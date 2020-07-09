@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rol Consolidado Mensual</title>
+    <style>
+        @page  {
+            size: A4 landscape;
+            margin: 30px;
+        }
+        .body {
+           border: 1px solid {{ reporte.color_lineas }};
+        }
+        .titulo{
+            color: {{ reporte.color_encabezados_tablas_texto }};
+            background-color:{{ reporte.color_encabezados_tablas }};
+            text-align: center;
+        }
+        tr{
+            padding: 5px;
+        }
+        .textos{
+            color: {{ reporte.color_texto }};
+            background-color: {{ reporte.color_fondo }} ;
+        }
+    </style>
+</head>
+<body>
+
+<table class="encabezado">
+    <thead>
+        <th><img src="{{ reporte.ruta_imagenes }}/media/{{ reporte.encabezado }}" alt=""></th>
+        <th style="width: 400px;text-align: center">
+            <h1 style="color: {{ reporte.color_texto }}">ROL NO.{{ remuneracion.rol.numeroRol }}<br>PERIODO {{ slug }}</h1>
+        </th>
+    </thead>
+</table>
+<br>
+<table class="body">
+    <tr>
+        <td class="titulo" style="width: 90px"><strong>NO.</strong></td>
+        <td class="titulo" ><strong>CÉDULA</strong></td>
+        <td class="titulo" style="width: 250px"><strong>NOMBRE Y APELLIDO</strong></td>
+        <td class="titulo" ><strong>CARGO</strong></td>
+        <td class="titulo" ><strong>SUELDO</strong></td>
+        <td class="titulo" ><strong>XIII</strong></td>
+        <td class="titulo" ><strong>XIV</strong></td>
+        <td class="titulo" ><strong>F.R.</strong></td>
+        <td class="titulo" ><strong>VAC.</strong></td>
+        <td class="titulo" ><Strong>H. EXT.</Strong></td>
+        <td class="titulo" ><strong>OTROS</strong></td>
+        <td class="titulo" ><strong>INGRESO</strong></td>
+    </tr>
+    {% for remuneracion in remuneraciones %}
+        <tr>
+            <td class="textos">{{ forloop.counter }}</td>
+            <td class="textos" style="width: 200px;text-align: center;">{{ remuneracion.sueldo.empleado.ruc }}</td>
+            <td class="textos" style="width: 450px;">{{ remuneracion.sueldo.empleado.nombre }} {{ remuneracion.sueldo.empleado.apellido }}</td>
+            <td class="textos" style="width: 300px;">{{ remuneracion.sueldo.cargo.cargo }}</td>
+            <td class="textos" style="width: 150px;text-align: center">{{ remuneracion.sueldo.sueldo|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.xiiisueldo|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.xivsueldo|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.fondosreserva|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.vacaciones|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.horasextras|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.otrosingresos|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.totalIngresos|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <td colspan="3" rowspan="3" style="text-align: center" class="textos">
+                <br><br><br>
+                -----------------------------------<br>
+                <strong>FIRMA</strong>
+            </td>
+            <td class="titulo" style="text-align:center;"><strong>APORTE IESS</strong></td>
+            <td class="titulo" style="text-align:center;"><strong>IECE</strong></td>
+            <td class="titulo" style="text-align:center;"><strong>PRE. IESS</strong></td>
+            <td class="titulo" style="text-align:center;"><strong>IMP. R</strong></td>
+            <td class="titulo" style="text-align:center;"><strong>ANT. S.</strong></td>
+            <td class="titulo" style="text-align:center;"><strong>DESC.</strong></td>
+            <td class="titulo" style="text-align:center;"><strong>MULTAS</strong></td>
+            <td class="titulo" style="text-align:center;"><strong>OTROS</strong></td>
+            <td class="titulo" style="text-align:center;"><strong>EGRESO</strong></td>
+        </tr>
+        <tr>
+            <td class="textos" style="text-align: center;">{{ remuneracion.aporteiess|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.iece|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.prestamosiess|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.impuestoalarenta|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.anticiposueldo|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.descuento|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.multas|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.otrosegresos|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.totalEgresos|floatformat:2 }}</td>
+        </tr>
+        <tr>
+        <td class="titulo">
+            <strong>FECHA: </strong>
+        </td>
+        <td colspan="6" class="textos">
+            {{ remuneracion.rol.fechaRol }}
+        </td>
+        <td class="titulo"><strong>TOTAL</strong></td>
+        <td style="text-align: center; background-color: orange">{{ remuneracion.total|floatformat:2 }}</td>
+        </tr>
+    {% endfor %}
+    
+</table>
+<br><br>
+<table class="body">
+    <thead>
+        <th  class="titulo" colspan="19"><STRONG>RESUMEN DE LOS VALORES</STRONG></th>
+    </thead>
+   <tbody>
+    <tr style="font-size: 9px; text-align: center">
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">IDENTIF.</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">SUELDOS</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">XIII</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">XIV</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">F. R.</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">VAC</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">H. EXTRAS</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">OTROS</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">ING.</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">APORTE IESS</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">IECE</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">PREST. IESS</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">IMP. RENTA</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">ANT.</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">DESC.</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">MULTAS</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">OTROS</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">EGR.</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold">TOTAL</td>
+    </tr>
+    {% for remuneracion in remuneraciones %}
+        <tr>
+            <td class="textos" style="width: 150px;text-align: center">{{ remuneracion.sueldo.empleado.ruc}}</td>
+            <td class="textos" style="width: 150px;text-align: center">{{ remuneracion.sueldo.sueldo|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.xiiisueldo|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.xivsueldo|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.fondosreserva|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.vacaciones|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.horasextras|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;">{{ remuneracion.otrosingresos|floatformat:2 }}</td>
+            <td class="textos" style="width: 150px; text-align: center;background-color: #7FB1DC">{{ remuneracion.totalIngresos|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.aporteiess|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.iece|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.prestamosiess|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.impuestoalarenta|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.anticiposueldo|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.descuento|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.multas|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center;">{{ remuneracion.otrosegresos|floatformat:2 }}</td>
+            <td class="textos" style="text-align: center; background-color: #7FB1DC">{{ remuneracion.totalEgresos|floatformat:2 }}</td>
+            <td style="text-align: center; background-color: orange">{{ remuneracion.total|floatformat:2 }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tr>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center">{{ sumaIngresos|floatformat:2 }}</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center"> </td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center">{{ sumaEgresos|floatformat:2 }}</td>
+        <td style="background-color: black; color: whitesmoke; font-weight: bold; text-align: center">{{ totales|floatformat:2 }}</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

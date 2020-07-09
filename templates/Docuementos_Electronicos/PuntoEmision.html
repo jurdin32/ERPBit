@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BitAdmin | Inventario{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+          <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                  <div class="x_title">
+                    <h2>Doc. Electronicos » <small>Punto Emision</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+                    <div class="x_content">
+                        <a href="{% url 'registroPuntoEmision' %}" class="btn bg-blue"><i class="fa fa-table"></i> Agregar Punto Emision</a>
+                    </div>
+                    <br/><br/><br/><br/>
+                     <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                         <table id="tablaCodEstablecimiento" class="table table-bordered table-striped dataTables_scroll">
+                      <thead style="background-color: #5A738E;color: whitesmoke">
+                        <tr>
+                          <th>No.</th>
+                          <th>EMPRESA</th>
+                          <th>CODIGO</th>
+                          <th style="text-align: center;width: 100px">ESTADO</th>
+                          <th style="width: 100px">OPCIONES</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for ptoEmision in puntoEmision %}
+                      <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ ptoEmision.empresa.nombreComercial }}</td>
+                        <td>{{ ptoEmision.codigo }}</td>
+                        <td style="text-align: center">
+                          {% if ptoEmision.estado %}
+                             <span class="glyphicon glyphicon-ok-sign text-success" style="font-size:20px;"></span>
+                              {% else %}
+                                <span class="glyphicon glyphicon-remove-sign text-danger" style="font-size:20px"></span>
+                          {% endif %}
+                        </td>
+                        <td style="text-align:center">
+                            <a href="/documentos_electronicos/puntoEmision/editar/{{ ptoEmision.id }}/" class="btn bg-orange btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                            {% if ptoEmision.estado %}
+                                <a onclick="f()" href="/documentos_electronicos/puntoEmision/delete/{{ ptoEmision.id }}/" class="btn bg-red btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                            {% endif %}
+                        </td>
+                      </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+
+    <script>
+        Tablas("#tablaCategorias");
+    </script>
+{% endblock scripts %}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.0.0"><infoTributaria><ambiente>1</ambiente><tipoEmision>1</tipoEmision><razonSocial>Juan Maria Galarza Pereira</razonSocial><nombreComercial/><ruc>0701847600001</ruc><claveAcceso>1202201901070184760000110010010000000010000000015</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000001</secuencial><dirMatriz>Bolivar Madero y General Gallardo</dirMatriz></infoTributaria><infoFactura><fechaEmision>12/02/2019</fechaEmision><dirEstablecimiento>Bolivar Madero y General Gallardo</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>07</tipoIdentificacionComprador><razonSocialComprador>CONSUMIDOR FINAL</razonSocialComprador><identificacionComprador>9999999999999</identificacionComprador><direccionComprador>S/N</direccionComprador><totalSinImpuestos>0.01</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <baseImponible>0.0</baseImponible>
+                    <valor>0</valor>
+                    </totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>0.01</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>298</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0202'</codigoAuxiliar>
+                      <descripcion>b'CLOUD 2'/SIN MARCA x  x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>0.01</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>0.01</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>0.00</baseImponible>
+                <valor>0.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature468671">
+<ds:SignedInfo Id="Signature-SignedInfo178516">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID455200" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature468671-SignedProperties773331">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>Z6lwE0bnuelSyW1wSgN3Podpezo=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1447179">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>50AI5JAnFvCcMntQno17opA70G8=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-518453" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>pafUWF2SNtcfxhGj09clzqWd5ew=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue235763">
+ehvhg6xCh6BGkKj9J8LAHf1z7eOZ+CbHiVzVy/bKIXCQATy9rhyxcGuwwVl5f3dygWCL+68euq9E
+g2Iqiof1UtjuOao4mpBeU8Z5ukKV4EJbwEfKEzw+G8yjev5OqiviwWKfRaoTq9VSVeCylHXXgImQ
+rPf/plT8i2SME+SCINoyM5+MifJbcFI61WwcYdojbz8h0pAGLUTZwGEzStbzzcBS6/DY8WVSicSi
+1G06x9YIXZrVBPOQaUePeCwN4bBSMZWmq2yJe9ezZLZ/oy/6bFkhFsTwEHKUdNhqtRf/fJOYlSJC
+iA4H0WG/bNsR9ykMZbANJQkgROJGFqTq/WSYZA==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1447179">
+<ds:X509Data>
+<ds:X509Certificate>
+MIII/TCCBuWgAwIBAgIEW16w9DANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE5MDIwNzE1NDIzOFoXDTIxMDIwNzE2MTIz
+OFowgbIxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE2MBEGA1UEBRMKMDAwMDM1MDQzOTAhBgNVBAMTGkpVQU4gTUFSSUEgR0FM
+QVJaQSBQRVJFSVJBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1QrrpyDbMsKxHv8f
+807InEiP09dC4EAuO3W/kL+7D4/ef0V+Yo+A3ZiGry3FpPzGZWJYBi0N1OgiwBFQQNcc5eEdKVnc
+rSIBqA7K3RuYG9nYo6SxUdzZMZK4QfzQTtcZ2OYuVp0itd42DS5FipjlD49gIVyq8pZcR4s+pYtE
+2inGfgnNg9kAU3//NtGI5wF7CsxfvsdXO8NsgQEKCYLZvw1U3IbBVAGamH197cWjFqH3ttiWLFN6
+lHT+FUlGdkh9phznmpKI/t5QwLa1KZF9xLP23X3F4Kv1f/h4Pa1dq47Mjzk05/AJ+oQ6gC8MUqrB
+lrleZULE4e7ulCgkqeAzFQIDAQABo4IEKDCCBCQwCwYDVR0PBAQDAgUgMIGRBggrBgEFBQcBAQSB
+hDCBgTA+BggrBgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIv
+c3RhdHVzL29jc3AwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwMS5lY2kuYmNlLmVjL2VqYmNhL3B1
+YmxpY3dlYi9zdGF0dXMvb2NzcDAaBgorBgEEAYKoOwMBBAwTCjA3MDE4NDc2MDAwGgYKKwYBBAGC
+qDsDAgQMEwpKVUFOIE1BUklBMBcGCisGAQQBgqg7AwMECRMHR0FMQVJaQTAXBgorBgEEAYKoOwME
+BAkTB1BFUkVJUkEwHgYKKwYBBAGCqDsDBwQQEw5CT0xJVkFSIE1BREVSTzAZBgorBgEEAYKoOwMI
+BAsTCTA3Mjg3NzUzNzAVBgorBgEEAYKoOwMJBAcTBVBpbmFzMBcGCisGAQQBgqg7AwwECRMHRUNV
+QURPUjAdBgorBgEEAYKoOwMLBA8TDTA3MDE4NDc2MDAwMDEwIAYKKwYBBAGCqDsDMwQSExBTT0ZU
+V0FSRS1BUkNISVZPMCIGA1UdEQQbMBmBF2p1YW5pdG9wZzYzQGhvdG1haWwuY29tMIIB3wYDVR0f
+BIIB1jCCAdIwggHOoIIByqCCAcaGgdVsZGFwOi8vYmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JM
+NzE0LGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIwREVMJTIwRUNVQURPUixsPVFVSVRPLG91PUVO
+VElEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBERSUyMElORk9STUFDSU9OLUVDSUJDRSxvPUJB
+TkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1IsYz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25M
+aXN0P2Jhc2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5lYy9DUkwvZWNpX2JjZV9lY19jcmxmaWxlY29t
+Yi5jcmykgbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VB
+RE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJ
+QkNFMQ4wDAYDVQQHEwVRVUlUTzElMCMGA1UEAxMcQUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURP
+UjEPMA0GA1UEAxMGQ1JMNzE0MB8GA1UdIwQYMBaAFBj58PvmMhyZZjkqyouyaX1JJ7/OMB0GA1Ud
+DgQWBBTkdX0j6/EnckkOSxvh18gaR7wdLTAJBgNVHRMEAjAAMBkGCSqGSIb2fQdBAAQMMAobBFY4
+LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQBdJvXmhAMiGxtCIBIIPySm0yFuyzVn3nok9IRRlPcj
+5FyVhVS6bZaHIMsCrS0Sari6LYNIq7dai4DGWrf999TEiRYdlOJVFZDNNSVFC7Pm/oR9x+4AOyZH
+3pVSkkhYlODbB9XWkaXKBpPLLo4RCSzMvPfX2JV1QD9ZsZtEKZOxFFJ/32NAuySnbXUfgye8+h6z
+D6DycX4zqBJ3QhVgKqQEFuj61iQY2DqMYaQJVVTFzbCoCLYK8AC3DaJjMC1kigP38XG9u9IUESwE
+9cNdJMpPPFEBg2wDBMmRiju5NQi6WxfEo2L6qHNaDGFog9cdXzRgTgcQ8qpdnkULwgX8UPUkZMJH
+sPsF6prvDH3jZlQ0QScQ2CBNj0dNqwT8ICVwLHO/yNLGQplTc0Z3KG2y1sgIm4K+camu6leBtr6K
+FYGTWLfzK0Qmz8ZzD7KcEotD+QYx/Ojr8YP2l6SnKHkSHrZ/itmcvJpuODXQP7a4FxLyzyRFwWCZ
+sN6EtlzKsKQDoAXinGUQp9a8iAFCYyhdeJDp3qNJ4deuUatPi5WcTB+Vgg7pxMYRDqJ4k74EU+Gv
+dtyfm7aIjs8AUWYPSoPGDSgY+0KEquXdlRxbp3jZmOilnosS90nIrGtQu4ek499pfbSfnXZBoZf7
+tJcooW40tJcJf9ApHtsf+3YLuovyRNmecw==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+1QrrpyDbMsKxHv8f807InEiP09dC4EAuO3W/kL+7D4/ef0V+Yo+A3ZiGry3FpPzGZWJYBi0N1Ogi
+wBFQQNcc5eEdKVncrSIBqA7K3RuYG9nYo6SxUdzZMZK4QfzQTtcZ2OYuVp0itd42DS5FipjlD49g
+IVyq8pZcR4s+pYtE2inGfgnNg9kAU3//NtGI5wF7CsxfvsdXO8NsgQEKCYLZvw1U3IbBVAGamH19
+7cWjFqH3ttiWLFN6lHT+FUlGdkh9phznmpKI/t5QwLa1KZF9xLP23X3F4Kv1f/h4Pa1dq47Mjzk0
+5/AJ+oQ6gC8MUqrBlrleZULE4e7ulCgkqeAzFQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature468671-Object254147"><etsi:QualifyingProperties Target="#Signature468671"><etsi:SignedProperties Id="Signature468671-SignedProperties773331"><etsi:SignedSignatureProperties><etsi:SigningTime>2019-02-12T11:46:14-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>9A7x3tbk6ZFL1myQ3l2PtjK7ONg=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1532932340</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-518453"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

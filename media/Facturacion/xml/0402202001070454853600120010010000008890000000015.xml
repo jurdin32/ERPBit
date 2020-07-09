@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>0402202001070454853600120010010000008890000000015</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000889</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>04/02/2020</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>  VIVIANA VERONICA MACAS SALAZAR</razonSocialComprador><identificacionComprador>0704483718001</identificacionComprador><direccionComprador>S/N</direccionComprador><totalSinImpuestos>1391.96</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>1191.96</baseImponible><valor>167.04</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>1559.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>660</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0500'</codigoAuxiliar>
+                      <descripcion>b'MONITOR LG BLACK LED 20"'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>100.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>200.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>0</codigoPorcentaje>
+                <tarifa>0.00</tarifa>
+                <baseImponible>200.00</baseImponible>
+                <valor>0.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1378</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1133'</codigoAuxiliar>
+                      <descripcion>b'COMPUTADOR CORE I3,4GB RAM 1 TB HDD '/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>392.86</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>392.86</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>392.86</baseImponible>
+                <valor>47.14</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                                  <codigoPrincipal>1234</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0990'</codigoAuxiliar>
+                                  <descripcion>b'UPS FORZA 500 W' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>35.71</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>71.42</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>71.42</baseImponible>
+                <valor>8.58</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                      <codigoPrincipal>740</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0568'</codigoAuxiliar>
+                      <descripcion>b'IMPRESORA EPSON L3150 .'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>209.82</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>209.82</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>209.82</baseImponible>
+                <valor>25.18</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1377</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1132'</codigoAuxiliar>
+                      <descripcion>b'COMPUTADOR CORE I5,8GB RAM , 1TB HDD'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>517.86</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>517.86</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>517.86</baseImponible>
+                <valor>62.14</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

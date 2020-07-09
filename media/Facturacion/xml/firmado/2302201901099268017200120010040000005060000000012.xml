@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.0.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>OPERADORA NATIONAL DE TURISMO OPENAT SA</razonSocial><nombreComercial>OPERADORA NATIONAL DE TURISMO OPENAT SA</nombreComercial><ruc>0992680172001</ruc><claveAcceso>2302201901099268017200120010040000005060000000012</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>004</ptoEmi><secuencial>000000506</secuencial><dirMatriz>Av. Remigio Crespo S/N intercepcion espa\xc3\xb1ola.</dirMatriz></infoTributaria><infoFactura><fechaEmision>23/02/2019</fechaEmision><dirEstablecimiento>Av. Remigio Crespo S/N intercepcion espa\xc3\xb1ola.</dirEstablecimiento><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>cristian andres URGILES</razonSocialComprador><identificacionComprador>0104688973001</identificacionComprador><direccionComprador>RICARDO MU\xc3\x91OZ</direccionComprador><totalSinImpuestos>12.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>0</codigoPorcentaje>
+                    <baseImponible>12.0</baseImponible>
+                    <valor>0</valor>
+                    </totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>12.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>133</codigoPrincipal>
+                                  <codigoAuxiliar>b'SIN-0076'</codigoAuxiliar>
+                                  <descripcion>b'SERVICIO TRANSPORTE' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>12.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>12.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>0</codigoPorcentaje>
+                <tarifa>0.00</tarifa>
+                <baseImponible>12.00</baseImponible>
+                <valor>0.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature275748">
+<ds:SignedInfo Id="Signature-SignedInfo256787">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID88643" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature275748-SignedProperties402256">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>VoBCs0/vjr+4efCWi3Lo+t85Diw=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1295307">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>US9kEKpWO01Dr0d8ggJ1vokAgaw=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-926815" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>smnSQBl/zcTt6hUKyvfYMv1fjFM=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue83810">
+y16KMmKuvZVWr2NIDUgxOu2kLkdvQNkvODkOe6QIx+x9PLC+22SgOlRTdLa/LCYmthi72g8Ur7mg
+BIRXYMk/UQ0uxXxQ1RZq0etLvC2zjSaDFLwnM33qU/MplUMipBN2YdvZ/nt3+TJ+CJFOhCV2Wfkq
+Ng/ZPAia4qxWZU6WlzXpyqUJO0F/eWCphJajlOAtTgZOUDTSSJwz6EPPVZ2/iYS7k6TUeotk7N7z
+0Rm7FNFhjkUchuGA6+UxTJVCrldBZu2VFTAqOnDkvCv0t9ubK70ijPTcUPgxVe8v6JBRZYuAKMGP
+iqrao2v07WWRGo/ewOG0rdSYyxBf0BJwgQwBaw==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1295307">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJ6jCCCNKgAwIBAgIEVNOGwjANBgkqhkiG9w0BAQsFADCBkzELMAkGA1UEBhMCRUMxGzAZBgNV
+BAoTElNFQ1VSSVRZIERBVEEgUy5BLjEwMC4GA1UECxMnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OMTUwMwYDVQQDEyxBVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUIg
+U0VDVVJJVFkgREFUQTAeFw0xODEyMjgwMDM5MDhaFw0xOTEyMjgwMTA5MDhaMIGeMQswCQYDVQQG
+EwJFQzEbMBkGA1UEChMSU0VDVVJJVFkgREFUQSBTLkEuMTAwLgYDVQQLEydFTlRJREFEIERFIENF
+UlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xQDATBgNVBAUTDDI3MTIxODA5NDkzMjApBgNVBAMT
+IkpFTk5ZIEFVR1VTVEEgU0FSTUlFTlRPIENBTVBPVkVSREUwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDMZR4cgTQX6xaEgYStM8kDDyj2xuFXtvDQBC9Zzff02/87qdyA+kKNfMr4kqLs
+Qa6XSeVy28QK83GEaV08pqgNjedHZvPUPA3SsQimArRJU6QO8Cy8V9xJ34E24MNbCTfs1GnZ5fIy
+7bwe+xnA/5CeRYE+bnTIvBRfo7BCEqP/ncuWKwQ2W1A3U3sJvi3cWEaTur2JVLyhIXJmJyEPgyRg
+vMu+ly2gPOreOgT4//2QtFFSyobUbQDokfblCmXn03tWuwnpee+IcnNv/OzzCy5o8/XgWl1CRijN
+olTPGd5xr8BYnX1bxO7UQdbEOmiJ7w95YScXAWU9aX35wqZl4VUvAgMBAAGjggY3MIIGMzALBgNV
+HQ8EBAMCBeAwWQYIKwYBBQUHAQEETTBLMEkGCCsGAQUFBzABhj1odHRwOi8vb2NzcGd3LnNlY3Vy
+aXR5ZGF0YS5uZXQuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwMIHMBgNVHSAEgcQwgcEw
+QAYKKwYBBAGCpnICCTAyMDAGCCsGAQUFBwICMCQaIkNlcnRpZmljYWRvIGRlIFJlcHJlc2VudGFu
+dGUgTGVnYWwwfQYKKwYBBAGCpnICAzBvMG0GCCsGAQUFBwIBFmFodHRwczovL3d3dy5zZWN1cml0
+eWRhdGEubmV0LmVjL2xleWVzX25vcm1hdGl2YXMvUG9saXRpY2FzIGRlIENlcnRpZmljYWRvIFJl
+cHJlc2VudGFudGUgTGVnYWwucGRmMDgGCisGAQQBgqZyAwoEKhMoT1BFUkFET1JBIE5BVElPTkFM
+IERFIFRVUklTTU8gT1BFTkFUIFMuQTAdBgorBgEEAYKmcgMLBA8TDTA5OTI2ODAxNzIwMDEwGgYK
+KwYBBAGCpnIDAQQMEwowMTAyMDk5NDA1MB0GCisGAQQBgqZyAwIEDxMNSkVOTlkgQVVHVVNUQTAZ
+BgorBgEEAYKmcgMDBAsTCVNBUk1JRU5UTzAaBgorBgEEAYKmcgMEBAwTCkNBTVBPVkVSREUwHwYK
+KwYBBAGCpnIDBQQREw9HRVJFTlRFIEdFTkVSQUwwVwYKKwYBBAGCpnIDBwRJE0dDVUVOQ0EgUEFS
+Uk9RVUlBOiBFTCBCQVRBTiBCQVJSSU86IFNVUk9FU1RFIENBTExFOiBSRU1JR0lPIENSRVNQTyBU
+T1JBTDAbBgorBgEEAYKmcgMIBA0TCzU5MzcyODE2MzI5MBYGCisGAQQBgqZyAwkECBMGQ1VFTkNB
+MBcGCisGAQQBgqZyAwwECRMHRUNVQURPUjAfBgorBgEEAYKmcgMgBBETDzAwMjAwMTAwMDAyOTQ3
+MzATBgorBgEEAYKmcgMhBAUTA1BGWDAfBgNVHREEGDAWgRRPUEVOQVRTQTEwQEdNQUlMLkNPTTCC
+AnsGA1UdHwSCAnIwggJuMIICaqCCAmagggJihj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0YS5u
+ZXQuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwhoHVbGRhcDovL2RpcmVjdC5zZWN1cml0
+eWRhdGEubmV0LmVjL2NuPUNSTDMxNyxjbj1BVVRPUklEQUQlMjBERSUyMENFUlRJRklDQUNJT04l
+MjBTVUIlMjBTRUNVUklUWSUyMERBVEEsb3U9RU5USURBRCUyMERFJTIwQ0VSVElGSUNBQ0lPTiUy
+MERFJTIwSU5GT1JNQUNJT04sbz1TRUNVUklUWSUyMERBVEElMjBTLkEuLGM9RUM/Y2VydGlmaWNh
+dGVSZXZvY2F0aW9uTGlzdD9iYXNlhoGeaHR0cHM6Ly9kaXJlY3Quc2VjdXJpdHlkYXRhLm5ldC5l
+Yy9+Y3JsL2F1dG9yaWRhZF9kZV9jZXJ0aWZpY2FjaW9uX3N1Yl9zZWN1cml0eV9kYXRhX2VudGlk
+YWRfZGVfY2VydGlmaWNhY2lvbl9kZV9pbmZvcm1hY2lvbl9jdXJpdHlfZGF0YV9zLmEuX2NfZWNf
+Y3JsZmlsZS5jcmykgacwgaQxCzAJBgNVBAYTAkVDMRswGQYDVQQKExJTRUNVUklUWSBEQVRBIFMu
+QS4xMDAuBgNVBAsTJ0VOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjE1MDMG
+A1UEAxMsQVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCIFNFQ1VSSVRZIERBVEExDzANBgNV
+BAMTBkNSTDMxNzArBgNVHRAEJDAigA8yMDE4MTIyODAwMzkwOFqBDzIwMTkxMjI4MDEwOTA4WjAf
+BgNVHSMEGDAWgBT3L0zgdedio3iWWwa2LnE7zGw/kDAdBgNVHQ4EFgQUJBDKHmSXQu0rjG27lRty
+8dWD7yswCQYDVR0TBAIwADAZBgkqhkiG9n0HQQAEDDAKGwRWOC4xAwIDqDANBgkqhkiG9w0BAQsF
+AAOCAQEAdUOeKIXbCT2L/Dkpq/bnpPl3apvJW4HQhxj5nAFHIlGLIPxeEszQyatDTG3Kq0pwCTKK
+6dfyfogXqddV/2QhoBwNdndClwHP0lr1KKC0CdUu2ZpZiYS8hpOTE0gG9jeI7oO/Hntpkd6rm460
+oGF9SjF8uAhhcBN8Uon5IZ3O2d5KF3O5K/NgyK0UFQAfVhF09DKH0cMc1FbkC29c352KMPTA05hW
+/DoYVoWANV7w0Dxy9q3iSWUQuaW8CQckhjmnCbyt6pFuFyMWYp2VhliO8sMK6rFGh7wNF5PIdk3n
+C0zrnaQnc4xH0xiQ7qZ9s62ZwrOtCpwRByPvlszeO8Q/Ig==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+zGUeHIE0F+sWhIGErTPJAw8o9sbhV7bw0AQvWc339Nv/O6ncgPpCjXzK+JKi7EGul0nlctvECvNx
+hGldPKaoDY3nR2bz1DwN0rEIpgK0SVOkDvAsvFfcSd+BNuDDWwk37NRp2eXyMu28HvsZwP+QnkWB
+Pm50yLwUX6OwQhKj/53LlisENltQN1N7Cb4t3FhGk7q9iVS8oSFyZichD4MkYLzLvpctoDzq3joE
++P/9kLRRUsqG1G0A6JH25Qpl59N7VrsJ6XnviHJzb/zs8wsuaPP14FpdQkYozaJUzxneca/AWJ19
+W8Tu1EHWxDpoie8PeWEnFwFlPWl9+cKmZeFVLw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature275748-Object287226"><etsi:QualifyingProperties Target="#Signature275748"><etsi:SignedProperties Id="Signature275748-SignedProperties402256"><etsi:SignedSignatureProperties><etsi:SigningTime>2019-02-23T09:36:29-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>gf00BRdS7GGiWQL4TuUf9luDg6o=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUB SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A.,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1423148738</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-926815"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

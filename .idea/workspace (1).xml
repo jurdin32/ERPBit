@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html" line="669" mnemonic="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84ca8c53-b6c2-4f9e-9d4b-1d654e7d3f66" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ERPBit$ipSearch.coverage" NAME="ipSearch Coverage Results" MODIFIED="1551127425215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Shurtcodes" />
+    <SUITE FILE_PATH="coverage/ERPBit$Test__NOTIFICACIONES.coverage" NAME="Test: NOTIFICACIONES Coverage Results" MODIFIED="1547530718013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ERPBit$pruebasSRI.coverage" NAME="pruebasSRI Coverage Results" MODIFIED="1547872200613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db [3]" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db [3]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db [3]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ERPBit" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/sri.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/factura.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1122">
+              <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/xmls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="16" column="133" selection-start-line="16" selection-start-column="133" selection-end-line="16" selection-end-column="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/INVENTARIO/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1462">
+              <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/INVENTARIO/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="769" column="55" selection-start-line="769" selection-start-column="55" selection-end-line="769" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroProforma.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="434" column="50" selection-start-line="434" selection-start-column="50" selection-end-line="434" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="337" column="16" selection-start-line="337" selection-start-column="16" selection-end-line="337" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Inventario/registroProductos.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/INVENTARIO/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1717">
+              <caret line="121" column="41" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>provee</find>
+      <find>servicios</find>
+      <find>existen</find>
+      <find>cargos</find>
+      <find>sueldos</find>
+      <find>editar</find>
+      <find>impuest</find>
+      <find>ivas</find>
+      <find>items.</find>
+      <find>compras</find>
+      <find>facturacion</find>
+      <find>grupo</find>
+      <find>retenciones</find>
+      <find>PRODUC</find>
+      <find>retencion</find>
+      <find>guias</find>
+      <find>factura.</find>
+      <find>fac</find>
+      <find>registrore</find>
+      <find>guia</find>
+      <find>Tabla</find>
+      <find>factura</find>
+      <find>impuesto</find>
+      <find>factu</find>
+      <find>cierr</find>
+      <find>nota</find>
+      <find>dropzone</find>
+      <find>pro</find>
+      <find>xhr</find>
+      <find>4</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/templates</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/NOTIFICACIONES/models.py" />
+        <option value="$PROJECT_DIR$/NOTIFICACIONES/admin.py" />
+        <option value="$PROJECT_DIR$/templates/Notificaciones/Chat/thread_list.html" />
+        <option value="$PROJECT_DIR$/CLIENTES/forms.py" />
+        <option value="$PROJECT_DIR$/static/uploadFile/jquery.uploadfile.min.js" />
+        <option value="$PROJECT_DIR$/templates/Clientes/clientes.html" />
+        <option value="$PROJECT_DIR$/CLIENTES/models.py" />
+        <option value="$PROJECT_DIR$/CLIENTES/views.py" />
+        <option value="$PROJECT_DIR$/templates/Clientes/migracionClientes.html" />
+        <option value="$PROJECT_DIR$/templates/sri/104AMensual.html" />
+        <option value="$PROJECT_DIR$/SRI/views.py" />
+        <option value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/pruebasSRI.py" />
+        <option value="$PROJECT_DIR$/templates/Inventario/registroCompra.html" />
+        <option value="$PROJECT_DIR$/ERPBit/urls.py" />
+        <option value="$PROJECT_DIR$/INVENTARIO/views.py" />
+        <option value="$PROJECT_DIR$/templates/Inventario/ver_compras.html" />
+        <option value="$PROJECT_DIR$/templates/Inventario/compras.html" />
+        <option value="$USER_HOME$/.local/lib/python3.6/site-packages/djcelery/management/commands/celeryd.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/ERPBit/settings-develop.py" />
+        <option value="$PROJECT_DIR$/ERPBit/settings.py" />
+        <option value="$PROJECT_DIR$/CONTABILIDAD/views.py" />
+        <option value="$PROJECT_DIR$/static/Apps/app.js" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/retenciones.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/tablas/cargando.html" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/tablas/proforma.html" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/tablas/retencion.html" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/reporteDinamico.html" />
+        <option value="$PROJECT_DIR$/CARTERA/views.py" />
+        <option value="$PROJECT_DIR$/CARTERA/models.py" />
+        <option value="$PROJECT_DIR$/static/Apps/tablasCustom.js" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/tablas/factura.html" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/0301201901070388669700110010010000000510000000014.xml" />
+        <option value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/factura.py" />
+        <option value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/xmls.py" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/2201201901070454853600120010010000000300000000013.xml" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/firmado/2201201901070454853600120010010000000300000000013.xml" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/facturas.html" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/repFactura.html" />
+        <option value="$PROJECT_DIR$/Shurtcodes/ipSearch.py" />
+        <option value="$PROJECT_DIR$/CLIENTES/validarCedulasRuc.py" />
+        <option value="$USER_HOME$/Documentos/ui/reproductor.py" />
+        <option value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/sri.py" />
+        <option value="$PROJECT_DIR$/CONFIGURACION/models.py" />
+        <option value="$PROJECT_DIR$/templates/Inventario/registroProductos.html" />
+        <option value="$PROJECT_DIR$/INVENTARIO/models.py" />
+        <option value="$PROJECT_DIR$/INVENTARIO/admin.py" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/registroProforma.html" />
+        <option value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="336" />
+    <option name="y" value="225" />
+    <option name="width" value="950" />
+    <option name="height" value="790" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="DOCUMENTOS_ELECTRONICOS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="INVENTARIO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Docuementos_Electronicos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Inventario" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/Inventario" />
+      <recent name="$PROJECT_DIR$/templates/Clientes" />
+      <recent name="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS" />
+      <recent name="$PROJECT_DIR$/templates/Cartera" />
+      <recent name="$PROJECT_DIR$/templates/Notificaciones/codes" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.sri">
+    <configuration name="ipSearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Shurtcodes" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Shurtcodes/ipSearch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pruebasSRI" type="PythonConfigurationType" factoryName="Python">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/pruebasSRI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="reproductor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documentos/ui" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documentos/ui/reproductor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sri" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/sri.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ERPBit" type="Python.DjangoServer" factoryName="Django server">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ERPBit.settings-develop" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8080" />
+      <option name="host" value="0.0.0.0" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.ERPBit" />
+      <item itemvalue="Python.pruebasSRI" />
+      <item itemvalue="Python.ipSearch" />
+      <item itemvalue="Python.reproductor" />
+      <item itemvalue="Python.sri" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sri" />
+        <item itemvalue="Python.reproductor" />
+        <item itemvalue="Python.ipSearch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84ca8c53-b6c2-4f9e-9d4b-1d654e7d3f66" name="Default" comment="" />
+      <created>1533051044612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533051044612</updated>
+      <workItem from="1544026978414" duration="54000" />
+      <workItem from="1544036060821" duration="160000" />
+      <workItem from="1544052567575" duration="679000" />
+      <workItem from="1544058647490" duration="22000" />
+      <workItem from="1544121294180" duration="7614000" />
+      <workItem from="1544229518163" duration="2398000" />
+      <workItem from="1544796719931" duration="4582000" />
+      <workItem from="1544807081864" duration="4742000" />
+      <workItem from="1544822670587" duration="1875000" />
+      <workItem from="1544829422446" duration="5583000" />
+      <workItem from="1544887943802" duration="737000" />
+      <workItem from="1545061995835" duration="1211000" />
+      <workItem from="1545101474421" duration="158000" />
+      <workItem from="1545154586900" duration="600000" />
+      <workItem from="1545407273539" duration="14687000" />
+      <workItem from="1545425885089" duration="8696000" />
+      <workItem from="1545490616159" duration="10956000" />
+      <workItem from="1545572830779" duration="30976000" />
+      <workItem from="1545615032444" duration="9033000" />
+      <workItem from="1545659712560" duration="22506000" />
+      <workItem from="1545682449379" duration="8566000" />
+      <workItem from="1545711572106" duration="1822000" />
+      <workItem from="1545747672751" duration="12959000" />
+      <workItem from="1545837362636" duration="5627000" />
+      <workItem from="1545858197376" duration="597000" />
+      <workItem from="1545860830493" duration="8588000" />
+      <workItem from="1545931365503" duration="5649000" />
+      <workItem from="1545943641255" duration="9022000" />
+      <workItem from="1546005968116" duration="13124000" />
+      <workItem from="1546036243610" duration="6219000" />
+      <workItem from="1546092869874" duration="19699000" />
+      <workItem from="1546123806727" duration="685000" />
+      <workItem from="1546136819896" duration="7296000" />
+      <workItem from="1546178453212" duration="47981000" />
+      <workItem from="1546268316711" duration="3924000" />
+      <workItem from="1546273941820" duration="13846000" />
+      <workItem from="1546472364504" duration="4608000" />
+      <workItem from="1546522384035" duration="3200000" />
+      <workItem from="1546544561599" duration="333000" />
+      <workItem from="1546555876153" duration="681000" />
+      <workItem from="1546699775653" duration="8842000" />
+      <workItem from="1546719790795" duration="3265000" />
+      <workItem from="1546901407814" duration="5376000" />
+      <workItem from="1546966054190" duration="2474000" />
+      <workItem from="1547135175021" duration="1248000" />
+      <workItem from="1547156113139" duration="3268000" />
+      <workItem from="1547163710070" duration="78000" />
+      <workItem from="1547216250360" duration="74000" />
+      <workItem from="1547218618482" duration="384000" />
+      <workItem from="1547221579585" duration="645000" />
+      <workItem from="1547229781201" duration="533000" />
+      <workItem from="1547319898613" duration="2249000" />
+      <workItem from="1547306752792" duration="9543000" />
+      <workItem from="1547428302024" duration="12487000" />
+      <workItem from="1547528789268" duration="8461000" />
+      <workItem from="1547610596680" duration="14498000" />
+      <workItem from="1547625149051" duration="421000" />
+      <workItem from="1547651158683" duration="15150000" />
+      <workItem from="1547758997175" duration="18000" />
+      <workItem from="1547870150638" duration="824000" />
+      <workItem from="1547871207081" duration="5109000" />
+      <workItem from="1547934769430" duration="21501000" />
+      <workItem from="1547996144851" duration="10746000" />
+      <workItem from="1548021740327" duration="10707000" />
+      <workItem from="1548039735604" duration="11724000" />
+      <workItem from="1548255816576" duration="3543000" />
+      <workItem from="1548274959125" duration="181000" />
+      <workItem from="1548864998352" duration="41000" />
+      <workItem from="1548873136596" duration="672000" />
+      <workItem from="1550766477756" duration="14000" />
+      <workItem from="1550859280694" duration="276000" />
+      <workItem from="1550938999070" duration="15000" />
+      <workItem from="1550939038568" duration="10000" />
+      <workItem from="1551127219800" duration="264000" />
+      <workItem from="1551139045456" duration="374000" />
+      <workItem from="1551290177985" duration="632000" />
+      <workItem from="1552060650625" duration="988000" />
+      <workItem from="1555614051045" duration="1288000" />
+      <workItem from="1555615585613" duration="1121000" />
+      <workItem from="1555993492250" duration="881000" />
+      <workItem from="1556333520638" duration="76000" />
+      <workItem from="1557074079050" duration="11238000" />
+      <workItem from="1557156523991" duration="1098000" />
+      <workItem from="1557579937412" duration="14220000" />
+      <workItem from="1557608731571" duration="2793000" />
+      <workItem from="1557673298263" duration="28297000" />
+      <workItem from="1558214633068" duration="253000" />
+      <workItem from="1560467711239" duration="1422000" />
+      <workItem from="1560472222526" duration="134000" />
+      <workItem from="1560892195412" duration="3675000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 20m 29s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 21m 30s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 22m 22s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 22m 49s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 23m 37s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 24m 53s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 36m 10s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 37m 04s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__NOTIFICACIONES - 2019.01.15 at 00h 39m 07s.xml">
+      <configuration name="Test: NOTIFICACIONES" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="525928000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49661016" visible="true" weight="0.22922252" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5009242" side_tool="true" weight="0.29932886" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850778" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.88239074" weight="0.3507795" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997773" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.4994664" weight="0.32739422" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.43763676" side_tool="true" weight="0.35746104" />
+      <window_info anchor="bottom" id="manage.py@ERPBit" order="9" sideWeight="0.62326574" weight="0.36636972" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.56236327" weight="0.35746104" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32777777" />
+      <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49798658" weight="0.3288889" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="14" sideWeight="0.4994664" weight="0.32850778" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="SciView" order="6" sideWeight="0.49777284" weight="0.32977587" />
+      <window_info anchor="right" id="Database" order="7" sideWeight="0.50338984" side_tool="true" weight="0.3479189" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ERPBit/urls.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ERPBit/urls.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ERPBit/urls.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ERPBit/urls.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ERPBit/urls.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ERPBit/urls.py</url>
+          <line>241</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ERPBit/urls.py</url>
+          <line>258</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py</url>
+          <line>423</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ERPBit/urls.py</url>
+          <line>306</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html</url>
+          <line>831</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html</url>
+          <line>785</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html</url>
+          <line>331</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ERPBit$reproductor.coverage" NAME="reproductor Coverage Results" MODIFIED="1555993651384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documentos/ui" />
+    <SUITE FILE_PATH="coverage/ERPBit$sri.coverage" NAME="sri Coverage Results" MODIFIED="1555993855283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/Inventario/ver_compras.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#th#8;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ERPBit/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/vendors/parsleyjs/bower_components/jquery/src/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3711">
+          <caret line="484" column="31" selection-start-line="484" selection-start-column="26" selection-end-line="484" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Apps/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="71" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="273" column="80" selection-start-line="273" selection-start-column="80" selection-end-line="273" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/retenciones.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Inventario/registroCompra.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1232">
+          <caret line="261" column="34" selection-start-line="186" selection-start-column="28" selection-end-line="261" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/tablas/proforma.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/tablas/retencion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="94" selection-start-line="32" selection-start-column="94" selection-end-line="32" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#th#1;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#5;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#6;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#7;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#8;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#9;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#9;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#9;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#10;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CARTERA/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CARTERA/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="83" column="87" lean-forward="true" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/reporteDinamico.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="108" column="42" selection-start-line="108" selection-start-column="42" selection-end-line="108" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/tablas/cargando.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sri/104AMensual.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="1891" selection-start-line="1891" selection-end-line="1891" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="322" column="6" selection-start-line="322" selection-start-column="6" selection-end-line="322" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="469" column="22" selection-start-line="469" selection-start-column="22" selection-end-line="469" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Apps/tablasCustom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Cartera/CierreCaja.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="135" column="22" selection-start-line="8" selection-start-column="16" selection-end-line="135" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/django/db/models/options.py" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/0301201901070388669700110010010000000480000000018.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/2201201901070454853600120010010000000300000000013.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/firmado/2201201901070454853600120010010000000300000000013.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/2211201801070388669700110010010000000590000000011.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/0301201901070388669700110010010000000510000000014.xml" />
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/repFactura.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2790">
+          <caret line="213" column="132" lean-forward="true" selection-start-line="213" selection-start-column="132" selection-end-line="213" selection-end-column="132" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/templatetags/customTagsCuentas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ERPBit/settings-develop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="169" selection-start-line="169" selection-end-line="232" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Notificaciones/sweetalert.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="195" selection-start-line="1" selection-start-column="195" selection-end-line="1" selection-end-column="195" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ERPBit/utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ERPBit/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/ipSearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="e#24#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Clientes/clientes.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/tablas/factura.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Clientes/registroClientes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4140">
+          <caret line="276" column="103" selection-start-line="276" selection-start-column="36" selection-end-line="276" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroGuiaRemision.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENTES/validarCedulasRuc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documentos/ui/reproductor.py" />
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/facturas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="96" column="120" selection-start-line="96" selection-start-column="120" selection-end-line="96" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/proformas.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONFIGURACION/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="145" selection-start-line="145" selection-end-line="181" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENTES/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" selection-start-line="18" selection-end-line="52" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INVENTARIO/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INVENTARIO/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Inventario/registroProductos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INVENTARIO/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="121" column="41" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="769" column="55" selection-start-line="769" selection-start-column="55" selection-end-line="769" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroProforma.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="434" column="50" selection-start-line="434" selection-start-column="50" selection-end-line="434" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/sri.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/factura.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/xmls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="133" selection-start-line="16" selection-start-column="133" selection-end-line="16" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="337" column="16" selection-start-line="337" selection-start-column="16" selection-end-line="337" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

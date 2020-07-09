@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1012201901070454853600120010010000007260000000016</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000726</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>10/12/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>HOSPITAL BASICO 1BI EL ORO </razonSocialComprador><identificacionComprador>1768002830001</identificacionComprador><direccionComprador>SUCRE Y AV JUBONES</direccionComprador><totalSinImpuestos>385.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>385.00</baseImponible><valor>46.20</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>431.20</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1256</codigoPrincipal>
+                                  <codigoAuxiliar>b'IMP-1012'</codigoAuxiliar>
+                                  <descripcion>b'REPARACION DE IMPRESORA EPSON L4150' / b''</descripcion>
+                                  <cantidad>5.00</cantidad>
+                                  <precioUnitario>55.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>275.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>275.00</baseImponible>
+                <valor>33.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1257</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1013'</codigoAuxiliar>
+                                  <descripcion>b'REPARACION DE IMPRESORA EPSON MATRICIAL FX890' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>40.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>40.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>40.00</baseImponible>
+                <valor>4.80</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1255</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1011'</codigoAuxiliar>
+                                  <descripcion>b'REPARACION DE IMPRESORA EPSON L355' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>35.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>70.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>70.00</baseImponible>
+                <valor>8.40</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>

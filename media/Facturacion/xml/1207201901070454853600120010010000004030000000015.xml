@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1207201901070454853600120010010000004030000000015</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000403</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>12/07/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>Compa\xc3\xb1ia de Comercio Nora Mu\xc3\xb1oz Ponce Cia. Ltda </razonSocialComprador><identificacionComprador>0791735157001</identificacionComprador><direccionComprador>Bolivar #718 e/ juan Montalvo y junin</direccionComprador><totalSinImpuestos>455.36</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>455.36</baseImponible><valor>54.64</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>510.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>795</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0618'</codigoAuxiliar>
+                      <descripcion>b'IMPRESORA TINTA CONTINUA EPSON ECOTANK L6171'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>455.36</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>455.36</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>455.36</baseImponible>
+                <valor>54.64</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

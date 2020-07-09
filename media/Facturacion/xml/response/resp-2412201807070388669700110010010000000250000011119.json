@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '2412201807070388669700110010010000000250000011119',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '35',
+                            'mensaje': 'ARCHIVO NO CUMPLE ESTRUCTURA XML',
+                            'informacionAdicional': "Se encontró el siguiente error en la estructura del comprobante: cvc-pattern-valid: Value '303' is not facet-valid with respect to pattern '[0-9]{1}' for type 'codigo'..",
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

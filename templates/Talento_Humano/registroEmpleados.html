@@ -1,0 +1,363 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="right_col" role="main">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Registro de Empleados</h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <form method="POST" action=" " class="form-horizontal form-label-left input_mask">
+                {% csrf_token %}
+            <input class="hidden" id="veri" type="text"name="verificar">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="{% url 'empleados' %}">Empleados »</a>
+                                    <small>Datos del empleado</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nombres <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="nombre"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="{{ empleado.nombre}}">
+                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Apellidos <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="apellido"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="{{ empleado.apellido}}">
+                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Identificacion <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="ruc" id="ruc" maxlength="13"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="{{ empleado.ruc}}">
+                                        <span class="fa fa-credit-card form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Email <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="email"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="email" value="{{ empleado.email}}">
+                                        <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Fecha Nacimiento</label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="fechaNacimiento" type="date"
+                                               class="form-control" value="{{ empleado.fechaNacimiento|date:"Y-m-d" }}">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Sexo <span
+                                            class="required">*</span></label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" id="sexo" name="sexo">
+                                            <option value="M" >Masculino</option>
+                                            <option value="F" >Femenino</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Cargas <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="cargas"
+                                               class="date-picker form-control col-md-7 col-xs-12"
+                                               required="required" type="number" value="{{ empleado.cargas }}">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Profesion <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="profesion"
+                                               class="date-picker form-control col-md-7 col-xs-12"
+                                               required="required" type="text" value="{{ empleado.profesion }}">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Observaciones<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <textarea style="border-radius: 5px; height: 130px; resize: none" name="observaciones" class="form-control ">{{ empleado.observaciones }}</textarea></div>
+                                </div>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="{% url 'empleados' %}">Empleados »</a>
+                                    <small>Datos adicionales</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Departamento <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" name="departamento" id="departamento" value="{{ departamentos }}">
+
+                                            {% for departamento in departamentos %}
+                                                <option value="{{ departamento.id }}">{{ departamento.nombre }}</option>
+                                            {% endfor %}
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Fecha Ingreso<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <input style="border-radius: 5px" name="fechaIngreso" type="date"
+                                               class="form-control" value="{{ empleado.fechaIngreso|date:'Y-m-d' }}">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Fecha Salida<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <input style="border-radius: 5px" name="fechaSalida" type="date"
+                                               class="form-control" value="{{ empleado.fechaSalida|date:'Y-m-d' }}">
+                                    </div>
+                                </div>
+
+                            <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Telefono <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <input style="border-radius: 5px" name="telefono"
+                                               class="date-picker form-control col-md-7 col-xs-12"
+                                               required="required" type="text" value="{{ empleado.telefono }}">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Pais <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" name="pais" id="pais">
+                                            {% for pais in paises %}
+                                                <option value="{{ pais.id }}">{{ pais.nombre }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Provincia <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-xs-12" name="provincias" id="provincias"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Ciudad <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-xs-12" name="lugarciudad" id="lugarciudad"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Parroquia <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-xs-12" name="lugarparroquia" id="lugarparroquia"></div>
+                                </div>
+
+                            <div class="form-group">
+                                    <label class="control-label col-md-4 col-xs-12">Direccion<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-8 col-xs-12">
+                                        <input style="border-radius: 5px" name="direccion" type="text"
+                                               class="form-control" value="{{ empleado.direccion }}">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-4 col-xs-12 control-label">Estado <span
+                                            class="required">*</span></label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" class="flat" {% if empleado.estado == True %}
+                                                       checked {% endif %} name="estado" value="1"> Activo
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" {% if empleado.estado == False %}checked {% endif %}
+                                                       class="flat" name="estado" value="2"> Inactivo
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+
+                                <div style="text-align: center">
+                                    <button type="submit" class="btn bg-blue"><i class="glyphicon glyphicon-save"></i> Guardar
+                                    </button>
+                                    <button class="btn bg-orange" type="reset"><i class="fa fa-remove"></i> Limpiar
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+{% endblock content %}
+{% block scripts %}
+ <script src="{% static 'js/ruc_jquery_validator.min.js' %}"></script>
+
+    <script>
+        var opciones = {
+            strict: true,              // va a validar siempre, aunque la cantidad de caracteres no sea 10 ni 13
+            events: "keyup",          // evento que va a disparar la validación
+            the_classes: "invalid",    // clase que se va a agregar al nodo en el que se realiza la validación
+            onValid: function () {
+                console.log("correcto")
+                if ($("#ruc").val().length==13){
+                    $("#ruc").removeClass('parsley-error')
+                    $('#veri').val('')
+                }else{
+                    if( $("#ruc").val().length==10)
+                    {
+                        $("#ruc").removeClass('parsley-error')
+                        $('#veri').val('')
+
+                    }
+                    else{
+                        $("#ruc").addClass('parsley-error')
+                        $('#veri').val('Error')
+
+                    }
+                }
+
+            },   // callback cuando la cédula es correcta.
+            onInvalid: function () {
+                if($("#ruc").val().length==13 || $("#ruc").val().length==10)
+                {
+                    $("#ruc").addClass('parsley-error')
+                    $('#veri').val('Error')
+                }
+                else{
+                    $("#ruc").removeClass('parsley-error')
+                     $('#veri').val('')
+                }
+
+            }  // callback cuando la cédula es incorrecta.
+        };
+        $('#ruc').validarCedulaEC(opciones);
+
+        function valida(){
+            $('#ruc').validarCedulaEC(opciones)
+        }
+        $("#tipoIdentificacion").change(valida()).change()
+    </script>
+  <script>
+    $(document).ready(function () {
+        var prov = "";
+        var ciud = "";
+        var parr = "";
+        $('#tipoIdentificacion option[value="{{ tipo.id }}"]').attr("selected", true);
+        provincia();
+
+        function provincia() {
+            $('#pais option[value="{{ empleado.parroquia.lugar.lugar.lugar.id }}"]').attr("selected", true);
+            $('#pais').change(function () {
+                $.get('/configuracion/lugar/' + $(this).val() + "/", function (data) {
+                    prov = '<select  style="border-radius: 5px" class="form-control" id="provincia">' + data + '</select>';
+                    $("#provincias").html(prov);
+                    $('#provincia option[value="{{ empleado.parroquia.lugar.lugar.id }}"]').attr("selected", true);
+                    $('#provincia').change(function () {
+                        $.get('/configuracion/lugar/' + $("#provincia").val() + "/", function (data1) {
+                            ciud = '<select  style="border-radius: 5px" class="form-control" name="ciudad" id="ciudad">' + data1 + '</select>';
+                            $("#lugarciudad").html(ciud);
+                            $('#ciudad option[value="{{ empleado.parroquia.lugar.id }}"]').attr("selected", true);
+                            $('#ciudad').change(function () {
+                                $.get('/configuracion/lugar/' + $(this).val() + "/", function (data2) {
+                                    parr = '<select  style="border-radius: 5px" class="form-control" name="parroquia" id="parroquia">' + data2 + '</select>';
+                                    $("#lugarparroquia").html(parr);
+                                    $('#parroquia option[value="{{ empleado.parroquia.id }}"]').attr("selected", true);
+                                });
+                            }).change();
+                        });
+                    }).change();
+                });
+            }).change();
+        }
+    })
+  </script>
+    <script>
+    if ("{{ empleado.sexo }}" == "M"){
+         $('#sexo option[value="M"]').attr("selected", true);
+    }else{
+        $('#sexo option[value="F"]').attr("selected", true);
+    }
+    </script>
+{% endblock %}
+

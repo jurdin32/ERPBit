@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '2712201801070388669700120010010000000600000000014',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '45',
+                            'mensaje': 'ERROR SECUENCIAL REGISTRADO',
+                            'informacionAdicional': None,
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+<div class="col-md-12 col-sm-12 col-xs-12" id="">
+    <div style="border-radius: 5px" class="x_panel">
+        <div class="x_content">
+            <table id="tablaReportes" class="table table-bordered table-striped dataTables_scroll">
+                <thead style="background-color: #5A738E;color: whitesmoke">
+                <th>USUARIO</th>
+                <th>ESTADO</th>
+                <th style="text-align: center">Nº DOCUMENTO</th>
+                <th style="text-align: center">TIPO DOCUMENTO</th>
+                <th>PROVEEDOR</th>
+                <th style="text-align: right">SUB 0%</th>
+                <th  style="text-align: right">SUB 12%</th>
+                <th  style="text-align: right">SUBTOTAL%</th>
+                <th style="text-align: right">IVA</th>
+                <th style="text-align: right">TOTAL</th>
+                <th style="text-align: center">FECHA EMISON</th>
+                </thead>
+                <tbody>
+                    {% for documento in retenciones %}
+                        <tr>
+                        <td>{{ documento.usuario.usuario }}</td>
+                        <td>{% if documento.estado == "AUTORIZADO" or documento.estado == "ANULADO" %}{{ documento.estado }}{% else %}NO AUTORIZADO{% endif %}</td>
+                            <td style="text-align: center">{{ documento.secuencial }}</td>
+                            <td style="text-align: center">{{ documento.tipo }}</td>
+                            <td>{% if documento.proveedor.razonSocial %}
+                                {{ documento.proveedor.razonSocial }}
+                                {% else %}
+                                {{ documento.proveedor.razonSocial }}
+                            {% endif %}
+                             </td>
+                            <td style="text-align: right">{{ documento.compra.subtotal_0 }}</td>
+                            <td style="text-align: right">{{ documento.compra.subtotal_iva}}</td>
+                            <td style="text-align: right">{{ documento.compra.subtotal }}</td>
+                            <td style="text-align: right">{{ documento.compra.iva }}</td>
+                            <td style="text-align: right">{{ documento.compra.total }}</td>
+                            <td style="text-align: center">{{ documento.fecha }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    Tablas("#tablaReportes");
+</script>

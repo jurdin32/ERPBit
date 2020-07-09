@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Transporte{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Transporte
+                                <small>Listado de Vehicuilos</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <div class="x_content">
+                            <a class="btn bg-blue" href="{% url 'registroVehiculo' %}"><i class="fa fa-bus"></i>
+                                Agregar Vehiculo</a>
+                            <a class="btn bg-green"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+
+                        </div>
+                        <br/><br/><br/><br/>
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                            <table id="tablaVehiculos" class="table table-bordered table-striped dataTables_scroll">
+                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                <tr>
+                                    <th>PLACA</th>
+                                    <th>MODELO</th>
+                                    <th>MARCA</th>
+                                    <th>MATRICULA</th>
+                                    <th>CONDUCTOR</th>
+                                    <th>EMPRESA TRANSPORTE</th>
+                                    <th style="text-align: center">ESTADO</th>
+                                    <th style="text-align: center; width: 100px">OPCIONES</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                    {% for vehiculo in vehiculos %}
+                                        <tr>
+                                            <td>{{ vehiculo.placa }}</td>
+                                            <td>{{ vehiculo.modelo }}</td>
+                                            <td>{{ vehiculo.marca }}</td>
+                                            <td>{{ vehiculo.matricula }}</td>
+                                            <td>{{ vehiculo.conductor.nombre }}</td>
+                                            <td>{{ vehiculo.conductor.empresaTrans.razonSocial }}</td>
+
+                                            <td style="text-align: center">
+                                                {% if vehiculo.estado == 1 %}
+                                                    <span class="glyphicon glyphicon-ok-sign text-success"
+                                                          style="font-size:20px;"></span>
+                                                {% else %}
+                                                    <span class="glyphicon glyphicon-remove-sign text-danger"
+                                                          style="font-size:20px"></span>
+                                                {% endif %}
+                                            </td>
+
+                                            <td style="text-align: center">
+                                                <a href="/transporte/editarVehiculo/{{ vehiculo.id }}/"
+                                                   class="btn bg-orange btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                                                {% if vehiculo.estado %}
+                                                    <a href="/transporte/deleteVehiculo/{{ vehiculo.id }}/"
+                                                       class="btn bg-red btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+{% block scripts %}
+     <script>
+        Tablas("#tablaVehiculos");
+    </script>
+{% endblock scripts %}

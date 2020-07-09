@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Cartera {% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Cartera »
+                                <small>Listado de Empleados en la Insitución</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div id="lista">
+                                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                                <ul>
+                                    {% for usuario in usuarios %}
+                                        <li><button onclick="respuesta({{ usuario.usuario.id }})">{{ usuario }}</button></li>
+                                    {% endfor %}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script>
+    function respuesta(usuarioId){
+        $.get("/chat/hilos/19/",{usuario:usuarioId,msj:$("#mensaje").val()},function (data) {
+            console.log(data.creado)
+        })
+    }
+    </script>
+{% endblock %}
+    <main role="main">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-md-9 mx-auto mb-5">
+                    <div class="row">
+                        <!-- Hilos de conversación -->
+                        <div class="col-md-4">
+                            <!-- Recorremos los Threads y sólo mostramos los que tienen como mínimo 1 mensaje -->
+                            {% for thread in request.user.threads.all %}
+                                {% if thread.messages.all|length > 0 %}
+                                    <div class="mb-3">
+                                        <!-- Recorremos los miembros del hilo menos el propio request.user -->
+                                        {% for user in thread.users.all %}
+                                            {% if user != request.user %}
+                                                <!-- Mostramos el avatar del miembro -->
+                                                {% if user.profile.avatar %}
+                                                    <img src="{{ user.profile.avatar.url }}" class="avatar">
+                                                {% else %}
+                                                    <img src="{% static 'registration/img/no-avatar.jpg' %}"
+                                                         class="avatar">
+                                                {% endif %}
+                                                <!-- Mostramos la información del miembro -->
+                                                <div>
+                                                    {#                        <a href="{% url 'messenger:detail' thread.pk %}">{{user}}</a><br>#}
+                                                    <small><i>Hace {{ thread.messages.last.created|timesince }}</i>
+                                                    </small>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <!-- Hilos de conversación -->
+                        <div class="col-md-8">
+                            <p><i>Selecciona un hilo de conversación de tu panel izquierdo.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>

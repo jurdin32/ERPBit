@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>2401202001070454853600120010010000008720000000013</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000872</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>24/01/2020</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>05</tipoIdentificacionComprador><razonSocialComprador>PATRI ABAD  </razonSocialComprador><identificacionComprador>0704482926001</identificacionComprador><direccionComprador>VIA LIMON Y 9NA NORTE</direccionComprador><totalSinImpuestos>250.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>250.00</baseImponible><valor>30.00</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>280.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1365</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1120'</codigoAuxiliar>
+                      <descripcion>b'IMPRESORA BROTHER T710W'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>250.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>250.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>250.00</baseImponible>
+                <valor>30.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

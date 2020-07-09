@@ -1,0 +1,409 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Registro Rol de Pago</h3>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+              <br/> <br/>
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                      <h2><a href="{% url 'rolPagos' %}">Rol de Pagos »</a><small>Datos del rol</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left input_mask">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nº Documento <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-paste form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Fecha Emision <span class="required">*</span></label>
+                        <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" type="date" class="form-control has-feedback-left col-md-7 col-xs-12">
+                          <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Periodo Rol<span class="required">*</span></label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="form-control">
+                            <option>Seleccione</option>
+                            <option>ENERO</option>
+                            <option>FEBRERO</option>
+                            <option>MARZO</option>
+                            <option>ABRIL</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Empresa <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-home form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Departamento <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-th-large form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Fecha Pago <span class="required">*</span></label>
+                        <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" type="date" class="form-control has-feedback-left col-md-7 col-xs-12">
+                          <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Forma Pago <span class="required">*</span></label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="form-control ">
+                            <option>Seleccione</option>
+                            <option>Efectivo</option>
+                            <option>Transferencia</option>
+                            <option>Cheque</option>
+                          </select>
+
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Observaciones<span class="required">*</span></label>
+                        <div style="border-radius: 5px " class="col-md-9 col-sm-9 col-xs-12">
+                            <textarea style="border-radius: 5px; height: 70px; resize: none" class="form-control "></textarea>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                      <h2><a href="{% url 'rolPagos' %}">Rol de Pagos »</a><small>Datos adicionales</small> </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left">
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input style="border-radius: 5px" type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input style="border-radius: 5px" type="text" class="form-control" id="inputSuccess3" placeholder="Apellido">
+                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input style="border-radius: 5px" type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Ruc/Cedula">
+                        <span class="fa fa-credit-card form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input style="border-radius: 5px" type="text" class="form-control" id="inputSuccess5" placeholder="Cargo">
+                        <span class="fa fa-th-large form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Dias Laborados <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-calendar-plus-o form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Horas Extras <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dashboard form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Dias Permiso <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-hand-paper-o form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Valor Anticipo <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+
+                        <br/> <br/> <br/>
+                        <div class="separator"></div>
+
+                        <div  class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                            <button type="button" class="btn bg-blue"><i class="glyphicon glyphicon-save"></i> Guardar</button>
+                            <button class="btn bg-orange" type="reset"><i class="fa fa-remove"></i> Limpiar</button>
+                        </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                      <h3>REMUNERACIONES</h3>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left input_mask">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">SALARIO <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">XIII SUELDO <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">XIV SUELDO <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">FONDOS RESERVA <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">VACACIONES <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">OTROS INGRESOS <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12" style="color: #d58512">TOTAL INGRESOS</label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                      <h3>DESCUENTOS</h3>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left input_mask">
+
+                      <div class="form-group">
+                        <label  class="control-label col-md-6 col-sm-3 col-xs-12">APORTE IEES <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">PRESTAMO IEES <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label  class="control-label col-md-6 col-sm-3 col-xs-12">IMPUESTO RENTA <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">ANTICIPO SUELDO <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">DESCUENTOS <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12">OTROS EGRESOS <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-6 col-sm-3 col-xs-12" style="color: #d58512">TOTAL EGRESOS</label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input readonly style="border-radius: 5px" class="form-control has-feedback-left col-md-7 col-xs-12" required="required" type="text">
+                          <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var prov="";
+            var ciud="";
+            var parr="";
+             $('#pais').change(function () {
+                 $.get('/configuracion/lugar/'+$(this).val()+"/",function (data) {
+                      prov='<select style="border-radius: 5px" class="form-control" name="provincia" id="provincia">' + data +'</select>';
+                     $("#provincias").html(prov);
+                     $('#provincia').change(function () {
+                        $.get('/configuracion/lugar/'+$(this).val()+"/",function (data1) {
+                             ciud='<select style="border-radius: 5px" class="form-control" name="ciudad" id="ciudad">' + data1 +'</select>';
+                             $("#lugarciudad").html(ciud);
+                             $('#ciudad').change(function () {
+                                $.get('/configuracion/lugar/'+$(this).val()+"/",function (data2) {
+                                    parr='<select style="border-radius: 5px" class="form-control" name="parroquia" id="parroquia">' + data2 +'</select>';
+                                    $("#lugarparroquia").html(parr);
+                                })
+                            }).change();
+                        })
+                     }).change();
+                })
+            }).change();
+        })
+
+        function removerItem() {
+            $("#provincia option").html("");
+        }
+
+    </script>
+
+{% endblock content %}
+

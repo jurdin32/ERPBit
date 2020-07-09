@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte Usuarios</title>
+    <style>
+        @page  {
+            size: A4 portrait;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+<img src="http://{{ reporte.ruta_imagenes }}/media/{{ reporte.encabezado }}" style="width: 100%;" alt="">
+<div style="text-align: center;font-size: 13px">
+    <p><strong>REPORTE DE USUARIOS REGISTRADOS</strong></p>
+</div>
+<div style="text-align: left;font-size: 13px">
+    <p><strong>Fecha reporte: </strong> {{ formatedDay }}</p>
+</div>
+<div id="pag">
+
+    <table style="border-radius: 15px;color: {{ reporte.color_texto }};">
+
+       <thead>
+         <tr style="padding: 3px; padding-top: 5px; border: 1px solid {{ reporte.color_lineas }}">
+             <th rowspan="2" style="text-align: left;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 150px;">USUARIO</th>
+             <th rowspan="2" style="text-align: left;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 150px;">NOMBRES</th>
+             <th rowspan="2" style="text-align: left;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 150px;">EMAIL</th>
+             <th rowspan="2" style="text-align: center;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 100px;">ESATDO</th>
+             <th colspan="2" style="text-align: center;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 100px;">NIVEL</th>
+         </tr>
+       </thead>
+        <tbody>
+        <tr style="padding: 3px; padding-top: 5px; border: 1px solid {{ configuracion.color_lineas }}">
+
+            <td style="text-align: center;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 100px;"><strong>Administrador</strong></th>
+            <td style="text-align: center;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 100px;"><strong>Staff</strong></th>
+        </tr>
+            {% for usuario in usuarios %}
+                <tr style="padding: 3px; padding-top: 5px; border: 1px solid {{ configuracion.color_lineas }}">
+                    <td style="text-align: left; color: {{ reporte.color_texto }}">{{ usuario.usuario.username }} </td>
+                    <td style="text-align: left; color: {{ reporte.color_texto }}">{{ usuario.usuario.get_full_name }} </td>
+                    <td style="text-align: left; color: {{ reporte.color_texto }}">{{ usuario.usuario.email }} </td>
+
+                    <td style="text-align: center; color: {{ reporte.color_texto }}">
+                        {% if usuario.is_active %}
+                            <strong>Activo</strong>
+                        {% else %}
+                            <strong>Inactivo</strong>
+                        {% endif %}
+                    </td>
+
+                    <td style="text-align: center; color: {{ reporte.color_texto }}">
+                        {% if usuario.is_superuser %}
+                            <strong>Activo</strong>
+                        {% else %}
+                            <strong>Inactivo</strong>
+                        {% endif %}
+                    </td>
+
+                    <td style="text-align: center; color: {{ reporte.color_texto }}">
+                        {% if usuario.is_staff %}
+                             <strong>Activo</strong>
+                        {% else %}
+                            <strong>Inactivo</strong>
+                        {% endif %}
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,465 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% load customTalentoHumano %}
+    <div class="right_col" role="main">
+        <div class="x_title">
+            <h2><a href="{% url 'rolPagos' %}">Rol de Pagos</a> »
+                <small><strong>Configuración General:</strong></small>
+                <small style="color: #d58512">{{ empleado.nombre|upper }} {{ empleado.apellido|upper }} »</small>
+                <small>{{ empleado.departamento.nombre }}</small>
+            </h2>
+            <ul class="nav navbar-right panel_toolbox">
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>SUELDO</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-horizontal form-label-left input_mask">
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">SUELDO ACTUAL<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" value="{{ sueldo.sueldo|floatformat:2  }}"
+                                               class="form-control has-feedback-left col-md-7 col-xs-12"
+                                               required="required" readonly
+                                               type="text" name="sueldo" id="sueldo">
+                                        <span class="fa fa-dollar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">DIAS TRABAJADOS<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" value="{{ sueldo.diasTrabajados }}"
+                                               class="form-control has-feedback-left col-md-7 col-xs-12"
+                                               required="required" readonly
+                                               type="text" name="diasTrabajados" id="diasTrabajados">
+                                        <span class="fa fa-calendar-check-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">HORAS DIARIAS<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" value="{{ sueldo.horasdiarias }}"
+                                               class="form-control has-feedback-left col-md-7 col-xs-12"
+                                               required="required" readonly
+                                               type="text" name="horasdiarias" id="horasdiarias">
+                                        <span class="fa fa-clock-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">TOTAL DE HORAS EN EL PERIODO<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" value="{{ sueldo.totalHoras }}"
+                                               class="form-control has-feedback-left col-md-7 col-xs-12"
+                                               required="required" readonly
+                                               type="text" name="totalhoras" id="totalhoras">
+                                        <span class="fa fa-clock-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">VALOR DE HORA DE TRABAJO<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" value="{{ sueldo.valor_hora }}"
+                                               class="form-control has-feedback-left col-md-7 col-xs-12"
+                                               required="required" readonly
+                                               type="text" name="valorhora" id="valorhora">
+                                        <span class="fa fa-dollar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">CON BENEFICIOS<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" value="{% if sueldo.beneficio %}SI{% else %}NO{% endif %}"
+                                             class="form-control has-feedback-left col-md-7 col-xs-12"
+                                               required="required" readonly
+                                               type="text" name="valorhora" id="valorhora">
+                                        <span class="fa fa-yelp form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">REMUNERACIÓN BÁSICA UNIFICADA<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" value="{{ sueldo.annio.sueldoBasico|floatformat:2  }}"
+                                               class="form-control has-feedback-left col-md-7 col-xs-12"
+                                               required="required" readonly
+                                               type="text" name="sbu" id="sbu">
+                                        <span class="fa fa-dollar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">AÑO DE AFECTACIÓN<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" value="{{ sueldo.annio.anio }}"
+                                               class="form-control has-feedback-left col-md-7 col-xs-12"
+                                               required="required" readonly
+                                               type="text" name="annio" id="annio">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>INGRESOS</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-horizontal form-label-left input_mask">
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">MES A LÍQUIDAR<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" name="periodo" id="periodo" class="form-control ">
+                                            <option value="01">Enero</option>
+                                            <option value="02">Febrero</option>
+                                            <option value="03">Marzo</option>
+                                            <option value="04">Abril</option>
+                                            <option value="05">Mayo</option>
+                                            <option value="06">Junio</option>
+                                            <option value="07">Julio</option>
+                                            <option value="08">Agosto</option>
+                                            <option value="09">Septiembre</option>
+                                            <option value="10">Octubre</option>
+                                            <option value="11">Noviembre</option>
+                                            <option value="12">Diciembre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">HORAS TRABAJADAS<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" onkeyup="calcularDias()"
+                                               class="form-control has-feedback-left has-feedback-right col-md-7 col-xs-12"
+                                               required="required" value="0.00"
+                                               type="text" name="horastrabajadas" id="horastrabajadas">
+                                        <span class="fa fa-clock-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                        <span class="fa fa-calculator form-control-feedback right"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12">DIAS LABORADOS<span
+                                            class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" onkeyup="calcularHoras()"
+                                               class="form-control has-feedback-left has-feedback-right col-md-7 col-xs-12"
+                                               required="required" value="0.00"
+                                               type="text" name="diaslaborados" id="diaslaborados">
+                                        <span class="fa fa-calendar-check-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                        <span class="fa fa-calculator form-control-feedback right"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                {% for campo in campos %}
+                                    {% if campo.tipo == 'I' and campo.estado %}
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 col-sm-3 col-xs-12">{{ campo.nombre }}<span
+                                                    class="required">:</span></label>
+                                            <div class="col-md-6 col-sm-9 col-xs-12">
+                                                <input style="border-radius: 5px; text-align: right"
+                                                       class="form-control has-feedback-left has-feedback-right col-md-7 col-xs-12"
+                                                       required="required" value="0.00" onkeyup="sumaIng('totalingresos','I')"
+                                                        {{ campo.atributo }}
+                                                       type="text" name="{{ campo.campo }}" id="{{ campo.campo }}">
+                                                <span class="fa fa-plus form-control-feedback left"
+                                                      aria-hidden="true"></span>
+                                                <span class="fa fa-dollar form-control-feedback right"
+                                                      aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12" style="color: #d58512">TOTAL
+                                        DE INGRESOS<span
+                                                class="required">:</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px; text-align: right"
+                                               class="form-control has-feedback-left has-feedback-right col-md-7 col-xs-12"
+                                               required="required" type="text" name="totalingresos" id="totalingresos">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                        <span class="fa fa-calculator form-control-feedback right" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>EGRESOS</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-horizontal form-label-left input_mask">
+                                {% for campo in campos %}
+                                    {% if campo.tipo == 'E' and campo.estado %}
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 col-sm-3 col-xs-12">{{ campo.nombre }}
+                                                <span
+                                                        class="required">:</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-9 col-xs-12">
+                                                <input style="border-radius: 5px; text-align: right"
+                                                       class="form-control has-feedback-left has-feedback-right col-md-7 col-xs-12 "
+                                                       onkeyup="sumaIng('totalegresos','E')"
+                                                       required="required" name="{{ campo.campo }}" {{ campo.atributo }}
+                                                       id="{{ campo.campo }}" type="text" value="0.00">
+                                                <span class="fa fa-minus form-control-feedback left"
+                                                      aria-hidden="true"></span>
+                                                <span class="fa fa-dollar form-control-feedback right"
+                                                      aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="form-group">
+                                    <label class="control-label col-md-6 col-sm-3 col-xs-12" style="color: #d58512">TOTAL
+                                        EGRESOS</label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px; text-align: right" value="0.00"
+                                               class="form-control has-feedback-left has-feedback-right col-md-7 col-xs-12"
+                                               required="required" type="text" name="totalegresos" id="totalegresos">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                        <span class="fa fa-calculator form-control-feedback right" aria-hidden="true"></span>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="ln_solid"></div>
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: center">
+                                        <label for="" style="font-size: 20px">TOTAL A CANCELAR </label><br><input
+                                            readonly type="text" id="total" name="total"
+                                            style='text-align: center; font-size: 20px;border:none;color: darkred;font-weight: bold'
+                                            value="$ 400.00">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn bg-blue"><i class="fa fa-save"></i> Registrar</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    {% if remuneraciones %}
+            <div class="row">
+                <div class="col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>DETALLES GENERALES</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="x_content">
+                            <div class="table-responsive">
+                                <table id="dtVerticalScrollExample" class="table table-bordered table-striped table-sm"
+                                       cellspacing="0" width="100%" style="text-align: center">
+                                    <thead style="background-color: #5A738E;color: whitesmoke">
+                                    <th style="text-align: center">NO.</th>
+                                    <th style="text-align: center">PERÍODO</th>
+                                    <th style="text-align: center">REM.</th>
+                                    <th style="text-align: center">XIII</th>
+                                    <th style="text-align: center">XIV</th>
+                                    <th style="text-align: center">F.R.</th>
+                                    <th style="text-align: center">VAC.</th>
+                                    <th style="text-align: center">OTROS</th>
+                                    <th>EXT.</th>
+                                    <th style="text-align: center">INGRESOS</th>
+                                    <th style="text-align: center">A. IESS</th>
+                                    <th style="text-align: center">P. IESS</th>
+                                    <th style="text-align: center">I.R.</th>
+                                    <th style="text-align: center">IECE</th>
+                                    <th style="text-align: center">ANT.</th>
+                                    <th style="text-align: center">MULTAS</th>
+                                    <th style="text-align: center">DES.</th>
+                                    <th style="text-align: center">OTROS</th>
+                                    <th style="text-align: center">EGRESOS</th>
+                                    <th style="text-align: center">TOTAL</th>
+                                    <th style="text-align: center" colspan="2">OPCIONES</th>
+                                    </thead>
+                                    <tbody>
+                                    {% for remuneracion in remuneraciones %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ remuneracion.periodo }}</td>
+                                            <td class="alert-success">{{ remuneracion.sueldo.sueldo|floatformat:2 }}</td>
+                                            <td class="alert-success">{{ remuneracion.xiiisueldo|floatformat:2  }}</td>
+                                            <td class="alert-success">{{ remuneracion.xivsueldo|floatformat:2  }}</td>
+                                            <td class="alert-success">{{ remuneracion.fondosreserva|floatformat:2  }}</td>
+                                            <td class="alert-success">{{ remuneracion.vacaciones|floatformat:2  }}</td>
+                                            <td class="alert-success">{{ remuneracion.otrosingresos|floatformat:2  }}</td>
+                                            <td class="alert-success">{{ remuneracion.horasextras|floatformat:2  }}</td>
+                                            <td class="alert-danger">{{ remuneracion.totalIngresos|floatformat:2  }}</td>
+                                            <td class="alert-warning">{{ remuneracion.aporteiess|floatformat:2  }}</td>
+                                            <td class="alert-warning">{{ remuneracion.prestamosiess|floatformat:2  }}</td>
+                                            <td class="alert-warning">{{ remuneracion.impuestoalarenta|floatformat:2  }}</td>
+                                            <td class="alert-warning">{{ remuneracion.iece|floatformat:2  }}</td>
+                                            <td class="alert-warning">{{ remuneracion.anticiposueldo|floatformat:2  }}</td>
+                                            <td class="alert-warning">{{ remuneracion.multas|floatformat:2  }}</td>
+                                            <td class="alert-warning">{{ remuneracion.descuento|floatformat:2  }}</td>
+                                            <td class="alert-warning">{{ remuneracion.otrosegresos|floatformat:2  }}</td>
+                                            <td class="alert-danger">{{ remuneracion.totalEgresos|floatformat:2  }}</td>
+                                            <td class="alert-info">{{ remuneracion.total|floatformat:2  }}</td>
+                                            <td><a class="text-info" target="_blank"
+                                                   href="/telento_humano/rolPagos/print/{{ remuneracion.id }}/"><span
+                                                    class="glyphicon glyphicon-print"></span></a></td>
+                                            <td><a href="/telento_humano/rolPagos/eliminar/{{ remuneracion.id }}/{{ empleado.id }}/" class="text-danger"><span class="glyphicon glyphicon-trash"></span></a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("#periodo option[value={{ mes }}]").attr('selected',true);
+        var sueldoActual=parseFloat($("#sueldo").val().replace(",", "."))
+        var diasAtrabajar=parseFloat($("#diasTrabajados").val().replace(",", "."))
+        var horasPeriodo=0.00;
+        var valorHora=parseFloat($('#valorhora').val().replace(",", "."))
+        var sbu=parseFloat($("#sbu").val().replace(",", "."))
+        var anio=parseFloat($("#annio").val())
+        var horastrabajadas=0.00;
+        var remuneracionPeriodo=0.00;
+        var sumaIngreso=0.00;
+
+        var horasDiarias=0.00;
+        var diasTrabajados=0.00;
+        $("#horastrabajadas").val($('#totalhoras').val().replace(",", "."))
+        $("#diaslaborados").val($('#diasTrabajados').val().replace(",", "."))
+        Ingresos('totalingresos','I')
+        Ingresos('totalegresos','E')
+        function calcularHoras()
+        {
+            horastrabajadas=horasDiarias=diasTrabajados=sumaIngreso=0.00;
+            diasTrabajados=parseFloat($('#diaslaborados').val().replace(",", "."))
+            horasDiarias= parseFloat($('#horasdiarias').val().replace(",", "."))
+            horastrabajadas=diasTrabajados*horasDiarias;
+            $("#horastrabajadas").val(horastrabajadas)
+            Ingresos('totalingresos','I')
+        }
+        function calcularDias()
+        {
+            diasTrabajados=horasDiarias=horasPeriodo=sumaIngreso=0.00;
+            horasPeriodo=parseFloat($('#horastrabajadas').val().replace(",", "."))
+            horasDiarias=parseFloat($('#horasdiarias').val().replace(",", "."))
+            diasTrabajados=horasPeriodo/horasDiarias
+            $("#diaslaborados").val(diasTrabajados)
+            Ingresos('totalingresos','I')
+        }
+
+        function Ingresos(campo,tipo) {
+            remuneracionPeriodo =horastrabajadas =sumaIngreso=0.00;
+            {% for exp in campos %}
+                if('{{ exp.tipo  }}' == tipo) {
+                {% if sueldo.beneficio %}
+                    horastrabajadas = parseFloat($("#horastrabajadas").val().replace(",", '.'));
+                    remuneracionPeriodo = parseFloat($("#remuneracionperiodo").val().replace(",", '.'));
+                    $("#" + '{{ exp.campo }}').val(eval('{{ exp.formula }}').toFixed({{ exp.decimales }}));
+                    sumaIngreso+=eval('{{ exp.formula }}');
+                {% else %}
+                    {% if exp.campo == 'remuneracionperiodo' %}
+                        horastrabajadas = parseFloat($("#horastrabajadas").val().replace(",", '.'));
+                        remuneracionPeriodo = parseFloat($("#remuneracionperiodo").val().replace(",", '.'));
+                        $("#" + '{{ exp.campo }}').val(eval('{{ exp.formula }}').toFixed({{ exp.decimales }}));
+                        sumaIngreso+=eval('{{ exp.formula }}');
+                    {% endif %}
+                    {#$("#remuneracionperiodo").val(sueldoActual)#}
+                    {#sumaIng(campo,tipo)#}
+                {% endif %}
+                }
+                $("#"+campo).val(sumaIngreso.toFixed(2));
+            {% endfor %}
+            $("#total").val((parseFloat($("#totalingresos").val().replace(",", '.'))-parseFloat($("#totalegresos").val().replace(",", '.'))).toFixed(2))
+        }
+        function sumaIng(campo,tipo){
+            sumaIngreso=0.00;
+            var fondosdereserva ,otrosingresos ,ingresoporhorasextras ,vacaciones ,xiiisueldo, remuneracionperiodo,xivsueldo =0.00
+            {% for exp in campos %}
+                if('{{ exp.tipo  }}' == tipo) {
+                    sumaIngreso+=parseFloat($("#" + '{{ exp.campo }}').val().replace(",","."));
+                    console.log("campo: "+"{{ exp.campo }}"+" valor: "+$("#" + '{{ exp.campo }}').val())
+                }
+                $("#"+campo).val(sumaIngreso.toFixed(2));
+            {% endfor %}
+            $("#total").val((parseFloat($("#totalingresos").val().replace(",", '.'))-parseFloat($("#totalegresos").val().replace(",", '.'))).toFixed(2))
+        }
+    </script>
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        Tablas("#dtVerticalScrollExample");
+    </script>
+{% endblock %}

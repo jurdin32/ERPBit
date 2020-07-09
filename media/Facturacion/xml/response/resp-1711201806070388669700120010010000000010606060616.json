@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': 'N/A',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '35',
+                            'mensaje': 'ARCHIVO NO CUMPLE ESTRUCTURA XML',
+                            'informacionAdicional': 'Se encontró el siguiente error en la estructura del comprobante: 0 no corresponde a ningun tipo de ambiente.',
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

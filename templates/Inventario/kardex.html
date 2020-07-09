@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Inventario{% endblock title %}
+{% block content %}
+{% load customTagsInventario %}
+    <div class="right_col" role="main">
+          <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                  <div class="x_title">
+                    <h2>Inventario <small>Productos</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+
+                    <div class="x_content">
+                        <a href="{% url 'existenciasIngresosEgresos' %}" class="btn bg-blue"><i class="fa fa-shopping-cart"></i> Agregar Producto</a>
+                        <div class="pagination">
+                            <span class="step-links">
+                                {% if productos.has_previous %}
+                                    <a class="btn bg-blue" href="?page=1">&laquo; Primera</a>
+                                    <a class="btn bg-blue" href="?page={{ productos.previous_page_number }}">Anterior</a>
+                                {% endif %}
+                                {% if productos.has_next %}
+                                    <a class="btn bg-green" href="?page={{ productos.next_page_number }}">Siguiente </a>
+                                    <a class="btn bg-blue" href="?page={{ productos.paginator.num_pages }}">Última &raquo;</a>
+                                {% endif %}
+                                <span class="current">
+                                    Página: {{ productos.number }}
+                                </span>
+                            </span>
+                    </div>
+                    
+                  </div>
+                    <br/><br/>
+                    <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                       <table id="tablaKardex" class="table table-bordered table-striped table-responsive">
+                      <thead style="background-color: #5A738E;color: whitesmoke">
+                          <th>CODIGO</th>
+                          <th>TIPO</th>
+                          <th>NOMBRE</th>
+                          <th>PROVEDOR</th>
+                          <th>BODEGA</th>
+                          <th style="text-align: center">INGRESO</th>
+                          <th style="text-align: center">EGRESO</th>
+                          <th style="text-align: center">TOTAL</th>
+                          <th style="text-align: center">ULTIMA MODIFICACION</th>
+                      </thead>
+
+
+                      <tbody>
+                      {% for producto in productos %}
+                      <tr>
+                          <td style="text-align: center">{{ producto.producto.cod_referencia }}</td>
+                          <td>{{ producto.producto.tipo }}</td>
+                          <td>{{ producto.producto.nombre }}</td>
+                        <td>{{ producto.proveedor }}</td>
+                          {% if  producto.producto.bodega %}
+                            <td>{{ producto.producto.bodega }}</td>
+                          {% else %}
+                              <td>NO ASIGNADO</td>
+                          {% endif %}
+
+                          <td style="text-align: center"><a class="badge badge-danger" href="/inventario/exitenciasr/ingresos/{{producto.id}}">{% CalcularIngresos producto.id %}</a></td>
+                          <td style="text-align: center"><a class="badge badge-success" href="/inventario/exitenciasr/egresos/{{producto.id}}">{% CalcularEngresos producto.id %}</a></td>
+                          <td style="text-align: center"><a class="badge badge-success" href="/inventario/exitenciasr/total/{{producto.id}}">{% CalcularStock producto.id %}</a></td>
+                          <td style="text-align: center">{% UltimaModificacionInventario producto.id %}</td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    </div>
+
+{% endblock %}
+{% block scripts %}
+    <script>
+        Tablas("#tablaKardex");
+    </script>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Contabilidad »
+                            <small>Porcentajes de Retencion</small>
+                        </h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="col-lg-12 table-responsive">
+                            <a class="btn bg-blue" id="regis" data-toggle="modal" href="#registro"><i
+                                    class="fa fa-bookmark-o"></i> Nueva Impuesto</a>
+
+                            <table id="Tabla" class="table table-bordered table-striped">
+                                <thead style="background: #2A3F54; color: white; vertical-align: middle">
+                                <th style="text-align: center; width: 100px;vertical-align: middle">NO.</th>
+                                <th style="text-align: center; width: 150px;vertical-align: middle">CODIGO TRIBUTARIO
+                                </th>
+                                <th style="vertical-align: middle">NOMBRE</th>
+                                <th style="text-align: center; width: 100px;vertical-align: middle">AGREGAR TARIFAS</th>
+                                <th style="text-align: center; width: 100px;vertical-align: middle">CONFIGURACION</th>
+                                </thead>
+                                <tbody>
+                                {% for impuesto in impuestos %}
+                                    <tr>
+                                        <td style="text-align: center">{{ forloop.counter }}</td>
+                                        <td style="text-align: center">{{ impuesto.codigo }}</td>
+                                        <td>{{ impuesto.nombre }}</td>
+                                        <td style="text-align: center"><a href="" class="btn btn-primary" style="padding: 2px; padding-right: 5px; padding-left: 5px"><i class="fa fa-plus-square-o"></i></a></td>
+                                        <td style="text-align: center">
+                                            <a data-toggle="modal" data-id="{{ impuesto.id }}" data-nombre="{{ impuesto.nombre }}" data-codigo="{{ impuesto.codigo }}" href="#registro" class="btn btn-warning registro"style="padding: 2px; padding-right: 5px; padding-left: 5px"><i class="fa fa-edit"></i></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#    modal#}
+    <div class="modal fadeInLeft" id="registro" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">REGISTRO DE IMPUESTOS</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form role="form" id="formulario" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="id" id="id">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <label>CODIGO DEL IMPUESTO</label>
+                            <input required style="border-radius: 5px" type="number" class="form-control" name="codigo" id="codigo"/>
+                        </div>
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <label>NOMBRE DE LA CUENTA</label>
+                            <input required style="border-radius: 5px" type="text" class="form-control" name="nombre"
+                                   id="nombre"/>
+                        </div>
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+                            <button type="submit" class="btn btn-info"><i class="fa fa-save"></i> REGISTRAR</button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal"><i
+                                    class="fa fa-sign-in"></i> SALIR
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script>
+        Tablas("#Tabla")
+    </script>
+    <script>
+    $(".registro").click(function () {
+        $("#id").val($(this).data("id"))
+        $("#codigo").val($(this).data("codigo"))
+        $("#nombre").val($(this).data("nombre"))
+    })
+    </script>
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Datos Electronicos{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Datos Electronicos
+                                <small>Registo de Retenciones</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <div class="x_content">
+                            <a class="btn bg-blue" href="/documentos_electronicos/registroRetenciones/0/"><i
+                                    class="fa fa-file-text-o "></i> Nueva Retencion</a>
+                        </div>
+
+                        <br/><br/> <br/><br/>
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                            <table id="tablaRetenciones" class="table table-bordered table-striped table-sm" cellspacing="0"
+                                   width="100%">
+                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                <th style="text-align: center">AMBIENTE</th>
+                                <th style="text-align: center">FECHA EMISION</th>
+                                <th style="text-align: center">IDENTIFICACION</th>
+                                <th>NOMBRE</th>
+                                <th style="text-align: center"># COMPROBANTE</th>
+                                <th style="text-align: center">TOTAL.</th>
+                                <th style="text-align: center">ESTATUS</th>
+                                <th style="text-align: center">DOCUMENTOS</th>
+                                </thead>
+
+
+                                <tbody>
+                                    {% for retencion in retenciones %}
+                                        <tr>
+                                            {% if retencion.ambiente == '1' %}
+                                                <td style="text-align: center; color: white" class="label-danger">PRUEBAS</td>
+                                            {% else %}
+                                                <td style="text-align: center; color: white" class="label-success">PRODUCCCION</td>
+                                            {% endif %}
+                                            <td style="text-align: center">{{ retencion.fecha|date:"d/m/Y" }}</td>
+                                            <td style="text-align: center">{{ retencion.proveedor.ruc }}</td>
+                                            <td>{{ retencion.proveedor.razonSocial }}</td>
+                                            <td style="text-align: center">{{ retencion.secuencial }}</td>
+                                            <td style="text-align: center">{{ retencion.valor_total|floatformat:2 }}</td>
+                                            {% if retencion.estado %}
+                                            <td style="text-align: center;" class="alert alert-info">{{ retencion.estado }}</td>
+                                            {% else %}
+                                                <td class="alert-danger autorizar" style="text-align: center"><a target="_blank" class="btn btn-danger" href="{% url 'guiRemisionJSon' retencion.id %}">NO AUTORIZADO</a></td>
+                                            {% endif %}
+                                            <td style="text-align: center; font-size: 20px">
+                                                <a class="text-info" target="_blank" href="{% url 'retencionRideSlug' retencion.id %}"><span class="fa fa-file-pdf-o"></span></a>
+                                                <a class="text-success" target="_blank" href="{% url 'retencionXML' retencion.id %}"><span class="fa fa-file-excel-o"></span></a>
+                                                <a class="text-primary" target="_blank" href="{% url 'guiRemisionJSon' retencion.id %}"><span class="fa fa-file-text-o"></span></a>
+                                            </td>
+                                        </tr>
+
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock content %}
+{% block scripts %}
+    <script>
+        $('.autorizar').click(function(){
+        setTimeout(function(){
+            window.location="/documentos_electronicos/retenciones/"
+        },2000)
+
+    })
+    </script>
+    <script>
+        Tablas("#tablaRetenciones");
+    </script>
+{% endblock scripts %}

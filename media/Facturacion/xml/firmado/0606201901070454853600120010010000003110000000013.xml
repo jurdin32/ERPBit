@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.0.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>0606201901070454853600120010010000003110000000013</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000311</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>06/06/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>  COMANDO DE APOYO LOGISTICO N.-1 EL ORO </razonSocialComprador><identificacionComprador>1768002240001</identificacionComprador><direccionComprador>ARIZAGA Y 7MA OESTE</direccionComprador><totalSinImpuestos>902.22</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <baseImponible>902.22</baseImponible>
+                    <valor>108.26</valor>
+                    </totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>1010.49</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>747</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0575'</codigoAuxiliar>
+                      <descripcion>b'AUDIFONOS -MANOS LIBRES'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>18.02</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>18.02</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>18.02</baseImponible>
+                <valor>2.16</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>746</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0574'</codigoAuxiliar>
+                      <descripcion>b'MODEM PROBADOR DE LINEAS'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>22.23</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>22.23</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>22.23</baseImponible>
+                <valor>2.67</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>753</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0581'</codigoAuxiliar>
+                      <descripcion>b'KIT DE HERRAMIENTAS '/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>22.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>44.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>44.00</baseImponible>
+                <valor>5.28</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>748</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0576'</codigoAuxiliar>
+                      <descripcion>b'MICROFONO PARA PARLANTE'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>28.37</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>56.74</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>56.74</baseImponible>
+                <valor>6.81</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>752</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0580'</codigoAuxiliar>
+                      <descripcion>b'UPS REGULADOR 8 TOMAS'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>4.00</cantidad>
+                      <precioUnitario>38.42</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>153.68</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>153.68</baseImponible>
+                <valor>18.44</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>745</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0573'</codigoAuxiliar>
+                      <descripcion>b'DISCO DURO EXTERNO 1TB'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>3.00</cantidad>
+                      <precioUnitario>89.12</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>267.36</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>267.36</baseImponible>
+                <valor>32.08</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>744</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0572'</codigoAuxiliar>
+                      <descripcion>b'SWITCH TP-LINK DE 8 PUERTOS'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>35.26</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>70.52</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>70.52</baseImponible>
+                <valor>8.46</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>751</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0579'</codigoAuxiliar>
+                      <descripcion>b'MOUSE USB'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>7.00</cantidad>
+                      <precioUnitario>7.01</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>49.07</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>49.07</baseImponible>
+                <valor>5.89</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>750</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0578'</codigoAuxiliar>
+                      <descripcion>b'TECLADO ALPHA-NUMERICO'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>5.00</cantidad>
+                      <precioUnitario>8.22</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>41.10</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>41.10</baseImponible>
+                <valor>4.93</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>749</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0577'</codigoAuxiliar>
+                      <descripcion>b'`PARLANTE PARA COMPUTADORA'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>16.89</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>33.78</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>33.78</baseImponible>
+                <valor>4.05</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>743</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0571'</codigoAuxiliar>
+                      <descripcion>b'ROUTER NANO STATION M2 2.4GHZ'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>72.86</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>145.72</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>145.72</baseImponible>
+                <valor>17.49</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature346656">
+<ds:SignedInfo Id="Signature-SignedInfo871370">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID791671" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature346656-SignedProperties550977">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>hrvbuT9RH5oRbp8jOczZi+W5+XE=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1726739">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>pnLamCI0XbBz8EM+4SxxAXZQr/s=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-290076" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>8cLWN4xcq7FlJ85+cNdUxFqAumQ=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue880917">
+KF4a2SWWva0XNl2RIOySbViVwyKe6eVRG5zDCGX7V3U2AAWfbTjE/IN/o4E89nKHGsgiUg4pYZQV
+4zx83+CIND0B4CYTFazUEjFgycijSteHp9xZwBwkAJ6efzA0cyaLZSXGJQG52CZpVEhJxGL9Go66
+b0M3gSfWgIy+wx+J3ROW2b5bsrMeOo3wJNzR9HdEzVjRBrvHOvCG5CZhTy2YvIVgUKfd30JotYGT
+c2YgQS8Yq8De7D1gOqMbso7/6rGmVR6EBrOI08Bi08QDULSwNwL96x+TwqDfPocqWD5KMnU8vBo3
+EJAzLhOgnj3DuCZ7mQNGKzX9Z4oo8ugNi3ICAA==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1726739">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJODCCByCgAwIBAgIEW134STANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE4MTIxMjE2MDg0NVoXDTIwMTIxMjE2Mzg0
+NVowgbQxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE4MBEGA1UEBRMKMDAwMDMzMjQ4NTAjBgNVBAMTHExFV0lTIFJPR0VSIEpB
+UkFNSUxMTyBBU0FOWkEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDOqd0tET4W2af6
+tH8yslxnbu2KjH6MMmWBTBNsHKxVyi7BE3Kfel4lBbOWMFGLyXPRyoD+J3qV5VGQecrL1yLMG+2Z
+g/pf9A2Mlhj46M/692I/9fEDa1LhocRZZVGQAndpY1SHGmF2NrSSr5ZDbiGcqNPJVMGv34+fQJuI
+1oU4Q6Uc56g3tBqP3K97WgSP33kjbcPNUdop89D4JDqZKFd01Ab6DGRBFm9ZFNwqR9mzPDeMnYVp
+ebk5FZ/sh7mHVmcii9XXQ4phaqdeefs2dSWmyDOcMteW/r8KQstZVTYD3mlgn32bcnix7GAdYjqb
+a/KDvOVoRnqmy95i/DI0xB5pAgMBAAGjggRhMIIEXTALBgNVHQ8EBAMCBSAwgZEGCCsGAQUFBwEB
+BIGEMIGBMD4GCCsGAQUFBzABhjJodHRwOi8vb2NzcC5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dl
+Yi9zdGF0dXMvb2NzcDA/BggrBgEFBQcwAYYzaHR0cDovL29jc3AxLmVjaS5iY2UuZWMvZWpiY2Ev
+cHVibGljd2ViL3N0YXR1cy9vY3NwMBoGCisGAQQBgqg7AwEEDBMKMDcwNDU0ODUzNjAbBgorBgEE
+AYKoOwMCBA0TC0xFV0lTIFJPR0VSMBkGCisGAQQBgqg7AwMECxMJSkFSQU1JTExPMBYGCisGAQQB
+gqg7AwQECBMGQVNBTlpBMDYGCisGAQQBgqg7AwcEKBMmT0xNRURPIEVOVFJFIFBPTUVSSU8gQ0FC
+UkVSQSBZIEpBTUJFTEkwGQYKKwYBBAGCqDsDCAQLEwkwNzI5NDM4NjEwGgYKKwYBBAGCqDsDCQQM
+EwpTYW50YSBSb3NhMBcGCisGAQQBgqg7AwwECRMHRUNVQURPUjAdBgorBgEEAYKoOwMLBA8TDTA3
+MDQ1NDg1MzYwMDEwHQYKKwYBBAGCqDsDMgQPEw0wNzA0NTQ4NTM2MDAxMCAGCisGAQQBgqg7AzME
+EhMQU09GVFdBUkUtQVJDSElWTzAdBgNVHREEFjAUgRJ2ZWV6ZV9AaG90bWFpbC5jb20wggHfBgNV
+HR8EggHWMIIB0jCCAc6gggHKoIIBxoaB1WxkYXA6Ly9iY2VxbGRhcHN1YnAxLmJjZS5lYy9jbj1D
+Ukw2NzYsY249QUMlMjBCQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGw9UVVJVE8sb3U9
+RU5USURBRCUyMERFJTIwQ0VSVElGSUNBQ0lPTiUyMERFJTIwSU5GT1JNQUNJT04tRUNJQkNFLG89
+QkFOQ08lMjBDRU5UUkFMJTIwREVMJTIwRUNVQURPUixjPUVDP2NlcnRpZmljYXRlUmV2b2NhdGlv
+bkxpc3Q/YmFzZYY0aHR0cDovL3d3dy5lY2kuYmNlLmVjL0NSTC9lY2lfYmNlX2VjX2NybGZpbGVj
+b21iLmNybKSBtTCBsjELMAkGA1UEBhMCRUMxIjAgBgNVBAoTGUJBTkNPIENFTlRSQUwgREVMIEVD
+VUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1F
+Q0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxBQyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VB
+RE9SMQ8wDQYDVQQDEwZDUkw2NzYwHwYDVR0jBBgwFoAUGPnw++YyHJlmOSrKi7JpfUknv84wHQYD
+VR0OBBYEFK8c71spdB2olg7rZfxJLeSK4ISjMAkGA1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsE
+VjguMQMCBLAwDQYJKoZIhvcNAQELBQADggIBAJtgDNjLlX2O9XXqVVpZGtR0lA4nMZRH7n9Dd3qk
+1iO/xo7XPAA86CcdT755hTJFTzu41y+ugioh8qXmExASuDyfKFQnOIB0vgcDbr9chNuoT+ShUvlV
+4fOHxXyYY+oRSBNid5eK/FFrEZNZVsOQbH2ug/39V3QE+y/Vkhen04Kn0/7n8FRBauWyeXRZA9b5
+R4afRpFnvQGS/zv9mOOtK43MXunUgS7RQagWObAgyr0xmSj5tJar2KempUmgLA7N/Bl9c+/kCeZy
+9WjnlxZn8ZRa9hfIBjE80o2Fp3GZrr2gcOHv8IT7MOplhaTnTOr5q3E9y8ZZkuYrMw+fH+Vvu7JP
+jCn92zQBDpjw2rP3bpTiTvBXtjm76Bs7UatamieiArv90UekdT7l3vNWX/LoVCmUzsoZCddmxAWe
+UDQzVSgBRYb/X896c9eqn3cfKxa+R1qb/EnE1XtuznK+r9pqVheJ7nCoJxM1DUPe9dGjBnJp6SHW
+ML6Vjh8Qbs1BQGVY3aziGi3uEPPdNmIF7Ue9cU8Ti6/V4b1E92RJZcEkPwfEKuSiueOqwRMdUMsd
+02QITGWpusRERkvA3sR6NGokH1JjNn2Aztnoi7gl3ecpssS34Ea1vPML1SVxWgbjBoAJ+coAMLjT
+dU0FT4oKUkXs2O75N0GKMzVXGIphA2dcl3y2
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+zqndLRE+Ftmn+rR/MrJcZ27tiox+jDJlgUwTbBysVcouwRNyn3peJQWzljBRi8lz0cqA/id6leVR
+kHnKy9cizBvtmYP6X/QNjJYY+OjP+vdiP/XxA2tS4aHEWWVRkAJ3aWNUhxphdja0kq+WQ24hnKjT
+yVTBr9+Pn0CbiNaFOEOlHOeoN7Qaj9yve1oEj995I23DzVHaKfPQ+CQ6mShXdNQG+gxkQRZvWRTc
+KkfZszw3jJ2FaXm5ORWf7Ie5h1ZnIovV10OKYWqnXnn7NnUlpsgznDLXlv6/CkLLWVU2A95pYJ99
+m3J4sexgHWI6m2vyg7zlaEZ6psveYvwyNMQeaQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature346656-Object414687"><etsi:QualifyingProperties Target="#Signature346656"><etsi:SignedProperties Id="Signature346656-SignedProperties550977"><etsi:SignedSignatureProperties><etsi:SigningTime>2019-06-14T13:10:18-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>ZqlbMhPhIOxTvl3gqxzc/QF58Sw=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1532885065</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-290076"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

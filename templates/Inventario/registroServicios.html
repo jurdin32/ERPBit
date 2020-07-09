@@ -1,0 +1,419 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Clientes{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Formulario Registro de Servicios</h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        {% if detalle %}
+        <table class="table table-bordered table-striped" style="text-align: center">
+                <thead style="background-color: #5A738E;color: whitesmoke">
+                    <th style="width: 120px; text-align: center">No. Registros</th>
+                    <th style="text-align: center">Producto</th>
+                    <th style="text-align: center">Proveedor</th>
+                    <th style="text-align: center">Precio Proveedor</th>
+                    <th style="text-align: center">Porcentaje</th>
+                    <th style="text-align: center">Recargo</th>
+                    <th style="text-align: center">Precio de Venta</th>
+                    <th style="width: 150px;text-align: center">Seleccionar</th>
+                </thead>
+                <tbody>
+                    {% for det in detalle %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ det.producto }}</td>
+                        <td>{{ det.proveedor }}</td>
+                        <td>{{ det.total }}</td>
+                        <td>{{ det.porcentajeGanancia }}</td>
+                        <td>{{ det.recargo }}</td>
+                        <td>{{ det.totalpvp }}</td>
+                        <td style="text-align: center">
+                            <a class="text-primary" href="/inventario/servicios/edit/{{ producto.id }}/{{ det.id }}/"> <span class="glyphicon glyphicon-ok"></span> Sel.</a>
+                            <a class="text-danger" href="/inventario/servicios/delete/{{ det.id }}/"> <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br/>
+        {% endif %}
+
+            <form method="POST" action="" class="form-horizontal form-label-left">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="{% url 'servicios' %}">Servicios »</a>
+                                    <small>Registro de Servicios</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br/>
+
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nombre<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" value="{{ producto.nombre }}"
+                                               class="form-control has-feedback-left" name="nombre">
+                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Categoría <span
+                                            class="required">*</span></label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" name="categoria" id="categoria" class="form-control">
+                                            {% for categoria in categorias %}
+                                                <option value="{{ categoria.id }}">{{ categoria.categoria }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Detalles del Servicio<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <textarea style="resize: none; border-radius: 5px" class="form-control" name="detalle" id="detalle" rows="10">{{ det.detalles }}</textarea>
+                                    </div>
+                                </div>
+                            
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-md-3 col-sm-3 col-xs-12 control-label">Estado <span
+                                            class="required">*</span></label>
+
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" class="flat" {% if producto.estado == True %}
+                                                       checked {% endif %}   name="estado" value="1"> Activo
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" {% if producto.estado == False %}
+                                                       checked {% endif %} class="flat" name="estado" value="2">
+                                                Inactivo
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a>Servicios »</a>
+                                    <small>Datos Adicionales</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br/>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Proveedor<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" name="proveedor" id="proveedor" class="form-control">
+                                            <option value="0">Sin Proveedor</option>
+                                            {% for proveedor in proveedores %}
+                                                <option value="{{ proveedor.id }}">{{ proveedor.nombreComercial }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Precio<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" onkeyup="valores()" onchange="valores()" value="{% if det.precioProveedor %}{{ det.precioProveedor }}{% else %}0.00{% endif %}" name="precio"
+                                               id="precio"
+                                               type="text" class="form-control has-feedback-left">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">% IVA<span
+                                            class="required">*</span></label>
+                                    <div  class="col-md-9 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" onchange="valores()" class="form-control" name="porcentajeiva" id="porcentajeiva">
+                                            {% for iva in ivas %}
+                                                {% if iva.porcentaje == 12 %}
+                                                    <option parametro="{{ iva.id }}" selected value="{{ iva.porcentaje }}">{{ iva.porcentaje }}% : {{ iva.detalle|upper }} </option>
+                                                    {% else %}
+                                                    <option parametro="{{ iva.id }}" value="{{ iva.porcentaje }}">{{ iva.porcentaje }}% : {{ iva.detalle|upper }} </option>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </select>
+                                        <input type="hidden" name="codigoIVA" id="codigoIVA">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">IVA<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="iva" readonly value="{{ det.iva }}" id="iva"
+                                               type="text"
+                                               class="form-control has-feedback-left">
+                                               <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">% ICE<span
+                                            class="required">*</span></label>
+                                <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                    <select style="border-radius: 5px" onchange="valores()" class="form-control" name="porcentajeice" id="porcentajeice">
+                                            {% for ice in ices %}
+                                                <option parametro="{{ ice.id }}" value="{{ ice.porcentaje }}">{{ ice.porcentaje }}% : {{ ice.detalle|upper }} </option>
+                                            {% endfor %}
+
+                                        </select>
+                                    <input type="hidden" name="codigoICE" id="codigoICE">
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">ICE<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="ice" readonly value="{{ det.ice }}" id="ice"
+                                               type="text"
+                                               class="form-control has-feedback-left">
+                                               <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">% irbpnr<span
+                                            class="required">*</span></label>
+                                    <div  class="col-md-9 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" onchange="valores()" class="form-control" name="porcentajeirbpnr" id="porcentajeirbpnr">
+                                            {% for irb in irbpnr %}
+                                                <option parametro="{{ irb.id }}" value="{{ irb.porcentaje }}">{{ irb.porcentaje }} % : {{ irb.detalle|upper }}</option>
+                                            {% endfor %}
+                                            
+                                        </select>
+                                        <input type="hidden" name="codigoIBRPNR" id="codigoIBRPNR">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">irbpnr<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="irbpnr" readonly value="{{ det.irbpnr }}" id="irbpnr"
+                                           type="text"
+                                           class="form-control has-feedback-left">
+                                           <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Total<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="total" readonly id="total" type="text"
+                                               value="{{ det.total }}"
+                                               class="form-control has-feedback-left">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a>Servicios »</a>
+                                    <small>Datos Adicionales</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br/>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">% Ganacia</label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="porcentaje" onkeyup="valores()"
+                                               onchange="valores()" id="porcentaje" type="text" value="{% if det.porcentajeGanancia >= 0 %}{{ det.porcentajeGanancia }}{% else %}10{% endif %}"
+                                               class="form-control has-feedback-left" min="0" max="100">
+                                        <span class="fa fa-percent form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">% Recargo</label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" onkeyup="valores()" onchange="valores()"
+                                               name="recargo" id="recargo" type="text" value="{% if det.recargo >= 0 %}{{ det.recargo }}{% else %}5{% endif %}" min="0" max="100"
+                                               class="form-control has-feedback-left">
+                                        <span class="fa fa-percent form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">PVP<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="nprecio" value="{{ det.pvp }}" readonly
+                                               id="nprecio" type="text"
+                                               class="form-control has-feedback-left">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">IVA<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="niva" value="{{ det.ivapvp }}" readonly id="niva"
+                                           type="text"
+                                           class="form-control has-feedback-left">
+                                           <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">ICE<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="nice" value="{{ det.icepvp }}" readonly id="nice"
+                                               type="text"
+                                               class="form-control has-feedback-left">
+                                               <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">IRBPNR<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="nibrpnr" value="{{ det.irbpnrpvp }}" readonly id="nibrpnr"
+                                               type="text"
+                                               class="form-control has-feedback-left">
+                                               <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">TOTAL<span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="ntotal" value="{{ det.totalpvp }}" readonly
+                                               id="ntotal" type="text"
+                                               class="form-control has-feedback-left">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
+                                <br>
+                                <div class="form-group">
+                                    <div style="text-align: center">
+                                        <button class="btn bg-blue" type="submit"><i class="glyphicon glyphicon-save"></i> Guardar </button>
+                                        <a class="btn bg-orange" href="{% url 'registroServicios' %}"><i class="fa fa-remove"></i> Limpiar</a>
+                                        <a class="btn bg-green" href="/inventario/servicios/edit/{{ producto.id }}/0/"><i class="fa fa-refresh"></i> Otro Proveedor</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
+{% block scripts %}
+    <script>
+        $('#categoria option[value="{{ producto.categoria.id }}"]').attr("selected", true);
+        $('#bodega option[value="{{ producto.bodega.id }}"]').attr("selected", true);
+        $('#proveedor option[value="{{ det.proveedor.id }}"]').attr("selected", true);
+        $('#marca option[value="{{ producto.marca.id }}"]').attr("selected", true);
+        $('#porcentajeiva option[value="{{ det.porcentajeIVA }}"]').attr("selected", true);
+        $('#porcentajeice option[value="{{ det.porcentajeICE }}"]').attr("selected", true);
+        $('#porcentajeirbpnr option[value="{{ det.porcentajeIRBPNR }}"]').attr("selected", true);
+
+        valor=$("#precio").val().replace(",", ".")
+        $("#precio").val(valor)
+
+        valores()
+
+        function valores() {
+            obj=$("#porcentajeiva")
+            code=$('option:selected', obj).attr('parametro')
+            $("#codigoIVA").val(code);
+
+            obj=$("#porcentajeice")
+            code=$('option:selected', obj).attr('parametro')
+            $("#codigoICE").val(code);
+
+            obj=$("#porcentajeirbpnr")
+            code=$('option:selected', obj).attr('parametro')
+            $("#codigoIBRPNR").val(code);
+
+            if ($('#precio').val().length > 0) {
+                var precio = parseFloat($('#precio').val());
+                var iva = (precio * parseFloat($("#porcentajeiva").val().replace(",",".")))/100;
+                var ice = (precio) * parseFloat($("#porcentajeice").val().replace(",","."))/100;
+                var irbpnr = (precio) * parseFloat($("#porcentajeirbpnr").val().replace(",","."))/100;
+
+                var total = iva + precio+ice+irbpnr;
+                $('#iva').val(iva.toFixed(4));
+                $('#ice').val(ice.toFixed(4));
+                $('#irbpnr').val(irbpnr.toFixed(4));
+                $('#total').val(total.toFixed(4));
+
+                var porcentaje = parseFloat($("#porcentaje").val().replace(",","."));
+                var recargo = parseFloat($("#recargo").val().replace(",","."));
+                var suma = porcentaje + recargo
+
+                var nprecio = (precio * (suma / 100)) + precio
+                var niva = nprecio * parseFloat($("#porcentajeiva").val().replace(",","."))/100;
+                var nice = nprecio * parseFloat($("#porcentajeice").val().replace(",","."))/100;
+                var nirbpnr = nprecio * parseFloat($("#porcentajeirbpnr").val().replace(",","."))/100;
+                var ntotal = nprecio + niva+nice+nirbpnr;
+
+                $('#nprecio').val(nprecio.toFixed(4));
+                $('#niva').val(niva.toFixed(4));
+                $('#nice').val(nice.toFixed(4));
+                $('#nibrpnr').val(nirbpnr.toFixed(4));
+                $('#ntotal').val(ntotal.toFixed(4));
+            }
+            else {
+                $('#iva').val("0.00");
+                $('#total').val("0.00");
+                $('#nprecio').val("0.00");
+                $('#niva').val("0.00");
+                $('#nice').val("0.00");
+                $('#nibrpnr').val("0.00");
+                $('#ntotal').val("0.00");
+            }
+
+        }
+    </script>
+{% endblock %}

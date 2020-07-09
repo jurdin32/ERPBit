@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>2101202001070454853600120010010000008620000000015</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000862</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>21/01/2020</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>Ocean Product CIA LTDA</razonSocialComprador><identificacionComprador>0790101316001</identificacionComprador><direccionComprador>S/N</direccionComprador><totalSinImpuestos>526.79</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>526.79</baseImponible><valor>63.21</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>590.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1361</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1116'</codigoAuxiliar>
+                      <descripcion>b'MONITOR QUASAD 19.5 LED BLACK'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>89.29</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>89.29</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>89.29</baseImponible>
+                <valor>10.71</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1360</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1115'</codigoAuxiliar>
+                      <descripcion>b'CPU RYZEN 3 8GB RAM 1 TB HDD'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>437.50</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>437.50</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>437.50</baseImponible>
+                <valor>52.50</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

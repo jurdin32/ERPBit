@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Clientes{% endblock title %}
+{% block content %}
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Clientes »
+                            <small>Migracion</small>
+                        </h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div id="fileuploader">Cargar Archivo de Excel</div>
+                        {% csrf_token %}
+                        <br/>
+                        <div class="alert alert-success" id="alerta"></div>
+                        <br>
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">{% csrf_token %}
+                            <table id="myTable" class="table table-striped table-bordered dataTables_scroll ">
+
+                                <tr>
+                                    <td style="vertical-align: middle"></td>
+                                    <td style="vertical-align: middle"></td>
+                                    <td style="vertical-align: middle"></td>
+                                    <td style="vertical-align: middle"></td>
+                                    <td style="vertical-align: middle"></td>
+                                    <td style="vertical-align: middle"></td>
+                                    <td style="text-align: center; vertical-align: middle"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #procesar {
+            cursor: pointer;
+        }
+    </style>
+{% endblock content %}
+{% block scripts %}
+    <script>
+        $("#alerta").hide();
+        $("#myTable").hide();
+        var contador=0
+        function procesar(lista,cantidad){
+            console.log(lista)
+            $.post("{% url 'migrarClientes' %}", {
+                tipo:lista[0],
+                identificacion:lista[1],
+                nombres:lista[2],
+                apellidos:lista[3],
+                razonSocial:lista[4],
+                direccion:lista[5],
+                telefono:lista[6],
+                email:lista[7],
+            }, function (data) {
+                console.log(data)
+                if (data=="ok"){
+                    contador+=1;
+                }
+                $("#alerta").html("<strong>Se han procesado: " +(cantidad)+" y se han restrado "+(contador) + "</strong>, algunos datos no se crean si estan repetidos o existen en la base de datos..!!");
+            });
+        }
+
+        $("#fileuploader").uploadFile({
+            url: "/subir/migrar/",
+            fileName: "myfile",
+            dataType: "json",
+            onSuccess: function (files, data, xhr, pd) {
+                var trs = ''
+                var td = ''
+                var i = 0;
+                var lista=[];
+                for (i in data.datos) {
+                    td = ''
+                    for (j in data.datos[i]) {
+                        td += "<td>" + data.datos[i][j] + "</td>"
+                        lista.push(data.datos[i][j])
+                    }
+                    trs += "<tr><td>" + (parseInt(i) + 1) + "</td>" + td + "</tr>"
+                    setTimeout(function(){
+                         procesar(lista,(parseInt(i) + 1) );
+                    },200);
+
+
+                }
+                $("#alerta").show()
+                $("#alerta").html("<strong>" + (parseInt(i) + 1) + "</strong> Registros cargados")
+                $("#myTable").html(trs)
+                $("#myTable").show();
+                contador=0;
+
+            }
+        });
+    </script>
+
+
+{% endblock %}

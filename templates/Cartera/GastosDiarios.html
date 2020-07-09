@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block title %}BitAdmin | Gastos Gastos, Movimientos,Ingresos Extras Diarios{% endblock title %}
+{% load static %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="">Cartera »</a>
+                                <small>Gastos, Movimientos,Ingresos Extras Diarios</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <form method="POST" action="" id="form-registro-marcas"
+                                  class="form-horizontal form-label-left">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Movimiento del Efectivo<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <select name="tipo" id="tipo" class="form-control">
+                                            <option value="GASTO">GASTO</option>
+                                            <option value="BANCO">MOVIMIENTO A BANCOS</option>
+                                            <option value="INGRESO">INGRESO EXTRAORDINARIO</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Descripción<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" required type="text" id="descripcion" placeholder="Ingrese la descripcion del gasto" class="form-control has-feedback-left" name="descripcion">
+                                        <span class="fa fa-text-height form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Tipo de Documento<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" id="tipoDocumento" value="FACTURA" required class="form-control has-feedback-left" name="tipoDocumento">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Número del Comprobante<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" id="numero" value="000-000-000000000" required
+                                               class="form-control has-feedback-left" name="numero">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Valor<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" id="valor" value="0.00" required class="form-control has-feedback-left" name="valor">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-xs-12" style="text-align:center">
+                                        <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Guardar
+                                        </button>
+                                        <a class="btn btn-warning" href="{% url 'gastosDiarios' %}" type="reset"><i
+                                                class="fa fa-remove"></i> Limpiar</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if gastos %}
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="">Gastos »</a>
+                                <small>Último Mes</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped" style="text-align: center">
+                                    <thead style="background-color: #5A738E; color: whitesmoke">
+                                    <th style="text-align: center">
+                                        Fecha
+                                    </th>
+                                    <th style="text-align: center">
+                                        Tipo de Movimiento
+                                    </th>
+                                    <th style="text-align: center">
+                                        Descripción
+                                    </th>
+                                    <th style="text-align: center">
+                                        Tipo de Documento
+                                    </th>
+                                    <th style="text-align: center">
+                                        No. de Documento
+                                    </th>
+                                    <th style="text-align: center">
+                                        Valor
+                                    </th>
+                                    </thead>
+                                    <tbody>
+                                    {% for gasto in gastos %}
+                                        <tr>
+                                            <td>{{ gasto.fecha }}</td>
+                                            <td>{{ gasto.tipo }}</td>
+                                            <td style="text-align: justify">{{ gasto.descripcion }}</td>
+                                            <td>{{ gasto.tipoDocumento }}</td>
+                                            <td>{{ gasto.numeroDocumento }}</td>
+                                            <td>{{ gasto.valor|floatformat:2 }}</td>
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

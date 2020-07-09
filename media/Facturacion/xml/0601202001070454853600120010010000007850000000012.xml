@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>0601202001070454853600120010010000007850000000012</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000785</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>06/01/2020</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>OSCAR GUERRERO CHAVEZ </razonSocialComprador><identificacionComprador>0704168541001</identificacionComprador><direccionComprador>CAMILO PONCE ENRIQUEZ</direccionComprador><totalSinImpuestos>379.46</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>379.46</baseImponible><valor>45.54</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>425.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1339</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1094'</codigoAuxiliar>
+                                  <descripcion>b'LAPTOP HP RYZEN 3 - 8GB - 1TB HDD' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>379.46</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>379.46</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>379.46</baseImponible>
+                <valor>45.54</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>

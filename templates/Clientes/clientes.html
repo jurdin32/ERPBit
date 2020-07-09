@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Clientes{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Clientes »
+                            <small>Listado de Clientes</small>
+                        </h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <a class="btn bg-blue" href="{% url 'registroClientes' %}"><i
+                                class="fa fa-user-plus"></i> Agregar Cliente</a>
+                        <a class="btn bg-green" target="_blank" href="{% url 'reporteClientes' %}"><i
+                                class="glyphicon glyphicon-print"></i> Imprimir</a>
+                        <a class="btn btn-danger" href="{% url 'migrarClientes' %}"><i
+                                class="fa fa-database"></i> Migracion</a>
+
+                        <br/><br/> <br/>
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                            <table id="clientesTabla" class="table table-striped table-bordered dataTables_scroll ">
+                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                <th>NO.</th>
+                                <th>TIPO</th>
+                                <th>IDENTIFICACION</th>
+                                <th>NOMBRES</th>
+                                <th>DIRECCION</th>
+                                <th>TELEFONO</th>
+                                <th>EMAIL</th>
+                                <th style="text-align: center">ESTADO</th>
+                                <th style="text-align: center; width: 150px">OPCIONES</th>
+                                </thead>
+                                <tbody>
+                                {% for cliente in clientes %}
+                                    <tr>
+                                        <td style="vertical-align: middle">{{ forloop.counter }}</td>
+                                        <td style="vertical-align: middle">{{ cliente.tipo_identificacion.nombre }}</td>
+                                        <td style="vertical-align: middle">{{ cliente.ruc }}</td>
+                                        <td style="vertical-align: middle"><strong>Razon Social: </strong>{{ cliente.nombre|upper }} {{ cliente.apellido|upper }} <br>
+                                                        <strong>Nombre Comercial: </strong>{{ cliente.razonSocial|upper }}
+                                        </td>
+                                        <td style="vertical-align: middle">{{ cliente.direccion }}</td>
+                                        <td style="vertical-align: middle">{{ cliente.telefono }}</td>
+                                        <td style="vertical-align: middle">{{ cliente.email }}</td>
+
+                                        <td style="text-align: center; vertical-align: middle">
+                                            {% if cliente.estado == 1 %}
+                                                <span class="glyphicon glyphicon-ok-sign text-success"
+                                                      style="font-size:20px;"></span>
+                                            {% else %}
+                                                <span class="glyphicon glyphicon-remove-sign text-danger"
+                                                      style="font-size:20px"></span>
+                                            {% endif %}
+                                        </td>
+
+                                        <td style="text-align: center">
+                                            <a href="/clientes/editarCliente/{{ cliente.id }}/"
+                                               class="btn bg-orange btn-xs"><i
+                                                    class="glyphicon glyphicon-pencil"></i></a>
+                                            {% if cliente.estado %}
+                                                <a onclick="f()" href="/clientes/deleteCliente/{{ cliente.id }}/"
+                                                   class="btn bg-red btn-xs"><i
+                                                        class="glyphicon glyphicon-trash"></i></a>
+                                            {% endif %}
+
+                                            <a class="cargar btn bg-blue btn-xs" data-toggle="modal"
+                                               href="#clientes"
+                                               onclick="capturar('{{ cliente.tipo_identificacion }}',
+                                                       '{{ cliente.ruc }}',
+                                                       '{{ cliente.nombre }}',
+                                                       '{{ cliente.apellido }}',
+                                                       '{{ cliente.razonSocial }}',
+                                                       '{{ cliente.nombreComercial }}',
+                                                       '{{ cliente.parroquia.lugar.lugar.lugar.nombre }}',
+                                                       '{{ cliente.parroquia.lugar.lugar.nombre }}',
+                                                       '{{ cliente.parroquia.lugar.nombre }}',
+                                                       '{{ cliente.parroquia.nombre }}',
+                                                       '{{ cliente.direccion }}',
+                                                       '{{ cliente.telefono }}',
+                                                       '{{ cliente.email }}',
+                                                       {% if cliente.estado %}'1'{% else %}'0'{% endif %})">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL PARA CARGAR CLIENTES -->
+    <div class="modal fadeInLeft clientes" id="clientes" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Datos Cliente Seleccionado </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form role="form">
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Tipo Identificacion</label>
+                            <input readonly style="border-radius: 5px" type="text" class="form-control"
+                                   id="Indentificacion"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Cedula o RUC</label>
+                            <input readonly style="border-radius: 5px" type="text" class="form-control" id="Ruc"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Nombre</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Nombre"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Apellido</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Apellido"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Razon Social</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="rSocial"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Nombre Comercial</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="nComercial"/>
+                        </div>
+
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Telefono</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Telefono"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Pais</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Pais"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Provincia</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Provincia"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Ciudad</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Ciudad"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Parroquia</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Parroquia"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Direccion</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Direccion"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Email</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Email"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Estado</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                                   id="Estado"/>
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        SALIR
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        function capturar(identificacion, ruc, nombres, apellido, razonSocial,nombreComercial, pais, provincia, ciudad, parroquia, direccion, telefono, email, estado) {
+            $('#Indentificacion').val(identificacion);
+            $("#Ruc").val(ruc);
+            $("#Nombre").val(nombres);
+            $("#Apellido").val(apellido);
+            $("#rSocial").val(razonSocial);
+            $("#nComercial").val(nombreComercial);
+            $("#Pais").val(pais);
+            $("#Provincia").val(provincia);
+            $("#Ciudad").val(ciudad);
+            $("#Parroquia").val(parroquia);
+            $("#Direccion").val(direccion);
+            $("#Telefono").val(telefono);
+            $("#Email").val(email);
+
+            if (parseInt(estado.trim()) == 1)
+                $('#Estado').val('Activo');
+            else
+                $('#Estado').val('Inactivo');
+
+            console.log(estado)
+        }
+    </script>
+    <script>
+        function f() {
+            var mesanje = 'El clientes fue deshabilitado del sistema'
+            alert(mesanje)
+        }
+    </script>
+    <script>
+        Tablas("#clientesTabla");
+    </script>
+{% endblock %}

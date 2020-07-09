@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte Clientes</title>
+    <style>
+        @page  {
+            size: A4 portrait;
+            margin: 30px;
+            page-break-inside: initial;
+
+        }
+    </style>
+</head>
+<body>
+<img src="{{ configuracion.ruta_imagenes }}/media/{{ configuracion.encabezado }}" style="width: 100%;" alt="">
+<div style="text-align: center;font-size: 13px">
+    <p><strong>REPORTE DE CLIENTES REGISTRADOS</strong></p>
+</div>
+<div style="text-align: left;font-size: 13px">
+    <p><strong>Fecha reporte: </strong> {{ formatedDay }}</p>
+</div>
+    <table style="border-radius: 15px;color: {{ reporte.color_texto }};">
+
+       <thead>
+         <tr style="padding: 3px; padding-top: 5px; border: 1px solid {{ configuracion.color_lineas }}">
+             <th style="text-align: left;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }};">RUC/CEDULA</th>
+             <th style="text-align: left;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }};">NOMBRE y APELLIDO</th>
+             <th style="text-align: left;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }};">LOCALIDAD</th>
+             <th style="text-align: left;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 300px">DATOS INFORMAIVOS</th>
+             <th style="text-align: center;background-color: {{ reporte.color_encabezados_tablas }}; color: {{ reporte.color_encabezados_tablas_texto }}; width: 90px">ESTADO</th>
+         </tr>
+       </thead>
+        <tbody>
+            {% for cliente in clientes %}
+                <tr style="padding: 3px; padding-top: 5px; border: 1px solid {{ configuracion.color_lineas }}">
+                    <td style="text-align: left; color: {{ reporte.color_texto }}">{{ cliente.ruc }} </td>
+                    <td style="text-align: left; color: {{ reporte.color_texto }}">{{ cliente.nombre }} {{ cliente.apellido }}</td>
+                <td style="text-align: left; color: {{ reporte.color_texto }}">{{ cliente.parroquia.lugar.lugar.lugar }}
+                    <br>{{ cliente.parroquia.lugar.lugar }} <br> {{ cliente.parroquia.lugar }} <br> {{ cliente.parroquia }}</td>
+                    <td style="text-align: left; color: {{ reporte.color_texto }}">{{ cliente.direccion }} <br> {{ cliente.telefono }}
+                        <br>{{ cliente.email }} </td>
+                    <td style="text-align: center; color: {{ reporte.color_texto }}">
+                        {% if cliente.estado == 1 %}
+                           <strong>Activo</strong>
+                        {% else %}
+                            <strong>Inactivo</strong>
+                        {% endif %}
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

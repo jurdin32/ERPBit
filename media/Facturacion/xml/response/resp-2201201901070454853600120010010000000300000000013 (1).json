@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '2201201901070454853600120010010000000300000000013',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '90',
+                            'mensaje': 'LIMITE DE INTENTOS NO AUTORIZADOS POR DIA',
+                            'informacionAdicional': 'La clave de acceso 2201201901070454853600120010010000000300000000013 ha superado el limite diario permitido para un comprobante no autorizado (2 intentos), para la fecha: Tue Jan 22 16:49:04 GMT-05:00 2019. Corrija los errores e intente nuevamente al dia siguiente.',
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

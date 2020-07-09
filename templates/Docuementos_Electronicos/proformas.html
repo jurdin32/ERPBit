@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Datos Electronicos{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Datos Electronicos
+                                <small>Registo de Proformas</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <a class="btn bg-blue" href="{% url 'registroProformas' %}"><i
+                                    class="fa fa-file-text-o "></i> Nueva Proforma</a>
+                            <a class="btn bg-orange"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                            <table id="tablaProformas" class="table table-bordered table-striped table-sm" cellspacing="0" width="100%">
+
+                                <thead style="background-color: #5A738E;color: whitesmoke;">
+                                    <th style="cursor: pointer"><span class="fa fa-angle-down"></span> ID</th>
+                                    <th style="cursor: pointer"><span class="fa fa-angle-down"></span> USUARIO</th>
+                                    <th style="cursor: pointer"><span class="fa fa-angle-down"></span> FECHA EMISION</th>
+                                    <th>IDENTIFICACION</th>
+                                    <th>COMPROBANTE</th>
+                                    <th>SUBTOTAL</th>
+                                    <th>IVA</th>
+                                    <th>ICE</th>
+                                    <th>IRBPNR</th>
+                                    <th>TOTAL</th>
+                                    <th style="text-align: center">PDF</th>
+                                    <th style="text-align: center">FACTURAR</th>
+                                    <th style="text-align: center">ENVIAR</th>
+                                </thead>
+                                <tbody>
+                                {% for factura in facturas %}
+                                <tr>
+                                    <td style="width: 50px; text-align: center">{{ forloop.counter }}</td>
+                                    <td>{{ factura.usuario.username }}</td>
+                                    <td>{{ factura.fecha|date:"d/m/Y"}}</td>
+                                    <td><strong>RUC:</strong> {{ factura.cliente.ruc }}
+                                        <br><strong>NOMBRE:</strong> {% if factura.cliente.razonSocial %}
+                                            {{ factura.cliente.razonSocial }}
+                                        {% else %}
+                                            {{ factura.cliente.nombre }} {{ factura.cliente.apellido }}
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ factura.secuencial }}</td>
+                                    <td>{{ factura.subtotal|floatformat:2 }}</td>
+                                    <td>{{ factura.iva|floatformat:2  }}</td>
+                                    <td>{{ factura.ice|floatformat:2  }}</td>
+                                    <td>{{ factura.irbpnr|floatformat:2  }}</td>
+                                    <td>{{ factura.total|floatformat:2  }}</td>
+                                    <td style="text-align: center; font-size: 20px">
+                                        <a class="text-info" target="_blank" href="{{ factura.id }}"><span class="fa fa-file-pdf-o"></span></a>
+                                    </td>
+                                    <td style="text-align: center; font-size: 20px">
+                                       <a href="{% url 'convertirNota_to_Factura' factura.id %}" class="btn btn-danger"><span class="fa fa-calculator"></span> Facturar</a>
+                                    </td>
+                                    <td style="text-align: center; font-size: 20px">
+                                        <a class="text-info" href="/documentos_electronicos/Proformas/enviar/{{ factura.id }}"><span class="fa fa-envelope-o"></span></a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block scripts %}
+     <script>
+        Tablas("#tablaProformas");
+    </script>
+{% endblock scripts %}

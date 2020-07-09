@@ -1,0 +1,45 @@
+
+<div class="x_content">
+    <div class="col-md-12 col-sm-12 col-xs-12 " id="">
+        <table id="tablaConsultas" class="table table-striped table-bordered  ">
+            <thead style="background-color: #5A738E;color: whitesmoke">
+            <th style="text-align: center">NO. DOCUMENTO</th>
+            <th style="text-align: center">FECHA EMISION</th>
+            <th style="text-align: center">PROVEEDOR</th>
+            <th style="text-align: center">IDENTIFICACION</th>
+            <th style="text-align: center">ESTADO</th>
+            </thead>
+            <tbody>
+            {% for guia in guias %}
+                <tr>
+                    <td style="text-align: center; vertical-align: middle">
+                        <a target="_blank" href="/consulta/listarPDFGuia/{{ guia.id }}/"> <i
+                                class="fa fa-file-pdf-o text-danger"></i> {{ guia.secuencial }}
+                        </a>
+                    </td>
+                    <td style="text-align: center; vertical-align: middle">{{ guia.fecha|date:"d/m/Y" }}</td>
+                    <td style="vertical-align: middle;text-align: center">
+                        {% if guia.factura.razonSocial %}
+                            {{ guia.factura.razonSocial }}
+                        {% else %}
+                            {{ guia.factura.cliente.nombre }} {{ guia.factura.cliente.apellido }}
+                        {% endif %}
+                    </td>
+                    <td style="vertical-align: middle;text-align: center">{{ guia.factura.cliente.ruc }}</td>
+                    <td style="text-align: center; vertical-align: middle">
+                        {% if guia.estado %}
+                            AUTORIZADO
+                        {% else %}
+                            NO AUTORIZADO
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    Tablas("#tablaConsultas");
+</script>

@@ -1,0 +1,646 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% load customTalentoHumano %}
+    <div class="right_col" role="main">
+        <div class="x_title">
+            <h2><a href="{% url 'guiaRemision' %}">Guia de Remision »</a>
+                <small><strong>Nueva Guia Remision</strong></small>
+            </h2>
+            <ul class="nav navbar-right panel_toolbox">
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>DATOS TRANSPORTISTA</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-horizontal form-label-left input_mask">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Identificacion <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-10">
+                                        <div class="input-group">
+                                            <input readonly style="border-radius: 5px" name="identificacion"
+                                                   id="Identificacion" class="form-control"
+                                                   required="required" type="text" value="">
+                                            <span class="input-group-btn">
+                                                  <button type="button" data-toggle="modal"
+                                                          data-target="#transportitas" class="btn bg-blue">
+                                                      <i class="fa fa-taxi"></i> Transportista
+                                                  </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Nombres Conductor <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="nombreApellido"
+                                               id="NombreApellido"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Licencia Conductor <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="licencia" id="Licencia"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Empresa Transporte <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="empresa" id="Empresa"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-industry form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Vehiculo <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="vehiculo" id="Vehiculo"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <input name="vehiculo" id="Vehiculo_id" type="hidden" value="">
+                                        <span class="fa fa-cc form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Placa Vehiculo <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="placaVehiculo"
+                                               id="PlacaVehiculo"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-cc form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Punto Partida <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="puntoPartida" id="puntoPartida"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="MACHALA">
+                                        <span class="fa fa-map-marker form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Fecha Salida <span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="fechaSalida" type="date"
+                                               id="fechaSalida"
+                                               class="form-control has-feedback-left" required value="">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Fecha Llegada <span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="fechaLLegada" type="date"
+                                               id="fechaLLegada"
+                                               class="form-control has-feedback-left" required value="">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Observaciones <span
+                                            class="required">*</span></label>
+                                    <div style="border-radius: 5px" class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="observaciones" type="text"
+                                               id="observaciones"
+                                               class="form-control has-feedback-left" value="SIN OBSERVACIONES">
+                                        <span class="fa fa-edit form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>DATOS DESTINATARIO</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-horizontal form-label-left input_mask">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Doc. Referencia <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div readonly class="col-md-8 col-sm-9 col-xs-10">
+                                        <div class="input-group">
+                                            <input readonly style="border-radius: 5px" name="factura" id="Documento"
+                                                   class="form-control "
+                                                   required="required" type="text" value="">
+                                            <span class="input-group-btn">
+                                                  <button type="button" data-toggle="modal"
+                                                          data-target="#documentos" class="btn bg-blue">
+                                                      <i class="fa fa-file-text-o"></i> Documento
+                                                  </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Fecha Emision <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="fechaEmision" id="FechaEmision"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Nº Autorizacion <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="autorizacion" id="Autorizacion"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-check-square form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label readonly class="control-label col-md-4 col-sm-3 col-xs-12">Razon Social |
+                                        Nombres y Apellidos <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="razonSocial" id="Cliente"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-industry form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label readonly class="control-label col-md-4 col-sm-3 col-xs-12">Identificacion
+                                        Cliente<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input readonly style="border-radius: 5px" name="ruc" id="IdentificacionCli"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-credit-card form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Motivo Traslado <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="motivoTraslado" id="motivoTraslado"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="SIN MOTIVO">
+                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Punto Llegada <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="puntoLLegada" id="puntoLLegada"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="MACHALA">
+                                        <span class="fa fa-map-marker form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Documento Aduanero <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="docAduanero" id="docAduanero"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="SIN DOCUMENTO">
+                                        <span class="fa fa-file-text-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Cod. Establecimiento <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="codEstablecimiento"
+                                               id="codEstablecimiento"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="SIN CODIGO">
+                                        <span class="fa fa-code form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-3 col-xs-12">Ruta <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="ruta" id="ruta"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="">
+                                        <span class="fa fa-map form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 10px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Guia de Remision : <a>{{ secuencial }}</a>
+                                <input id="secuencia" type="hidden" value="{{ secuencial }}">
+                            </h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="row">
+                                <div class="col-xs-12 table-responsive" style="height:200px; overflow-y: scroll ;">
+                                    <table style="text-align: center" id="Tabla" class="table ">
+                                        <thead style="background-color: #5A738E;color: whitesmoke">
+                                        <th style="text-align: center">CANTIDAD</th>
+                                        <th style="text-align: center">DESCRIPCION</th>
+                                        <th style="text-align: center">COD. PRINCIPAL</th>
+                                        <th style="text-align: center">COD. AUX</th>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 10px" class="x_panel">
+                        <div class="x_content">
+                            <div class="col-sm-12 col-xs-12" style="text-align: center">
+                                <button class="btn bg-blue"><i class="fa fa-save"></i> Registrar Guia </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- MODAL PARA CARGAR TRANSPORTISTAS -->
+    <div class="modal fadeInLeft" id="transportitas" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width: 75%; height: 400px">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Agregar transportista a la Guia</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <style>
+                                        .encabezados {
+                                            background-color: {{ reportes.color_encabezados_tablas }};
+                                            color: {{ reportes.color_encabezados_tablas_texto }}
+                                        }
+                                    </style>
+                                    <div class="row">
+                                        <div class="col-xs-12 table-responsive"
+                                             style="height:400px; overflow-y: scroll ;">
+                                            <table id="tablaTransportistas"
+                                                   class=" tablaTransportistas table-bordered table table-striped dataTables_scroll">
+                                                <thead style="background-color: #5A738E;color: whitesmoke">
+
+                                                <th>IDENTIFICACION</th>
+                                                <th>CONDUCTOR</th>
+                                                <th>LICENCIA</th>
+                                                <th>PLACAS</th>
+                                                <th>MODELO</th>
+                                                <th style="text-align: center">EMPRESA</th>
+                                                <th style="text-align: center">SELECCIONE</th>
+
+                                                </thead>
+                                                <tbody id="body">
+                                                {% for vehiculo in vehiculos %}
+                                                    <tr>
+                                                        <td>{{ vehiculo.conductor.ruc }}</td>
+                                                        <td>{{ vehiculo.conductor.nombre }} {{ conductor.apellido }}</td>
+                                                        <td>{{ vehiculo.conductor.licencia }}</td>
+                                                        <td>{{ vehiculo.placa }}</td>
+                                                        <td>{{ vehiculo.modelo }}</td>
+                                                        <td>{{ vehiculo.conductor.empresaTrans.razonSocial }}</td>
+                                                        <td style="text-align: center ">
+                                                            <a data-ruc="{{ vehiculo.conductor.ruc }}"
+                                                               data-nombre="{{ vehiculo.conductor.nombre }}"
+                                                               data-apellido="{{ vehiculo.conductor.apellido }}"
+                                                               data-licencia="{{ vehiculo.conductor.licencia }}"
+                                                               data-empresa="{{ vehiculo.conductor.empresaTrans.razonSocial }}"
+                                                               data-marca="{{ vehiculo.marca }}"
+                                                               data-modelo="{{ vehiculo.modelo }}"
+                                                               data-vehiculo="{{ vehiculo.id }}"
+                                                               data-placa="{{ vehiculo.placa }}"
+
+                                                               class=" Agregar btn bg-green glyphicon glyphicon-user "
+                                                               style="font-size: 9px; padding: 5px;margin: 0px"></a>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="{% url 'registroConductor' %}" class="btn bg-blue"><i class="fa fa-user-plus"></i> Agregar
+                        Conductor</a>
+                    <button type="button" class="btn bg-red" data-dismiss="modal"><i class="fa fa-sign-in"></i> SALIR
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PARA CARGAR DOCUMENTOS -->
+    <div class="modal fadeInLeft" id="documentos" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="height: 400px;width: 75%">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Agregar Documentos</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <div class="row">
+                                        <div class="col-xs-12 table-responsive"
+                                             style="height:400px; overflow-y: scroll ;">
+                                            <table id="tablaDocumentos"
+                                                   class=" tablaDocumentos table table-bordered table-striped dataTables_scroll">
+
+                                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                                <th>COMPROBANTE</th>
+                                                <th>FECHA EMISION</th>
+                                                <th>AUTORIZACION</th>
+                                                <th>TOTAL</th>
+                                                <th style="text-align: center">SELECCIONE</th>
+                                                </thead>
+
+                                                <tbody id="body">
+                                                {% for factura in documentos %}
+                                                    <tr>
+                                                        <td>{{ factura.secuencial }}</td>
+                                                        <td>{{ factura.fecha }}</td>
+                                                        <td>{{ factura.clave_acceso }}</td>
+                                                        <td style="text-align: center">{{ factura.total }}</td>
+                                                        <td style="text-align: center">
+                                                            <a data-id="{{ factura.id }}"
+                                                               data-documento="{{ factura.secuencial }}"
+                                                               data-fecha="{{ factura.fecha }}"
+                                                               data-autorizacion="{{ factura.clave_acceso }}"
+                                                               data-clienten="{{ factura.cliente.nombre }}"
+                                                               data-clientea="{{ factura.cliente.apellido }}"
+                                                               data-clienters="{{ factura.cliente.razonSocial }}"
+                                                               data-identificacioncli="{{ factura.cliente.ruc }}"
+                                                               class=" addDocumento btn bg-green glyphicon glyphicon-user "
+                                                               style="font-size: 9px; padding: 5px;margin: 0px"></a>
+                                                        </td>
+                                                    </tr>
+
+                                                {% endfor %}
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-red" data-dismiss="modal"><i class="fa fa-sign-in"></i> SALIR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block scripts %}
+    <script>
+        $("#pdf").click(function () {
+            window.location.href = "/documentos_electronicos/guiaRemisionS/" + $("#secuencia").val() + "/";
+        })
+    </script>
+    <!-- FUNCION PARA ADD TRANSPORTISTAS A LA GUIA DE REMISION -->
+    <script>
+        $(document).on('click', '.Agregar', function () {
+            var ruc = $(this).data('ruc');
+            var nombre = $(this).data('nombre');
+            var apellido = $(this).data('apellido');
+            var licencia = $(this).data('licencia');
+            var empresa = $(this).data('empresa');
+            var marca = $(this).data('marca');
+            var modelo = $(this).data('modelo');
+            var vehiculoid = $(this).data('vehiculo');
+            var placa = $(this).data('placa');
+
+            $('#Identificacion').val(ruc);
+            $("#NombreApellido").val(nombre + " " + apellido);
+            $('#Licencia').val(licencia);
+            $('#Empresa').val(empresa);
+            $('#Vehiculo').val(marca + ' | ' + modelo);
+            $('#Vehiculo_id').val(vehiculoid);
+            $("#PlacaVehiculo").val(placa);
+            $('#transportitas').modal('hide');
+        });
+    </script>
+
+    <!-- FUNCION PARA ADD DOCUMENTO A LA GUIA DE REMISION -->
+    <script>
+        $(document).on('click', '.addDocumento', function () {
+            var documento = $(this).data('documento');
+            var fecha = $(this).data('fecha');
+            var autorizacion = $(this).data('autorizacion');
+            var clienten = $(this).data('clienten');
+            var clientea = $(this).data('clientea');
+            var clienters = $(this).data('clienters');
+            var identificacioncli = $(this).data("identificacioncli");
+
+            $('#Documento').val(documento);
+            $('#FechaEmision').val(fecha);
+            $('#Autorizacion').val(autorizacion);
+
+            if (clienters.length > 0) {
+                $('#Cliente').val(clienters)
+            } else {
+                $('#Cliente').val(clienten + ' ' + clientea)
+            }
+
+            $('#IdentificacionCli').val(identificacioncli);
+
+            var id = $(this).data('id');
+
+            $.get("/documentos_electronicos/Facturas/Detalles/" + id + "/", function (data) {
+                if ($('#Tabla').find('> tbody').empty()) {
+                    $.each(data.items, function (index, items) {
+                        $('#Tabla').find('> tbody').append($('<tr>')
+                            .append($('<td>').html(items.cantidad))
+                            .append($('<td>').html(items.producto))
+                            .append($('<td>').html(items.id))
+                            .append($('<td>').html(items.codRef))
+                        );
+                    });
+                }
+            })
+
+            $('#documentos').modal('hide');
+        });
+    </script>
+
+
+{#    <script>#}
+{#        function registrarGuia() {#}
+{#            var secuenciaguia = $("#secuencia").val();#}
+{#            var vehiculo = $("#Vehiculo_id").val();#}
+{#            var puntoPartida = $("#puntoPartida").val();#}
+{#            var fechaSalida = $("#fechaSalida").val();#}
+{#            var fechaLLegada = $("#fechaLLegada").val();#}
+{#            var observaciones = $("#observaciones").val();#}
+{#            var factura = $("#Documento").val();#}
+{#            var motivoTraslado = $('#motivoTraslado').val()#}
+{#            var puntoLlegada = $("#puntoLLegada").val();#}
+{#            var docAduanero = $("#docAduanero").val();#}
+{#            var codEstablecimiento = $("#codEstablecimiento").val();#}
+{#            var ruta = $("#ruta").val();#}
+{##}
+{#            $.post("/documentos_electronicos/registroGuiaRemision/", {#}
+{#                "secuencia": secuenciaguia,#}
+{#                'vehiculo': vehiculo,#}
+{#                'puntoPartida': puntoPartida,#}
+{#                'fechaSalida': fechaSalida,#}
+{#                'fechaLLegada': fechaLLegada,#}
+{#                'observaciones': observaciones,#}
+{#                'factura': factura,#}
+{#                'motivoTraslado': motivoTraslado,#}
+{#                'puntoLLegada': puntoLlegada,#}
+{#                'docAduanero': docAduanero,#}
+{#                'codEstablecimiento': codEstablecimiento,#}
+{#                'ruta': ruta,#}
+{#            }, function (respuesta) {#}
+{#                console.log(respuesta)#}
+{#                if (respuesta == 'ok') {#}
+{#                    alert("Se registro la Guìa de Remisiòn")#}
+{#                } else {#}
+{#                    alert("Al parecer algunos de los datos son obligatorios, corrija..!")#}
+{#                }#}
+{#            });#}
+{#        }#}
+{#    </script>#}
+
+    <script>
+        Tablas("#tablaTransportistas");
+        Tablas("#tablaDocumentos");
+    </script>
+
+{% endblock %}
+

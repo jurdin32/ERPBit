@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% block title %}BitAdmin | Cartera{% endblock title %}
+{% load static %}
+{% block content %}
+    {% load customTagsCuentas %}
+    {% load mathfilters %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="">Cartera »</a>
+                                    <small>Cajas Cerradas</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <table id="tablaCierres" class="table table-bordered table-striped"
+                                           style="text-align: center">
+                                        <thead style="background-color: #5A738E; color: whitesmoke">
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Usuario
+                                        </th>
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Hora
+                                        </th>
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Fecha
+                                        </th>
+                                        <th style="text-align: center">
+                                            Saldo Inicial
+                                        </th>
+                                        <th style="text-align: center">
+                                            Total en Ventas
+                                        </th>
+                                        <th style="text-align: center">
+                                            Total en Gastos
+                                        </th>
+                                        <th style="text-align: center">
+                                            Suma Total
+                                        </th>
+                                        <th>Total Cierre</th>
+                                        <th style="text-align: center; vertical-align: middle">Diferencias
+                                        </th>
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Observación
+                                        </th>
+                                        </thead>
+                                        <tbody>
+                                        {% for cierre in cierres %}
+                                            <tr>
+                                                <td>{{ cierre.caja.usuario }}</td>
+                                                <td>{{ cierre.hora }}</td>
+                                                <td>{{ cierre.fecha|date:"d/m/Y" }}</td>
+                                                <td>{{ cierre.saldoInicial|floatformat:2 }}</td>
+                                                <td>{{ cierre.totalVentas|floatformat:2 }}</td>
+                                                <td>{{ cierre.totalGasto|floatformat:2 }}</td>
+                                                <td>{{ cierre.totalDiario|floatformat:2 }}</td>
+                                                <td>{{ cierre.saldoFinal|floatformat:2 }}</td>
+                                                <td>{{ cierre.faltante|floatformat:2 }}</td>
+                                                <td style="width: 600px; text-align: justify">{{ cierre.observacion }}</td>
+                                            </tr>
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="">
+            <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="">Cartera »</a>
+                                    <small>Cajas Abiertas</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <table id="tablaCierres" class="table table-bordered table-striped"
+                                           style="text-align: center">
+                                        <thead style="background-color: #5A738E; color: whitesmoke">
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Usuario
+                                        </th>
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Hora
+                                        </th>
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Fecha
+                                        </th>
+                                        <th style="text-align: center">
+                                            Saldo Inicial
+                                        </th>
+                                        <th style="text-align: center">
+                                            Total en Ventas
+                                        </th>
+                                        <th style="text-align: center">
+                                            Total en Gastos
+                                        </th>
+                                        <th style="text-align: center">
+                                            Suma Total
+                                        </th>
+                                        <th>Estado</th>
+                                        </thead>
+                                        <tbody>
+                                        {% for apertura in aperturas %}
+                                            <tr>
+                                                <td>{{ apertura.usuario }}</td>
+                                                <td>{{ apertura.hora }}</td>
+                                                <td>{{ apertura.fecha|date:"d/m/Y" }}</td>
+                                                <td>{{ apertura.saldoInicial|floatformat:2 }}</td>
+                                                <td>{% CalcularVentas apertura %}</td>
+                                                <td>{% CalcularGastos apertura %}</td>
+                                                <td>{% CalcularTodo apertura %}</td>
+                                                <td>{{ apertura.estado }}</td>
+                                            </tr>
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script>
+        var totales = (parseFloat($("#apertura").val().replace(",", ".")) + parseFloat($("#ventas").val().replace(",", "."))) - parseFloat($("#gastos").val().replace(",", "."))
+        $("#diario").val(totales.toFixed(2))
+
+        function calcular() {
+            var billetes = parseFloat($("#billetes").val().replace(",", "."));
+            var monedas = parseFloat($("#monedas").val().replace(",", "."));
+            var documentos = parseFloat($("#documentos").val().replace(",", "."));
+            var saldo = parseFloat(billetes + monedas + documentos);
+            $("#saldo").val(saldo);
+        }
+
+        Tablas("#tablaCierres");
+    </script>
+{% endblock %}

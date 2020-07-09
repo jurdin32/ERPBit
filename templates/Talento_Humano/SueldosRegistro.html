@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Talento Humano{% endblock title %}
+{% block content %}
+    {% load customTalentoHumano %}
+    <div class="right_col" role="main">
+        <div class="">
+
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="border-radius: 5px " class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="{% url 'sueldosySalarios' %}">Sueldos y Salarios</a> »
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div style="border-radius: 5px " class="x_panel">
+                        <div class="x_title">
+                            <h2> »
+                                <small> Crear o Modificar Sueldos</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <form class="form-horizontal form-label-left input_mask" method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Afectación <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" name="anio" id="anio" class="form-control">
+                                            {% for anio in annios %}
+                                                {% if anio.estado %}
+                                                    <option selected value="{{ anio.id }}">{{ anio.anio }}</option>
+                                                {% else %}
+                                                    <option value="{{ anio.id }}">{{ anio.anio }}</option>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Cargo <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" class="select2_group form-control" id="cargo" name="cargo">
+                                            {% for departamento in departamentos %}
+                                                <optgroup label={{ departamento.nombre }}>
+                                                    {% for cargo in cargos %}
+                                                        {% if cargo.departamento == departamento %}
+                                                            <option value="{{ cargo.id }}">{{ cargo.cargo }}
+                                                                | {{ cargo.descripcion }}</option>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </optgroup>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Remuneración
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="sueldo" id="sueldo"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="{{ sueldo.sueldo }}"
+                                               data-inputmask="'mask': '999.99'">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Días a Laborar
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="dias" id="dias"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="{{ sueldo.diasTrabajados }}">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Horas diarias
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="horasdiarias" id="horasdiarias"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="{{ sueldo.horasdiarias }}">
+                                        <span class="fa fa-clock-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Total de Horas
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" name="totalhoras" id="totalhoras"
+                                               class="form-control has-feedback-left"
+                                               required="required" type="text" value="{{ sueldo.totalHoras }}">
+                                        <span class="fa fa-clock-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Forma de Pago
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <select style="border-radius: 5px" name="fpago" id="fpago" class="form-control">
+                                            {% for pago in pagos %}
+                                                <option value="{{ pago.id }}">{{ pago.formaPago }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-right: 5px; text-align: right">
+                                    <div class="col-md-12">
+                                        <label class="">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input
+                                                    style="border-radius: 8px; position: absolute; opacity: 0;"
+                                                    type="checkbox" id="beneficio" {% if sueldo.beneficio %}
+                                                    checked {% endif %}name="beneficio" value="1" class="flat">
+                                                <ins class="iCheck-helper"
+                                                     style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            BENEFICIOS </label>
+                                    </div>
+                                </div>
+                                <div class="row" style="text-align: right">
+                                    <div class="col-md-12">
+                                        <button class="btn bg-blue"><i class="fa fa-save"></i> Guardar</button>
+                                        <a href="/telento_humano/empleado/sueldo/registro/{{ empleado.id }}/"
+                                           class="btn bg-red"><i class="fa fa-sign-in"></i> Regresar</a>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div style="border-radius: 5px " class="x_panel">
+                        <div class="x_title">
+                            <h2>Registros del Empleado »
+                                <small style="color: #985f0d; font-weight: bold"> {{ empleado.nombre }} {{ empleado.apellido }}</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                                <table id="tablaRegistroSueldo" class="table table-bordered table-striped dataTables_scroll">
+                                    <thead style="background-color: #5A738E;color: whitesmoke">
+                                    <th>Año</th>
+                                    <th>Cargo</th>
+                                    <th>Sueldo</th>
+                                    <th>Beneficio</th>
+                                    <th>Forma de Pago</th>
+                                    <th>Activado</th>
+                                    <th colspan="2" style="text-align: center">Opciones</th>
+                                    </thead>
+                                    <tbody>
+                                    {% for sueldo in sueldos %}
+                                        <tr>
+                                            <td>{{ sueldo.annio.anio }}</td>
+                                            <td>{% cargoSueldoId sueldo.id %}</td>
+                                            <td>{{ sueldo.formaPago }}</td>
+                                            {% if sueldo.beneficio %}
+                                                <td>SI</td>
+                                            {% else %}
+                                                <td>NO</td>
+                                            {% endif %}
+                                            <td>{{ sueldo.sueldo }}</td>
+
+                                            {% if sueldo.estado %}
+                                                <td>Activo</td>
+                                            {% else %}
+                                                <td>No Activo</td>
+                                            {% endif %}
+                                            <td style="text-align: center">
+                                                <a href="/telento_humano/empleado/sueldo/edit/{{ empleado.id }}/{{ sueldo.id }}/"
+                                                   class="text-info"><span class="fa fa-edit"></span></a>
+                                            </td>
+                                            <td style="text-align: center">
+                                                {% if not sueldo.estado %}
+                                                    <a href="/telento_humano/empleado/sueldo/actDesacSueldo/{{ empleado.id }}/{{ sueldo.id }}/"
+                                                       class="text-danger"><span class="fa fa-remove"></span></a>
+                                                {% else %}
+                                                    <a href="/telento_humano/empleado/sueldo/actDesacSueldo/{{ empleado.id }}/{{ sueldo.id }}/"
+                                                       class="text-danger"><span class="glyphicon glyphicon-ok"></span></a>
+                                                {% endif %}
+
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('#anio option[value="{{ sueldo.annio.id }}"]').attr("selected", true);
+        $('#cargo option[value="{{ sueldo.cargo.id }}"]').attr("selected", true);
+        $('#fpago option[value="{{ sueldo.formaPago.id }}"]').attr("selected", true);
+    </script>
+{% endblock content %}
+{% block scripts %}
+{% endblock %}

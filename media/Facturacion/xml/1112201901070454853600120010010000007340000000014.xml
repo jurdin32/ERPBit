@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1112201901070454853600120010010000007340000000014</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000734</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>11/12/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>TRIONICA COMPUTACION C LTDA   </razonSocialComprador><identificacionComprador>0790151542001</identificacionComprador><direccionComprador>S/N</direccionComprador><totalSinImpuestos>2747.72</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>2747.72</baseImponible><valor>329.73</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>3077.45</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1266</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1022'</codigoAuxiliar>
+                      <descripcion>b'KIT TECALDO MOUSE, PARLANTES '/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>3.00</cantidad>
+                      <precioUnitario>20.01</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>60.03</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>60.03</baseImponible>
+                <valor>7.20</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1268</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1024'</codigoAuxiliar>
+                      <descripcion>b'IMPRESORA EPSON MATRICIAL LX350'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>122.69</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>122.69</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>122.69</baseImponible>
+                <valor>14.72</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1267</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1023'</codigoAuxiliar>
+                      <descripcion>b'MONITOR LG BLACK LED 19.5'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>3.00</cantidad>
+                      <precioUnitario>90.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>270.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>270.00</baseImponible>
+                <valor>32.40</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1265</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1021'</codigoAuxiliar>
+                      <descripcion>b'CPU AMD RYZEN 7, 8GB RAM, MBO ASUS PRIME 1TB HDD, DVD '/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>3.00</cantidad>
+                      <precioUnitario>765.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>2295.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>2295.00</baseImponible>
+                <valor>275.40</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

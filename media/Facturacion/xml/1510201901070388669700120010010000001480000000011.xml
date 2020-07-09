@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Johnny E. Urdin Gonz\xc3\xa1lez</razonSocial><nombreComercial>Business Intelligence Thinks</nombreComercial><ruc>0703886697001</ruc><claveAcceso>1510201901070388669700120010010000001480000000011</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000148</secuencial><dirMatriz>Rocafuerte 504 y Buenavista</dirMatriz></infoTributaria><infoFactura><fechaEmision>15/10/2019</fechaEmision><dirEstablecimiento>Rocafuerte 504 y Buenavista</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>ASOCIACION DE PEQUE\xc3\x91OS AVICULTORES BALMAR </razonSocialComprador><identificacionComprador>0791740908001</identificacionComprador><direccionComprador>A 500 metros de la entrada al Sitio el Milagro</direccionComprador><totalSinImpuestos>800.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>800.00</baseImponible><valor>96.00</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>896.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1048</codigoPrincipal>
+                                  <codigoAuxiliar>b'HOS-0849'</codigoAuxiliar>
+                                  <descripcion>b'HOSTING EMPRESARIAL' / b'HOSTING EMPRESARIAL\r\nSISTEMA CLOUD\r\nDOMINIO\r\nCORREO CORPORATIVO\r\nSSL SECURITY \r\n'</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>800.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>800.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>800.00</baseImponible>
+                <valor>96.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>

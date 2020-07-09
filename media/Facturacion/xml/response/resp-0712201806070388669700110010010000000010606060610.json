@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '0712201806070388669700110010010000000010606060610',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '35',
+                            'mensaje': 'ARCHIVO NO CUMPLE ESTRUCTURA XML',
+                            'informacionAdicional': 'El ambiente de la solicitud PRODUCCIÓN no coincide con el de ejecución PRUEBAS',
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

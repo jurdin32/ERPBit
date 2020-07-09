@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.0.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Johnny E. Urdin Gonz\xc3\xa1lez</razonSocial><nombreComercial>Business Intelligence Thinks</nombreComercial><ruc>0703886697001</ruc><claveAcceso>1211201901070388669700120010010000000990000000019</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000099</secuencial><dirMatriz>Rocafuerte 504 y Buenavista</dirMatriz></infoTributaria><infoFactura><fechaEmision>12/11/2019</fechaEmision><dirEstablecimiento>Rocafuerte 504 y Buenavista</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>FAMILSALUD CIA. LTDA. </razonSocialComprador><identificacionComprador>0791777380001</identificacionComprador><direccionComprador>VEGA DAVILA Y SUCRE </direccionComprador><totalSinImpuestos>5944.05</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>5944.05</baseImponible><valor>713.29</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>6657.34</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1152</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0919'</codigoAuxiliar>
+                      <descripcion>b'I-1028-N GABINETE ABATIBLE DE PARED 25UR'/BEAUCOUP  x UNIDADES x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>431.45</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>431.45</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>431.45</baseImponible>
+                <valor>51.77</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1174</codigoPrincipal>
+                      <codigoAuxiliar>b'RED-0939'</codigoAuxiliar>
+                      <descripcion>b'AC1350 - ARCHER C58HP ROUTER INAL\xc3\x81MBRICO BANDA DUAL ALTA POTENCIA'/TPLINK x Unidades x </descripcion>
+                      <cantidad>3.00</cantidad>
+                      <precioUnitario>126.27</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>378.81</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>378.81</baseImponible>
+                <valor>45.45</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1173</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0938'</codigoAuxiliar>
+                      <descripcion>b'UCM-6204 CENTRAL IPBX, 4 PUERTOS FXO PSTN'/GRANDSTREAM x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>485.75</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>485.75</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>485.75</baseImponible>
+                <valor>58.29</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1172</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0937'</codigoAuxiliar>
+                      <descripcion>b'GXP-1760W TELEFONO IP 6 CUENTAS SIP GXP-1760W FIJO WIFI'/GRANDSTREAM x Unidades x </descripcion>
+                      <cantidad>7.00</cantidad>
+                      <precioUnitario>133.41</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>933.87</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>933.87</baseImponible>
+                <valor>112.07</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1171</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0936'</codigoAuxiliar>
+                      <descripcion>b'GXP-1610 TELEFONO IP 1 CUENTA SIP, PANTALLA LCD DE 132X48 PIXEL'/GRANDSTREAM x Unidades x </descripcion>
+                      <cantidad>23.00</cantidad>
+                      <precioUnitario>41.91</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>963.93</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>963.93</baseImponible>
+                <valor>115.69</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1169</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0934'</codigoAuxiliar>
+                      <descripcion>b'DP750 BASE TELEFONO IP TECNOLOGIA INALAMBRICA DECT'/GRANDSTREAM x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>59.45</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>59.45</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>59.45</baseImponible>
+                <valor>7.13</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1170</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0935'</codigoAuxiliar>
+                      <descripcion>b'DP720 TELEFONO IP TECNOLOGIA INALAMBRICA DECT'/GRANDSTREAM x Unidades x </descripcion>
+                      <cantidad>5.00</cantidad>
+                      <precioUnitario>60.90</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>304.50</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>304.50</baseImponible>
+                <valor>36.55</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1168</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0933'</codigoAuxiliar>
+                      <descripcion>b'ROUTERBOARD RB4011UIAS-RM QUAD CORE 1400MHZ/ 1GB / 5 GIGABIT / NIVEL 5'/MIKROTIK x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>369.78</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>369.78</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>369.78</baseImponible>
+                <valor>44.37</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1167</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0932'</codigoAuxiliar>
+                      <descripcion>b'SWITCH 24 PUERTOS 10/100/1000 MBPS GIGABIT QP-G160R RACK'/QPCOM x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>140.66</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>281.32</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>281.32</baseImponible>
+                <valor>33.76</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1177</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0931'</codigoAuxiliar>
+                      <descripcion>b'PATCH CORD 1 METRO CAT5E AZUL'/QPCOM x UNIDADES x </descripcion>
+                      <cantidad>70.00</cantidad>
+                      <precioUnitario>1.96</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>137.20</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>137.20</baseImponible>
+                <valor>16.80</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1165</codigoPrincipal>
+                      <codigoAuxiliar>b'RED-0930'</codigoAuxiliar>
+                      <descripcion>b'PONCHADORA DE RED CONECTORES RJ - 3 SERVICIOS 2-3-4 '/QPCOM x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>20.30</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>20.30</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>20.30</baseImponible>
+                <valor>2.44</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                                  <codigoPrincipal>1184</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0942'</codigoAuxiliar>
+                                  <descripcion>b'CONFIGURACION DE ROUTER MIKROTIK' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>100.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>200.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>200.00</baseImponible>
+                <valor>24.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                      <codigoPrincipal>1164</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0929'</codigoAuxiliar>
+                      <descripcion>b'KEYSTONE JACK CAT5E RJ45 AZUL'/QPCOM x Unidades x </descripcion>
+                      <cantidad>80.00</cantidad>
+                      <precioUnitario>2.74</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>219.20</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>219.20</baseImponible>
+                <valor>26.40</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1162</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0927'</codigoAuxiliar>
+                      <descripcion>b'FACE PLATE 2 PUERTOS'/QPCOM x UNIDADES x </descripcion>
+                      <cantidad>20.00</cantidad>
+                      <precioUnitario>1.31</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>26.20</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>26.20</baseImponible>
+                <valor>3.20</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1161</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0926'</codigoAuxiliar>
+                      <descripcion>b'CABLE DE RED UTP SOLIDO CAT6 / 24 AWG / 250MHZ / 305 '/QPCOM x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>181.25</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>181.25</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>181.25</baseImponible>
+                <valor>21.75</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1158</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0923'</codigoAuxiliar>
+                      <descripcion>b'BEAUCOUP I-1161 FUNDA DE 20 TORNILLOS PARA RACK'/BEAUCOUP  x Unidades x </descripcion>
+                      <cantidad>4.00</cantidad>
+                      <precioUnitario>1.80</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>7.20</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>7.20</baseImponible>
+                <valor>0.88</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1175</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0924'</codigoAuxiliar>
+                      <descripcion>b'PATCH PANEL MODULAR PARA CAT5E Y CAT6 24 PTOS QPCOM'/HUAWEI x UNIDADES x </descripcion>
+                      <cantidad>4.00</cantidad>
+                      <precioUnitario>20.16</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>80.64</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>80.64</baseImponible>
+                <valor>9.68</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1160</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0925'</codigoAuxiliar>
+                      <descripcion>b'FUNDA 100 UNID. CONECTOR RJ-45 CAT5E / CAT6'/QPCOM x Cajas x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>21.75</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>21.75</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>21.75</baseImponible>
+                <valor>2.61</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                                  <codigoPrincipal>1185</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0943'</codigoAuxiliar>
+                                  <descripcion>b'CONFIGURACION DE TELEFONOS IP' / b'CONFIGURACION DE TELEFONOS IP'</descripcion>
+                                  <cantidad>29.00</cantidad>
+                                  <precioUnitario>5.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>145.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>145.00</baseImponible>
+                <valor>17.40</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                      <codigoPrincipal>1176</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0922'</codigoAuxiliar>
+                      <descripcion>b'I-1165 FUNDA DE 20 TUERCAS PARA RACK'/BEAUCOUP  x UNIDADES x </descripcion>
+                      <cantidad>4.00</cantidad>
+                      <precioUnitario>7.60</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>30.40</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>30.40</baseImponible>
+                <valor>3.64</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1155</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0920'</codigoAuxiliar>
+                      <descripcion>b'I-1107 BANDEJA 20CM 1UR'/BEAUCOUP  x UNIDADES x </descripcion>
+                      <cantidad>5.00</cantidad>
+                      <precioUnitario>14.07</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>70.35</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>70.35</baseImponible>
+                <valor>8.45</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>90</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0057'</codigoAuxiliar>
+                      <descripcion>b'L-1135 MULTITOMAELECTRICA HORIZONTAL 4 TOMAS DOBLES'/BEAUCOUP  x UNIDADES x </descripcion>
+                      <cantidad>3.00</cantidad>
+                      <precioUnitario>37.85</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>113.55</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>113.55</baseImponible>
+                <valor>13.62</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                                  <codigoPrincipal>1186</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0944'</codigoAuxiliar>
+                                  <descripcion>b'CONFIGURACION DE CENTRAL TELEFONICA' / b'CONFIGURACION DE CENTRAL TELEFONICA'</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>200.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>200.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>200.00</baseImponible>
+                <valor>24.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                      <codigoPrincipal>1156</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0921'</codigoAuxiliar>
+                      <descripcion>b' I1142 ORGANIZADOR HORIZONTAL 40X60 1UR'/BEAUCOUP  x UNIDADES x </descripcion>
+                      <cantidad>5.00</cantidad>
+                      <precioUnitario>16.43</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>82.15</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>82.15</baseImponible>
+                <valor>9.85</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                                  <codigoPrincipal>1183</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0941'</codigoAuxiliar>
+                                  <descripcion>b'INSTALACION Y CONFIGURACION DE RED' / b'INSTALACION Y CONFIGURACION DE RED'</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>100.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>200.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>200.00</baseImponible>
+                <valor>24.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature263094">
+<ds:SignedInfo Id="Signature-SignedInfo938644">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID598144" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature263094-SignedProperties388575">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>Md33ehU78wD/His5USEavz3tDyA=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1822317">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>myJo6ur/iFWz1BbJ74ifglmgnKE=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-396217" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>HAgXkWAH20bf4SriTMI8e7GePSo=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue379936">
+O/sy6Yw4XvBkXgV7E1c2vDtvASreSXE8i6aEBcam+KZkYHatxhG8DHqRXF9K9Vtr4ViQgv1uFeN6
+SlTS5/8On3tosslP+nx2FwEhC8NwrLgvXnJxZDhJ/ZlhL0cMXkYoHrjeZDML6uTGa2jCwJrtpve7
+PJysKETQsaFfG08N8RALQB8k1+GQuwsHf2vOg+vMoEe8HNHqjJpe+gQnfMcUWtIEpKUeEKxVieAy
+Bdgwpy+vXu2z6GUJHl4isWbmcdUua5fylbvldhImncJYZb5WcwcHplkQ7MnsiSZ6EiEIaEmEyl9K
+sy8JGqXt8uheRoQoNDMs6kxFDgc+A8E8sqbzcQ==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1822317">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJlTCCB32gAwIBAgIEWlq8gjANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE4MDExNjE4NTMxNVoXDTIwMDExNjE5MjMx
+NVowgbMxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE3MBEGA1UEBRMKMDAwMDI1MTM2MjAiBgNVBAMTG0pPSE5OWSBFREdBUiBV
+UkRJTiBHT05aQUxFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMJlIaeyZ75mCHbo
+6D7TQrWye9iPT/tqD1etsuNujpZocl6vqnd7CgqR+NRjI9JY+goK62dhuZcP7Cyq6QCqNTBM0BH7
+Bvz6o8BLo+UWoIJlgfvOunIaQElbNFtijVh1XopFe1Y4MSc0RltUwPwPc7zzuiJr+l3/Z3yP05MD
+6OLNqi11VwsbBfvHRDxnLtnX6bgUCXuvgG57IjW6O3IKCWhkFLs8l1zwOy0KvDnHw5e6TyZSkxXW
+3lFuk0a/RoXyI4MoC4NCDY1Av+01czG55sAaqoOc0qLZh6IFu3dMGQVXkhPa2Or4gy7u0+7g47xr
+NegqsdOOhMHEAu1mc2XhnIMCAwEAAaOCBL8wggS7MAsGA1UdDwQEAwIHgDBmBgNVHSAEXzBdMFsG
+CysGAQQBgqg7AgEBMEwwSgYIKwYBBQUHAgEWPmh0dHA6Ly93d3cuZWNpLmJjZS5lYy9wb2xpdGlj
+YS1jZXJ0aWZpY2Fkby9wZXJzb25hLW5hdHVyYWwucGRmMIGRBggrBgEFBQcBAQSBhDCBgTA+Bggr
+BgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29j
+c3AwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwMS5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dlYi9z
+dGF0dXMvb2NzcDAaBgorBgEEAYKoOwMBBAwTCjA3MDM4ODY2OTcwHAYKKwYBBAGCqDsDAgQOEwxK
+T0hOTlkgRURHQVIwFQYKKwYBBAGCqDsDAwQHEwVVUkRJTjAYBgorBgEEAYKoOwMEBAoTCEdPTlpB
+TEVaMCUGCisGAQQBgqg7AwcEFxMVUEFOQU1FUklDQU5BIFkgQ0FSQ0hJMBkGCisGAQQBgqg7AwgE
+CxMJMDcyOTUyODg1MBgGCisGAQQBgqg7AwkEChMIRWwgR3VhYm8wFwYKKwYBBAGCqDsDDAQJEwdF
+Q1VBRE9SMB0GCisGAQQBgqg7AwsEDxMNMDcwMzg4NjY5NzAwMTAgBgorBgEEAYKoOwMzBBITEFNP
+RlRXQVJFLUFSQ0hJVk8wGQYDVR0RBBIwEIEOaW5mb0BkaXpvZi5jb20wggHfBgNVHR8EggHWMIIB
+0jCCAc6gggHKoIIBxoaB1WxkYXA6Ly9iY2VxbGRhcHN1YnAxLmJjZS5lYy9jbj1DUkw1MDIsY249
+QUMlMjBCQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGw9UVVJVE8sb3U9RU5USURBRCUy
+MERFJTIwQ0VSVElGSUNBQ0lPTiUyMERFJTIwSU5GT1JNQUNJT04tRUNJQkNFLG89QkFOQ08lMjBD
+RU5UUkFMJTIwREVMJTIwRUNVQURPUixjPUVDP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+ZYY0aHR0cDovL3d3dy5lY2kuYmNlLmVjL0NSTC9lY2lfYmNlX2VjX2NybGZpbGVjb21iLmNybKSB
+tTCBsjELMAkGA1UEBhMCRUMxIjAgBgNVBAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1
+BgNVBAsTLkVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAM
+BgNVBAcTBVFVSVRPMSUwIwYDVQQDExxBQyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMQ8wDQYD
+VQQDEwZDUkw1MDIwKwYDVR0QBCQwIoAPMjAxODAxMTYxODUzMTVagQ8yMDIwMDExNjE5MjMxNVow
+HwYDVR0jBBgwFoAUGPnw++YyHJlmOSrKi7JpfUknv84wHQYDVR0OBBYEFLh0bcUnug8SNPn5fqW9
+55+MyDTMMAkGA1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsEVjguMQMCBLAwDQYJKoZIhvcNAQEL
+BQADggIBAEV2L4oBcgTSbNWGiTCYSAB9HDfXbXocWPrODQ3mgH48H6ZPBf1dju2+wq7qPv7GmPz8
+UaiXJJalupaz7jxk92hZ30dQR/eHGtc2D5v2MWjMGEuyT0v2yyR85JQvRZm5qjQYJ8XbKi1uqy3i
+DgR0QlQOpOqmUDpycGubAkzTo12U0KtSr3fiIE0fKEiWPhlOwjhFrl1I1dZzKC8smLe6jUy6z/Vy
+vAG0WCpgT/oQ9glHAYk8hq+NfORKIePbcRdJ3eV3csyajibU9zpra/b1ewQbkZAF+uBprD6EM9ya
+s4qHUdNCBm0ZCBGUr9SNeGGKIedUpO7MwTD8Tr2Bhzvzu2rdAncFkpJTG5XxLs8on0m2InMYcjsM
+b5PTNjAU42tUVif8r3f8DMJO8rjy5aHY3GiuLLGkh1/80cRq4LJJ8RZ3JmwUo8mCWkUUMxcuSpad
+SY+mET5xIIElv1c9p5b8swuO7GWRq99h7rTieEn7YrcPHGXbrnGkAFQ7XYpqvAK566EYLGMdWhci
+0q6oQkEz8vJTo1mecpFDesOOq7GPHrFEA+juCihCF40EJJhUSdzpFncdjlSIkMBVIx8VvVvmqBxh
+oeXwO+siC4g2raAM4Z1KURcR4l//mf5ZvQevDk1Pu72ihgcnmnWK6eBlv3tQ+sFUE/j717J4a5+Z
+0W6jlXSY
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+wmUhp7JnvmYIdujoPtNCtbJ72I9P+2oPV62y426OlmhyXq+qd3sKCpH41GMj0lj6CgrrZ2G5lw/s
+LKrpAKo1MEzQEfsG/PqjwEuj5RaggmWB+866chpASVs0W2KNWHVeikV7VjgxJzRGW1TA/A9zvPO6
+Imv6Xf9nfI/TkwPo4s2qLXVXCxsF+8dEPGcu2dfpuBQJe6+AbnsiNbo7cgoJaGQUuzyXXPA7LQq8
+OcfDl7pPJlKTFdbeUW6TRr9GhfIjgygLg0INjUC/7TVzMbnmwBqqg5zSotmHogW7d0wZBVeSE9rY
+6viDLu7T7uDjvGs16Cqx046EwcQC7WZzZeGcgw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature263094-Object310887"><etsi:QualifyingProperties Target="#Signature263094"><etsi:SignedProperties Id="Signature263094-SignedProperties388575"><etsi:SignedSignatureProperties><etsi:SigningTime>2019-11-12T16:34:36-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>oDaniwUYpeJMWYGXdvoH5vHD3A4=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1515895938</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-396217"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>0907201901070454853600120010010000003890000000019</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000389</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>09/07/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>TITO COELLO </razonSocialComprador><identificacionComprador>0701032682001</identificacionComprador><direccionComprador>babahoyo y sta catalina</direccionComprador><totalSinImpuestos>28.58</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>28.58</baseImponible><valor>3.43</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>32.01</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>723</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0554'</codigoAuxiliar>
+                      <descripcion>b'REPARACION DE COMPUTADOR, MANTENIMIENTO PREVENTIVO-CORRECTIVO'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>17.86</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>17.86</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>17.86</baseImponible>
+                <valor>2.14</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>279</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0178'</codigoAuxiliar>
+                      <descripcion>b'TINTA 100 ML CANON'/SIN MARCA x  x </descripcion>
+                      <cantidad>4.00</cantidad>
+                      <precioUnitario>2.68</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>10.72</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>10.72</baseImponible>
+                <valor>1.28</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

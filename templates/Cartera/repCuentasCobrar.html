@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: a4 portrait;
+            @frame header_frame{
+             -pdf-frame-content: header_content;
+             left: 10pt; top: 10pt;right:10pt ;
+            }
+            @frame content_frame{
+                left: 10pt; top: 190pt; height: 600pt; right: 10pt;
+            }
+            @frame footer_frame {           /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 10pt; top: 800pt;right: 10pt;
+            }
+        }
+        tr{
+            border: 1px solid {{ reporte.color_lineas }};
+            padding: 3px;
+            color: {{ reporte.color_texto }};
+        }
+        .encabezado{
+            color: {{ reporte.color_encabezados_tablas_texto }};
+            background-color:{{ reporte.color_encabezados_tablas }};
+            text-align: left;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        table{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        #header_content{
+            text-align: center;
+            color: {{ reporte.color_texto }};
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header_content">
+        <img src="{{ reporte.ruta_imagenes }}/media/{{ reporte.encabezado }}" style="width: 100%;" alt="">
+        <br>
+        <label ><strong>TABLA DE PAGOS</strong></label>
+    </div>
+    <div id="content">
+        <table>
+            <tr>
+                <td style="width: 180px" class="encabezado"><strong>CLIENTE: </strong></td>
+                <td>{{ cuenta.factura.cliente.nombre|upper }} {{ cuenta.factura.cliente.apellido|upper }}</td>
+                <td style="width: 180px;" class="encabezado"><strong>IDENTIFICACION:</strong> </td>
+                <td>{{ cuenta.factura.cliente.ruc }}</td>
+            </tr>
+            <tr>
+                <td style="width: 180px;" class="encabezado"><strong>UBICACION:</strong> </td>
+                <td>{{ cuenta.factura.cliente.parroquia }}</td>
+                <td style="width: 180px;" class="encabezado"><strong>DIRECCION:</strong> </td>
+                <td>{{ cuenta.factura.cliente.direccion|upper }}</td>
+            </tr>
+            <tr>
+                <td style="width: 160px;" class="encabezado"><strong>FACTURA:</strong> </td>
+                <td>{{ cuenta.factura.codigoEstablecimiento }}-{{ cuenta.factura.puntoEmision }}- {{ cuenta.factura.secuencial }}</td>
+                <td style="width: 180px;" class="encabezado">FECHA</td>
+                <td>{{ cuenta.fecha|date:"d/m/Y" }}</td>
+            </tr>
+            <tr>
+                 <td style="width: 180px;" class="encabezado">VALOR ADEUDADO:</td>
+                <td>${{ cuenta.valor }}</td>
+                 <td style="width:180px;" class="encabezado">USUARIO RESPONSABLE:</td>
+                <td>{{ cuenta.usuario|upper }}</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td style=" text-align: center" class="encabezado">NO</td>
+                <td style=" text-align: center" class="encabezado">FECHA DE PAGO</td>
+                <td style=" text-align: center" class="encabezado">ABONOS</td>
+                <td style=" text-align: center" class="encabezado">SALDOS</td>
+                <td style=" text-align: center" class="encabezado">ESTADOS</td>
+            </tr>
+            {% for detalle in detalles %}
+                <tr>
+                    <td style=" text-align: center">{{ detalle.n_pago }}</td>
+                    <td style=" text-align: center"> {{ detalle.fecha_esperada|date:"d/m/Y" }}</td>
+                    <td style=" text-align: center">{{ detalle.abono|floatformat:2}}</td>
+                    <td style=" text-align: center">{{ detalle.saldo|floatformat:2}}</td>
+                    <td style=" text-align: center">{% if detalle.estado%}PAGADO{% else %}PENDIENTE{% endif %}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br><br><br><br><br>
+        <table>
+            <tr style="border: none">
+                <td style="text-align: center"><strong>CLIENTE:<br><br><br><br><br><br>______________________________________ <br> {{ cuenta.factura.cliente.nombre|upper }} {{ cuenta.factura.cliente.apellido|upper }}
+                    <br>C.I.:{{ cuenta.factura.cliente.ruc }}</strong>
+                </td>
+                <td style="text-align: center"><strong>USUARIO RESPONSABLE: <br><br><br><br><br><br>______________________________________ <br>
+                    {{ cuenta.usuario|upper }}
+                    <br>C.I.:{{ reporte.empresa.ruc }}</strong>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="footer_content" class="encabezado" style="height: 30px; padding: 10px;vertical-align: center">
+        Página <pdf:pagenumber> de <pdf:pagecount> - CUENTAS POR COBRAR - {{ reporte.empresa|upper }}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Inventario{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+          <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                  <div class="x_title">
+                    <h2>Inventario <small>Listado de Proveedores</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+                    <div class="x_content">
+                        <a class="btn bg-blue" href="{% url 'registroProveedores' %}"><i class="fa fa-user"></i>  Agregar Proveedor</a>
+                        <a class="btn bg-green" target="_blank" href="{% url 'reporteProveedor' %}"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+
+                    </div>
+                    <br/><br/><br/><br/>
+                    <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                       <table id="tablaProveedores" class="table table-bordered table-striped dataTables_scroll">
+                      <thead style="background-color: #5A738E;color: whitesmoke">
+                          <th style="width: 400px">RAZON SOCIAL</th>
+                          <th>DIRECCION</th>
+                          <th>EMAIL</th>
+                          <th style="text-align: center">ESTADO</th>
+                          <th style="text-align: center; width: 150px" >OPCIONES</th>
+                      </thead>
+                      <tbody>
+                      {% for proveedor in proveedores %}
+                        <tr>
+                          <td>
+                              <strong>Identificación: </strong>{{ proveedor.ruc }}<br>
+                              <strong>Razón Social: </strong>{{ proveedor.razonSocial }}<br>
+                              <strong>Nombre Comercial: </strong>{{ proveedor.nombreComercial }}
+                          </td>
+                          <td><strong>Dir.: </strong>{{ proveedor.direccion }} <br><strong>Tel.: </strong>{{ proveedor.telefono }}</td>
+                          <td>{{ proveedor.email }} <br>{{ proveedor.web }}</td>
+
+                          <td style="text-align: center">
+                              {% if proveedor.estado == 1 %}
+                                 <span class="glyphicon glyphicon-ok-sign text-success" style="font-size:20px;"></span>
+                                  {% else %}
+                                    <span class="glyphicon glyphicon-remove-sign text-danger" style="font-size:20px"></span>
+                              {% endif %}
+                          </td>
+
+                          <td style="text-align: center">
+                              <a href="/inventario/editarProveedor/{{ proveedor.id }}/" class="btn bg-orange btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                              {% if proveedor.estado %}
+                                <a onclick="f()" href="/inventario/deleteProveedor/{{ proveedor.id }}/" class="btn bg-red btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                              {% endif %}
+                              <a class="cargar btn bg-blue btn-xs" data-toggle="modal" href="#proveedores"
+
+                              onclick="capturar('{{ proveedor.tipo_identificacion }}',
+                                      '{{ proveedor.ruc }}',
+                                      '{{ proveedor.razonSocial }}',
+                                      '{{ proveedor.nombreComercial }}',
+                                      '{{ proveedor.sector }}',
+                                      '{{ proveedor.actividad }}',
+                                      '{{ proveedor.telefono }}',
+                                      '{{ proveedor.convencional }}',
+                                      '{{ proveedor.web }}',
+                                      '{{ proveedor.parroquia.lugar.lugar.lugar.nombre }}',
+                                      '{{ proveedor.parroquia.lugar.lugar.nombre }}',
+                                      '{{ proveedor.parroquia.lugar.nombre}}',
+                                      '{{ proveedor.parroquia.nombre }}',
+                                      '{{ proveedor.direccion }}',
+                                      '{{ proveedor.email }}',
+                                      {% if proveedor.estado %}
+                                          '1'
+                                      {% else%}
+                                          '0'
+                                      {% endif %}
+                                      )">
+                                  <i class="fa fa-eye"></i>
+                              </a>
+
+                          </td>
+
+                        </tr>
+
+                      {% endfor %}
+
+
+                      </tbody>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    </div>
+
+     <!-- MODAL PARA CARGAR PROVEEDORES -->
+     <div class="modal fadeInLeft proveedores" id="proveedores" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Proveedor Seleccionado </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form role="form">
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Tipo Identificacion :</label>
+                            <input readonly style="border-radius: 5px" type="text" class="form-control" id="Indentificacion"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Indentificacion :</label>
+                            <input readonly style="border-radius: 5px" type="text" class="form-control" id="Ruc"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Razon Social :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Nombre"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Nombre Comercial :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Apellido"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Sector :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Sector"/>
+                        </div>
+
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Actividad :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Actividad"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Telefono :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Telefono"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Convencional :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Convencional"/>
+                        </div>
+
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Pais :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Pais"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Provincia :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Provincia"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Ciudad :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Ciudad"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Parroquia :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Parroquia"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Web :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Web"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Direccion :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Direccion"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Email :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Email"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Estado :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Estado"/>
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-orange" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        Salir
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+
+    function capturar(identificacion,ruc,nombres,apellido,sector,actividad,telefono,convencional,
+                      web,pais,provincia,ciudad,parroquia,direccion,email,estado)
+    {
+        $('#Indentificacion').val(identificacion);
+        $("#Ruc").val(ruc);
+        $("#Nombre").val(nombres);
+        $("#Apellido").val(apellido);
+        $("#Sector").val(sector);
+        $("#Actividad").val(actividad);
+        $("#Telefono").val(telefono);
+        $("#Convencional").val(convencional);
+        $("#Web").val(web);
+        $("#Pais").val(pais);
+        $("#Provincia").val(provincia);
+        $("#Ciudad").val(ciudad);
+        $("#Parroquia").val(parroquia);
+        $("#Direccion").val(direccion);
+        $("#Email").val(email);
+
+        if (parseInt(estado.trim()) == 1)
+            $('#Estado').val('Activo');
+        else
+            $('#Estado').val('Inactivo');
+    }
+    </script>
+
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        Tablas("#tablaProveedores");
+    </script>
+{% endblock scripts %}

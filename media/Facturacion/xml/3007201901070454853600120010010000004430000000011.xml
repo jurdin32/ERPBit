@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>3007201901070454853600120010010000004430000000011</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000443</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>30/07/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>DARWIN  PILALOA RUIZ</razonSocialComprador><identificacionComprador>0702818717001</identificacionComprador><direccionComprador>PICHINCHA E/ JUNIN Y TARQUI</direccionComprador><totalSinImpuestos>575.89</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>575.89</baseImponible><valor>69.11</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>645.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>165</codigoPrincipal>
+                      <codigoAuxiliar>b'IMP-0100'</codigoAuxiliar>
+                      <descripcion>b'IMPRESORA EPSON L575'/EPSON x  x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>348.22</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>348.22</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>348.22</baseImponible>
+                <valor>41.79</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>258</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0163'</codigoAuxiliar>
+                      <descripcion>b'CARTUCHO NEGRO CANON 210'/SIN MARCA x  x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>22.32</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>22.32</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>22.32</baseImponible>
+                <valor>2.68</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>160</codigoPrincipal>
+                      <codigoAuxiliar>b'IMP-0093'</codigoAuxiliar>
+                      <descripcion>b'IMPRESORA EPSON L4150 MULTIFUNCION'/EPSON x UNIDADES x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>205.35</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>205.35</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>205.35</baseImponible>
+                <valor>24.64</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

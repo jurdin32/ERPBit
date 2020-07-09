@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Johnny E. Urdin Gonz\xc3\xa1lez</razonSocial><nombreComercial>Business Intelligence Thinks</nombreComercial><ruc>0703886697001</ruc><claveAcceso>2611201901070388669700120010010000001020000000015</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000102</secuencial><dirMatriz>Rocafuerte 504 y Buenavista</dirMatriz></infoTributaria><infoFactura><fechaEmision>26/11/2019</fechaEmision><dirEstablecimiento>Rocafuerte 504 y Buenavista</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>VS SOLUTIONS</razonSocialComprador><identificacionComprador>0791819415001</identificacionComprador><direccionComprador>VIA PANAMERICANA S/N</direccionComprador><totalSinImpuestos>221.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>221.00</baseImponible><valor>26.52</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>247.52</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1213</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0970'</codigoAuxiliar>
+                                  <descripcion>b'SOPORTE PRESENCIA' / b'SOPORTE PRESENCIAL DONDE EL CLIENTE'</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>35.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>35.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>35.00</baseImponible>
+                <valor>4.20</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1216</codigoPrincipal>
+                                  <codigoAuxiliar>b'C\xc3\x81M-0972'</codigoAuxiliar>
+                                  <descripcion>b'DESBLOQUEO DE CAMARA ' / b'DESBLOQUEO DE CAMARA CCTV'</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>20.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>20.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>20.00</baseImponible>
+                <valor>2.40</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1212</codigoPrincipal>
+                                  <codigoAuxiliar>b'C\xc3\x81M-0969'</codigoAuxiliar>
+                                  <descripcion>b'SOPORTE NO PRESENCIAL ' / b'SOPORTE V\xc3\x8dA ACCESO REMOTO A SERVICIOS DE CCTV'</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>20.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>40.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>40.00</baseImponible>
+                <valor>4.80</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1215</codigoPrincipal>
+                                  <codigoAuxiliar>b'C\xc3\x81M-0971'</codigoAuxiliar>
+                                  <descripcion>b'REVISION DE CAMARAS' / b''</descripcion>
+                                  <cantidad>3.00</cantidad>
+                                  <precioUnitario>42.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>126.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>126.00</baseImponible>
+                <valor>15.12</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>

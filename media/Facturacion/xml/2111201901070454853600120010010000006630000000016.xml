@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>2111201901070454853600120010010000006630000000016</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000663</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>21/11/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>UNIVERSIDAD METROPOLITANA </razonSocialComprador><identificacionComprador>0791704340001</identificacionComprador><direccionComprador>BOLIVAR ENTRE JUNIN Y TARQUI</direccionComprador><totalSinImpuestos>125.01</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>125.01</baseImponible><valor>15.00</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>140.01</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>162</codigoPrincipal>
+                      <codigoAuxiliar>b'IMP-0097'</codigoAuxiliar>
+                      <descripcion>b'CARTUCHO CANON 211 COLOR'/SIN MARCA x  x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>26.79</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>26.79</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>26.79</baseImponible>
+                <valor>3.21</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1195</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0953'</codigoAuxiliar>
+                      <descripcion>b'CHIP EPSON WORK FORCE WF'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>44.64</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>44.64</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>44.64</baseImponible>
+                <valor>5.36</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>252</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0157'</codigoAuxiliar>
+                      <descripcion>b'TINTA EPSON 1000 ML'/SIN MARCA x  x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>17.86</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>17.86</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>17.86</baseImponible>
+                <valor>2.14</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>622</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0472'</codigoAuxiliar>
+                      <descripcion>b'TINTA DE LITRO AZUL'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>17.86</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>35.72</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>35.72</baseImponible>
+                <valor>4.28</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

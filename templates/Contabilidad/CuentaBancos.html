@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Registro Bancos y Asignacion al registro Contable</h3>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <input class="hidden" id="veri" type="text" name="verificar">
+        <div class="row">
+
+
+            <div class="col-md-6 col-xs-12">
+                <form method="POST" action="" id="form1" class="form-horizontal form-label-left input_mask">
+                    {% csrf_token %}
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="{% url 'registroBancos' %}">Contabilidad »</a>
+                                <small>Registro de Bancos</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Seleccione El Banco <span
+                                        class="required">*</span>
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <select name="banco" class="form-control has-feedback-left" id="banco">
+                                    <option value="0">-- SELECCIONE --</option>
+                                        {% for banco in bancos %}
+                                            <option value="{{ banco.id }}">{{ banco.nombre }}</option>
+                                        {% endfor %}
+
+                                    </select>
+                                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Tipo de Cuenta <span
+                                        class="required">*</span>
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <select name="tipo" class="form-control has-feedback-left" id="tipo">
+                                        <option value="0">-- SELECCIONE --</option>
+                                        <option value="CA">AHORROS</option>
+                                        <option value="CC">CORRIENTE</option>
+                                    </select>
+                                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">No. de Cuenta <span
+                                        class="required">*</span>
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <input style="border-radius: 5px" name="cuenta" id="cuenta" maxlength="15"
+                                           class="form-control has-feedback-left"
+                                           required="required" value="{{ cuenta.no_cuenta }}">
+                                    <span class="fa fa-credit-card form-control-feedback left"
+                                          aria-hidden="true"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Seleccione la Cuenta Contable<span
+                                        class="required">*</span>
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <select name="ccuenta" class="form-control has-feedback-left" id="ccuenta">
+                                        <option value="0">--- SELECCIONE ----</option>
+                                         {% for cuen in cuentas %}
+                                            <option value="{{ cuen.id }}">{{ cuen|upper }}</option>
+                                        {% endfor %}
+
+                                    </select>
+                                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="separator"></div>
+
+                            <div style="text-align: right">
+                                <button type="submit" id="btn1" class="btn bg-blue"><i class="glyphicon glyphicon-save"></i>
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="">Contabilidad »</a>
+                                <small>Registro de Bancos</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <table class="table table-striped table-bordered" id="tablaBancos">
+                                <thead style="background: #2A3F54; color: white">
+                                    <th>No.</th>
+                                    <th>BANCO</th>
+                                    <th>TIPO DE CUENTA</th>
+                                    <th>NO DE CUENTA</th>
+                                    <th>ESTADO</th>
+                                    <th>EDIT.</th>
+                                    <Th>ELIM.</Th>
+                                </thead>
+                                <tbody>
+                                    {% for cbanco in cbancos %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ cbanco.banco.nombre }}</td>
+                                            <td>{{ cbanco.tipo_cuenta }}
+                                            <td>{{ cbanco.no_cuenta }}</td>
+                                            <td>{% if cbanco.estado %}
+                                                 <label for="" class="text-success">ACTIVO</label>
+                                                {% else %}
+                                                <label for="" class="text-danger">NO ACTIVO</label>
+                                                {% endif %}
+                                            </td>
+                                            <td style="text-align: center"><a class="label btn-warning" href="{% url 'modificarBancos' cbanco.id %}"><i class="fa fa-edit"></i></a></td>
+                                            <td style="text-align: center">
+                                                {% if cbanco.estado %}
+                                                    <a class="label btn-danger" href="{% url 'EliminarBancos' cbanco.id %}"><i class="fa fa-trash"></i></a>
+                                                    {% else %}
+                                                    <a class="label btn-success" href="{% url 'EliminarBancos' cbanco.id %}"><i class="fa fa-check"></i></a>
+                                                {% endif %}
+
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    select{
+        border-radius: 5px;
+    }
+</style>
+{% endblock content %}
+{% block scripts %}
+    <script>
+    $("#btn1").click(function(){
+        $("#form1").attr("action","/contabilidad/bancos/{{ cuenta.id }}/".replace("//","/"))
+    })
+    $('#ccuenta option[value="{{ cuenta.enlace.id }}"]').attr("selected", true);
+    $('#banco option[value="{{ cuenta.banco.id }}"]').attr("selected", true);
+    $('#tipo option[value="{{ cuenta.tipo_cuenta }}"]').attr("selected", true);
+    </script>
+{% endblock %}

@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Configuracion{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+            {% if mensaje %}
+                <div class="alert alert-success">
+                    <label for="">{{ mensaje }}</label>
+                </div>
+            {% endif %}
+            {% if error %}
+                <div class="alert alert-danger">
+                    <label for="">{{ error }}</label>
+                </div>
+            {% endif %}
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="/configuracion/annios/">Configuracion</a>
+                                <small> DE AÑOS</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="x_content">
+                            <a class="btn bg-blue crear" data-toggle="modal" href="#registroAnnio"><i class="fa fa-th"></i> Agregar
+                                Año</a>
+                            <a class="btn bg-orange"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                        </div>
+
+                        <br/><br/><br/><br/>
+
+                        <table id="tablaAnnios" class="table table-striped table-bordered dataTables_scroll">
+                            <thead style="background-color: #5A738E;color: whitesmoke">
+                            <th style="width: 100px; text-align: center">NO.</th>
+                            <th>AÑO</th>
+                            <th>S.B.U.</th>
+                            <th>AÑO</th>
+                            <th>DIAS MENSUALES</th>
+                            <th>DIAS SEMANALES</th>
+                            <th>HORAS MENSUALES</th>
+                            <th>HORAS SEMANALES</th>
+                            <th>HORAS DIARIAS</th>
+                            <th>ESTATUS</th>
+                            <th style="text-align: center; width: 100px">OPCIONES</th>
+                            </thead>
+                            <tbody>
+                            {% for annio in annios %}
+                                <tr style="vertical-align: middle">
+                                    <td style="text-align: center">{{ forloop.counter }}</td>
+                                    <td style="text-align: center">{{ annio.anio }}</td>
+                                    <td style="text-align: center">{{ annio.sueldoBasico }}</td>
+                                    <td style="text-align: center">{{ annio.diasLaborables }}</td>
+                                    <td style="text-align: center">{{ annio.diasMensuales }}</td>
+                                    <td style="text-align: center">{{ annio.diasSemanales }}</td>
+                                    <td style="text-align: center">{{ annio.horasmensuales }}</td>
+
+                                    <td style="text-align: center">{{ annio.horassemanales }}</td>
+                                    <td style="text-align: center">{{ annio.horasdiarias }}</td>
+                                    <td style="text-align: center">{% if annio.activado %}
+                                        <a class="btn btn-success btn-xs" href="{% url 'activarAnios' annio.id %}"><i class="fa fa-close"></i></a>
+                                        {% else %}
+                                        <a class="btn btn-danger btn-xs" href="{% url 'activarAnios' annio.id %}"><i class="fa fa-check-circle-o"></i></a>
+                                    {% endif %}
+                                    </td>
+                                    <td style="text-align: center">
+                                        <a data-toggle="modal" href="#registroAnnio"
+                                           class="btn btn-success btn-xs datos"
+                                           data-id="{{ annio.id }}"
+                                           data-annio="{{ annio.anio }}"
+                                           data-sbu="{{ annio.sueldoBasico }}"
+                                           data-dannio="{{ annio.diasLaborables }}"
+                                           data-dmes="{{ annio.diasMensuales }}"
+                                           data-hdias="{{ annio.horasdiarias }}"
+                                           data-dsemana="{{ annio.diasSemanales }}"
+                                           data-hsemana="{{ annio.horassemanales }}"
+                                           data-hmes="{{ annio.horasmensuales }}"
+                                        ><i class="fa fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fadeInLeft" id="registroAnnio" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Registrar Nuevo Año Fiscal</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="formulario" role="form" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="id" id="id">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Año</label>
+                            <input required  type="number" class="form-control" name="annio" id="annio"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Sueldo Basico Unificado</label>
+                            <input required value="0.00"  type="text"  class="form-control" name="sbu" id="sbu"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Dias a laborar en el Año</label>
+                            <input required  type="number" class="form-control"  name="dannio" id="dannio"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Dias a laborar en el Mes</label>
+                            <input required  type="number" class="form-control" onkeyup="cambiar()"  name="dmes" id="dmes"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Horas a laborar en el día</label>
+                            <input required onkeyup="cambiar()"  type="number" class="form-control" name="hdias" id="hdias"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Dias a laborar en la Semana</label>
+                            <input required onkeyup="cambiar()" type="number" class="form-control" name="dsemana" id="dsemana"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Horas a laborar en la Semana</label>
+                            <input required type="number" class="form-control" readonly name="hsemana" id="hsemana"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>Horas a laborar en el Mes</label>
+                            <input required type="number" class="form-control" readonly  name="hmes" id="hmes"/>
+                        </div>
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12" style="text-align: center;padding-top: 20px">
+                            <button type="submit" class="btn btn-info"><i class="fa fa-save"></i> REGISTRAR</button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fa fa-sign-in"></i> SALIR</button>
+                        </div>
+                    </form>
+               </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        input{
+            border-radius: 5px;
+            text-align: right;
+        }
+    </style>
+{% endblock %}
+{% block scripts %}
+    <script>
+        setTimeout(function(){
+            $(".alert").hide()
+        },5000);
+
+        Tablas("#tablaAnnios");
+    </script>
+    <script>
+    $(".datos").click(function ()
+    {
+        $("#id").val($(this).data('id'));
+        $("#annio").val($(this).data('annio'));
+        $("#sbu").val($(this).data('sbu'));
+        $("#dannio").val($(this).data('dannio'));
+        $("#dmes").val($(this).data('dmes'));
+        $("#hdias").val($(this).data('hdias'));
+        $("#hsemana").val($(this).data('hsemana'));
+        $("#dsemana").val($(this).data('dsemana'));
+        $("#hmes").val($(this).data('hmes'));
+        $("#formulario").attr('action','/configuracion/annios/'+$(this).data('id')+"/")
+    });
+    $(".close").click(function(){
+        $("#formulario").attr('action','/configuracion/annios/')
+    })
+    $(".crear").click(function(){
+        $("#formulario").attr('action','/configuracion/annios/')
+        $("#id").val('');
+        $("#annio").val('');
+        $("#sbu").val('0.00');
+        $("#dannio").val(0);
+        $("#dmes").val(0);
+        $("#hdias").val(0);
+        $("#hsemana").val(0);
+        $("#dsemana").val(0);
+        $("#hmes").val(0);
+    })
+    function cambiar(){
+        mes=parseInt($("#dmes").val())
+        dia=parseInt($("#hdias").val())
+        semana=parseInt($("#dsemana").val())
+        $("#hsemana").val(semana *dia)
+        $("#hmes").val(mes *dia)
+    }
+    </script>
+{% endblock scripts %}

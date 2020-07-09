@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Configuracion{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Configuracion »
+                                <small> Reportes del Sistema</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="row">
+                                <div class="col-md-5 col-xs-12">
+                                    <div style="border-radius: 5px" class="x_panel">
+                                        <div class="x_title">
+                                            <h2>
+                                                <small>Parametros a Modificar</small>
+                                            </h2>
+                                            <ul class="nav navbar-right panel_toolbox">
+                                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                </li>
+                                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                                </li>
+                                            </ul>
+
+                                            <div class="clearfix"></div>
+
+                                            <div class="x_content">
+                                                <br/>
+                                                <form class="form-horizontal form-label-left"
+                                                      enctype="multipart/form-data" method="POST"
+                                                      action="">{% csrf_token %}
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Color
+                                                            del Texto</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <div class="input-group demo2  colorpicker-element">
+                                                                <input id="color_texto" name="color_texto" type="text"
+                                                                       value="{{ reporte.color_texto }}"
+                                                                       class="form-control">
+                                                                <span class="input-group-addon"><i
+                                                                        style="{{ reporte.color_texto }}"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Color
+                                                            del Fondo</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <div class="input-group demo2 colorpicker-element">
+                                                                <input id="color_fondo" name="color_fondo" type="text"
+                                                                       value="{{ reporte.color_fondo }}"
+                                                                       class="form-control">
+                                                                <span class="input-group-addon"><i
+                                                                        style="{{ reporte.color_fondo }}"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Color
+                                                            de las Líneas</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <div class="input-group demo2 colorpicker-element">
+                                                                <input id="color_lineas" name="color_lineas" type="text"
+                                                                       value="{{ reporte.color_lineas }}"
+                                                                       class="form-control">
+                                                                <span class="input-group-addon"><i
+                                                                        style="{{ reporte.color_lineas }}"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Encabezados</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <div class="input-group demo2 colorpicker-element">
+                                                                <input id="color_encabezados_tablas"
+                                                                       name="color_encabezados_tablas" type="text"
+                                                                       value="{{ reporte.color_encabezados_tablas }}"
+                                                                       class="form-control">
+                                                                <span class="input-group-addon"><i
+                                                                        style="{{ reporte.color_encabezados_tablas }}"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Textos
+                                                            del Encabezados</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <div class="input-group demo2 colorpicker-element">
+                                                                <input id="color_encabezados_tablas_texto"
+                                                                       name="color_encabezados_tablas_texto" type="text"
+                                                                       value="{{ reporte.color_encabezados_tablas_texto }}"
+                                                                       class="form-control">
+                                                                <span class="input-group-addon"><i
+                                                                        style="{{ reporte.color_encabezados_tablas_texto }}"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Imágen</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <small>Actualmente: {{ reporte.encabezado }}</small>
+                                                            <input id="encabezado" style="border:0px;" name="encabezado"
+                                                                   type="file" value="{{ reporte.encabezado }}"
+                                                                   class="form-control">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">Ruta
+                                                            del Servidor</label>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <input id="ruta_imagenes" name="ruta_imagenes" type="text"
+                                                                   value="{{ reporte.ruta_imagenes }}"
+                                                                   class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <br> <br> <br><br>
+                                                    <div style="text-align: center">
+                                                        <button type="submit" class="btn bg-blue"><i
+                                                                class="glyphicon glyphicon-save"></i> Guardar
+                                                        </button>
+                                                        <a href="" class="btn bg-orange" type="reset"><i
+                                                                class="glyphicon glyphicon-trash"></i> Limpiar</a>
+                                                        <a href="#" id="cambios" class="btn bg-green"><i
+                                                                class="glyphicon glyphicon-save-file"></i> Ver Cambios
+                                                        </a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-xs-12">
+                                    <div style="border-radius: 5px" class="x_panel">
+                                        <div class="x_title">
+                                            <h2>
+                                                <small>Simulación</small>
+                                            </h2>
+                                            <div class="clearfix"></div>
+                                            <div class="x_content">
+                                                <br>
+
+                                                <div style="text-align: center">
+                                                    <img src="/media/{{ reporte.encabezado }}" style="width: 100%">
+                                                </div>
+                                                <div class="row" style="text-align: center">
+                                                    <h1 class="titulo">REPORTE DE PRUEBA</h1>
+                                                </div>
+                                                <table id="tablaReporte" class="table tabla" border="1px">
+                                                    <thead>
+                                                    <th>Encabezado1</th>
+                                                    <th>Encabezado2</th>
+                                                    <th>Encabezado3</th>
+                                                    <th>Encabezado4</th>
+                                                    <th>Encabezado5</th>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>fila1</td>
+                                                        <td>fila1</td>
+                                                        <td>fila1</td>
+                                                        <td>fila1</td>
+                                                        <td>fila1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>fila2</td>
+                                                        <td>fila2</td>
+                                                        <td>fila2</td>
+                                                        <td>fila2</td>
+                                                        <td>fila2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>fila3</td>
+                                                        <td>fila3</td>
+                                                        <td>fila3</td>
+                                                        <td>fila3</td>
+                                                        <td>fila3</td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <thead>
+                                                    <th>Footer</th>
+                                                    <th>Footer</th>
+                                                    <th>Footer</th>
+                                                    <th>Footer</th>
+                                                    <th>Footer</th>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+{% endblock content %}
+
+{% block scripts %}
+
+    <script>
+        $('.tabla thead').css('background-color', '{{ reporte.color_encabezados_tablas }}');
+        $('.tabla thead').css('color', '{{ reporte.color_encabezados_tablas_texto }}');
+        $('.tabla tbody').css('color', '{{ reporte.color_texto }}')
+        $('.tabla tbody').css('background-color', '{{ reporte.color_fondo }}')
+        $('.tabla').css('border-color', '{{ reporte.color_lineas }}')
+        $('.tabla tr').css('border-color', '{{ reporte.color_lineas }}')
+        $('.titulo').css('color', '{{ reporte.color_texto }}')
+
+        function colores() {
+            $('.tabla thead').css('background-color', $('#color_encabezados_tablas').val());
+            $('.tabla thead').css('color', $('#color_encabezados_tablas_texto').val());
+            $('.tabla tbody').css('color', $('#color_texto').val());
+            $('.tabla tbody').css('background-color', $('#color_fondo').val());
+            $('.tabla').css('border-color', $('#color_lineas').val());
+            $('.tabla tr').css('border-color', $('#color_lineas').val());
+            $('.titulo').css('color', $('#color_texto').val());
+            console.log($('#color_encabezados_tablas').val());
+            console.log($('#color_encabezados_tablas').val());
+            console.log($('#color_texto').val());
+            console.log($('#color_fondo').val());
+            console.log($('#color_lineas').val());
+        }
+
+        $("#cambios").click(function () {
+            colores();
+        })
+    </script>
+{% endblock scripts %}

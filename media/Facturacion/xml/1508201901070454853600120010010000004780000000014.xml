@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1508201901070454853600120010010000004780000000014</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000478</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>15/08/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>UNIVERSIDAD TECNICA DE MACHALA </razonSocialComprador><identificacionComprador>0760001580001</identificacionComprador><direccionComprador>AV. PANAMERICANA 5. 1/2 VIA PASAJE</direccionComprador><totalSinImpuestos>150.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>150.00</baseImponible><valor>18.00</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>168.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>931</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0740'</codigoAuxiliar>
+                      <descripcion>b'UPS APC INTERACTIVO 600 VA 120 V, 120 V 4 TOMAS'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>75.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>150.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>150.00</baseImponible>
+                <valor>18.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

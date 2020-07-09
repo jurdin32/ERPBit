@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Clientes{% endblock title %}
+{% block content %}
+    
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title">
+                        <h2><a>Clientes »</a>
+                            <small>Reportes Dinamicos</small>
+                        </h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="form-horizontal form-label-left">
+
+                            <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                <label class="control-label col-md-3">Estado :</label>
+                                <div class="col-md-8 col-sm-3 col-xs-12">
+                                    <select style="border-radius: 5px" class="form-control" id="estado" name="estado">
+                                        <option value="T">Todos los registros</option>
+                                        <option value="A">Activo</option>
+                                        <option value="I">Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                <label class="control-label col-md-3 ">Desde :</label>
+                                <div class="col-md-8 col-sm-3 col-xs-12">
+                                    <input style="
+
+                                    border-radius: 5px" type="date" value=""
+                                           class="form-control has-feedback-left" id="fecha1" name="fecha1">
+                                    <span class="fa fa-calendar form-control-feedback left"
+                                          aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                <label class="control-label col-md-3 ">Hasta :</label>
+                                <div class="col-md-8 col-sm-3 col-xs-12">
+                                    <input style="
+
+
+                                    border-radius: 5px" type="date" value=""
+                                           class="form-control has-feedback-left" id="fecha2" name="fecha2">
+                                    <span class="fa fa-calendar form-control-feedback left"
+                                          aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3 col-sm-12 col-xs-12">
+                                 <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <button onclick="Listar()" class="btn bg-red"><i class="fa fa-refresh"></i> Generar</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12" id="#div-resultado">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_content">
+                        <table id="tablaDinamica" class="table table-bordered dataTables_scroll">
+                            <thead>
+                            <tr style="background-color: #5A738E;color: whitesmoke">
+                                <th style="width: 70px; text-align: center">NO.</th>
+                                <th style="width: 150px">IDENTIFICACIÓN</th>
+                                <th>NOMBRES Y APELLIDOS</th>
+                                <th>TELÉFONO</th>
+                                <th>DIRECCIÓN</th>
+                                <th style="text-align: center">ESTATUS</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% csrf_token %} 
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+
+    <script>
+        function Listar() {
+            var estado = $('#estado').val();
+            var fecha1 = $('#fecha1').val();
+            var fecha2 = $('#fecha2').val();
+            data = {
+                estado: estado,
+                fecha1: fecha1,
+                fecha2: fecha2,
+                csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val(),
+
+            };
+            $.post("{% url 'listarClienteAjax' %}", data, function(response) {
+                if ($('#tablaDinamica').find('> tbody').empty()) {
+                    $.each(response.items, function (index, items) {
+                        estado = items.estado;
+                        estilo = ""
+                        if (estado == "ACTIVO") {
+                            estilo = "text-align:center; color: ";
+                        }
+                        else {
+                            estilo = 'color: red; text-align:center';
+                        }
+                        var nombre=""
+                        console.log(items.nombreComercial.length);
+                        if (items.nombreComercial.length > 0){
+                            nombre=items.nombreComercial;
+                        }
+                        else{
+                            nombre=items.nombre + ' ' + items.apellido
+                        }
+                        $('#tablaDinamica').find('> tbody').append($('<tr>')
+                            .append($('<td style="text-align:center">').html(items.numero))
+                            .append($('<td>').html(items.identificacion))
+                            .append($('<td>').html(nombre))
+                            .append($('<td>').html(items.telefono))
+                            .append($('<td>').html(items.direccion))
+                            .append($('<td style="' + estilo + '">').html(items.estado))
+                        );
+                    });
+                }
+            });
+        }
+    $(document).ready(function(){
+        Listar();
+        Tablas("#tablaDinamica");
+
+
+    })
+    </script>
+{% endblock %}

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Johnny E. Urdin Gonz\xc3\xa1lez</razonSocial><nombreComercial>Business Intelligence Thinks</nombreComercial><ruc>0703886697001</ruc><claveAcceso>0907201901070388669700120010010000000880000000011</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000088</secuencial><dirMatriz>Rocafuerte 504 y Buenavista</dirMatriz></infoTributaria><infoFactura><fechaEmision>09/07/2019</fechaEmision><dirEstablecimiento>Rocafuerte 504 y Buenavista</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>SOCIEDAD CIVIL ARMIJOS AGUILAR HNA</razonSocialComprador><identificacionComprador>0791780926001</identificacionComprador><direccionComprador>canton naranjal</direccionComprador><totalSinImpuestos>500.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>500.00</baseImponible><valor>60.00</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>560.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>861</codigoPrincipal>
+                      <codigoAuxiliar>b'REP-0675'</codigoAuxiliar>
+                      <descripcion>b'AIRGRID M5'/HUAWEI x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>125.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>125.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>125.00</baseImponible>
+                <valor>15.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                                  <codigoPrincipal>864</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0678'</codigoAuxiliar>
+                                  <descripcion>b'INSTALACION DE CAMARA' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>100.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>100.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>100.00</baseImponible>
+                <valor>12.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>863</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0677'</codigoAuxiliar>
+                                  <descripcion>b'REPARACION DE CAMARAS' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>150.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>150.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>150.00</baseImponible>
+                <valor>18.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                      <codigoPrincipal>860</codigoPrincipal>
+                      <codigoAuxiliar>b'REP-0674'</codigoAuxiliar>
+                      <descripcion>b'CABLE CONCENTRICO 3X12'/HUAWEI x Unidades x </descripcion>
+                      <cantidad>5.00</cantidad>
+                      <precioUnitario>2.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>10.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>10.00</baseImponible>
+                <valor>1.20</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>862</codigoPrincipal>
+                      <codigoAuxiliar>b'RED-0676'</codigoAuxiliar>
+                      <descripcion>b'POE UBIQUITI'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>30.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>30.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>30.00</baseImponible>
+                <valor>3.60</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>865</codigoPrincipal>
+                      <codigoAuxiliar>b'RED-0679'</codigoAuxiliar>
+                      <descripcion>b'CABLE UTP'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>30.00</cantidad>
+                      <precioUnitario>0.50</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>15.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>15.00</baseImponible>
+                <valor>1.80</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>859</codigoPrincipal>
+                      <codigoAuxiliar>b'REP-0673'</codigoAuxiliar>
+                      <descripcion>b'CAJA METALICA'/HUAWEI x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>45.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>45.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>45.00</baseImponible>
+                <valor>5.40</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>858</codigoPrincipal>
+                      <codigoAuxiliar>b'REP-0672'</codigoAuxiliar>
+                      <descripcion>b'REGULADOR DE VOLTAJE '/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>25.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>25.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>25.00</baseImponible>
+                <valor>3.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

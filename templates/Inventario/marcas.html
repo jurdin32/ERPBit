@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BitAdmin | Cliente{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+          <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                  <div class="x_title">
+                    <h2>Inventario » <small>Marcas</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+                    <div class="x_content">
+                        <a href="{% url 'registroMarcas' %}" class="btn bg-blue"><i class="fa fa-th-large"></i> Agregar Marcas</a>
+                        <a class="btn bg-green"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+
+                    </div>
+                    <br/><br/><br/><br/>
+                     <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                        <table id="tablaMarcas" class="table table-bordered table-striped dataTables_scroll">
+                      <thead style="background-color: #5A738E;color: whitesmoke">
+                          <th>No.</th>
+                          <th>NOMBRE</th>
+                          <th>DETALLE</th>
+                          <th style="text-align: center;width: 100px">ESTADO</th>
+                          <th style="width: 100px">OPCINES</th>
+                      </thead>
+                      <tbody>
+                      {% for marca in marcas %}
+                      <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ marca.nombre }}</td>
+                        <td>{{ marca.descripcion }}</td>
+                        <td style="text-align: center">
+                          {% if marca.estado %}
+                             <span class="glyphicon glyphicon-ok-sign text-success" style="font-size:20px;"></span>
+                              {% else %}
+                                <span class="glyphicon glyphicon-remove-sign text-danger" style="font-size:20px"></span>
+                          {% endif %}
+                        </td>
+                        <td style="text-align:center">
+                            <a href="/inventario/marca/edit/{{ marca.id }}/" class="btn bg-orange btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                            {% if marca.estado %}
+                                <a  onclick="f()" href="/inventario/marca/delete/{{ marca.id }}/" class="btn bg-red btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                            {% endif %}
+
+                        </td>
+                      </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        Tablas("#tablaMarcas");
+    </script>
+{% endblock scripts %}

@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head lang="{{ LANGUAGE_CODE }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BIT-Admin | Documentos Electronicos</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'assets/vendors/bootstrap/dist/css/bootstrap.min.css' %} " rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{% static 'assets/vendors/font-awesome/css/font-awesome.min.css' %} " rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{% static 'assets/vendors/nprogress/nprogress.css' %} " rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="{% static 'assets/vendors/animate.css/animate.min.css' %} " rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="{% static 'assets/build/css/custom.min.css' %} " rel="stylesheet">
+</head>
+
+<body class="login">
+<br><br><br>
+<div class="right_col" role="main">
+    <div class="">
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title" style="text-align: center !important;">
+                        <h1><strong>CONSULTA DE DOCUMENTOS</strong></h1>
+                        <img src="{% static 'images/logos/LOGO ERALY-06.png' %}" style="width: 160px" alt="">
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="form-horizontal">
+                            <div class="col-md-5 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="identificacion"
+                                       maxlength="13"
+                                       name="ruc"
+                                       placeholder="Ingrese su identificacion">
+                                <span class="fa fa-credit-card-alt form-control-feedback left"
+                                      aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-5 col-sm-6 col-xs-12 form-group has-feedback">
+                                <select style="border-radius: 5px" class="form-control" id="documento"
+                                        name="documento">
+                                    <option value="FACTURA">FACTURA</option>
+                                    <option value="GUIA_REMISION">GUIA DE REMISION</option>
+                                    <option value="RETENCION">RETENCION</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-12 form-group has-feedback">
+                                <button onclick="Listar()" class="btn bg-blue" id="bucador" type="submit"
+                                        style="width: 100%; color: white"><i
+                                        class="fa fa-search  "></i> BUSCAR
+                                </button>
+                                <input type="hidden" id="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" clearfix"></div>
+    <div class="row" id="div-resultado"></div>
+</div>
+<div class="clearfix"></div>
+<br/>
+<div style="text-align: center" class="col-md-12 col-sm-12 col-xs-12 ">
+    <p>©2018 All Rights Reserved. Business Intelligence Thinks</p>
+</div>
+</body>
+<!-- jQuery -->
+<script src="{% static 'assets/vendors/jquery/dist/jquery.min.js' %} "></script>
+<script>
+    function Listar() {
+        if ($("#identificacion").val().length >=10 && $("#identificacion").val().length <=13) {
+            $("#bucador").html('<i class="fa fa-search"></i> BUSCAR')
+            $("#bucador").click(function () {
+                $("#bucador").attr('disabled', 'disabled')
+                $("#bucador").html('<i class="fa fa-database"></i> BUSCANDO ......')
+            })
+            $.post('/consulta/listar/', {
+                csrfmiddlewaretoken: $("#csrfmiddlewaretoken").val(),
+                identificacion: $("#identificacion").val(),
+                documento: $('#documento').val(),
+            }, function (data) {
+
+                $("#bucador").removeAttr('disabled', 'disabled')
+                $("#bucador").html('<i class="fa fa-search"></i> BUSCAR')
+                $('#div-resultado').html(data)
+            })
+        }
+        else{
+            $("#bucador").html('<i class="fa fa-remove"></i> Error en la cedula')
+        }
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '2612201901070388669700120010010000000910000000013',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '65',
+                            'mensaje': 'FECHA EMISION EXTEMPORANEA',
+                            'informacionAdicional': 'La fecha de emisión está fuera del rango de tolerancia [129600 minutos], o es mayor a la fecha del servidor',
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    'claveAccesoConsultada': '2102201901099268017200120010040000004690000000013',
+    'numeroComprobantes': None,
+    'autorizaciones': {
+        'autorizacion': [
+            {
+                'estado': 'EN PROCESO',
+                'numeroAutorizacion': None,
+                'fechaAutorizacion': None,
+                'ambiente': None,
+                'comprobante': None,
+                'mensajes': None
+            }
+        ]
+    }
+}

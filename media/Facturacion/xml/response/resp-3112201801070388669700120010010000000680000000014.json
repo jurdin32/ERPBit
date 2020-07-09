@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '3112201801070388669700120010010000000680000000014',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '43',
+                            'mensaje': 'CLAVE ACCESO REGISTRADA',
+                            'informacionAdicional': None,
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

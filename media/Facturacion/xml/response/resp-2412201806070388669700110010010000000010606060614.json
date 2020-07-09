@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '2412201806070388669700110010010000000010606060614',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '35',
+                            'mensaje': 'ARCHIVO NO CUMPLE ESTRUCTURA XML',
+                            'informacionAdicional': "Se encontró el siguiente error en la estructura del comprobante: cvc-complex-type.2.4.b: The content of element 'detalles' is not complete. One of '{detalle}' is expected..",
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

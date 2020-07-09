@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rol individual</title>
+    <style>
+        @page  {
+            size: A4;
+            padding: 50px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .body {
+           border: 1px solid {{ reporte.color_lineas }};
+           padding: 50px;
+        }
+
+        .titulo{
+            color:{{ reporte.color_encabezados_tablas_texto }};
+            background-color:{{ reporte.color_encabezados_tablas }};
+            text-align: center;
+        }
+        tr{
+            padding: 5px;
+        }
+        .textos{
+            color: {{ reporte.color_texto }};
+            background-color: {{ reporte.color_fondo }};
+        }
+        .textos2{
+            color: {{ reporte.color_texto }};
+            background-color: {{ reporte.color_fondo }};
+            border-bottom: 1px solid {{ reporte.color_lineas }};
+        }
+        .parrafo{
+            color: {{ reporte.color_texto }};
+        }
+
+
+    </style>
+</head>
+<body>
+<img src="{{ reporte.ruta_imagenes }}/media/{{ reporte.encabezado }}" style="width: 100%;" alt="">
+<div style="text-align: center;font-size: 13px; padding: 10px">
+    <h2 class="parrafo"><strong>ROL DE PAGOS CORRESPONDIENTE AL PERÍODO {{ remuneracion.periodo }}</strong></h2>
+</div>
+<table class="body">
+    <tr>
+        <td class="titulo" style="width: 150px;"><strong>NOMBRE</strong></td>
+        <td class="textos" colspan="3">{{ remuneracion.sueldo.empleado.nombre|upper }} {{ remuneracion.sueldo.empleado.apellido|upper }}</td>
+    </tr>
+    <tr>
+        <td class="titulo" style="width: 150px;"><strong>CARGO</strong></td>
+        <td class="textos">{{ remuneracion.sueldo.empleado.departamento|upper }}</td>
+        <td class="titulo" style="width: 300px; text-align: left"><strong>MODALIDAD</strong></td>
+        <td class="textos">{% if remuneracion.dias < 30 %}PARCIAL{% else %}COMPLETO{% endif %}</td>
+    </tr>
+    <tr >
+        <td class="titulo" style="width: 150px;"><strong>TELEFONO</strong></td>
+        <td class="textos">{{ remuneracion.sueldo.empleado.telefono }}</td>
+        <td class="titulo" style="width: 150px;text-align: left"><strong>PAIS</strong></td>
+        <td class="textos">{{ remuneracion.sueldo.empleado.parroquia.lugar.lugar.lugar.nombre|upper }}</td>
+    </tr>
+    <tr>
+        <td class="titulo" style="width: 150px;"><strong>PROVINCIA</strong></td>
+        <td class="textos">{{ remuneracion.sueldo.empleado.parroquia.lugar.lugar.nombre|upper }}</td>
+        <td class="titulo" style="width: 150px;text-align: left"><strong>CIUDAD</strong></td>
+        <td class="textos">{{ remuneracion.sueldo.empleado.parroquia.lugar.nombre|upper }} - {{ remuneracion.sueldo.empleado.parroquia.nombre|upper }}</td>
+    </tr>
+    <tr>
+        <td class="titulo" style="width: 150px;"><strong>DIRECCIÓN</strong></td>
+        <td class="textos">{{ remuneracion.sueldo.empleado.direccion|upper }}</td>
+        <td class="titulo" style="width: 150px;"><strong>TOTAL A PAGAR</strong></td>
+        <td class="textos">$ {{ remuneracion.total|floatformat:2 }}</td>
+    </tr>
+</table>
+<br>
+<table class="body2">
+    <tr>
+        <td class="titulo" colspan="2" style="text-align: center"><strong>INGRESOS</strong></td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="titulo" colspan="2" style="text-align: center"><strong>EGRESOS</strong></td>
+    </tr>
+    <tr>
+        <td class="textos2"><strong>SUELDO:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.sueldoInicial|floatformat:2 }} $</td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="textos2"><strong>APORTE INDIVIDUAL IESS</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.aporteiess|floatformat:2 }} $</td>
+    </tr>
+    <tr>
+        <td class="textos2"><strong>XIII SUELDO:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.xiiisueldo|floatformat:2 }} $</td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="textos2"><strong>PRESTAMOS DEL IESS</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.prestamosiess|floatformat:2 }} $</td>
+    </tr>
+    <tr>
+        <td class="textos2"><strong>XIV SUELDO:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.xivsueldo|floatformat:2 }} $</td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="textos2"><strong>IMPUESTO A LA RENTA</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.impuestoalarenta|floatformat:2 }} $</td>
+    </tr>
+    <tr>
+        <td class="textos2"><strong>FONDOS DE RESERVA:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.fondosreserva|floatformat:2 }} $</td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="textos2"><strong>ANTICIPOS DE SUELDOS:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.anticiposueldo|floatformat:2 }} $</td>
+    </tr>
+    <tr>
+        <td class="textos2"><strong>OTROS INGRESOS:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.otrosingresos|floatformat:2 }} $</td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="textos2"><strong>DESCUENTOS:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.descuento|floatformat:2 }} $</td>
+    </tr>
+    <tr>
+        <td class="textos2"><strong>VACACIONES:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.vacaciones|floatformat:2 }} $</td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="textos2"><strong>IECE:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.iece|floatformat:2 }} $</td>
+    </tr>
+    <tr>
+        <td class="textos2"><strong>INGRESOS POR HORAS EXTRAS:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.horasextras|floatformat:2 }} $</td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="textos2"><strong>MULTAS:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.multas|floatformat:2 }} $</td>
+    </tr>
+    <tr>
+        <td class="textos2"><strong>  </strong></td>
+        <td class="textos2" style="text-align: right">   </td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td class="textos2"><strong>OTROS EGRESOS:</strong></td>
+        <td class="textos2" style="text-align: right"> {{ remuneracion.otrosegresos|floatformat:2 }} $</td>
+    </tr>
+    <tr>
+        <td style="width: 300px; text-align: left" class="titulo"><strong>TOTAL  DE INGRESOS:</strong></td>
+        <td class="titulo" style="width: 300px; text-align: right"> {{ remuneracion.totalIngresos|floatformat:2 }} $</td>
+        <td style="width: 100px;border-color: white" ></td>
+        <td style="width: 300px; text-align: left" class="titulo"><strong>TOTAL DE EGRESOS:</strong></td>
+        <td class="titulo" style="width: 300px; text-align: right"> {{ remuneracion.totalEgresos|floatformat:2 }} $</td>
+    </tr>
+    <tr style="padding-top: 20px"><td class="parrafo" colspan="5" style="text-align: right">{{ empresa.parroquia.nombre }}, {{ remuneracion.fecha|date:"d" }} {{ remuneracion.fecha|date:"M"|upper }} DE {{ remuneracion.fecha|date:"Y" }}</td></tr>
+    <tr style="padding-top: 30px">
+        <td class="parrafo" colspan="2" style="text-align: center">
+            ------------------------------------------------------------------ <br>
+            <strong>RECIBI CONFORME</strong>
+            <br>{{ remuneracion.sueldo.empleado.nombre|upper }} {{ remuneracion.sueldo.empleado.apellido|upper }}
+            <br> C.I.: {{ remuneracion.sueldo.empleado.ruc }}
+        </td>
+        <td style="width: 100px"></td>
+        <td class="parrafo" colspan="2" style="text-align: center">
+            ------------------------------------------------------------------ <br>
+            <strong>ENTREGUE CONFORME</strong>
+            <br>{{ remuneracion.sueldo.empleado.departamento.empresa.nombreComercial|upper }}
+            <br> R.U.C.: {{ remuneracion.sueldo.empleado.departamento.empresa.ruc }}
+        </td>
+    </tr>
+</table>
+</body>
+</html>

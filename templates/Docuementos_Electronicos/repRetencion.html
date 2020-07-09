@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+         @page {
+            size: a4 portrait;
+            @frame header_frame{
+             -pdf-frame-content: header_content;
+             left: 0pt; top: 0pt;right:0pt ;
+            }
+            @frame content_frame{
+                left: 10pt; top: 190pt; height: 650pt; right: 10pt;
+            }
+            @frame footer_frame {           /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 520pt; top: 170pt; height: 20pt;
+            }
+        }
+
+        body, #todo, table, .body {
+            background-color: {{ reporte.color_fondo }};
+            color: {{ reporte.color_texto }};
+
+        }
+        .encabezado{
+            color: {{ reporte.color_encabezados_tablas_texto }};
+            background-color:{{ reporte.color_encabezados_tablas }};
+            text-align: center;
+        }
+        #datosFactura {
+            padding-left: 30px;
+            padding-top: 0px;
+            text-align: justify;
+            font-size: 11px;
+            color: {{ reporte.color_texto }};
+        }
+
+        #datosFactura1 {
+            padding-right: 30px;
+            padding-top: 10px;
+            text-align: justify;
+            font-size: 11px;
+            color: {{ reporte.color_texto }};
+        }
+
+        .body {
+            margin-top: -20px;
+            margin-left: 30px;
+            margin-right: 30px;
+            border-top: 1px solid silver;
+        }
+    </style>
+    <title>Retencion: {{ retencion.clave_acceso }} {{ retencion.datosRetencion.codigoEstablecimiento }}-{{ retencion.datosRetencion.puntoEmision }}-{{ retencion.secuencial }}</title>
+</head>
+<body>
+<div id="todo">
+    <div id="header_content">
+    <img src="{{ reporte.ruta_imagenes }}/media/{{ reporte.encabezado }}" style="width: 100%;" alt="">
+    </div>
+    <div id="content">
+        <table>
+        <tr>
+            <td>
+                <div id="datosFactura" style="font-size: 14px">
+                    <span style="font-size: 12px; font-weight: bold">
+                    {% if retencion.datosRetencion.empresa.nombreComercial %}
+                        {{ retencion.datosRetencion.empresa.nombreComercial|upper }}
+                    {% else %}
+                        {{ retencion.datosRetencion.empresa.razonSocial|upper }}
+                    {% endif %}
+                    </span>
+                    <br>
+                    {{ retencion.datosRetencion.empresa.ruc }}<br>
+                    {{ retencion.datosRetencion.empresa.direccionMatriz|upper }}<br>
+                    {{ retencion.datosRetencion.empresa.parroquia.lugar.nombre|upper }}
+                        - {{ retencion.datosRetencion.empresa.parroquia.lugar.lugar.nombre|upper }}
+                        - {{ retencion.datosRetencion.empresa.parroquia.lugar.lugar.lugar.nombre|upper }}<br>
+                    <strong>OBLIGADO A LLEVAR CONTABILIDAD:</strong>
+                    {% if retencion.datosRetencion.empresa.obligado_llevar_contabilidad %}
+                        SI {% else %}
+                        NO
+                    {% endif %}
+                    <br>
+                    <strong>FECHA EMISION:</strong> {{ retencion.fecha }}<br>
+                    <strong>AMBIENTE:</strong>{% if retencion.ambiente == '1' %}<strong style="color: darkred"> PRUEBAS </strong>{% else %}PRODUCCIÓN{% endif %}
+                </div>
+            </td>
+            <td>
+                <div id="datosFactura1">
+                    <strong style="font-size: 22px;">COMPROBANTE DE RETENCION</strong><br>
+                <div style="padding: 0px">
+                     <pdf:barcode value="{{ retencion.clave_acceso }}" type="code128" humanreadable="1"/>
+                </div>
+                    <span style="font-size: 15px; color: red">{{ retencion.datosRetencion.codigoEstablecimiento.codigo }}
+                    - {{ retencion.datosRetencion.puntoEmision.codigo }} - {{ retencion.secuencial }}</span><br>
+                    <strong>CEDULA / RUC:</strong> {{ retencion.compra.proveedor.ruc }}<br>
+                    {% if retencion.compra.proveedor.razonSocial %}
+                        <strong style="font-size: 14px"> {{ retencion.compra.proveedor.razonSocial|upper }}</strong><br>
+                        {% else %}
+                        <strong style="font-size: 14px"> {{ retencion.compra.proveedor.nombreComercial|upper }}</strong><br>
+                    {% endif %}
+                    <strong> FECHA EMISION COMPRA: </strong>{{ retencion.compra.fecha_emision }}
+                </div>
+            </td>
+        </tr>
+    </table>
+        <br><br><br>
+        <div class="body">
+            <table>
+                <thead>
+                <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver; border-left: 1px solid silver">COMPROBANTE</th>
+                <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;">NUMERO</th>
+                <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;">FECHA EMISION</th>
+                <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;text-align: justify">EJERCICIO FISCAL</th>
+                <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;text-align: right">BASE IMPONIBLE (RETENCION)</th>
+                <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;text-align: right">IMPUESTO</th>
+                <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;text-align: right">PORCENTAJE RETENCION</th>
+                <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;text-align: right">VALOR RETENIDO</th>
+                </thead>
+                <tbody>
+                {% for detalle in detalles %}
+                    <tr style="padding-top: 5px; font-size: 10px">
+                        <td style=" text-align: center; border: 1px solid silver;">FACTURA</td>
+                        <td style=" text-align: center; border: 1px solid silver;">{{ retencion.compra.secuencial }}</td>
+                        <td style=" text-align: center; border: 1px solid silver;">{{ retencion.compra.fecha_emision|date:"d/m/Y" }}</td>
+                        <td style=" text-align: center; border: 1px solid silver;">{{ retencion.compra.fecha|date:"m/Y" }}</td>
+                        <td style=" text-align: center; border: 1px solid silver;">{{ detalle.baseImp|floatformat:2 }}</td>
+                        <td style=" text-align: center; border: 1px solid silver;">
+                        {% for impuesto in impuestos %}
+                            {% if impuesto.codigo == detalle.impuesto %}
+                                {{ impuesto.nombre }}
+                            {% endif %}
+                        {% endfor %}
+                        </td>
+                         <td style=" text-align: right; border: 1px solid silver;">{{ detalle.porcentaje|floatformat:2 }}</td>
+                    <td style=" text-align: right; border: 1px solid silver;">{{ detalle.total_retencion|floatformat:2 }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+
+                <tfoot>
+                    <tr style="padding-top: 5px; font-size: 10px">
+                        <td style=" text-align: right; border: 1px solid silver;" colspan="7">TOTAL :</td>
+                        <td style=" text-align: right; border: 1px solid silver;" >{{ retencion.valor_total }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+    {% if factura.tipo == "PROFORMA" %}
+        <div style="text-align:justify; margin-top: 20px">
+            <div style="border: 1px solid silver; padding: 10px">
+
+                <strong>NOTA:</strong><br>
+                {% for detalle in detalles %}
+                    <strong> > {{ detalle.producto.producto.nombre|upper }}:</strong>
+                    {{ detalle.producto.detalles|upper }}<br>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    <div id="footer_content">Página <pdf:pagenumber> de <pdf:pagecount> </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Reportes{% endblock title %}
+{% block content %}
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title">
+                        <h2><a>Documento »</a>
+                            <small>Reporte de Productos</small>
+                        </h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="row">
+                            <div class="form-horizontal form-label-left">
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3">Bodega:</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" id="bodega"
+                                                name="bodega">
+                                            <option value="TODASB">TODAS LAS BODEGAS</option>
+                                            {% for bodega in bodegas %}
+                                                <option value="{{ bodega.id }}">{{ bodega.bodega }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3">Categoria:</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" id="categoria"
+                                                name="categoria">
+                                            <option value="TODASC">TODAS LAS CATEGORIAS</option>
+                                            {% for categoria in categorias %}
+                                                <option value="{{ categoria.id }}">{{ categoria.categoria }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3">Producto:</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <input style="border-radius: 5px" class="form-control" type="text" id="producto" name="producto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-horizontal form-label-left">
+
+                                 <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3 ">Desde :</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <input style="border-radius: 5px" type="date"
+                                               class="form-control has-feedback-left" id="fecha1" name="fecha1">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3 ">Hasta :</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <input style="border-radius: 5px" type="date" value=""
+                                               class="form-control has-feedback-left" id="fecha2" name="fecha2">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3"> </label>
+                                    <div class="col-md-9 col-sm-12 col-xs-12">
+                                        <button onclick="Listar()" class="btn btn-dark"><i class="fa fa-refresh"></i> ACTUALIZAR </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="div-resultado">
+
+        </div>
+
+        <input type="hidden" id="csrfmiddlewaretoken"  value="{{ csrf_token }}">
+    </div>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+        fecha()
+
+        function fecha(){
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            console.log(y+"-"+m+"-"+d);
+            //Lo ordenas a gusto.
+            $("#fecha1").val(y+"-"+m+"-01");
+            $("#fecha2").val(y+"-"+m+"-"+d);
+        }
+    </script>
+    <script>
+
+        function Listar() {
+            $.post('/reportes/productos/', {
+                csrfmiddlewaretoken: $("#csrfmiddlewaretoken").val(),
+                bodega: $("#bodega").val(),
+                categoria: $("#categoria").val(),
+                fecha1: $("#fecha1").val(),
+                fecha2: $("#fecha2").val(),
+                producto: $("#producto").val(),
+
+            }, function (data) {
+                console.log(data)
+                $("#div-resultado").html(data)
+
+            })
+        }
+
+    </script>
+{% endblock scripts %}

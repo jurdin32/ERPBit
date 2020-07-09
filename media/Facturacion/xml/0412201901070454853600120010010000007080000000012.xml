@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>0412201901070454853600120010010000007080000000012</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000708</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>04/12/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>TRANSPESAMER S.A </razonSocialComprador><identificacionComprador>0791774950001</identificacionComprador><direccionComprador>AV. JOSE ARMIJOS Y PANAMERICANA</direccionComprador><totalSinImpuestos>516.07</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>516.07</baseImponible><valor>61.93</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>578.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1246</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1002'</codigoAuxiliar>
+                      <descripcion>b'IMRPESORA EPSON L3150'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>203.57</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>203.57</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>203.57</baseImponible>
+                <valor>24.43</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1245</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-1001'</codigoAuxiliar>
+                      <descripcion>b'NOTEBOOK CELERON 4GB , 14 PANTALLA "'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>312.50</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>312.50</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>312.50</baseImponible>
+                <valor>37.50</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

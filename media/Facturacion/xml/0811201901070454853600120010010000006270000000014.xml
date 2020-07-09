@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>0811201901070454853600120010010000006270000000014</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000627</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>08/11/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>UNIVERSIDAD TECNICA DE MACHALA </razonSocialComprador><identificacionComprador>0760001580001</identificacionComprador><direccionComprador>AV. PANAMERICANA 5. 1/2 VIA PASAJE</direccionComprador><totalSinImpuestos>38.40</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>38.40</baseImponible><valor>4.61</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>43.01</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1141</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0908'</codigoAuxiliar>
+                      <descripcion>b'PASTA TERMICA GRIS'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>4.00</cantidad>
+                      <precioUnitario>2.60</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>10.40</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>10.40</baseImponible>
+                <valor>1.24</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1140</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0907'</codigoAuxiliar>
+                      <descripcion>b'LIMPIA CONTACTOS DE PC SPRAY'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>4.00</cantidad>
+                      <precioUnitario>7.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>28.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>28.00</baseImponible>
+                <valor>3.36</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

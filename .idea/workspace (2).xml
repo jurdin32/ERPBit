@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1c8ffc88-0b52-4a24-92c0-35bf572d98d8" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ERPBit$zipper.coverage" NAME="zipper Coverage Results" MODIFIED="1540012887988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Shurtcodes" />
+    <SUITE FILE_PATH="coverage/ERPBit$email.coverage" NAME="email Coverage Results" MODIFIED="1540010083565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/Escritorio" />
+    <SUITE FILE_PATH="coverage/ERPBit$GenerateBarCode.coverage" NAME="GenerateBarCode Coverage Results" MODIFIED="1540015470658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Shurtcodes" />
+    <SUITE FILE_PATH="coverage/ERPBit$ipSearch.coverage" NAME="ipSearch Coverage Results" MODIFIED="1540014095455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Shurtcodes" />
+    <SUITE FILE_PATH="coverage/ERPBit$GenerateQR.coverage" NAME="GenerateQR Coverage Results" MODIFIED="1540014600302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Shurtcodes" />
+    <SUITE FILE_PATH="coverage/ERPBit$emailes.coverage" NAME="emailes Coverage Results" MODIFIED="1540011495929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/Escritorio" />
+    <SUITE FILE_PATH="coverage/ERPBit$xmls.coverage" NAME="xmls Coverage Results" MODIFIED="1537105563138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS" />
+    <SUITE FILE_PATH="coverage/ERPBit$ImageResize.coverage" NAME="ImageResize Coverage Results" MODIFIED="1540016921093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Shurtcodes" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1192104537">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.8" value="5" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="54" />
+          <entry key="js" value="7" />
+          <entry key="json" value="15" />
+          <entry key="png" value="4" />
+          <entry key="py" value="102" />
+          <entry key="xml" value="50" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="54" />
+          <entry key="Image" value="4" />
+          <entry key="JSON" value="15" />
+          <entry key="JavaScript" value="7" />
+          <entry key="Python" value="102" />
+          <entry key="XML" value="50" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="4650" />
+          <entry key="js" value="145" />
+          <entry key="py" value="12894" />
+          <entry key="py@ERPBit" value="103" />
+          <entry key="xml" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CommandLine" value="81" />
+          <entry key="HTML" value="4650" />
+          <entry key="JavaScript" value="145" />
+          <entry key="PLAIN_TEXT" value="22" />
+          <entry key="Python" value="12894" />
+          <entry key="XML" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-268122305">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="6" />
+          <entry key="py" value="16" />
+          <entry key="xml" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="6" />
+          <entry key="Python" value="16" />
+          <entry key="XML" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="331" />
+          <entry key="py" value="734" />
+          <entry key="py@ERPBit" value="29" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CommandLine" value="29" />
+          <entry key="HTML" value="331" />
+          <entry key="Python" value="734" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17850">
+              <caret line="1073" column="5" selection-start-line="1073" selection-start-column="5" selection-end-line="1073" selection-end-column="5" />
+              <folding>
+                <element signature="e#24#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ERPBit/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-442">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ERPBit/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="169" selection-start-line="169" selection-end-line="233" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="635">
+              <caret line="322" column="6" selection-start-line="322" selection-start-column="6" selection-end-line="322" selection-end-column="6" />
+              <folding>
+                <element signature="e#18#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18632">
+              <caret line="1096" column="59" selection-start-line="1096" selection-end-line="1097" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>rea</find>
+      <find>configu</find>
+      <find>valores</find>
+      <find>marca</find>
+      <find>bode</find>
+      <find>proveedor</find>
+      <find>vehiculos</find>
+      <find>vehiculo</find>
+      <find>PROVEE</find>
+      <find>codigo</find>
+      <find>categ</find>
+      <find>categr</find>
+      <find>productos</find>
+      <find>Precio</find>
+      <find>Ganancia</find>
+      <find>repo</find>
+      <find>detalles</find>
+      <find>retencion</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/registroRetenciones.html" />
+        <option value="$PROJECT_DIR$/templates/Inventario/registroServicios.html" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/0710201801070388669700110010010000001010606060611.xml" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/0710201801070388669700110010010000001030606060610.xml" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/firmado/0710201801070388669700110010010000001090606060613.xml" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/0710201801070388669700110010010000001170606060617.xml" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/0710201801070388669700110010010000001200606060613.xml" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/0710201801070388669700110010010000001210606060619.xml" />
+        <option value="$PROJECT_DIR$/../manejadorIIS/manejadorIIS/settings.py" />
+        <option value="$PROJECT_DIR$/TALENTO_HUMANO/views.py" />
+        <option value="$PROJECT_DIR$/templates/Clientes/registroClientes.html" />
+        <option value="$PROJECT_DIR$/templates/Talento_Humano/registroEmpleados.html" />
+        <option value="$PROJECT_DIR$/templates/Transporte/registroConductor.html" />
+        <option value="$PROJECT_DIR$/templates/Inventario/registroCompra.html" />
+        <option value="$PROJECT_DIR$/INVENTARIO/templatetags/customTagsInventario.py" />
+        <option value="$PROJECT_DIR$/templates/Inventario/kardex.html" />
+        <option value="$PROJECT_DIR$/TRANSPORTE/views.py" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/repGuiaRemision.html" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/guiasRemision.html" />
+        <option value="$PROJECT_DIR$/CONFIGURACION/views.py" />
+        <option value="$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html" />
+        <option value="$PROJECT_DIR$/INVENTARIO/reportes.py" />
+        <option value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/models.py" />
+        <option value="E:/Escritorio/email.py" />
+        <option value="E:/Escritorio/emailes.py" />
+        <option value="$PROJECT_DIR$/Shurtcodes/emailes.py" />
+        <option value="$PROJECT_DIR$/Shurtcodes/zipper.py" />
+        <option value="$PROJECT_DIR$/Shurtcodes/ipSearch.py" />
+        <option value="$PROJECT_DIR$/Shurtcodes/GenerateQR.py" />
+        <option value="$PROJECT_DIR$/Shurtcodes/GenerateBarCode.py" />
+        <option value="$PROJECT_DIR$/Shurtcodes/ImageResize.py" />
+        <option value="$PROJECT_DIR$/templates/Inventario/servicios.html" />
+        <option value="$PROJECT_DIR$/templates/Inventario/registroCategorias.html" />
+        <option value="$PROJECT_DIR$/templates/Inventario/productos.html" />
+        <option value="$PROJECT_DIR$/INVENTARIO/views.py" />
+        <option value="$PROJECT_DIR$/templates/Inventario/categorias.html" />
+        <option value="$PROJECT_DIR$/templates/Clientes/clientes.html" />
+        <option value="$PROJECT_DIR$/templates/Inventario/registroProductos.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/CONTABILIDAD/models.py" />
+        <option value="$PROJECT_DIR$/CONTABILIDAD/views.py" />
+        <option value="$PROJECT_DIR$/ERPBit/urls.py" />
+        <option value="$PROJECT_DIR$/templates/Contabilidad/CuentaBancos.html" />
+        <option value="$PROJECT_DIR$/INVENTARIO/models.py" />
+        <option value="$PROJECT_DIR$/CLIENTES/views.py" />
+        <option value="$PROJECT_DIR$/ERPBit/settings.py" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/3112201801070388669700110010010000000480000000017.xml" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/2812201801070388669700120010010000000640000000010.xml" />
+        <option value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/xmls.py" />
+        <option value="$PROJECT_DIR$/media/Facturacion/xml/2201201901070388669700110010010000000940000000011.xml" />
+        <option value="$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/static/assets/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/Chart.js/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/DateJS/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/Flot/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/animate.css/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/autosize/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/bootstrap-daterangepicker/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/bootstrap-datetimepicker/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/bootstrap-progressbar/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/bootstrap-wysiwyg/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/cropper/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/devbridge-autocomplete/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/echarts/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/eve/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/flot-spline/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/ion.rangeSlider/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/jquery-knob/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/jquery.easy-pie-chart/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/jqvmap/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/jszip/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/morris.js/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/select2/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/starrr/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/switchery/package.json" />
+      <path value="$PROJECT_DIR$/static/assets/vendors/transitionize/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERPBit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERPBit" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Docuementos_Electronicos" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Drive\Proyectos_Drive\ERPBit\Shurtcodes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Drive\Proyectos_Drive\ERPBit\templates\Inventario" />
+      <recent name="E:\Drive\Proyectos_Drive\ERPBit\static\Apps" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.ERPBit">
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ERPBit" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration name="GenerateBarCode" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Shurtcodes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Shurtcodes/GenerateBarCode.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GenerateQR" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Shurtcodes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Shurtcodes/GenerateQR.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ImageResize" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Shurtcodes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Shurtcodes/ImageResize.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ipSearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Shurtcodes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Shurtcodes/ipSearch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="zipper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Shurtcodes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Shurtcodes/zipper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ERPBit" type="Python.DjangoServer" factoryName="Django server">
+      <module name="ERPBit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ERPBit.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.ERPBit" />
+      <item itemvalue="Python.zipper" />
+      <item itemvalue="Python.ipSearch" />
+      <item itemvalue="Python.GenerateQR" />
+      <item itemvalue="Python.GenerateBarCode" />
+      <item itemvalue="Python.ImageResize" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ImageResize" />
+        <item itemvalue="Python.GenerateBarCode" />
+        <item itemvalue="Python.GenerateQR" />
+        <item itemvalue="Python.ipSearch" />
+        <item itemvalue="Python.zipper" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c8ffc88-0b52-4a24-92c0-35bf572d98d8" name="Default" comment="" />
+      <created>1535242826178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535242826178</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17802057" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32777777" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49357328" weight="0.22916667" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.77699226" weight="0.32777777" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="manage.py@ERPBit" order="9" weight="0.32777777" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50642675" side_tool="true" weight="0.38472223" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.025064267" />
+      <window_info anchor="right" id="Database" order="4" weight="0.23971723" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py</url>
+          <line>1072</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py</url>
+          <line>1073</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/repGuiaRemision.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/guiasRemision.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="59" column="79" selection-start-line="59" selection-start-column="79" selection-end-line="59" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1184660488/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="4706" column="8" selection-start-line="4706" selection-start-column="8" selection-end-line="4706" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONFIGURACION/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="114" column="15" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FactElectronica/Facturas/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Escritorio/email.py" />
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/zipper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/emailes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="28" column="61" lean-forward="true" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/ipSearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/NEAREST.png" />
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/BILINEAR.png" />
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/BICUBIC.png" />
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/ANTIALIAS.png" />
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/ImageResize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/GenerateBarCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shurtcodes/GenerateQR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Inventario/servicios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1922">
+          <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Apps/Categorias.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Apps/Clientes.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Inventario/registroCategorias.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Inventario/productos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3434">
+          <caret line="202" column="12" lean-forward="true" selection-start-line="202" selection-start-column="12" selection-end-line="202" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Clientes/clientes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Inventario/categorias.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Inventario/registroProductos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INVENTARIO/reportes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INVENTARIO/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="632" selection-start-line="632" selection-end-line="632" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Clientes/registroClientes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="282" column="110" lean-forward="true" selection-start-line="282" selection-start-column="36" selection-end-line="282" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/0401201901070454853600120010010000000030000000018.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/2712201801070388669700110010010000000530000000018.xml" />
+    <entry file="file://$PROJECT_DIR$/CONTABILIDAD/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONTABILIDAD/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="152" column="54" selection-start-line="152" selection-start-column="54" selection-end-line="152" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INVENTARIO/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1968">
+          <caret line="172" column="32" selection-start-line="172" selection-start-column="32" selection-end-line="172" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Contabilidad/regitroContable.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Contabilidad/CuentaBancos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="40" column="79" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="317" column="33" selection-start-line="317" selection-start-column="33" selection-end-line="317" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLIENTES/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CARTERA/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="366" column="50" selection-start-line="366" selection-start-column="50" selection-end-line="366" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ERPBit/settings-develop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/2201201901070388669700110010010000000920000000010.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/3112201801070388669700110010010000000480000000017.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/2812201801070388669700120010010000000640000000010.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/2712201801099265402300110010020000000030000000010.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/2201201901070388669700110010010000000940000000011.xml" />
+    <entry file="file://$PROJECT_DIR$/media/Facturacion/xml/2201201901070388669700110010010000000910000000015.xml" />
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/xmls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="17" column="122" selection-start-line="17" selection-start-column="122" selection-end-line="17" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17850">
+          <caret line="1073" column="5" selection-start-line="1073" selection-start-column="5" selection-end-line="1073" selection-end-column="5" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Docuementos_Electronicos/registroFactura.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18632">
+          <caret line="1096" column="59" selection-start-line="1096" selection-end-line="1097" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ERPBit/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ERPBit/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="169" selection-start-line="169" selection-end-line="233" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOCUMENTOS_ELECTRONICOS/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="322" column="6" selection-start-line="322" selection-start-column="6" selection-end-line="322" selection-end-column="6" />
+          <folding>
+            <element signature="e#18#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

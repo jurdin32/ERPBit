@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>2002202001070454853600120010010000009250000000019</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000925</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>20/02/2020</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>willian moreno </razonSocialComprador><identificacionComprador>0704077247001</identificacionComprador><direccionComprador>rocafuerte e/ paez y junin</direccionComprador><totalSinImpuestos>53.57</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>53.57</baseImponible><valor>6.43</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>60.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1401</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1156'</codigoAuxiliar>
+                                  <descripcion>b'CAMBIO DE TARJETAS Y ARREGLO DE PLACAS' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>53.57</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>53.57</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>53.57</baseImponible>
+                <valor>6.43</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>

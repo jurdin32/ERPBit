@@ -1,0 +1,50 @@
+<div class="col-md-12 col-sm-12 col-xs-12" id="">
+    <div style="border-radius: 5px" class="x_panel">
+        <div class="x_content">
+            <table id="tablaReportes" class="table table-bordered table-striped dataTables_scroll">
+                <thead style="background-color: #5A738E;color: whitesmoke">
+                <th>USUARIO</th>
+                <th style="text-align: center">Nº DOCUMENTO</th>
+                <th style="text-align: center">TIPO DOCUMENTO</th>
+                <th style="text-align: center">CLIENTE</th>
+                <th style="text-align: center">ESTADO</th>
+                <th style="text-align: center">FECHA EMISON</th>
+                <th>EMPRESA TRANSPORTE</th>
+                <th>CONDUCTOR</th>
+                <th>DESDE -> HASTA</th>
+                <th>FECHA DE SALIDA</th>
+                <th>FECHA DE LLEGADA</th>
+                </thead>
+                <tbody>
+                    {% for documento in guias %}
+                        <tr>
+                        <td>{{ documento.usuario }}</td>
+                            <td>{{ documento.secuencial }}</td>
+                            <td>{{ documento.tipo }}</td>
+                            <td>{% if documento.factura.cliente.razonSocial %}
+                                {{ documento.factura.cliente.razonSocial }}
+                                {% else %}
+                                {{ documento.factura.cliente.nombre }} {{ documento.factura.cliente.apellido }}
+                            {% endif %}
+                             </td>
+                            <td>{% if documento.estado %}
+                                {{ documento.estado }}
+                                {% else %}
+                                No AUTORIZADO
+                            {% endif %}</td>
+                            <td>{{ documento.fecha|date:"d/m/Y" }}</td>
+                            <th>{{ documento.vehiculo.conductor.empresaTrans }}</th>
+                            <td>{{ documento.vehiculo.conductor.nombre }} {{ documento.vehiculo.conductor.apellido }}</td>
+                            <td>{{ documento.puntoPartida }} {{ documento.puntoLLegada }}</td>
+                            <td>{{ documento.fachaIniTrans|date:"d/m/Y" }}</td>
+                            <td>{{ documento.fachaFinTrans|date:"d/m/Y" }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    Tablas("#tablaReportes");
+</script>

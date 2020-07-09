@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Configuracion{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+            {% if mensaje %}
+                <div class="alert alert-success">
+                    <label for="">{{ mensaje }}</label>
+                </div>
+            {% endif %}
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>
+                                <a href="/configuracion/lugares/">Configuración</a>
+                                <small style="color: darkred;font-weight: bold"> PARA {{ lugar.nombre|upper }}</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="x_content">
+                            <a class="btn bg-blue" data-toggle="modal" href="#registroLugares"><i class="fa fa-th"></i> Agregar
+                                Lugares</a>
+                            <a class="btn bg-orange"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                        </div>
+
+                        <br/><br/><br/><br/>
+
+                        <table id="tablaLugares" class="table table-striped table-bordered dataTables_scroll">
+                            <thead style="background-color: #5A738E;color: whitesmoke">
+                            <th style="width: 100px; text-align: center">NO.</th>
+                            <th>NOMBRE</th>
+                            <th style="text-align: center; width: 100px">OPCIONES</th>
+                            </thead>
+                            <tbody>
+                            {% for lugar in lugares %}
+                                <tr>
+                                    <td style="text-align: center">{{ forloop.counter }}</td>
+                                    <td>{{ lugar.nombre }}</td>
+                                    </td>
+                                    <td style="text-align: center">
+                                        {% if lugar.provincia %}
+                                        <a href="/configuracion/lugares/{{ lugar.id }}/ciu/"
+                                           class="btn btn-success btn-xs"><i class="fa fa-cogs"></i></a>
+                                            <a href="#editarLugares"
+                                           class="btn btn-danger btn-xs editar" data-id="{{ lugar.id }}" data-ot="{{ lugar.lugar.nombre }}" data-nombre="{{ lugar.nombre }}" data-toggle="modal" ><i class="fa fa-pencil"></i></a>
+                                            {% elif lugar.ciudad%}
+                                            <a href="/configuracion/lugares/{{ lugar.id }}/parr/"
+                                           class="btn btn-success btn-xs"><i class="fa fa-cogs"></i></a>
+                                            <a href="#editarLugares"
+                                           class="btn btn-danger btn-xs editar" data-id="{{ lugar.id }}" data-ot="{{ lugar.lugar.nombre }}" data-nombre="{{ lugar.nombre }}" data-toggle="modal" ><i class="fa fa-pencil"></i></a>
+                                            {% else %}
+                                            <a href="#editarLugares"
+                                           class="btn btn-danger btn-xs editar" data-id="{{ lugar.id }}" data-ot="{{ lugar.lugar.nombre }}" data-nombre="{{ lugar.nombre }}" data-toggle="modal" ><i class="fa fa-pencil"></i></a>
+                                        {% endif %}
+
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fadeInLeft" id="registroLugares" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">{% if lugar.pais %}
+                            EDITAR PROVINCIA
+                            {% elif lugar.provincia %}
+                            EDITAR CIUDAD O CANTÓN
+                            {% elif lugar.ciudad %}
+                            EDITAR PARROQUIA
+                        {% endif %}</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form role="form" method="post">
+                        {% csrf_token %}
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <label>{% if lugar.pais %}
+                                    Nombre de la Provincia
+                                    {% elif lugar.provincia %}
+                                    Nombre de la Ciudad
+                                    {% elif lugar.ciudad %}
+                                    Nombre de la Parroquia
+                                {% endif %}</label>
+                            <input required style="border-radius: 5px" type="text" class="form-control" name="nombre" id="nombre"/>
+                        </div>
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+                            <button type="submit" class="btn btn-info"><i class="fa fa-save"></i> REGISTRAR</button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fa fa-sign-in"></i> SALIR</button>
+                        </div>
+                    </form>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fadeInLeft" id="editarLugares" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">
+                        {% if lugar.pais %}
+                            EDITAR PROVINCIA
+                            {% elif lugar.provincia %}
+                            EDITAR CIUDAD O CANTÓN
+                            {% elif lugar.ciudad %}
+                            EDITAR PARROQUIA
+                        {% endif %}
+                    </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="editor" role="form" method="post">
+                        {% csrf_token %}
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <label>
+                                {% if lugar.pais %}
+                                    Nombre de la Provincia
+                                    {% elif lugar.provincia %}
+                                    Nombre de la Ciudad
+                                    {% elif lugar.ciudad %}
+                                    Nombre de la Parroquia
+                                {% endif %}
+                            </label>
+                            <input required style="border-radius: 5px" type="text" class="form-control" name="nombref" id="nombref"/>
+                        </div>
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+                            <button type="submit" class="btn btn-info"><i class="fa fa-save"></i> REGISTRAR</button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fa fa-sign-in"></i> SALIR</button>
+                        </div>
+                    </form>
+               </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block scripts %}
+    <script>
+    $(".editar").click(function () {
+        $('#editor').attr('action', '/configuracion/lugares/edit/'+$(this).data('id')+'/');
+        $("#nombref").val($(this).data('nombre'))
+    })
+        setTimeout(function(){
+            $(".alert").hide()
+        },5000);
+
+        Tablas("#tablaLugares");
+    </script>
+
+{% endblock scripts %}

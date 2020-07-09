@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1908201901070454853600120010010000004830000000011</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000483</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>19/08/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>HOSPITAL BASICO 1BI EL ORO </razonSocialComprador><identificacionComprador>1768002830001</identificacionComprador><direccionComprador>SUCRE Y AV JUBONES</direccionComprador><totalSinImpuestos>425.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>425.00</baseImponible><valor>51.00</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>476.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>854</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-669'</codigoAuxiliar>
+                      <descripcion>b'MANTENIMIENTO PREVENTIVO-CORRETIVO DE IMPRESORA COPIADORA RICOH MP201 SPF.'/SIN MARCA x Unidades x None</descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>120.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>120.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>120.00</baseImponible>
+                <valor>14.40</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>845</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-660'</codigoAuxiliar>
+                      <descripcion>b'MANTENIMIENTO PREVENTIVO-CORRETIVO DE IMPRESORA MATRICIAL EPSON FX-890'/SIN MARCA x Unidades x None</descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>20.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>40.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>40.00</baseImponible>
+                <valor>4.80</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>846</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-661'</codigoAuxiliar>
+                      <descripcion>b'MANTENIMIENTO PREVENTIVO-CORRETIVO DE IMPRESORA MULTIFUNCION EPSON L365 Y L355'/SIN MARCA x Unidades x None</descripcion>
+                      <cantidad>3.00</cantidad>
+                      <precioUnitario>15.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>45.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>45.00</baseImponible>
+                <valor>5.40</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>847</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-662'</codigoAuxiliar>
+                      <descripcion>b'MANTENIMIENTO PREVENTIVO-CORRETIVO DE IMPRESORA LASER SAMSUMG SCX 4623F'/SIN MARCA x Unidades x None</descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>100.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>100.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>100.00</baseImponible>
+                <valor>12.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>848</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-663'</codigoAuxiliar>
+                      <descripcion>b'MANTENIMIENTO PREVENTIVO-CORRETIVO DE IMPRESORA LASER SAMSUMG 4828FN'/SIN MARCA x Unidades x None</descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>120.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>120.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>120.00</baseImponible>
+                <valor>14.40</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

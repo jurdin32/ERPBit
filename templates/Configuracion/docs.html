@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>ERALY DOCS »
+                                <small> A CONTINUACION ALGUNOS TEMAS QUE PODRIAN AYUDARTE A GESTIONAR EL SOFTWARE
+                                </small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <ul class="list-unstyled msg_list">
+                                {% for tema in temas %}
+                                    <li style="width: 100% !important;">
+
+                                        <a href="/docs/{{ tema.id }}/" style="width: 100%"><span class="image"><img src="/media/{{ tema.imagen }}" style="width: 80px"></span>
+                                            <span>
+                                                <span>{{ tema.titulo|upper }} | <strong style="color: #1fad83"> Actualizado: {{ tema.horaFecha|date:"d-m-Y" }}</strong></span>
+
+                                            </span>
+                                            <span class="message">{{ tema.descripcion|safe }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

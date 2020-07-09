@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1007201901070454853600120010010000003950000000014</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000395</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>10/07/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>JORGE PALACIOS  JORGE PALACIOS MARQUEZ</razonSocialComprador><identificacionComprador>0702364001001</identificacionComprador><direccionComprador>MACHALA Y GRAN COLOMBIA</direccionComprador><totalSinImpuestos>62.50</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>62.50</baseImponible><valor>7.50</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>70.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>856</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0671'</codigoAuxiliar>
+                      <descripcion>b'REPARACION DE MATRICIAL FX890'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>62.50</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>62.50</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>62.50</baseImponible>
+                <valor>7.50</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

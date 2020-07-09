@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Johnny E. Urdin Gonz\xc3\xa1lez</razonSocial><nombreComercial>Business Intelligence Thinks</nombreComercial><ruc>0703886697001</ruc><claveAcceso>0411201901070388669700120010010000000980000000019</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000098</secuencial><dirMatriz>Rocafuerte 504 y Buenavista</dirMatriz></infoTributaria><infoFactura><fechaEmision>04/11/2019</fechaEmision><dirEstablecimiento>Rocafuerte 504 y Buenavista</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>FAMILSALUD CIA. LTDA. </razonSocialComprador><identificacionComprador>0791777380001</identificacionComprador><direccionComprador>VEGA DAVILA Y SUCRE </direccionComprador><totalSinImpuestos>120.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>120.00</baseImponible><valor>14.40</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>134.40</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1122</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-0889'</codigoAuxiliar>
+                                  <descripcion>b'REVISION DE REDES' / b'INSPECCION Y REVISION DE REDES'</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>120.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>120.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>120.00</baseImponible>
+                <valor>14.40</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>

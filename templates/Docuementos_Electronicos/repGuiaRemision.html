@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: a4 portrait;
+            @frame header_frame{
+             -pdf-frame-content: header_content;
+             left: 0pt; top: 0pt;right:0pt ;
+            }
+            @frame content_frame{
+                left: 10pt; top: 190pt; height: 650pt; right: 10pt;
+            }
+            @frame footer_frame {           /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 520pt; top: 170pt; height: 20pt;
+            }
+        }
+
+        body, #todo, table, .body {
+            background-color: {{ reporte.color_fondo }};
+            color: {{ reporte.color_texto }};
+
+        }
+        .encabezado{
+            color: {{ reporte.color_encabezados_tablas_texto }};
+            background-color:{{ reporte.color_encabezados_tablas }};
+            text-align: center;
+        }
+        #datosFactura {
+            padding-left: 30px;
+            padding-top: 20px;
+            text-align: justify;
+            font-size: 11px;
+            color: {{ reporte.color_texto }};
+        }
+
+        #datosFactura1 {
+            padding-right: 30px;
+            padding-top: 20px;
+            text-align: justify;
+            font-size: 11px;
+            color: {{ reporte.color_texto }};
+        }
+
+        .body {
+            margin-top: -10px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    </style>
+    <title>GuiaRemisión: {{ guia.clave_acceso }}</title>
+</head>
+<body>
+<div id="todo">
+<div id="header_content">
+    <img src="{{ reporte.ruta_imagenes }}/media/{{ reporte.encabezado }}" style="width: 100%;" alt="">
+</div>
+<div id="footer_content">Página <pdf:pagenumber> de <pdf:pagecount> </div>
+<div id="content">
+    <div class="body">
+    <table>
+        <tr>
+            <td>
+                <div id="datosFactura">
+                    {% if guia.datosGuia.codigoEstablecimiento.empresa.nombreComercial %}
+                        <strong>{{ guia.datosGuia.codigoEstablecimiento.empresa.nombreComercial|upper }}</strong>
+                    {% else %}
+                        <strong>{{ guia.datosGuia.codigoEstablecimiento.empresa.razonSocial|upper }}</strong>
+                    {% endif %}
+                    <br>
+                    <strong>{{ guia.datosGuia.codigoEstablecimiento.empresa.ruc }}</strong><br>
+                    <strong>{{ guia.datosGuia.codigoEstablecimiento.empresa.direccionMatriz|upper }}</strong><br>
+                    <strong>{{ guia.datosGuia.codigoEstablecimiento.empresa.parroquia.lugar.nombre|upper }}
+                        - {{ guia.datosGuia.codigoEstablecimiento.empresa.parroquia.lugar.lugar.nombre|upper }}
+                        - {{ guia.datosGuia.codigoEstablecimiento.empresa.parroquia.lugar.lugar.lugar.nombre|upper }}</strong><br>
+                    <strong>OBLIGADO A LLEVAR CONTABILIDAD:</strong>
+                    {% if guia.datosGuia.codigoEstablecimiento.empresa.obligado_llevar_contabilidad %}
+                        SI {% else %}NO{% endif %} <br>
+                    <strong>FECHA:</strong> {{ guia.fecha }}<br>
+                </div>
+            </td>
+            <td>
+                <div id="datosFactura1">
+                    <strong style="font-size: 15px">GUÍA <span> </span> DE <span> </span> REMISIÓN</strong><br>
+                    <span style="font-size: 15px">{{ guia.datosGuia.codigoEstablecimiento.codigo }}
+                    - {{ guia.datosGuia.puntoEmision.codigo }} - {{ guia.secuencial }}</span>
+                    <br>
+                    <strong>CEDULA / RUC:</strong> {{ guia.factura.cliente.ruc }}<br>
+                    <strong> {{ guia.factura.cliente.nombre|upper }} {{ guia.factura.cliente.apellido|upper }}</strong><br>
+                    <strong>TELÉFONO:</strong> {{ guia.factura.cliente.telefono }}<br>
+                    <strong>{{ guia.factura.cliente.direccion|upper }}</strong><br>
+                    <strong>{{ guia.factura.cliente.parroquia.lugar.nombre|upper }}
+                        - {{ guia.factura.cliente.parroquia.lugar.lugar.nombre|upper }}
+                        - {{ guia.factura.cliente.parroquia.lugar.lugar.lugar.nombre|upper }}</strong>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <br><br>
+    <div class="body">
+        <table style="border-bottom: 1px solid silver">
+            <thead>
+            <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;" colspan="4">DETALLES DEL VEHÍCULO</th>
+            </thead>
+            <tbody>
+                <tr style="padding-top: 5px;">
+                    <td style="width: 350px;  border-left:1px solid silver"><strong>Identificación (Transportista)</strong></td>
+                    <td>{{ guia.vehiculo.conductor.ruc}}</td>
+                    <td> </td>
+                    <td style=" border-right:1px solid silver"> </td>
+                </tr>
+             <tr style="padding-top: 5px;">
+                <td style="border-left:1px solid silver"><strong>Razón Social / Nombres y Apellidos</strong></td>
+                <td colspan="2">{{ guia.vehiculo.conductor.empresaTrans.razonSocial }} / {{ guia.vehiculo.conductor.nombre }} {{ guia.vehiculo.conductor.apellido }}</td>
+                <td style=" border-right:1px solid silver"> </td>
+            </tr>
+            <tr style="padding-top: 5px;">
+                <td style="border-left:1px solid silver"><strong>Placa</strong></td>
+                <td colspan="2">{{ guia.vehiculo }}</td>
+                <td style=" border-right:1px solid silver"> </td>
+            </tr>
+            <tr style="padding-top: 5px;">
+                <td style="border-left:1px solid silver"><strong>Punto de Partida</strong></td>
+                <td colspan="2">{{ guia.puntoPartida }}</td>
+                <td style=" border-right:1px solid silver"> </td>
+            </tr>
+            <tr style="padding-top: 5px;">
+                <td style="border-left:1px solid silver"><strong>Fecha Inicio Transporte</strong></td>
+                <td>{{ guia.fachaIniTrans|date:"d/m/Y" }}</td>
+                <td><strong>Fecha Fin Transporte</strong></td>
+                <td style=" border-right:1px solid silver">{{ guia.fachaFinTrans|date:"d/m/Y" }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <div class="body">
+         <table style="border-bottom: 1px solid silver">
+            <thead>
+            <th class="encabezado" style="padding-top: 5px; border-bottom: 1px solid silver;" colspan="4">DETALLES DEL COMPROBANTE</th>
+            </thead>
+            <tbody>
+                <tr style="padding-top: 5px;">
+                    <td  style="width: 500px;border-left:1px solid silver"><strong>Comprobante de Venta: </strong></td>
+                    <td style="width: 500px">{{ guia.factura.tipo }}: {{ guia.factura.datosFactura.codigoEstablecimiento.codigo }} - {{ guia.factura.datosFactura.puntoEmision.codigo }} - {{ guia.factura.secuencial }}</td>
+                    <td><strong>Fecha de Emisión:</strong></td>
+                    <td style="border-right:1px solid silver">{{ guia.factura.fecha|date:"d/m/Y" }}</td>
+                </tr>
+                <tr style="padding-top: 5px;">
+                    <td style="border-left:1px solid silver" ><strong>Número de Autorización: </strong></td>
+                    <td colspan="3" style="border-right:1px solid silver">{{guia.factura.clave_acceso }}</td>
+                </tr>
+                <tr style="padding-top: 5px;">
+                    <td style="border-left:1px solid silver"><strong>Motivo del Traslado: </strong></td>
+                    <td colspan="3" style="border-right:1px solid silver">{{guia.motivoTraslado }}</td>
+                </tr>
+                <tr style="padding-top: 5px;">
+                    <td style="border-left:1px solid silver"><strong>Destino (Punto de LLegada): </strong></td>
+                    <td colspan="3" style="border-right:1px solid silver">{{guia.puntoLLegada }}</td>
+                </tr>
+                <tr style="padding-top: 5px;">
+                    <td style="border-left:1px solid silver"><strong>Documento Aduanero: </strong></td>
+                    <td colspan="3" style="border-right:1px solid silver">{{guia.docAduanero }}</td>
+                </tr>
+                <tr style="padding-top: 5px;">
+                    <td style="border-left:1px solid silver"><strong>Código de Establecimiento Destino: </strong></td>
+                    <td colspan="3" style="border-right:1px solid silver">{{guia.codEstablecimiento }}</td>
+                </tr>
+                <tr style="padding-top: 5px;">
+                    <td style="border-left:1px solid silver"><strong>Ruta: </strong></td>
+                    <td colspan="3" style="border-right:1px solid silver">{{guia.ruta }} - {{ guia.puntoPartida }} - {{guia.puntoLLegada }}</td>
+                </tr>
+            </tbody>
+         </table>
+        </div>
+    <br><br>
+    <div class="body">
+        <table style="border: 1px solid silver">
+            <thead>
+                <th class="encabezado" style="padding-top: 5px;width: 120px">CANTIDAD</th>
+                <th class="encabezado" style="padding-top: 5px">DESCRIPCIÓN</th>
+                <th class="encabezado" style="padding-top: 5px; width: 300px">CÓDIGO PRINCIPAL</th>
+                <th class="encabezado" style="padding-top: 5px;width: 300px">CÓDIGO AUXILIAR</th>
+            </thead>
+            <tbody>
+            {% for detalle in detalles %}
+                <tr style="padding-top: 5px">
+                    <td style="text-align: center">{{ detalle.cantidad }}</td>
+                    <td style="width: 700px">{{ detalle.producto.producto.nombre }} / {{ detalle.producto.producto.marca }}
+                        / {{ detalle.producto.producto.categoria }} x {{ detalle.producto.producto.peso }}
+                        x {{ detalle.producto.producto.medida }}</td>
+                    <td style="text-align: center">{{ detalle.producto.id }}</td>
+                    <td style="text-align: center">{{ detalle.producto.producto.cod_referencia }}</td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+    <div style="text-align:center; font-size: 13px">
+        <br><br>
+        <pdf:barcode value="{{ guia.clave_acceso }}" type="code128" humanreadable="1"/>
+    </div>
+    <div style="text-align:center;">
+        NÚMERO DE AUTORIZACIÓN Y CLAVE DE ACCESO
+    </div>
+</div>
+</div>
+</body>
+</html>

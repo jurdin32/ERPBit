@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: a5 landscape;
+            @frame header_frame {
+            -pdf-frame-content: header_content;
+            left: 10pt;
+            top: 10pt;
+            right: 10pt ;
+        }
+        @frame content_frame {
+            left: 10pt;
+            top: 190pt;
+            height: 350pt;
+            right: 10pt;
+            }
+            @frame footer_frame {           /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 10pt;
+                top: 370pt;
+                right: 10pt;
+            }
+        }
+        tr{
+            border: 1px solid {{ reporte.color_lineas }};
+            padding: 3px;
+            color: {{ reporte.color_texto }};
+        }
+        .encabezado{
+            color: {{ reporte.color_encabezados_tablas_texto }};
+            background-color:{{ reporte.color_encabezados_tablas }};
+            text-align: left;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        table{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        #header_content{
+            text-align: center;
+            color: {{ reporte.color_texto }};
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header_content">
+        <img src="{{ reporte.ruta_imagenes }}/media/{{ reporte.encabezado }}" style="width: 100%;" alt="">
+        <br>
+        <label ><strong>REGISTRO DE PAGO</strong></label>
+    </div>
+    <div id="content">
+        <table>
+            <tr>
+                <td class="encabezado">NO. {{ detalle.n_pago }}/{{ cuenta.cuotas|add:'1' }}</td>
+                <td>RECIBO LA SUMA DE: $ {{ detalle.abono }} DÓLARES AMÉRICANOS</td>
+                <td>{{ ciudad }}, {{ fecha }}</td>
+            </tr>
+            <tr>
+                <td style="width: 180px" class="encabezado"><strong>DEL SR.(A): </strong></td>
+                <td colspan="2">{{ cuenta.factura.cliente.nombre|upper }} {{ cuenta.factura.cliente.apellido|upper }}</td>
+            </tr>
+            <tr>
+                <td style="width: 180px;" class="encabezado"><strong>POR CONCEPTO DE:</strong> </td>
+                <td colspan="2">PAGO DE LA CUOTA {{ detalle.n_pago }}/{{ cuenta.cuotas|add:'1' }} SEGÚN FACTURA NO. {{ cuenta.factura.codigoEstablecimiento }}-{{ cuenta.factura.puntoEmision }}- {{ cuenta.factura.secuencial }}
+                POR EL VALOR DE $ {{ cuenta.factura.total }}, REGISTRADO CON FECHA {{ cuenta.factura.fecha|upper }} POR EL USUARIO {{ cuenta.factura.usuario|upper }}| {{ reporte.empresa|upper }}</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td style="width: 200px">Monto de la Cuenta:</td>
+                <td style="width: 120px;text-align: right">$ {{ cuenta.valor }}</td>
+                <td rowspan="3" style="text-align: center; border-top: none"><br><br><br>
+                    ______________________________ <br>
+                    RECIBI CONFORME, {{ detalle.caja.usuario|upper }}
+                </td>
+            </tr>
+            <tr>
+                <td>Abono:</td>
+                <td style="text-align: right">$ {{ detalle.abono }}</td>
+            </tr>
+            <tr>
+                <td>Saldo:</td>
+                <td style="text-align: right">$ {{ detalle.saldo }}</td>
+            </tr>
+        </table>
+    </div>
+    <div id="footer_content" class="encabezado" style="height: 30px; padding: 10px;vertical-align: center">
+        Página <pdf:pagenumber> de <pdf:pagecount> - CUENTAS POR COBRAR - {{ reporte.empresa|upper }}
+    </div>
+</body>
+</html>

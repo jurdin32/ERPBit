@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1012201901070454853600120010010000007290000000012</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000729</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>10/12/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>EMPRESA PUBLICA CORPORACION ORENSE DE DESARROLLO ECONOMICO TERRITORIAL DE EL ORO CORPODET EP</razonSocialComprador><identificacionComprador>0760048460001</identificacionComprador><direccionComprador>BOLIVAR E NAPOLEON MERA Y BUENAVISTA</direccionComprador><totalSinImpuestos>133.06</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>133.06</baseImponible><valor>15.97</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>149.03</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1263</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1019'</codigoAuxiliar>
+                                  <descripcion>b'TINTA AMARILLA 664 EPSON' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>8.04</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>8.04</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>8.04</baseImponible>
+                <valor>0.96</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1262</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1018'</codigoAuxiliar>
+                                  <descripcion>b'TINTA ROJA 664 EPSON' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>8.04</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>8.04</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>8.04</baseImponible>
+                <valor>0.96</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1264</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1020'</codigoAuxiliar>
+                                  <descripcion>b'TINTA AZUL 664 EPSON' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>8.04</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>8.04</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>8.04</baseImponible>
+                <valor>0.96</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1260</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1016'</codigoAuxiliar>
+                                  <descripcion>b'TINTA NEGRA 664 EPSON' / b''</descripcion>
+                                  <cantidad>3.00</cantidad>
+                                  <precioUnitario>8.04</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>24.12</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>24.12</baseImponible>
+                <valor>2.88</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1259</codigoPrincipal>
+                                  <codigoAuxiliar>b'SIN-1015'</codigoAuxiliar>
+                                  <descripcion>b'TONER XEROX PHASER 3635MFP 108R00796' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>84.82</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>84.82</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>84.82</baseImponible>
+                <valor>10.18</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>

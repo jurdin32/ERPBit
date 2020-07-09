@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>0209201901070454853600120010010000004900000000019</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000490</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>02/09/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>UNIDAD EDUCATIVA DE FUERZAS ARMADAS COLEGIO MILITAR N.-3 &quot;HEROES DEL 41&quot; </razonSocialComprador><identificacionComprador>0760052650001</identificacionComprador><direccionComprador>KM. 6  1/2VIA A PASAJE</direccionComprador><totalSinImpuestos>750.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>750.00</baseImponible><valor>90.00</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>840.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>938</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0631'</codigoAuxiliar>
+                      <descripcion>b'TINTA DE IMPRESORA EPSON 664 ORIGINAL  CYAN'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>8.00</cantidad>
+                      <precioUnitario>9.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>72.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>72.00</baseImponible>
+                <valor>8.64</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>942</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0747'</codigoAuxiliar>
+                      <descripcion>b'TINTA EPSON 504 MAGENTA'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>9.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>18.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>18.00</baseImponible>
+                <valor>2.16</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>937</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0632'</codigoAuxiliar>
+                      <descripcion>b'TINTA DE IMPRESORA EPSON 664 ORIGINAL  YELLOW'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>8.00</cantidad>
+                      <precioUnitario>9.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>72.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>72.00</baseImponible>
+                <valor>8.64</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>943</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0748'</codigoAuxiliar>
+                      <descripcion>b'TINTA EPSON 504 CYAN'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>9.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>18.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>18.00</baseImponible>
+                <valor>2.16</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>939</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0630'</codigoAuxiliar>
+                      <descripcion>b'TINTA DE IMPRESORA EPSON 664 ORIGINAL MAGENTA'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>8.00</cantidad>
+                      <precioUnitario>9.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>72.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>72.00</baseImponible>
+                <valor>8.64</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>944</codigoPrincipal>
+                      <codigoAuxiliar>b'IMP-0749'</codigoAuxiliar>
+                      <descripcion>b'CINTA EPSON 24MM'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>6.00</cantidad>
+                      <precioUnitario>25.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>150.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>150.00</baseImponible>
+                <valor>18.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>936</codigoPrincipal>
+                      <codigoAuxiliar>b'SIN-0642'</codigoAuxiliar>
+                      <descripcion>b'TINTA DE IMPRESORA EPSON 664 ORIGINAL BLACK'/SIN MARCA x UNIDADES x </descripcion>
+                      <cantidad>26.00</cantidad>
+                      <precioUnitario>9.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>234.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>234.00</baseImponible>
+                <valor>28.08</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>941</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0746'</codigoAuxiliar>
+                      <descripcion>b'TINTA EPSON 504 YELLOW'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>9.00</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>18.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>18.00</baseImponible>
+                <valor>2.16</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>940</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0745'</codigoAuxiliar>
+                      <descripcion>b'TINTA EPSON 504 BLACK'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>10.00</cantidad>
+                      <precioUnitario>9.60</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>96.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>96.00</baseImponible>
+                <valor>11.50</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

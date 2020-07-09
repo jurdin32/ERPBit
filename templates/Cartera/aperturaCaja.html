@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BitAdmin | Cartera{% endblock title %}
+{% block content %}
+
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="">Cartera »</a>
+                                    <small>Fondo Rotativo (Caja) - Desglose de <strong>MONEDAS</strong></small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 0.01</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="number" id="mon1" value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="mon1">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 0.05</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="number" id="mon5" value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="mon5">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 0.10</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="number" id="mon10"
+                                                   value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="mon10">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 0.25</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="number" id="mon25"
+                                                   value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="mon25">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 0.50</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="number" id="mon50"
+                                                   value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="mon50">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 1,00</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="number" id="mon100"
+                                                   value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="mon100">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">MONEDAS</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="text" id="tmonedas"
+                                                   value="0.00"
+                                                   readonly
+                                                   class="form-control has-feedback-left" name="tmonedas">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    {% csrf_token %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="">Cartera »</a>
+                                    <small>Fondo Rotativo (Caja) - Desglose de <strong>BILLETES</strong></small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 1.00</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="number" id="bil1" value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="bil1">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 5.00</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" type="number" id="bil5" value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="bil5">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 10.00</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" type="number" id="bil10" value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="bil10">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 20.00</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" type="number" id="bil20" value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="bil20">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 50.00</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" type="number" id="bil50" value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="bil50">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">$ 100.00</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" type="number" id="bil100" value="0"
+                                                   onkeyup="calcular()" onchange="calcular()"
+                                                   class="form-control has-feedback-left" name="bil100">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">BILLETES</label>
+                                        <div class="col-md-6 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" required type="text" id="tbilletes"
+                                                   value="0.00"
+                                                   readonly
+                                                   class="form-control has-feedback-left" name="tbilletes">
+                                            <span class="fa fa-money form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="">Cartera »</a>
+                                    <small>Fondo Rotativo (Caja) - <strong>DOCUMENTOS</strong></small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="row" style="padding: 10px">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                        <th>No.</th>
+                                        <th>Fecha</th>
+                                        <th>Tipo</th>
+                                        <th>Banco</th>
+                                        <th>Documento</th>
+                                        <th>Valor</th>
+                                        </thead>
+                                        <tbody>
+                                        {% if not documentos %}
+                                            <tr>
+                                                <td colspan="6">La Tabla no tiene datos..!!</td>
+                                            </tr>
+                                        {% else %}
+                                            <tr>
+                                                <td>1</td>
+                                                <td>21/12/2018</td>
+                                                <th>CHEQUE</th>
+                                                <td>BANCO DEL PICHINCHA</td>
+                                                <td>000000000054</td>
+                                                <td class="totalDocumentos">15263.20</td>
+                                            </tr>
+                                        {% endif %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-offset-8">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">TOTAL:</label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input type="text" value="0.00" readonly
+                                                   class="form-control has-feedback-left" name="tdocumentos">
+                                            <span class="fa fa-dollar form-control-feedback left"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="separator"></div>
+                                <div>
+                                    <button class="btn btn-danger -align-left">Abrir Caja</button>
+                                    <button class="btn btn-success">Reportar Descuadre</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                {% if aperturas %}
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 5px" class="x_panel">
+                                <div class="x_title">
+                                    <h2><a href="">Totales »</a>
+                                        <small>Último Mes</small>
+                                    </h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped" style="text-align: center">
+                                            <thead style="background-color: #5A738E; color: whitesmoke">
+                                            <th style="text-align: center">
+                                                Hora
+                                            </th>
+                                            <th style="text-align: center">
+                                                Fecha
+                                            </th>
+                                            <th style="text-align: center">
+                                                Total en Billetes
+                                            </th>
+                                            <th style="text-align: center">
+                                                Total en Monedas
+                                            </th>
+                                            <th style="text-align: center">
+                                                Total en Documentos
+                                            </th>
+                                            <th style="text-align: center">
+                                                Suma Total
+                                            </th>
+                                            <th style="text-align: center">Estado</th>
+                                            </thead>
+                                            <tbody>
+                                            {% for apertura in aperturas %}
+                                                <tr>
+                                                    <td>{{ apertura.hora }}</td>
+                                                    <td>{{ apertura.fecha }}</td>
+                                                    <td>{{ apertura.totalBilletes|floatformat:2 }}</td>
+                                                    <td>{{ apertura.totalMonedas|floatformat:2 }}</td>
+                                                    <td>{{ apertura.totalDocumentos|floatformat:2 }}</td>
+                                                    <td>{{ apertura.saldoInicial|floatformat:2 }}</td>
+                                                    <td>{% if apertura.estado %}CERRADA{% else %}ABIERTO{% endif %}</td>
+                                                </tr>
+                                            {% endfor %}
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <style>
+        .form-control {
+            border-radius: 5px !important;
+        }
+    </style>
+{% endblock %}
+{% block scripts %}
+    <script>
+        function calcular() {
+            var mon1 = parseFloat($("#mon1").val().replace("", "0")) * 0.01;
+            var mon5 = parseFloat($("#mon5").val().replace("", "0")) * 0.05;
+            var mon10 = parseFloat($("#mon10").val().replace("", "0")) * 0.10;
+            var mon25 = parseFloat($("#mon25").val().replace("", "0")) * 0.25;
+            var mon50 = parseFloat($("#mon50").val().replace("", "0")) * 0.50;
+            var mon100 = parseFloat($("#mon100").val().replace("", "0")) * 1;
+            var tmonedas = mon1 + mon5 + mon10 + mon25 + mon50 + mon100;
+            $("#tmonedas").val(tmonedas.toFixed(2));
+
+            var bil1 = parseFloat($("#bil1").val().replace("", "0")) * 1;
+            var bil5 = parseFloat($("#bil5").val().replace("", "0")) * 5;
+            var bil10 = parseFloat($("#bil10").val().replace("", "0")) * 10;
+            var bil20 = parseFloat($("#bil20").val().replace("", "0")) * 20;
+            var bil50 = parseFloat($("#bil50").val().replace("", "0")) * 50;
+            var bil100 = parseFloat($("#bil100").val().replace("", "0")) * 100;
+            var tbilletes = bil1 + bil5 + bil10 + bil20 + bil50 + bil100;
+            $("#tbilletes").val(tbilletes.toFixed(2));
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>2312201901070454853600120010010000007670000000017</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000767</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>23/12/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>CONAGOPARE EL ORO </razonSocialComprador><identificacionComprador>0760037850001</identificacionComprador><direccionComprador>JUNIN S/N Y AV 25 DE JUNIO</direccionComprador><totalSinImpuestos>6610.45</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>6610.45</baseImponible><valor>793.25</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>7403.70</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1324</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1079'</codigoAuxiliar>
+                                  <descripcion>b'NOTEBOOK DELL INSPIRON CI7 8VA G 8GB 2TB HDD TG 4GB 15,6 PANTALLA' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>1115.21</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>1115.21</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>1115.21</baseImponible>
+                <valor>133.83</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1319</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1074'</codigoAuxiliar>
+                                  <descripcion>b'DISCO EXTERNO 1TB ADATA ANTISHOCK' / b''</descripcion>
+                                  <cantidad>4.00</cantidad>
+                                  <precioUnitario>82.25</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>329.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>329.00</baseImponible>
+                <valor>39.48</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1321</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1076'</codigoAuxiliar>
+                                  <descripcion>b'IMPRESORA EPSON L1300 A3' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>685.42</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>685.42</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>685.42</baseImponible>
+                <valor>82.25</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1320</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1075'</codigoAuxiliar>
+                                  <descripcion>b'UNIDAD DVD EXTERNA' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>28.96</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>57.92</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>57.92</baseImponible>
+                <valor>6.96</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1322</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1077'</codigoAuxiliar>
+                                  <descripcion>b'FLAT PANEL SAMSUNG 24" LED CURVO HDMI RGB (VGA)' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>280.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>560.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>560.00</baseImponible>
+                <valor>67.20</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1323</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1078'</codigoAuxiliar>
+                                  <descripcion>b'UPS APC EASY 650 VA' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>82.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>164.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>164.00</baseImponible>
+                <valor>19.68</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1318</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1073'</codigoAuxiliar>
+                                  <descripcion>b'COMPUTADOR CPU CORE I7 - 16GB RAM - 1TB HDD - 480GB SSD - 8GB VIDEO' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>1849.45</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>3698.90</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>3698.90</baseImponible>
+                <valor>443.86</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>

@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Registro de Grupos</h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 col-sm-8 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="{% url 'grupos' %}">Grupos »</a>
+                                <small>Creaciones de Grupos</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                            </ul>
+
+                            <div class="clearfix"></div>
+
+                            <div class="x_content">
+                                <br/>
+                                <form class="form form-horizontal form-label-left" id="form" name="form" method="POST"
+                                      action="">
+                                    {% csrf_token %}
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nombre Grupo<span
+                                                class="required">*</span></label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <input style="border-radius: 5px" type="text" value="{{ grupo.nombre }}"
+                                                   id="nombre" name="nombre" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Descripción<span
+                                                class="required">*</span></label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <textarea style="border-radius: 8px; resize: none" name="descripcion"
+                                                      id="descripcion" style=" resize: none" rows="3"
+                                                      class="form-control">{{ grupo.descripcion }}</textarea>
+                                        </div>
+                                    </div>
+                                    <br/> <br/>
+                                    <div id="wizard_verticle" class="form_wizard wizard_verticle">
+
+                                        <ul class="list-unstyled wizard_steps anchor">
+                                            {% for funcion in funciones %}
+                                                {% if forloop.counter == 1 %}
+                                                    <li>
+                                                        <a href="#step-{{ funcion.id }}" class="selected" isdone="1"
+                                                           rel="{{ forloop.counter }}">
+                                                            <span class="step_no">{{ forloop.counter }}</span>
+                                                        </a>
+                                                    </li>
+                                                {% else %}
+                                                    <li>
+                                                        <a href="#step-{{ funcion.id }}" class="disabled" isdone="0"
+                                                           rel="{{ forloop.counter }}">
+                                                            <span class="step_no">{{ forloop.counter }}</span>
+                                                        </a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                        <div class="stepContainer" style="height: 500px; overflow-y: hidden">
+                                            <br><br>
+                                            {% for funcion in funciones %}
+                                            <div id="step-{{ funcion.id }}" class="content" style="display: block; height: 600px;">
+                                                <h2 class="StepTitle">Modulo: </h2>
+                                                <span class="section">{{ funcion.nombre }}</span>
+                                                <div class="form-group">
+                                                    <ul class="list-group">
+                                                        {% for permiso in permisos %}
+                                                            {% if permiso.item.funcion == funcion %}
+                                                                <li style="padding: 10px"><input name="{{ permiso.item.id }}" id="{{ permiso.item.id }}" class="flat" type="checkbox"> {{ permiso.item.nombre }}</li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block scripts %}
+    <script>
+        {% for permiso in perm %}
+            $("#{{ permiso.item.id }}").prop('checked', true);
+        {% endfor %}
+    </script>
+
+{#    <script>#}
+{#        function seleccionar() {#}
+{#            {% for funcion in funciones %}#}
+{#                {% for item in items %}#}
+{#                    if ({{ funcion.id }} == {{ item.funcion.id }}) {#}
+{#                        if ($("#{{ funcion.id }}").prop('checked')) {#}
+{#                            $('#{{ funcion.id  }}{{ item.id }}').prop('checked', true);#}
+{#                            console.log({{ funcion.id  }}{{ item.id }})#}
+{#                        } else {#}
+{#                            $('#{{ funcion.id }}{{ item.id }}').prop('checked', false)#}
+{#                        }#}
+{#                    }#}
+{#                {% endfor %}#}
+{#            {% endfor %}#}
+{#        }#}
+{#    </script>#}
+{% endblock %}
+

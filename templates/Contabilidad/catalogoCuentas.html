@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load customTagsCodigoCuenta %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Contabilidad »
+                            <small>Catalogo de Cuentas</small>
+                        </h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="col-lg-12 table-responsive">
+                            <a class="btn bg-blue" id="regis" data-toggle="modal" href="#registro"><i
+                                class="fa fa-bookmark-o"></i> Nueva Cuenta Principal</a>
+                            <table id="plan" class="table-bordered table table-striped">
+                                <thead style="background: #2A3F54; color: white">
+                                <th style="text-align: center">NO.</th>
+                                <th style="text-align: center">NIVEL</th>
+                                <th>CUENTA PRINCIPAL</th>
+                                <th>CODIGO</th>
+                                <th>NOMBRE DE LA CUENTA</th>
+                                <th style="text-align: center">OPCIONES</th>
+                                </thead>
+                                <tbody>
+                                {% for cuenta in cuentas %}
+                                    <tr>
+                                        <td style="text-align: center">{{ forloop.counter }}</td>
+                                        <td style="text-align: center">{{ cuenta.nivel }}</td>
+
+                                        {% if cuenta.principal %}
+                                            <td style="color: darkred"><strong>{{ cuenta.principal.codigo }} </strong> | <strong style="color: #0a68a3">{{ cuenta.principal.nombre|upper }}</strong></td>
+                                            <td style="color: green"><strong>{{ cuenta.codigo }}</strong></td>
+                                            <td style="color: green"><strong>{{ cuenta.nombre }}</strong></td>
+                                            <td style="text-align: center; width: 150px">
+
+                                                <a href="#registro" data-toggle="modal" class="btn btn-warning btn-xs editar"
+                                                    data-id="{{ cuenta.id }}" data-nivel="{{ cuenta.nivel }}"
+                                                   data-codigo="{{ cuenta.codigo }}"
+                                                    data-principal="{{ cuenta.principal.codigo }}" data-nombre="{{ cuenta.nombre }}">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+
+                                                <a href="#registro" data-toggle="modal" class="btn btn-info btn-xs nuevo"
+                                                    data-id="{{ cuenta.id }}" data-nivel="{{ cuenta.nivel }}"
+                                                   data-codigo="{{ cuenta.codigo }}.{% codigos cuenta.codigo cuenta.nivel%}"
+                                                    data-principal="{{ cuenta.codigo }}" data-nombre="{{ cuenta.nombre }}">
+                                                    <i class="fa fa-sort-numeric-asc"></i>
+                                                </a>
+
+                                                <a href="{% url 'eliminarCuenta' cuenta.id %}" class="btn btn-danger btn-xs"><i
+                                                        class="fa fa-remove"></i></a>
+                                            </td>
+                                        {% else %}
+                                            <td style="color: darkred"><strong>{{ cuenta.principal.codigo }}</strong></td>
+                                            <td><label for="" style="color: darkred">{{ cuenta.codigo }}</label></td>
+                                            <td><label for="" style="color: darkred">{{ cuenta.nombre|upper }}</label>
+                                            </td>
+                                            <td style="text-align: center; width: 150px">
+                                                <a href="#registro" data-toggle="modal" class="btn btn-warning btn-xs editar"
+                                                data-id="{{ cuenta.id }}" data-nivel="{{ cuenta.nivel }}"
+                                                   data-codigo="{{ cuenta.codigo }}"
+                                                    data-principal="{{ cuenta.principal.codigo }}" data-nombre="{{ cuenta.nombre }}">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                                <a href="#registro" data-toggle="modal" class="btn btn-info btn-xs nuevo"
+                                                    data-id="{{ cuenta.id }}" data-nivel="{{ cuenta.nivel }}"
+                                                    data-codigo="{{ cuenta.codigo }}.{% codigos cuenta.codigo cuenta.nivel %}"
+                                                    data-principal="{{ cuenta.codigo }}" data-nombre="{{ cuenta.nombre }}">
+                                                    <i class="fa fa-sort-numeric-asc"></i>
+                                                </a>
+                                                <a href="{% url 'eliminarCuenta' cuenta.id %}" class="btn btn-danger btn-xs"><i
+                                                        class="fa fa-remove"></i></a>
+                                            </td>
+                                        {% endif %}
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fadeInLeft" id="registro" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">REGISTRO DE CUENTAS</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form role="form" id="formulario" method="post">
+                        {% csrf_token %}
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>ID</label>
+                            <input required style="border-radius: 5px" readonly type="text" class="form-control" name="id" id="id"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>NIVEL</label>
+                            <input required style="border-radius: 5px" readonly type="text" class="form-control" name="nivel" id="nivel"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>CUENTA PRINCIPAL</label>
+                            <input readonly style="border-radius: 5px" type="text" class="form-control" name="principal" id="principal"/>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label>CODIGO DE LA CUENTA</label>
+                            <input required readonly style="border-radius: 5px" type="text" class="form-control" name="codigo" id="codigo"/>
+                        </div>
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <label>NOMBRE DE LA CUENTA</label>
+                            <input required  style="border-radius: 5px" type="text" class="form-control" name="nombre" id="nombre"/>
+                        </div>
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+                            <button type="submit" class="btn btn-info"><i class="fa fa-save"></i> REGISTRAR</button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fa fa-sign-in"></i> SALIR</button>
+                        </div>
+                    </form>
+               </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script>
+    {#Tablas("#plan")#}
+    $(".editar").click(function ()
+    {
+        id=$(this).data('id')
+        nivel=$(this).data('nivel')
+        principal=$(this).data('principal')
+        nombre=$(this).data('nombre')
+        codigo=$(this).data('codigo')
+        console.log(id+" "+nivel+" "+principal+" "+codigo+" "+nombre)
+        $("#id").val(id)
+        $("#nivel").val(nivel)
+        $("#principal").val(principal)
+        $("#codigo").val(codigo)
+        $("#nombre").val(nombre)
+        $("#formulario").attr('action','/contabilidad/catalogo/edit/'+id+'/')
+    });
+
+    $(".nuevo").click(function ()
+    {
+        id=$(this).data('id')
+        nivel=$(this).data('nivel')
+        principal=$(this).data('principal')
+        nombre=$(this).data('nombre')
+        codigo=$(this).data('codigo')
+        console.log(id+" "+nivel+" "+principal+" "+codigo+" "+nombre)
+        $("#id").val(id)
+        $("#nivel").val(nivel)
+        $("#principal").val(principal)
+        $("#codigo").val(codigo)
+        $("#nombre").val(nombre)
+        $("#formulario").attr('action','/contabilidad/catalogo/')
+    });
+
+    $("#regis").click(function(){
+        nivel=1
+        codigo='{% CodigosPrincipal %}'
+        $("#nivel").val(nivel)
+        $("#codigo").val(codigo)
+        $("#nombre").val("")
+        $("#principal").val("")
+        $("#formulario").attr('action','/contabilidad/catalogo/')
+    });
+    </script>
+
+{% endblock %}

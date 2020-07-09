@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '3012201806070388669700110010010000010030606060619',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '58',
+                            'mensaje': 'ERROR EN LA ESTRUCTURA DE LA CLAVE DE ACCESO',
+                            'informacionAdicional': 'La fecha de emisión Sat Dec 29 00:00:00 GMT-05:00 2018 no consta como parte de la clave de acceso 3012201806070388669700110010010000010030606060619',
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

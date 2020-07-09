@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Cartera {% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="/cartera/anticiposSueldo/">Cartera » </a>
+                                <small>Registro de Anticipo para: <strong>{{ empleado.nombre }} {{ empleado.apellido }}</strong></small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_content">
+                                    <div class="col-md-6">
+                                        <div class="form-horizontal form-label-left">
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Departamento: <span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                                    <input style="border-radius: 5px" required type="text"  value="{{ empleado.departamento }}" readonly
+                                                           class="form-control has-feedback-left">
+                                                    <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Cargo: <span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                                    <input style="border-radius: 5px" required type="text"  value="{{ sueldo.cargo|upper }}" readonly
+                                                           class="form-control has-feedback-left">
+                                                    <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Cédula<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                                    <input style="border-radius: 5px" required type="text"  value="{{ empleado.ruc }}" readonly
+                                                           class="form-control has-feedback-left">
+                                                    <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Profesión: <span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                                    <input style="border-radius: 5px" required type="text"  value="{{ empleado.profesion|upper }}" readonly
+                                                           class="form-control has-feedback-left">
+                                                    <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Remuneración: <span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                                    <input style="border-radius: 5px" required type="text"  value="{{ sueldo.sueldo|floatformat:2 }}" readonly
+                                                           class="form-control has-feedback-left">
+                                                    <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Total Anticipos: <span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                                    <input style="border-radius: 5px" required type="text"  value="{{ valorAnticipo }}" readonly
+                                                           class="form-control has-feedback-left">
+                                                    <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                         <form method="POST" action="" class="form-horizontal form-label-left">
+                                            {% csrf_token %}
+                                             <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Valor<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                                    <input style="border-radius: 5px; text-align: right" required type="text" id="valor" value="0.00"
+                                                           class="form-control has-feedback-left" name="valor">
+                                                    <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                             <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Descripción: <span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12">
+                                                    <textarea style="border-radius: 5px; resize: none" rows="7" required type="text" id="descripcion" class="form-control has-feedback-left" name="descripcion">Anticipo de Sueldo para el (la) Sr(a). {{ empleado.nombre }} {{ empleado.apellido }}.</textarea>
+                                                    <span class="fa fa-file-text-o form-control-feedback left" aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+                                             <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12"><span class="required"></span></label>
+                                                <div class="col-md-6 col-sm-9 col-xs-12" style="text-align: right">
+                                                    <button class="btn btn-primary">Registrar</button>
+                                                </div>
+                                            </div>
+                                         </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_content">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_content">
+                                    <table class="table table-bordered table-striped table-active">
+                                        <thead style="background-color: #5A738E; color: whitesmoke;">
+                                        <th>FECHA</th>
+                                        <th>CÉDULA</th>
+                                        <th>NOMBRE Y APELLIDO</th>
+                                        <th>VALOR</th>
+                                        <th>DESCRIPCIÓN</th>
+                                        </thead>
+                                        <tbody>
+                                        {% for anticipo in anticipos %}
+                                            <tr>
+                                                <td>{{ anticipo.fecha }}</td>
+                                                <td>{{ anticipo.empleado.ruc }}</td>
+                                                <td>{{ anticipo.empleado.nombre }} {{ anticipo.empleado.apellido }}</td>
+                                                <td>{{ anticipo.valor|floatformat:2 }}</td>
+                                                <td>{{ anticipo.descripcion }}</td>
+                                            </tr>
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.0.0"><infoTributaria><ambiente>1</ambiente><tipoEmision>1</tipoEmision><razonSocial>Johnny E. Urdin Gonz\xc3\xa1lez</razonSocial><nombreComercial>Business Intelligence Thinks</nombreComercial><ruc>0703886697001</ruc><claveAcceso>2101201901070388669700110010010000000880000000014</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000088</secuencial><dirMatriz>Rocafuerte 504 y Buenavista</dirMatriz></infoTributaria><infoFactura><fechaEmision>21/01/2019</fechaEmision><dirEstablecimiento>Rocafuerte 504 y Buenavista</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>07</tipoIdentificacionComprador><razonSocialComprador>CONSUMIDOR FINAL</razonSocialComprador><identificacionComprador>9999999999999</identificacionComprador><direccionComprador>S/N</direccionComprador><totalSinImpuestos>261.75</totalSinImpuestos><totalDescuento>30.00</totalDescuento><totalConImpuestos><totalImpuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <baseImponible>261.75</baseImponible>
+                    <valor>31.41</valor>
+                    </totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>293.16</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>171</codigoPrincipal>
+                                  <codigoAuxiliar>b'FOT-0020'</codigoAuxiliar>
+                                  <descripcion>b'FOTOGRAFIAS CON PRODUCCI\xc3\x93N' / b'20 Fotos Producidas '</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>150.00</precioUnitario>
+                                  <descuento>30</descuento>
+                                  <precioTotalSinImpuesto>150.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>150.00</baseImponible>
+                <valor>18.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>33</codigoPrincipal>
+                                  <codigoAuxiliar>b'FOT-0020'</codigoAuxiliar>
+                                  <descripcion>b'FOTOGRAFIAS CON PRODUCCI\xc3\x93N' / b'Fotograf\xc3\xada para  redes sociales.  local /servicio/ producto . Incluye edici\xc3\xb3n'</descripcion>
+                                  <cantidad>3.00</cantidad>
+                                  <precioUnitario>47.25</precioUnitario>
+                                  <descuento>30</descuento>
+                                  <precioTotalSinImpuesto>111.75</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>111.75</baseImponible>
+                <valor>13.41</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature343939">
+<ds:SignedInfo Id="Signature-SignedInfo342110">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID947124" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature343939-SignedProperties159916">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>LxkMXpWpfze8x+nPKxeLvqCuKQE=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1196836">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>/Ro3WnWnkCA9tv0+K/vSVHLbgT4=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-548406" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>HXEO8nZy1rX6ZXsxlNirJz9uU24=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue24449">
+Uf9ZycTTqstQVk++yVJVMMMHmG/n87z45DhGpYB61WdeeFvKvWek2Q+yoTMiVzLUXr3H6rNkEwwn
+PgHE89gqjqnKf2SCNotOkjGaijpsYs9JYiZYKrsxh6ThXWj9XAe83P3+lkgL0O43kW7/2gaEbbgY
+9ECgIPD4uh37keLgU9v6FLlGadOnjjLLUrgYVc61EpkwZQPJazAIH5FJygoPBC7AQUsqmj+RjG7P
+7mk0maK7Gp4LbQN8ZbxKbCqds4KmLT1Gp0hb1Iy9JWgv6GBOleCXZcImsieXm3JhB0/49j7kNLzs
+aiL8vR5uAyzi4uePNkvm1t9rew10+ssi7v8KPA==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1196836">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJlTCCB32gAwIBAgIEWlq8gjANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE4MDExNjE4NTMxNVoXDTIwMDExNjE5MjMx
+NVowgbMxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE3MBEGA1UEBRMKMDAwMDI1MTM2MjAiBgNVBAMTG0pPSE5OWSBFREdBUiBV
+UkRJTiBHT05aQUxFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMJlIaeyZ75mCHbo
+6D7TQrWye9iPT/tqD1etsuNujpZocl6vqnd7CgqR+NRjI9JY+goK62dhuZcP7Cyq6QCqNTBM0BH7
+Bvz6o8BLo+UWoIJlgfvOunIaQElbNFtijVh1XopFe1Y4MSc0RltUwPwPc7zzuiJr+l3/Z3yP05MD
+6OLNqi11VwsbBfvHRDxnLtnX6bgUCXuvgG57IjW6O3IKCWhkFLs8l1zwOy0KvDnHw5e6TyZSkxXW
+3lFuk0a/RoXyI4MoC4NCDY1Av+01czG55sAaqoOc0qLZh6IFu3dMGQVXkhPa2Or4gy7u0+7g47xr
+NegqsdOOhMHEAu1mc2XhnIMCAwEAAaOCBL8wggS7MAsGA1UdDwQEAwIHgDBmBgNVHSAEXzBdMFsG
+CysGAQQBgqg7AgEBMEwwSgYIKwYBBQUHAgEWPmh0dHA6Ly93d3cuZWNpLmJjZS5lYy9wb2xpdGlj
+YS1jZXJ0aWZpY2Fkby9wZXJzb25hLW5hdHVyYWwucGRmMIGRBggrBgEFBQcBAQSBhDCBgTA+Bggr
+BgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29j
+c3AwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwMS5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dlYi9z
+dGF0dXMvb2NzcDAaBgorBgEEAYKoOwMBBAwTCjA3MDM4ODY2OTcwHAYKKwYBBAGCqDsDAgQOEwxK
+T0hOTlkgRURHQVIwFQYKKwYBBAGCqDsDAwQHEwVVUkRJTjAYBgorBgEEAYKoOwMEBAoTCEdPTlpB
+TEVaMCUGCisGAQQBgqg7AwcEFxMVUEFOQU1FUklDQU5BIFkgQ0FSQ0hJMBkGCisGAQQBgqg7AwgE
+CxMJMDcyOTUyODg1MBgGCisGAQQBgqg7AwkEChMIRWwgR3VhYm8wFwYKKwYBBAGCqDsDDAQJEwdF
+Q1VBRE9SMB0GCisGAQQBgqg7AwsEDxMNMDcwMzg4NjY5NzAwMTAgBgorBgEEAYKoOwMzBBITEFNP
+RlRXQVJFLUFSQ0hJVk8wGQYDVR0RBBIwEIEOaW5mb0BkaXpvZi5jb20wggHfBgNVHR8EggHWMIIB
+0jCCAc6gggHKoIIBxoaB1WxkYXA6Ly9iY2VxbGRhcHN1YnAxLmJjZS5lYy9jbj1DUkw1MDIsY249
+QUMlMjBCQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGw9UVVJVE8sb3U9RU5USURBRCUy
+MERFJTIwQ0VSVElGSUNBQ0lPTiUyMERFJTIwSU5GT1JNQUNJT04tRUNJQkNFLG89QkFOQ08lMjBD
+RU5UUkFMJTIwREVMJTIwRUNVQURPUixjPUVDP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+ZYY0aHR0cDovL3d3dy5lY2kuYmNlLmVjL0NSTC9lY2lfYmNlX2VjX2NybGZpbGVjb21iLmNybKSB
+tTCBsjELMAkGA1UEBhMCRUMxIjAgBgNVBAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1
+BgNVBAsTLkVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAM
+BgNVBAcTBVFVSVRPMSUwIwYDVQQDExxBQyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMQ8wDQYD
+VQQDEwZDUkw1MDIwKwYDVR0QBCQwIoAPMjAxODAxMTYxODUzMTVagQ8yMDIwMDExNjE5MjMxNVow
+HwYDVR0jBBgwFoAUGPnw++YyHJlmOSrKi7JpfUknv84wHQYDVR0OBBYEFLh0bcUnug8SNPn5fqW9
+55+MyDTMMAkGA1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsEVjguMQMCBLAwDQYJKoZIhvcNAQEL
+BQADggIBAEV2L4oBcgTSbNWGiTCYSAB9HDfXbXocWPrODQ3mgH48H6ZPBf1dju2+wq7qPv7GmPz8
+UaiXJJalupaz7jxk92hZ30dQR/eHGtc2D5v2MWjMGEuyT0v2yyR85JQvRZm5qjQYJ8XbKi1uqy3i
+DgR0QlQOpOqmUDpycGubAkzTo12U0KtSr3fiIE0fKEiWPhlOwjhFrl1I1dZzKC8smLe6jUy6z/Vy
+vAG0WCpgT/oQ9glHAYk8hq+NfORKIePbcRdJ3eV3csyajibU9zpra/b1ewQbkZAF+uBprD6EM9ya
+s4qHUdNCBm0ZCBGUr9SNeGGKIedUpO7MwTD8Tr2Bhzvzu2rdAncFkpJTG5XxLs8on0m2InMYcjsM
+b5PTNjAU42tUVif8r3f8DMJO8rjy5aHY3GiuLLGkh1/80cRq4LJJ8RZ3JmwUo8mCWkUUMxcuSpad
+SY+mET5xIIElv1c9p5b8swuO7GWRq99h7rTieEn7YrcPHGXbrnGkAFQ7XYpqvAK566EYLGMdWhci
+0q6oQkEz8vJTo1mecpFDesOOq7GPHrFEA+juCihCF40EJJhUSdzpFncdjlSIkMBVIx8VvVvmqBxh
+oeXwO+siC4g2raAM4Z1KURcR4l//mf5ZvQevDk1Pu72ihgcnmnWK6eBlv3tQ+sFUE/j717J4a5+Z
+0W6jlXSY
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+wmUhp7JnvmYIdujoPtNCtbJ72I9P+2oPV62y426OlmhyXq+qd3sKCpH41GMj0lj6CgrrZ2G5lw/s
+LKrpAKo1MEzQEfsG/PqjwEuj5RaggmWB+866chpASVs0W2KNWHVeikV7VjgxJzRGW1TA/A9zvPO6
+Imv6Xf9nfI/TkwPo4s2qLXVXCxsF+8dEPGcu2dfpuBQJe6+AbnsiNbo7cgoJaGQUuzyXXPA7LQq8
+OcfDl7pPJlKTFdbeUW6TRr9GhfIjgygLg0INjUC/7TVzMbnmwBqqg5zSotmHogW7d0wZBVeSE9rY
+6viDLu7T7uDjvGs16Cqx046EwcQC7WZzZeGcgw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature343939-Object491561"><etsi:QualifyingProperties Target="#Signature343939"><etsi:SignedProperties Id="Signature343939-SignedProperties159916"><etsi:SignedSignatureProperties><etsi:SigningTime>2019-01-21T00:12:43-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>oDaniwUYpeJMWYGXdvoH5vHD3A4=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1515895938</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-548406"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

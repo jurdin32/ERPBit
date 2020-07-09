@@ -1,0 +1,697 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Datos Electronicos{% endblock title %}
+{% block content %}
+    {% load customTagsInventario %}
+    <div class="right_col" role="main">
+        <div class="x_title">
+            <h2><a href="{% url 'notaCredito' %}">Nota Debito »</a>
+                <small><strong>Nueva Nota Debito</strong></small>
+            </h2>
+            <ul class="nav navbar-right panel_toolbox"></ul>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div style="border-radius: 10px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Datos del Cliente</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br/>
+                        <div class="form-horizontal form-label-left input_mask">
+                            <div class="form-group">
+                                <label class="control-label col-md-4 col-xs-12">Razon Social |
+                                    Nombres y Apellidos :</label>
+
+                                <div class="col-md-8 col-xs-12">
+                                    <div class="input-group">
+                                        <input type="hidden" id="idCliente" value="{{ consumidor.id }}">
+                                        <input readonly type="text" id="nom" value="{{ consumidor.razonSocial }}"
+                                               class="form-control ">
+                                        <span class="input-group-btn">
+                                              <button type="button" data-toggle="modal"
+                                                      data-target="#clientes" class="btn btn-primary">
+                                                  <i class="fa fa-user-plus"></i> Cliente
+                                              </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4 col-xs-12">Identificacion
+                                    :</label>
+                                <div class="col-md-8 col-xs-12">
+                                    <input style="border-radius: 5px;" value="{{ consumidor.ruc }}"
+                                           class="form-control col-md-7 col-xs-12 has-feedback-left" id="identificacion"
+                                           required="required" readonly
+                                           type="text">
+                                    <span class="fa fa-credit-card form-control-feedback left"
+                                          aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4 col-xs-12">Direccion :</label>
+                                <div class="col-md-8 col-xs-12">
+                                    <input style="border-radius: 5px " readonly value="{{ consumidor.direccion }}"
+                                           class="form-control col-md-7 col-xs-12 has-feedback-left" id="direccion"
+                                           required="required"
+                                           type="text">
+                                    <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4 col-xs-12 col-xs-12">Email :</label>
+                                <div class="col-md-8 col-xs-12">
+                                    <input style="border-radius: 5px " readonly value="{{ consumidor.email }}"
+                                           class="form-control col-md-7 col-xs-12 has-feedback-left" id="email"
+                                           required="required"
+                                           type="email">
+                                    <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div style="border-radius: 10px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Datos del Documento</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br/>
+                        <div class="form-horizontal form-label-left input_mask">
+                            <div class="form-group">
+                                <label class="control-label col-md-4 col-xs-12">Doc. Referencia :</label>
+
+                                <div class="col-md-8 col-xs-12">
+                                    <div class="input-group">
+                                        <input type="hidden" id="idCliente" value="{{ consumidor.id }}">
+                                        <input readonly type="text" id="nom" value="{{ consumidor.razonSocial }}"
+                                               class="form-control ">
+                                        <span class="input-group-btn">
+                                              <button type="button" data-toggle="modal"
+                                                      data-target="#clientes" class="btn btn-primary">
+                                                  <i class="fa fa-file-text"></i> Documento
+                                              </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4 col-xs-12">Autorización
+                                    :</label>
+                                <div class="col-md-8 col-xs-12">
+                                    <input style="border-radius: 5px;" value="{{ consumidor.ruc }}"
+                                           class="form-control col-md-7 col-xs-12 has-feedback-left" id="identificacion"
+                                           required="required" readonly
+                                           type="text">
+                                    <span class="fa fa-check form-control-feedback left"
+                                          aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4 col-xs-12">Fecha Emision :</label>
+                                <div class="col-md-8 col-xs-12">
+                                    <input style="border-radius: 5px " readonly value="{{ consumidor.direccion }}"
+                                           class="form-control col-md-7 col-xs-12 has-feedback-left" id="direccion"
+                                           required="required"
+                                           type="text">
+                                    <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4 col-xs-12 col-xs-12">Razon Modificación :</label>
+                                <div class="col-md-8 col-xs-12">
+                                    <input style="border-radius: 5px "  value="{{ consumidor.email }}"
+                                           class="form-control col-md-7 col-xs-12 has-feedback-left" id="email"
+                                           required="required"
+                                           type="email">
+                                    <span class="fa fa-edit form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .encabezados {
+                background-color: {{ reportes.color_encabezados_tablas }};
+                color: {{ reportes.color_encabezados_tablas_texto }}
+            }
+
+            .totales {
+                text-align: right;
+            }
+        </style>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 10px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Detalle de Factura: <a id="secuencia">{{ secuencial }}</a></h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="row">
+                            <div class="col-xs-12 table-responsive">
+                                <table id="myTable" class="table">
+                                    <thead class="encabezados">
+                                    <th style="text-align: center;width: 100px">Eliminar</th>
+                                    <th style="width: 100px">Id</th>
+                                    <th style="width: 100px">Cod Ref</th>
+                                    <th style="text-align: center; width: 100px">Cantidad</th>
+                                    <th>Description</th>
+                                    <th style="width: 100px">P. Unit</th>
+                                    <th style="width: 100px">IVA</th>
+                                    <th style="width: 100px">ICE</th>
+                                    <th style="width: 100px">IRBPNR</th>
+                                    <th style="width: 100px; text-align: right">Total</th>
+
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td colspan="7" style="border-top: none !important;"></td>
+                                        <th  colspan="2" class="encabezados">Subtotal 12%:</th>
+                                        <td class="totales" id="subtotal12">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" style="border-top: none !important;"></td>
+                                        <th colspan="2" class="encabezados">Subtotal 0% :</th>
+                                        <td class="totales" id="subtotal0">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" style="border-top: none !important;"></td>
+                                        <th colspan="2" class="encabezados">Subtotal Sin Desc :</th>
+                                        <td class="totales" id="subtotal">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" style="border-top: none !important;"></td>
+                                        <th colspan="2" class="encabezados">Descuento :</th>
+                                        <td class="totales" id="descuento">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" style="border-top: none !important;"></td>
+                                        <th colspan="2" class="encabezados">IVA (12 %) :</th>
+                                        <td class="totales" id="iva12">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" style="border-top: none !important;"></td>
+                                        <th colspan="2" class="encabezados">Valor ICE :</th>
+                                        <td class="totales" id="ice">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" style="border-top: none !important;"></td>
+                                        <th colspan="2" class="encabezados">IRBPNR :</th>
+                                        <td class="totales" id="IRBPNR">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" style="border-top: none !important;"></td>
+                                        <th colspan="2" class="encabezados">VALOR TOTAL :</th>
+                                        <td class="totales" id="totales">0.00</td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12" style="text-align: center">
+                                <a id="pdf" class="btn btn-success" style="margin-right: 5px"><i
+                                        class="fa fa-print"></i> Imprimir PDF
+                                </a>
+                                <button onclick="registrarFactura()" class="btn btn-warning"><i class="glyphicon glyphicon-save"></i> Registrar Emt.
+                                </button>
+                                <button class="btn btn-primary" data-toggle="modal"
+                                        data-target=".productos">
+                                    <i class="fa fa-shopping-cart"></i> Productos (+)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- MODAL PARA CARGAR PRODUCTOS -->
+
+    <div class="modal fade productos" id="productos" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Agregar Productos a Factura</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+
+                    <div class="input-group col-md-6 col-sm-12 col-xs-12">
+                        <input onkeypress="buscar('tablaProductos','filterProduc')" id="filterProduc"
+                               style="border-radius: 5px" type="text" class="form-control" name="buscar"
+                               placeholder="Filtrar Productos">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <div class="row">
+                                        <div class="col-xs-12 table-responsive">
+                                            <table id="tablaProductos" class="tablaProductos table dataTables_scroll">
+                                                <thead>
+
+                                                <th>CODIGO</th>
+                                                <th>PRODUCTO</th>
+                                                <th style="text-align: center">STOCK</th>
+                                                <th>MARCA</th>
+                                                <th>PROVEEDOR</th>
+                                                <th>PRECIO</th>
+                                                <th>IVA</th>
+                                                <th style="text-align: right">PVP</th>
+                                                <th style="text-align: center">SELECCIONAR</th>
+
+                                                </thead>
+                                                <tbody>
+
+                                                {% for producto in productos %}
+                                                    <tr id="item{{ producto.id }}">
+                                                        <td>{{ producto.producto.cod_referencia }}</td>
+                                                        <td>{{ producto.producto.nombre }}</td>
+                                                        <td style="text-align: center">{% CalcularStock producto.id %}</td>
+                                                        <td>{{ producto.producto.marca.nombre }}</td>
+                                                        {% if producto.proveedor.nombreComercial %}
+                                                            <td>{{ producto.proveedor.nombreComercial }}</td>
+                                                        {% else %}
+                                                            <td>{{ producto.proveedor.razonSocial }}</td>
+                                                        {% endif %}
+                                                        <td style="text-align: right">{{ producto.total }}</td>
+                                                        <td style="text-align: center">{{ producto.ivapvp }}</td>
+                                                        <td style="text-align: right">{{ producto.totalpvp }}</td>
+
+                                                        <td style="text-align: center ">
+                                                            <a data-ip="{{ producto.id }}"
+                                                               data-codigo="{{ producto.producto.cod_referencia }}"
+                                                               data-nomb="{{ producto.producto.nombre }}"
+                                                               data-precio="{{ producto.pvp }}"
+                                                               data-iva="{{ producto.ivapvp }}"
+                                                               data-ice="{{ producto.icepvp }}"
+                                                               data-irbpnr="{{ producto.irbpnrpvp }}"
+                                                               data-stock="{% CalcularStock producto.id %}"
+                                                               data-total="{{ producto.totalpvp }}"
+                                                               class=" Fila btn btn-primary glyphicon glyphicon-ok "
+                                                               style="font-size: 9px; padding: 3px;margin: 0px"></a>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        SALIR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- MODAL PARA CARGAR CLIENTES -->
+    <div class="modal fadeInLeft" id="clientes" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Agregar Clientes a Factura</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+
+                    <div class="input-group col-md-6 col-sm-12 col-xs-12">
+                        <input onkeypress="buscar('tablaClientes','FilterTextBox')" id="FilterTextBox"
+                               style="border-radius: 5px" type="text" class="form-control "
+                               placeholder="Filtrar Clientes">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <div class="row">
+                                        <div class="col-xs-12 table-responsive">
+                                            <table id="tablaClientes" class="tablaClientes table dataTables_scroll">
+                                                <thead>
+                                                <th>RUC</th>
+                                                <th>NOMBRE y APELLIDO</th>
+                                                <th>RAZON SOCIAL</th>
+                                                <th>DIRECCION</th>
+                                                <th>TELEFONO</th>
+                                                <th style="text-align: center">SELECCIONAR</th>
+                                                </thead>
+
+                                                <tbody id="body">
+
+                                                {% for cliente in clientes %}
+                                                    <tr class="cli">
+                                                        <td>{{ cliente.ruc }}</td>
+                                                        <td>{{ cliente.nombre }} {{ cliente.apellido }}</td>
+                                                        <td>{{ cliente.razonSocial }}</td>
+                                                        <td>{{ cliente.direccion }}</td>
+                                                        <td>{{ cliente.telefono }}</td>
+                                                        <td style="text-align: center ">
+                                                            <a data-id="{{ cliente.id }}"
+                                                               data-ruc="{{ cliente.ruc }}"
+                                                               data-nombre="{{ cliente.nombre }}"
+                                                               data-apellidos="{{ cliente.apellido }}"
+                                                               data-rsocial="{{ cliente.razonSocial }}"
+                                                               data-direccion="{{ cliente.direccion }}"
+                                                               data-telefono="{{ cliente.telefono }}"
+                                                               data-email="{{ cliente.email }}"
+                                                               class=" Agregar btn btn-primary glyphicon glyphicon-user "
+                                                               style="font-size: 9px; padding: 5px;margin: 0px"></a>
+                                                        </td>
+
+                                                    </tr>
+                                                {% endfor %}
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="{% url 'registroClientes' %}" class="btn btn-success"><i class="fa fa-user-plus"></i>
+                        Agregar Cliente</a>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        SALIR
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .cantidad {
+            border: none;
+            width: 50px;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 0px;
+            margin-top: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- script para eliminar fila de la factura-->
+    <script>
+        function remove(t, id) {
+            var td = t.parentNode;
+            var tr = td.parentNode;
+            var table = tr.parentNode;
+            console.log($("#item" + id + " .Fila").removeAttr('data-estado'));//Elimina el atributo estado en la tabla productos
+            table.removeChild(tr);
+            calculos();
+        }
+    </script>
+    <!-- funcion para realizar calculos sobre la tabla -->
+    <script>
+        var subtotal0=0;
+        var subtotal12=0;
+        var subtotal=0;
+        var iva12=0;
+        var ice=0;
+        var descuento=0;
+        var IRBPNR=0;
+        var grantotal=0;
+
+        function capturador(t) {
+            subtotal0=subtotal12=subtotal=iva12=ice=descuento=IRBPNR=grantotal=0;
+            var td = t.parentNode;
+            var tr = td.parentNode;
+            var cantidad = ($(tr).find('td input').val())
+            var codigo=($(tr).find('td').eq(1))
+            var precioU = parseFloat($(tr).find('td').eq(5).text().replace(",", "."))
+            var iva = parseFloat($(tr).find('td').eq(6).text().replace(",", "."))
+            var ic=parseFloat($(tr).find('td').eq(7).text().replace(",","."));
+            var ir=parseFloat($(tr).find('td').eq(8).text().replace(",","."));
+            if (iva>0){
+                subtotal12=precioU*cantidad;
+                iva12=iva*cantidad;
+            }
+            else{
+                subtotal0=precioU*cantidad;
+                iva12=0
+            }
+
+            ice=(ic*cantidad);
+            IRBPNR=(ir*cantidad);
+            total = (precioU + iva+ic+ir) * cantidad;
+            console.log(cantidad + " " + precioU + " total: " + total);
+            $(tr).find('td').eq(9).text(total.toFixed(2))
+            calculos()
+        }
+
+        function calculos() {
+            subtotal0=subtotal12=subtotal=iva12=ice=descuento=IRBPNR=grantotal=0;
+            $("#myTable>tbody>tr").each(function () {
+                var cantidades=parseFloat($(this).find('td input').val().replace(",","."));
+                var unitarios=parseFloat($(this).find('td').eq(5).text().replace(",","."));
+                var ivas=parseFloat($(this).find('td').eq(6).text().replace(",","."));
+                var ices=parseFloat($(this).find('td').eq(7).text().replace(",","."));
+                var irbnpr=parseFloat($(this).find('td').eq(8).text().replace(",","."));
+                if (ivas >0){
+                    subtotal12+=unitarios*cantidades;
+                    iva12+=(ivas*cantidades);
+                }
+                else{
+                    subtotal0+=unitarios*cantidades;
+                }
+                ice+=(ices*cantidades);
+                IRBPNR+=(irbnpr*cantidades);
+            })
+            subtotal=subtotal12+subtotal0;
+            $("#subtotal12").text(subtotal12.toFixed(2));
+            $("#subtotal0").text(subtotal0.toFixed(2));
+            $("#subtotal").text(subtotal.toFixed(2))
+            $("#iva12").text(iva12.toFixed(2));
+            $("#ice").text(ice.toFixed(2));
+            $("#IRBPNR").text(IRBPNR.toFixed(2));
+            grantotal=subtotal+iva12+ice+IRBPNR
+            $("#totales").text(grantotal.toFixed(2));
+            console.log("Calculos: sub12: "+subtotal12.toFixed(2)+" sub0: "+subtotal0.toFixed(2)+" iva12: "+iva12.toFixed(2))
+        }
+
+    </script>
+
+    <!-- script para pasar registros del modal a la factura -->
+    <script>
+
+        $(document).on('click', '.Fila', function () {
+            id = $(this).data('ip')
+            codigo = $(this).data('codigo')
+            nombre = $(this).data('nomb')
+            precioU = $(this).data('precio')
+            porcentaje=$(this).data('porcentaje')
+            iva = $(this).data('iva')
+            ice=$(this).data('ice')
+            irbpnr=$(this).data('irbpnr')
+            total = $(this).data('total')
+
+            stock = $(this).data('stock')
+            if (stock > 0) {
+                cadena = '<tr id="' + id + '"><td style="text-align: center"><button id="' + id + '" class="btn btn-danger btn-xs" onclick="remove(this,' + id + ')"><i class="fa fa-trash-o"></i></button></td><td>' + id + '</td><td>' + codigo + '</td><td style="text-align: center;margin:0px;padding:0px;"><input class="cantidad" onkeyup="capturador(this)" value="1" type="text"></td><td>' + nombre + '</td><td class="unitarios">' + precioU + '<td class="ivas">' + iva + '</td><td class="ices">' + ice + '</td><td class="irbnpr">' + irbpnr + '</td><td class="totales">' + total + '</td></tr>'
+                nfilas = $("#myTable>tbody>tr").length;
+                if (($(this).data('estado') == 'usado')) {
+                    alert('Este item ya lo agrego a la factura. Edite la cantidad')
+                } else {
+                    $('#myTable>tbody:last').append(cadena)
+                    $(this).attr('data-estado', 'usado');
+                }
+            }
+            else {
+                alert('El producto no tiene suficiente stock..!!')
+            }
+            calculos();
+
+        })
+    </script>
+
+    <script>
+        $(document).on('click', '.Agregar', function () {
+            ruc = $(this).data('ruc');
+            nombre = $(this).data('nombre');
+            apellido = $(this).data('apellidos');
+            rsocial = $(this).data('rsocial');
+            direccion = $(this).data('direccion');
+            telefono = $(this).data('telefono');
+            email = $(this).data('email');
+            id=$(this).data('id');
+            console.log(rsocial)
+            if (rsocial.length > 0) {
+                $("#nom").val(rsocial);
+            }
+            else {
+                $("#nom").val(nombre + " " + apellido);
+            }
+            $('#identificacion').val(ruc);
+            $('#direccion').val(direccion);
+            $('#email').val(email);
+            $("#idCliente").val(id);
+            $('#clientes').modal('hide');
+        });
+    </script>
+
+    <script>
+    function registrarFactura(){
+        var idCliente=$("#idCliente").val();
+        var sub0=$("#subtotal0").text();
+        var sub12=$("#subtotal12").text();
+        var sub=$("#subtotal").text();
+        var ivva=$("#iva12").text();
+        var iceee=$("#ice").text();
+        var irbpnrrr=$("#IRBPNR").text();
+        var totalesss=$("#totales").text();
+        var secuencia=$("#secuencia").text();
+        var f = $("#myTable>tbody>tr").length;
+        if (f>0) {
+            $.post("/documentos_electronicos/registroFactura/", {
+                "secuencia": secuencia,
+                'cliente': parseInt(idCliente),
+                'sutotal0': parseFloat(sub0),
+                'subtotal12': parseFloat(sub12),
+                'subtotal': parseFloat(sub),
+                'iva': parseFloat(ivva),
+                'ice': parseFloat(iceee),
+                'irbpnr': parseFloat(irbpnrrr),
+                'total': parseFloat(totalesss)
+            }, function (data) {
+                if (parseInt(data) > 0) {
+                    registroDetalles(data)
+                }
+            });
+        }
+        else{
+            alert("No se puede emitir una factura en blanco")
+        }
+    }
+    var idFact=0
+    function registroDetalles(data) {
+        var subtotal0=0;
+        var subtotal12=0;
+        var subtotal=0;
+        var iva12=0;
+        var ice=0;
+        var IRBPNR=0;
+        var nf = $("#myTable>tbody>tr").length;
+        $("#myTable>tbody>tr").each(function () {
+            subtotal0=subtotal12=subtotal=iva12=ice=IRBPNR=0;
+            var producto=$(this).find('td').eq(1).text();
+            var cantidades=parseFloat($(this).find('td input').val().replace(",","."));
+            var unitarios=parseFloat($(this).find('td').eq(5).text().replace(",","."));
+            var ivas=parseFloat($(this).find('td').eq(6).text().replace(",","."));
+            var ices=parseFloat($(this).find('td').eq(7).text().replace(",","."));
+            var irbnpr=parseFloat($(this).find('td').eq(8).text().replace(",","."));
+            if (ivas >0){
+                subtotal12+=unitarios*cantidades;
+                iva12+=(ivas*cantidades);
+            }
+            else{
+                subtotal0+=unitarios*cantidades;
+            }
+            subtotal=subtotal0+subtotal12;
+            ice+=(ices*cantidades);
+            IRBPNR+=(irbnpr*cantidades);
+            idFact=data;
+            $.post("/documentos_electronicos/Facturas/" + data + "/", {
+                factura_id: parseInt(data),
+                producto: producto,
+                cantidad: cantidades,
+                sub0: subtotal0,
+                sub12: subtotal12,
+                sub: subtotal,
+                iva: iva12,
+                ice: ice,
+                Irbpnr: IRBPNR,
+                total: total
+            }, function (data) {
+                if (data=="ok"){
+                    nf-=1;
+                    console.log("Se registró la fila..!!  -> "+nf)
+
+                    if (nf == 0){
+                        $.get('/documentos_electronicos/Facturas/xml/'+idFact+'/',function(){
+                        });
+                        alert("La factura se emitio correctamente..!!");
+                    }
+                }
+                else{
+                    console.log("Error en el servidor..!!")
+
+                }
+
+            })
+        })
+    }
+
+    $("#pdf").click(function(){
+        if(idFact>0){
+            window.location.href = "/documentos_electronicos/Facturas/"+idFact+"/";
+        }
+        else{
+            alert("La Factura No se ha creado aun..!!")
+        }
+
+    })
+    </script>
+
+    <!-- FUNCION PARA FILTRAR CLIENTES Y PRODCUTOS -->
+    <script>
+        function buscar(claseTable, idInput) {
+            var $rows = $('.' + claseTable + ' tbody tr');
+            $('#' + idInput).keyup(function () {
+                var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+                $rows.show().filter(function () {
+                    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+                    return !~text.indexOf(val);
+                }).hide();
+            });
+        }
+    </script>
+
+{% endblock content %}
+

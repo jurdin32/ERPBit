@@ -1,0 +1,643 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="right_col" role="main">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Registro de Retencion</h3>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br/> <br/>
+        <div class="form-horizontal form-label-left input_mask">
+            <form action="" method="post">{% csrf_token %}
+                <input type="hidden" name="totales" id="totales">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <input type="hidden" id="jsones" name="jsones" class="form-control">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="{% url 'retenciones' %}">Retenciones »</a>
+                                    <small>Datos del proveedor</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <div class="form-group ">
+                                    <label class="control-label col-md-1 col-xs-12">RUC/CI :</label>
+                                    <div class="col-md-3  col-xs-12">
+                                        <div class="input-group">
+                                            <input type="hidden"
+                                                   id="idproveedor" name="idproveedor"
+                                                   value="{{ proveedor.id }}">
+
+                                            <input style="border-radius: 5px"
+                                                   name="identificacion"
+                                                   id="identificacion"
+                                                   class="form-control"
+                                                   required="required"
+                                                   type="text" readonly
+                                                   value="{{ proveedor.ruc }}">
+                                            <span class="input-group-btn">
+                                              <button type="button" data-toggle="modal"
+                                                      data-target="#proveedores" class="btn bg-blue">
+                                                  <i class="fa fa-credit-card"></i>
+                                              </button>
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <label class="control-label col-md-1 col-xs-12">Nombres :</label>
+                                    <div class="col-md-3 col-xs-12">
+                                        <input style="border-radius: 5px"
+                                               name="nombres" readonly
+                                               id="nombres"
+                                               class="form-control has-feedback-left"
+                                               required="required"
+                                               type="text"
+                                               value="{{ proveedor.razonSocial }}">
+                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+                                    <label class="control-label col-md-1 col-xs-12">Correo :</label>
+                                    <div class="col-md-3 col-xs-12">
+                                        <input style="border-radius: 5px" readonly
+                                               name="email"
+                                               id="email"
+                                               class="form-control has-feedback-left"
+                                               required="required"
+                                               type="email"
+                                               value="{{ proveedor.email }}">
+                                        <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="{% url 'retenciones' %}">Retenciones »</a>
+                                    <small>Datos factura</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-6 col-sm-3 col-xs-12">Doc. Referencia
+                                        :</label>
+                                    <div class="col-md-10 col-xs-12">
+                                        <div class="input-group">
+                                            <input type="hidden"
+                                                   id="idcompra" name="idcompra"
+                                                   value="">
+                                            <input style="border-radius: 5px"
+                                                   name="docReferencia" readonly
+                                                   id="docReferencia"
+                                                   class="form-control"
+                                                   required="required"
+                                                   type="text"
+                                                   value="{{ compra.secuencial }}">
+                                            <span class="input-group-btn">
+                                              <button type="button" data-toggle="modal"
+                                                      data-target="#documentos" class="btn bg-blue">
+                                                  <i class="fa fa-file-text-o"></i> Documento
+                                              </button>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-6 col-xs-12">Autorizacion :</label>
+                                    <div class="col-md-10 col-xs-12">
+                                        <input style="border-radius: 5px" readonly
+                                               name="autorizacion"
+                                               id="autorizacion"
+                                               class="form-control has-feedback-left"
+                                               required="required"
+                                               type="text"
+                                               value="">
+                                        <span class="fa fa-check form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-6 col-xs-12">Fecha Emision :</label>
+                                    <div class="col-md-10 col-xs-12">
+                                        <input style="border-radius: 5px" readonly
+                                               name="fechaEmision"
+                                               id="fechaEmision"
+                                               class="form-control has-feedback-left"
+                                               required="required"
+                                               type="text"
+                                               value="">
+                                        <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="{% url 'retenciones' %}">Retenciones »</a>
+                                    <small>Base</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <div class="form-group ">
+                                    <label class="control-label col-md-4 col-sm-6 col-xs-12">Base 0% :</label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" name="base0" id="base0"
+                                               readonly
+                                               class="form-control has-feedback-left"
+                                               required="required"
+                                               type="text"
+                                               value="">
+                                        <span class="fa fa-percent form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-6 col-xs-12">Base 12% :</label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" readonly
+                                               name="base12" id="base12"
+                                               class="form-control has-feedback-left"
+                                               required="required"
+                                               type="text"
+                                               value="">
+                                        <span class="fa fa-percent form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-6 col-xs-12">IVA :</label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right"
+                                               name="ivas" id="ivas" readonly
+                                               class="form-control has-feedback-left"
+                                               required="required"
+                                               type="text"
+                                               value="">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                    <br>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-6 col-xs-12">Base NG :</label>
+                                    <div class="col-md-8 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right"
+                                               name="baseng" id="baseng"
+                                               class="form-control has-feedback-left"
+                                               required="required"
+                                               type="text"
+                                               value="">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                    <br>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 10px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Retención : <a>{{ secuencial }}</a>
+                                <input id="secuencia" type="hidden" value="{{ secuencial }}">
+                            </h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="row">
+                                <div style="overflow-x: scroll ;">
+                                    <table style="text-align: center" id="Tabla" class="table  ">
+                                        <thead style="background-color: #5A738E;color: whitesmoke">
+                                        <th style="text-align: center">ELIMINAR</th>
+                                        <th style="text-align: center">ID</th>
+                                        <th style="text-align: center">CODIGO</th>
+                                        <th style=" width: 600px; text-align: center">DETALLE</th>
+                                        <th style="text-align: center">COD. IMPUESTO</th>
+                                        <th style="text-align: center">IMPUESTO</th>
+                                        <th style="text-align: center">%</th>
+                                        <th style="text-align: center">BASE IMP.</th>
+                                        <th style="text-align: center">RETENCION</th>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                        <tfoot>
+                                        <tr>
+                                            <td colspan="6" style="border-top: none !important;"></td>
+                                            <th colspan="2"
+                                                style="background-color: #5A738E;color: whitesmoke; text-align: center">
+                                                TOTAL:
+                                            </th>
+                                            <td class="total" id="total" style="text-align: center">0.00</td>
+                                        </tr>
+                                        </tfoot>
+
+                                    </table>
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div>
+                                    <a href="/documentos_electronicos/registroRetenciones/0/" class="btn bg-blue-sky"><i
+                                            class="glyphicon glyphicon-file"></i> Nueva Ret.</a>
+                                    <a class="btn bg-red" id="addFila" data-toggle="modal" data-target="#retenciones"><i
+                                            class="fa fa-file-text"></i> Codigo Ret. </a>
+                                    <button onclick="guardarRetencion()" class="btn bg-blue"><i
+                                            class="glyphicon glyphicon-save"></i> Guardar Ret.
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MODAL PARA CARGAR PROVEEDORES -->
+
+    <div class=" proveedores modal fadeInRightBig" id="proveedores" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width: 60%;">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Agregar Retenciones</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <div class="row">
+                                        <div class="col-xs-12" style="height:600px; overflow-y: scroll">
+                                            <table id="tablaProveedores" class="table table-striped table-bordered"
+                                                   style="overflow-y:auto; width: 100%;">
+                                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                                <th>Identificacion</th>
+                                                <th>Nombre</th>
+                                                <th>Datos Informativos</th>
+                                                <th style="text-align: center">Seleccionar</th>
+
+                                                <tbody>
+                                                {% for prov in proveedores %}
+                                                    <tr>
+                                                        <td>{{ prov.ruc }}</td>
+                                                        <td>{{ prov.nombreComercial }}</td>
+                                                        <td>{{ prov.email }}<br>{{ prov.telefono }}<br>{{ prov.direccion }}
+                                                        </td>
+                                                        <td style="text-align: center ">
+                                                            <a href="/documentos_electronicos/registroRetenciones/{{ prov.id }}/"
+                                                               class="btn bg-green glyphicon glyphicon-user "
+                                                               style="font-size: 9px; padding: 5px;margin: 0px"></a>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-orange" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        SALIR
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL PARA CARGAR DOCUMENTOS -->
+
+    <div class="modal fadeInRightBig " id="documentos" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width: 60%; height: 600px">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Agregar Documento</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <div class="row">
+                                        <div class="col-xs-12" style="height:600px; overflow-y: scroll">
+                                            <table id="tablaDocumento"
+                                                   class="tablaDocumento table-striped table-bordered table">
+                                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                                <th>Fecha Emision</th>
+                                                <th>Comprobate</th>
+                                                <th>Autorizacion</th>
+                                                <th>Total</th>
+                                                <th style="text-align: center">Seleccione</th>
+                                                </thead>
+                                                <tbody>
+                                                {% for comp in compras %}
+                                                    <tr>
+                                                        <td>{{ comp.fecha_emision|date:"d/m/Y" }}</td>
+                                                        <td>{{ comp.secuencial }}</td>
+                                                        <td>{{ comp.clave_acceso }}</td>
+                                                        <td style="text-align: center">{{ comp.total }}</td>
+                                                        <td style="text-align: center">
+                                                            <a data-idcompra="{{ comp.id }}"
+                                                               data-secuencial="{{ comp.secuencial }}"
+                                                               data-fecha="{{ comp.fecha_emision|date:"d/m/Y" }}"
+                                                               data-clave="{{ comp.clave_acceso }} "
+                                                               data-base0="{{ comp.subtotal_0|floatformat:2 }}"
+                                                               data-base12="{{ comp.subtotal_iva|floatformat:2 }}"
+                                                               data-iva="{{ comp.iva|floatformat:2 }}"
+                                                               class=" Agregar btn bg-green fa fa-file-text "
+                                                               style="font-size: 9px; padding: 5px;margin: 0px"></a>
+                                                        </td>
+                                                    </tr>
+
+                                                {% endfor %}
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-orange" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        SALIR
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL PARA CARGAR RENTENCIONES -->
+    <div class="modal fadeInDown " id="retenciones" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width: 80%; height: 600px">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Agregar Retenciones</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <div class="row">
+                                        <div class="col-xs-12 table-responsive"
+                                             style="height:600px; overflow-y: scroll">
+
+                                            <table id="tablaRentenciones"
+                                                   class="tablaRentenciones table-bordered table dataTables_scroll">
+                                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                                <th style="text-align: center">CODIGO IMP</th>
+                                                <th style="text-align: center">IMPUESTO</th>
+                                                <th style="text-align: center">CODIGO TARIFA.</th>
+                                                <th>NOMBRE</th>
+                                                <th style="text-align: center">PORCENTAJE</th>
+                                                <th style="text-align: center">SELECCIONAR</th>
+                                                </thead>
+
+                                                <tbody id="body">
+                                                {% for tarifa in tarifas %}
+
+                                                    <tr id="item{{ tarifa.id }}">
+                                                        <td style="text-align: center ">{{ tarifa.impuesto.codigo }}</td>
+                                                        <td style="text-align: center ">{{ tarifa.impuesto }}</td>
+                                                        <td style="text-align: center ">
+                                                            {% if tarifa.codigo %}{{ tarifa.codigo }}{% else %}
+                                                                {{ tarifa.numeroCampo }}{% endif %}</td>
+                                                        <td>{{ tarifa.detalle }}</td>
+                                                        <td style="text-align: center ">{% if tarifa.porcentaje >= 0 %}
+                                                            {{ tarifa.porcentaje }} % {% endif %}</td>
+                                                        <td style="text-align: center ">
+                                                            <a data-id="{{ tarifa.id }}"
+                                                               data-impp="{{ tarifa.impuesto.codigo }}"
+                                                               data-codigo="{{ tarifa.codigo }}"
+                                                               data-detalle="{{ tarifa.detalle }}"
+                                                               data-porc="{{ tarifa.porcentaje }}"
+                                                               data-impuesto="{{ tarifa.impuesto.nombre }}"
+                                                               class=" Fila btn bg-green fa fa-file-text "
+                                                               style="font-size: 9px; padding: 5px;margin: 0px"></a>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-orange" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        SALIR
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        Tablas("#tablaProveedores");
+        Tablas("#tablaDocumento");
+        Tablas("#tablaRentenciones");
+
+    </script>
+    <script>
+        $(document).on('click', '.Agregar', function () {
+            var idcompra = $(this).data('idcompra')
+            var secuencial = $(this).data('secuencial');
+            var clave_acceso = $(this).data('clave');
+            var fecha = $(this).data('fecha');
+            var base0 = $(this).data('base0');
+            var base12 = $(this).data('base12');
+            var baseng = $(this).data('base0')
+            $('#idcompra').val(idcompra)
+            $("#docReferencia").val(secuencial);
+            $("#autorizacion").val(clave_acceso);
+            $("#fechaEmision").val(fecha);
+            $("#base0").val(base0);
+            $("#base12").val(base12);
+            $("#baseng").val(baseng);
+            $('#documentos').modal('hide');
+            $("#ivas").val($(this).data('iva'))
+
+        })
+    </script>
+
+    <script>
+
+        function remove(t, id) {
+            var td = t.parentNode;
+            var tr = td.parentNode;
+            var table = tr.parentNode;
+            console.log($("#item" + id + " .Fila").removeAttr('data-estado'));//Elimina el atributo estado en la tabla productos
+            table.removeChild(tr);
+            calcular();
+
+        }
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var bandera = 0;
+            var bandera1 = 0;
+            $(document).on('click', '.Fila', function () {
+                if ($('#base0').val() == '' && $('#base12').val() == '' && $('#baseng').val() == '') {
+                    alert('Primero debe seleccionar la factura de compra.')
+                } else {
+
+                    $('#tablaRentenciones').modal('hide')
+                    var id = $(this).data('id');
+                    var codigo = $(this).data('codigo');
+                    var detalle = $(this).data('detalle');
+                    var porcentaje = $(this).data('porc').replace(",", ".");
+                    var impuesto = $(this).data('impuesto');
+                    var codImpuesto = $(this).data("impp");
+                    var iva_12 = parseFloat($("#ivas").val().replace(",", "."));
+                    var subtotal_12 = parseFloat($("#base12").val().replace(",", "."));
+                    var subtotal_0 = parseFloat($("#base0").val().replace(",", "."));
+                    var retencion = 0;
+                    var subtotal=0
+
+                    var cadena = ""
+                    if (parseInt(codImpuesto) == 2 || parseInt(codImpuesto) == 4) {
+                        cadena = ""
+                        retencion = iva_12 * (porcentaje / 100)
+                        cadena = '<tr id="' + id + '"><td><button id="' + id + '" class="btn bg-red btn-xs" onclick="remove(this,' + id + ')"><i class="glyphicon glyphicon-trash"></i></button></td><td>' + id + '</td><td>' + codigo + '</td><td style="text-align:left">' + detalle + '</td><td>'+codImpuesto+'</td><td>' + impuesto + '</td><td>' + porcentaje + " %" + '</td><td>' + iva_12.toFixed(2) + '</td><td class ="valor">' + retencion.toFixed(2) + '</td></tr>'
+                        $('#Tabla>tbody:last').append(cadena);
+                    }
+                    if (parseInt(codImpuesto) == 1) {
+                        cadena = "";
+                        if (subtotal_12>0){
+                            retencion = subtotal_12 * (porcentaje / 100)
+                            subtotal=subtotal_12
+                             cadena = '<tr id="' + id + '"><td><button id="' + id + '" class="btn bg-red btn-xs" onclick="remove(this,' + id + ')"><i class="glyphicon glyphicon-trash"></i></button></td><td>' + id + '</td><td>' + codigo + '</td><td style="text-align:left">' + detalle + '</td><td>'+codImpuesto+'</td><td>' + impuesto + '</td><td>' + porcentaje + " %" + '</td><td>' + subtotal.toFixed(2) + '</td><td class ="valor">' + retencion.toFixed(2) + '</td></tr>'
+                        $('#Tabla>tbody:last').append(cadena);
+                        }
+                        if (subtotal_0>0){
+                             retencion = subtotal_0 * (porcentaje / 100)
+                            console.log(retencion,subtotal_0)
+                            subtotal=subtotal_0
+                             cadena = '<tr id="' + id + '"><td><button id="' + id + '" class="btn bg-red btn-xs" onclick="remove(this,' + id + ')"><i class="glyphicon glyphicon-trash"></i></button></td><td>' + id + '</td><td>' + codigo + '</td><td style="text-align:left">' + detalle + '</td><td>'+codImpuesto+'</td><td>' + impuesto + '</td><td>' + porcentaje + " %" + '</td><td>' + subtotal.toFixed(2) + '</td><td class ="valor">' + retencion.toFixed(2) + '</td></tr>'
+                        $('#Tabla>tbody:last').append(cadena);
+                        }
+
+
+
+                    }
+                    calcular()
+                }
+            });
+        })
+    </script>
+
+    <script>
+        function calcular() {
+            var valor = 0;
+            $('#Tabla>tbody>tr').each(function () {
+                var valorRetencion = parseFloat($(this).find('td').eq(8).text().replace(",", "."));
+                valor += valorRetencion
+            });
+            $('#total').text(valor.toFixed(2))
+            $('#totales').val(valor.toFixed(2))
+            tablaToJson("Tabla")
+        }
+    </script>
+
+
+    <script>
+        function tablaToJson(tabla)
+        {
+            var rows=[];
+            $("#"+tabla+ ' tbody tr').each(function(){
+                rows.push({
+                    tarifa: $(this).find('td').eq(1).text(),
+                    impuesto:$(this).find('td').eq(4).text(),
+                    baseImp: baseImp = $(this).find('td').eq(7).text().replace(",", "."),
+                    Saldos: $(this).find('td').eq(8).text().replace(",", ".")
+                });
+                console.log(JSON.stringify(rows));
+            });
+            $("#jsones").val(JSON.stringify(rows));
+        }
+    </script>
+{% endblock %}

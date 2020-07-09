@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1508201901070454853600120010010000004760000000013</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000476</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>15/08/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador> NORA BERTILDA MU\xc3\x91OZ PONCE </razonSocialComprador><identificacionComprador>0701403669001</identificacionComprador><direccionComprador>Bolivar e/ juan Montalvo y junin</direccionComprador><totalSinImpuestos>227.68</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>227.68</baseImponible><valor>27.32</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>255.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>928</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0737'</codigoAuxiliar>
+                      <descripcion>b'IMPRESORA MATRICIAL LX350'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>227.68</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>227.68</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>227.68</baseImponible>
+                <valor>27.32</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

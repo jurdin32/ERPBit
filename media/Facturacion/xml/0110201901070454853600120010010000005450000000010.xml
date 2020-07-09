@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>0110201901070454853600120010010000005450000000010</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000545</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>01/10/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>CONAGOPARE EL ORO </razonSocialComprador><identificacionComprador>0760037850001</identificacionComprador><direccionComprador>JUNIN S/N Y AV 25 DE JUNIO</direccionComprador><totalSinImpuestos>67.84</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>67.84</baseImponible><valor>8.14</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>75.98</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1009</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0811'</codigoAuxiliar>
+                      <descripcion>b'NANO WIFI 600MBPS TP LINK'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>17.86</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>17.86</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>17.86</baseImponible>
+                <valor>2.14</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1008</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0810'</codigoAuxiliar>
+                      <descripcion>b'MOUSE GENIUS BLACK USB'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>7.00</cantidad>
+                      <precioUnitario>7.14</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>49.98</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>49.98</baseImponible>
+                <valor>6.02</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

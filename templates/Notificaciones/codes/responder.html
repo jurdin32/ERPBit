@@ -1,0 +1,48 @@
+{% extends 'Notificaciones/inbox.html' %}
+{% block espacioMensajes %}
+    <div class="col-sm-9 mail_view">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="inbox-body">
+                <div class="mail_heading row">
+                    <div class="col-md-8">
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-envelope"></i> Enviar
+                            </button>
+                            <a href="{% url 'noticiasVer' mensajeUI.id %}" class="btn btn-sm btn-default" type="button"
+                               data-placement="top" data-toggle="tooltip"
+                               data-original-title="Volver"> Volver <i class="fa fa-share"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <p class="date"> {{ mensajeUI.hora }}</p>
+                    </div>
+                    <div class="col-md-12">
+                        <h4> {{ mensajeUI.asunto|upper }}.</h4>
+                        <input class="form-control" type="text" name="asunto" id="asunto"
+                               placeholder="Ecriba un asunto para el mensaje" required="">
+                    </div>
+                </div>
+                <div class="sender-info">
+                    <div class="row">
+                        <div class="col-md-12">
+                            De: <strong>{{ mensajeUI.destino }}</strong>
+                            para: <strong> {{ mensajeUI.origen }}</strong>
+                            <a class="sender-dropdown"><i class="fa fa-chevron-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-mail"
+                     style="padding-left: 20px; text-align: justify; height: 600px;overflow-y:scroll; padding-right: 20px; padding-top: 20px">
+                    <textarea name="mensaje" id="mensaje" rows="10"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src='/static/ckeditor/ckeditor/ckeditor.js'></script>
+    <script>
+        CKEDITOR.replace('mensaje');
+    </script>
+{% endblock %}

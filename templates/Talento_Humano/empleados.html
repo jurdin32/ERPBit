@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Talento Humano{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Talento Humano
+                                <small>Listado de Empleados</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="x_content">
+                                <a class="btn bg-blue" href="{% url 'registroEmpleados' %}"><i
+                                        class="fa fa-group"></i> Agregar Empleados</a>
+                                <a class="btn bg-green"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                            </div>
+                            <br/><br/><br/><br/>
+                            <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                                <table id="tablaEmpleados" class="table table-bordered table-striped dataTables_scroll">
+                                    <thead style="background-color: #5A738E;color: whitesmoke">
+                                    <tr>
+                                        <th>NOMBRE y APELLIDO</th>
+                                        <th>IDENTIFICACION</th>
+                                        <th>EMAIL</th>
+                                        <th>TELEFONO</th>
+                                        <th>CARGAS</th>
+                                        <th>INGRESO</th>
+                                        <th style="text-align: center">ESTADO</th>
+                                        <th style="text-align: center; width: 150px">OPCIONES</th>
+                                    </tr>
+                                    </thead>
+
+
+                                    <tbody>
+
+                                    {% for empleado in empleados %}
+                                        <tr>
+                                            <td>{{ empleado.apellido }} {{ empleado.nombre }}</td>
+                                            <td>{{ empleado.ruc }}</td>
+                                            <td>{{ empleado.email }}</td>
+                                            <td>{{ empleado.telefono }}</td>
+                                            <td>{{ empleado.cargas }}</td>
+                                            <td>{{ empleado.fechaIngreso|date:'d/m/Y' }}</td>
+
+                                            <td style="text-align: center">
+                                                {% if empleado.estado == 1 %}
+                                                    <span class="glyphicon glyphicon-ok-sign text-success"
+                                                          style="font-size:20px;"></span>
+                                                {% else %}
+                                                    <span class="glyphicon glyphicon-remove-sign text-danger"
+                                                          style="font-size:20px"></span>
+                                                {% endif %}
+                                            </td>
+
+                                            <td style="text-align: center">
+                                                <a href="/telento_humano/editarEmpleados/{{ empleado.id }}/"
+                                                   class="btn bg-orange btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                                                {% if empleado.estado %}
+                                                    <a href="/telento_humano/deleteEmpleado/{{ empleado.id }}/"
+                                                       class="btn bg-red btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                                                {% endif %}
+                                                <a class="cargar btn bg-blue btn-xs" data-toggle="modal"
+                                                   href="#empleados"
+
+                                                   onclick="capturar('{{ empleado.nombre }}',
+                                                           '{{ empleado.apellido }}',
+                                                           '{{ empleado.ruc }}',
+                                                           '{{ empleado.email }}',
+                                                           '{{ empleado.fechaNacimiento|date:'d/m/Y' }}',
+                                                           '{{ empleado.sexo }}',
+                                                           '{{ empleado.cargas }}',
+                                                           '{{ empleado.profesion }}',
+                                                           '{{ empleado.observaciones }}',
+                                                           '{{ empleado.departamento.nombre }}',
+                                                           '{{ empleado.fechaIngreso|date:'d/m/Y' }}',
+                                                           '{{ empleado.fechaSalida|date:'d/m/Y' }}',
+                                                           '{{ empleado.telefono }}',
+                                                           '{{ empleado.parroquia.lugar.lugar.lugar.nombre }}',
+                                                           '{{ empleado.parroquia.lugar.lugar.nombre }}',
+                                                           '{{ empleado.parroquia.lugar.nombre }}',
+                                                           '{{ empleado.parroquia.nombre }}',
+                                                           '{{ empleado.direccion }}',
+
+                                                           {% if empleado.estado %}
+                                                               '1'
+                                                           {% else %}
+                                                               '0'
+                                                           {% endif %}
+
+                                                           )">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- MODAL PARA CARGAR EMPLEADOS -->
+     <div class="modal fadeInLeft empleados" id="empleados" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Datos Empleado Seleccionado </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form role="form">
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Nombres :</label>
+                            <input readonly style="border-radius: 5px" type="text" class="form-control" id="Nombres"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Identificacion :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Identificacion"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Email :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Email"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Fecha Nacimiento :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="FechaNacimiento"/>
+                        </div>
+
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Sexo :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Sexo"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Cargas :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Cargas"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Profesion :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Profesion"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Observaciones :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Observaciones"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Departamento :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Departamento"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Fecha Ingreso :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="FechaIngreso"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Fecha Salida :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="FechaSalida"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Telefono :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Telefono"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Pais :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Pais"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Provincia :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Provincia"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Ciudad :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Ciudad"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Parroquia :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Parroquia"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Direccion :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Direccion"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12" >
+                            <label>Estado :</label>
+                            <input readonly style="border-radius: 5px" class="form-control" type="text"
+                            id="Estado"/>
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn bg-orange" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        Salir
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+
+    function capturar(nombres,apellido,ruc,email,fechaNacimiento,sexo,cargas,profesion,observaciones,
+                      departamento,fechaIngreso,fechaSalida,telefono,pais,provincia,ciudad,parroquia,direccion,estado)
+    {
+        $('#Nombres').val(nombres+' '+ apellido);
+        $("#Identificacion").val(ruc);
+        $("#Email").val(email);
+        $("#FechaNacimiento").val(fechaNacimiento);
+        $("#Sexo").val(sexo);
+        $("#Cargas").val(cargas);
+        $("#Profesion").val(profesion);
+        $("#Observaciones").val(observaciones);
+        $("#Departamento").val(departamento);
+        $("#FechaIngreso").val(fechaIngreso);
+        $("#FechaSalida").val(fechaSalida);
+        $("#Telefono").val(telefono);
+        $("#Pais").val(pais);
+        $("#Provincia").val(provincia);
+        $("#Ciudad").val(ciudad);
+        $("#Parroquia").val(parroquia);
+        $("#Direccion").val(direccion);
+
+        if (parseInt(estado.trim()) == 1)
+            $('#Estado').val('Activo');
+        else
+            $('#Estado').val('Inactivo');
+    }
+    </script>
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        Tablas("#tablaEmpleados");
+    </script>
+{% endblock scripts %}

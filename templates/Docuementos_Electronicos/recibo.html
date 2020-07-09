@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+          @page {
+            size: 8cm 20cm ;
+          }
+        #datosFactura1 {
+            padding-right: 5px;
+            padding-top: 3px;
+            text-align: justify;
+            font-size: 3px;
+            color: {{ reporte.color_texto }};
+        }
+    </style>
+    <title>Factura: {{ factura.clave_acceso }} {{ factura.codigoEstablecimiento }}-{{ factura.puntoEmision }}-{{ factura.secuencial }}</title>
+</head>
+<body>
+<div id="todo">
+    <div id="header_content">
+
+    </div>
+    <br><br>
+    <div id="content">
+        <div id="datosFactura" style="text-align: center;">
+            <span style="font-size: 10px; font-weight: bold;">
+            {% if factura.datosFactura.empresa.nombreComercial %}
+                {{ factura.datosFactura.empresa.nombreComercial|upper }}
+            {% else %}
+                {{ factura.datosFactura.empresa.razonSocial|upper }}
+            {% endif %}
+            </span>
+            <br>
+            {{ factura.datosFactura.empresa.ruc }}<br>
+            {{ factura.datosFactura.empresa.direccionMatriz|upper }}<br>
+            {{ factura.datosFactura.empresa.parroquia.lugar.nombre|upper }}
+                - {{ factura.datosFactura.empresa.parroquia.lugar.lugar.nombre|upper }}
+                - {{ factura.datosFactura.empresa.parroquia.lugar.lugar.lugar.nombre|upper }}
+
+
+        </div>
+        <div id="datosFactura1" style="text-align: center">
+            <strong style="font-size: 10px">DATOS DEL CLIENTE</strong><br><br>
+            <strong style="font-size: 8px;">{{ factura.tipo|upper  }} : </strong> <span style="font-size: 8px; color: black">{{ factura.codigoEstablecimiento }}
+            - {{ factura.puntoEmision }} - {{ factura.secuencial }}</span><br>
+            <strong style="font-size: 8px;">CEDULA / RUC:</strong> <strong style="font-size: 8px;"> {{ factura.cliente.ruc }}</strong><br>
+            {% if factura.cliente.razonSocial %}
+                <strong style="font-size: 8px;"> {{ factura.cliente.razonSocial|upper }}</strong><br>
+                {% else %}
+                <strong style="font-size: 8px;"> {{ factura.cliente.nombre|upper }} {{ factura.cliente.apellido|upper }}</strong><br>
+            {% endif %}
+
+            <strong style="font-size: 8px;">TELÉFONO:</strong> <strong style="font-size: 8px;"></strong><strong style="font-size: 8px;">{{ factura.cliente.telefono }}</strong><br>
+            <strong style="font-size: 8px;">{{ factura.cliente.direccion|upper }}</strong><br>
+            <strong style="font-size: 8px;">{{ factura.cliente.parroquia.lugar.nombre|upper }}
+                - {{ factura.cliente.parroquia.lugar.lugar.nombre|upper }}
+                - {{ factura.cliente.parroquia.lugar.lugar.lugar.nombre|upper }}</strong><br>
+        </div>
+        <br>
+        <div class="body">
+            <table>
+                <thead>
+                    <th style="padding-top: 5px; padding-left:5px; width:50px">CANT.</th>
+                    <th style="padding-top: 3px; width: 50px">DETALLE</th>
+                    <th style="padding-top: 5px;width:50px; padding-right: 5px">UNIT.</th>
+                    <th style="padding-top: 5px;width:50px; padding-right: 5px">TOTAL</th>
+                </thead>
+                <tbody>
+                    {% for detalle in detalles %}
+                        <tr style="padding-top: 5px; font-size: 10px">
+                            <td style="padding-top: 5px; width:50px;padding-left:5px;">{{ detalle.cantidad }}</td>
+                            {% if detalle.producto.producto.tipo == "PRODUCTO" %}
+                                <td style="padding-top: 5px; width: 200px; font-size: 8px;padding-left:8px;">{{ detalle.producto.producto.nombre }}</td>
+                            {% else %}
+                               <td style="padding-top: 5px; width: 200px;font-size: 8px;padding-left:8px;">{{ detalle.producto.producto.nombre }} </td>
+                            {% endif %}
+
+                            <td style="padding-top: 5px;width:50px">{{ detalle.producto.totalpvp|floatformat:2 }}</td>
+                            <td style="padding-top: 5px;width:50px">{{ detalle.total|floatformat:2 }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br><br><br>
+                <table>
+                    <tr style="padding-top: 0px">
+                        <td style="padding-left: 5px"><strong>SUBTOTAL 0%  ------------------------------------------------------------------------------------------</strong></td>
+                        <td style="text-align: right;padding-right: 6px">{{ factura.subtotal_0|floatformat:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 5px"><strong>SUBTOTAL IVA % ------------------------------------------------------------------------------------------</strong></td>
+                        <td style="text-align: right;padding-right: 6px">{{ factura.subtotal_iva|floatformat:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 5px"><strong>SUBTOTAL ------------------------------------------------------------------------------------------</strong></td>
+                        <td style="text-align: right;padding-right: 6px">{{ factura.subtotal|floatformat:2 }}</td>
+                    </tr>
+
+                    <tr >
+                        <td style="padding-left: 5px"><strong>IVA ------------------------------------------------------------------------------------------</strong></td>
+                        <td style="text-align: right;padding-right: 6px">{{ factura.iva|floatformat:2 }}</td>
+                    </tr>
+                    <tr >
+                        <td style="padding-left: 5px"><strong>ICE ------------------------------------------------------------------------------------------</strong></td>
+                        <td style="text-align: right;padding-right: 6px">{{ factura.ice|floatformat:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 5px"><strong>IBRNPR ------------------------------------------------------------------------------------------</strong></td>
+                        <td style="text-align: right;padding-right: 6px">{{ factura.irbpnr|floatformat:2 }}</td>
+                    </tr>
+                     <tr>
+                        <td style="padding-left: 5px" ><strong>TOTAL A PAGAR ------------------------------------------------------------------------------------------</strong></td>
+                        <td style="text-align: right;padding-right: 6px">{{ factura.total|floatformat:2 }}</td>
+                    </tr>
+                </table>
+
+        </div>
+        <div style="text-align: center;font-size: 6px;padding-left:20px; padding-right: 25px">
+            {% if factura.tipo == "FACTURA" %}
+                <pdf:barcode value="{{ factura.clave_acceso }}" type="code128" humanreadable="1"/>
+                <div>
+                    NÚMERO DE AUTORIZACIÓN Y CLAVE DE ACCESO
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

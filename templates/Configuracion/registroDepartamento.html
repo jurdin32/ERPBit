@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Configuracion{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Formulario Registro Departamentos</h3>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+                <br/> <br/>
+
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                  <div class="x_title">
+                    <h2><a href="{% url 'departamentos' %}">Departametos »</a><small>Registro de Departamentos</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form  method="POST" action="" class="form-horizontal form-label-left">
+                        {% csrf_token %}
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Empresa <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                            <select class="form-control" name="empresa" id="empresa">
+                                 <option value="{{ empresa.id }}">{{empresa.nombreComercial}}: {{empresa.razonSocial}}</option>
+                            </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Departamento<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" type="text" class="form-control has-feedback-left" name="nombre" value="{{ nombre }}">
+                          <span class="fa fa-edit form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Descripción<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+                          <input style="border-radius: 5px" type="text" class="form-control has-feedback-left" name="descripcion" value="{{ descripcion }}">
+                          <span class="fa fa-edit form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">Estado <span class="required">*</span></label>
+
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" {% if estado == True %} checked {% endif %}   name="estado" value="1"> Activo
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" {% if estado == False %} checked {% endif %} class="flat" name="estado" value="2"> Inactivo
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn bg-blue" type="submit"><i class="glyphicon glyphicon-save"></i> Guardar</button>
+						  <a class="btn bg-orange" href="{% url 'registroDepartamentos' %}" type="reset"><i class="fa fa-remove"></i> Limpiar</a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+     $('#empresa option[value="{{ departamento.empresa.id }}"]').attr("selected", true);
+
+    </script>
+
+{% endblock content %}

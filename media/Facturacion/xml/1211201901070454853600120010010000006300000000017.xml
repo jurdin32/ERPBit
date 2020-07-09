@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1211201901070454853600120010010000006300000000017</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000630</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>12/11/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>EMPRESA PUBLICA.MUNICIPAL DE AGUA.POTABLE Y ALCANTARILLADO DEL CANTON MACHALA AGUAS MACHALA EP  </razonSocialComprador><identificacionComprador>0760051840001</identificacionComprador><direccionComprador>25 de junio entre colon y buenavista</direccionComprador><totalSinImpuestos>267.84</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>267.84</baseImponible><valor>32.14</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>299.98</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1138</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0905'</codigoAuxiliar>
+                      <descripcion>b'TECLADO KLIP XTREME USB'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>10.00</cantidad>
+                      <precioUnitario>7.50</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>75.00</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>75.00</baseImponible>
+                <valor>9.00</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1139</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0906'</codigoAuxiliar>
+                      <descripcion>b'UPS FORZA 500VA'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>4.00</cantidad>
+                      <precioUnitario>34.81</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>139.24</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>139.24</baseImponible>
+                <valor>16.72</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>1137</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0904'</codigoAuxiliar>
+                      <descripcion>b'MOUSE KLIP STREME USB'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>10.00</cantidad>
+                      <precioUnitario>5.36</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>53.60</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>53.60</baseImponible>
+                <valor>6.40</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

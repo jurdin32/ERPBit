@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BitAdmin | Cliente{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+          <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                  <div class="x_title">
+                    <h2>Inventario » <small>Bodegas</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+                    <div class="x_content">
+                        <a href="{% url 'registroBodegas' %}" class="btn bg-blue"><i class="fa fa-braille"></i> Agregar Bodegas</a>
+                        <a class="btn bg-green"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                    </div>
+                    <br/><br/><br/><br/>
+                    <div class="col-md-12 col-sm-12 col-xs-12 table-responsive ">
+                       <table id="tablaBodegas" class="table table-bordered table-striped dataTables_scroll">
+                      <thead style="background-color: #5A738E;color: whitesmoke">
+                        <tr>
+                          <th>ID</th>
+                          <th>BODEGA</th>
+                          <th>DETALLE</th>
+                          <th style="text-align: center; width: 100px">ESTADO</th>
+                          <th style="width: 100px">OPCIONES</th>
+                        </tr>
+                      </thead>
+
+
+                      <tbody>
+                      {% for bodega in bodegas %}
+                      <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ bodega.bodega }}</td>
+                        <td>{{ bodega.descripcion }}</td>
+                        <td style="text-align: center">
+                          {% if bodega.estado == 1 %}
+                             <span class="glyphicon glyphicon-ok-sign text-success" style="font-size:20px;"></span>
+                              {% else %}
+                                <span class="glyphicon glyphicon-remove-sign text-danger" style="font-size:20px"></span>
+                          {% endif %}
+                        </td>
+                        <td style="text-align: center">
+                            <a href="/inventario/bodega/edit/{{ bodega.id }}/" class="btn bg-orange btn-xs"><i class="glyphicon glyphicon-pencil"></i></a>
+                            {% if bodega.estado %}
+                                <a onclick="f()" href="/inventario/bodega/delete/{{ bodega.id }}/" class="btn bg-red btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                            {% endif %}
+                        </td>
+                      </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        Tablas("#tablaBodegas");
+    </script>
+{% endblock scripts %}

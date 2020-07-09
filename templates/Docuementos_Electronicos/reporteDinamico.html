@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Documentos{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title">
+                        <h2><a>Documento »</a>
+                            <small>Reportes Documentos</small>
+                        </h2>
+                       <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="row">
+                            <div class="form-horizontal form-label-left">
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3">Documento:</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" id="documento"
+                                                name="documento">
+                                            <option value="FACTURA">FACTURA</option>
+                                            <option value="PROFORMA">PROFORMA</option>
+                                            <option value="GUIA_REMISION">GUIA DE REMISION</option>
+                                            <option value="RETENCION">RETENCION</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3">Estado:</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" id="estado"
+                                                name="estado">
+                                            <option value="AUTORIZADO">AUTORIZADO</option>
+                                            <option value="">NO AUTORIZADO</option>
+                                            <option value="ANULADO">ANULADO</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3 ">Desde :</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <input style="border-radius: 5px" type="date"
+                                               class="form-control has-feedback-left" id="fecha1" name="fecha1">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3 ">Hasta :</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <input style="border-radius: 5px" type="date" value=""
+                                               class="form-control has-feedback-left" id="fecha2" name="fecha2">
+                                        <span class="fa fa-calendar form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-horizontal form-label-left">
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3">Usuario:</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" id="usuario"
+                                                name="usuario">
+                                            <option value="0">TODOS</option>
+                                            {% for usuario in usuarios %}
+                                                <option value="{{ usuario.usuario.id }}">{{ usuario.usuario.username }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3">Ambiente:</label>
+                                    <div class="col-md-8 col-sm-3 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" id="ambiente"
+                                                name="ambiente">
+                                            {% for ambiente in ambientes %}
+                                                <option value="{{ ambiente.codigo }}">{{ ambiente.nombre }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                    <label class="control-label col-md-3"> </label>
+                                    <div class="col-md-9 col-sm-12 col-xs-12">
+                                        <button style="width: 90%" onclick="Listar()" id="generar" class="btn btn-success"><i class="fa fa-refresh"></i> Generar Reporte</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="div-resultado"></div>
+        </div>
+        <input type="hidden" id="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    </div>
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+        fecha()
+
+        function fecha() {
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            console.log(y + "-" + m + "-" + d);
+            //Lo ordenas a gusto.
+            $("#fecha1").val(y + "-" + m + "-01");
+            $("#fecha2").val(y + "-" + m + "-" + d);
+        }
+    </script>
+    <script>
+        function Listar() {
+            $("#generar").attr('disabled','disabled')
+            $("#div-resultado").html('<div class="col-md-12 col-sm-12 col-xs-12" id=""><div style="border-radius: 5px" class="x_panel"><div class="x_content"><p>Espere mientras se genera el reporte.....</p></div></div></div>')
+            $.ajax({
+                url: '/documentos_electronicos/reportes/',
+                type: "post",
+                data: {
+                    csrfmiddlewaretoken: $("#csrfmiddlewaretoken").val(),
+                    tipo: $("#documento").val(),
+                    estado: $("#estado").val(),
+                    fecha1: $("#fecha1").val(),
+                    fecha2: $("#fecha2").val(),
+                    usuario: $("#usuario").val(),
+                    ambiente: $("#ambiente").val()
+                },
+                success: function (data) {
+                    if (data == '0'){
+                        $("#div-resultado").html('<div class="col-md-12 col-sm-12 col-xs-12" id=""><div style="border-radius: 5px" class="x_panel"><div class="x_content"><p>La busqueda no proporciono resultados</p></div></div></div>')
+                    }
+                    else{
+                        $("#div-resultado").html(data)
+                    }
+                    $("#generar").removeAttr('disabled')
+                    console.log(data)
+                }
+            });
+        }
+    </script>
+{% endblock scripts %}

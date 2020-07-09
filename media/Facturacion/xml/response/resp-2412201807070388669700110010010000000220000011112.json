@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': 'N/A',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '35',
+                            'mensaje': 'ARCHIVO NO CUMPLE ESTRUCTURA XML',
+                            'informacionAdicional': 'Error al convetir el campo fechaEmision : Unparseable date: "2018-12-24"',
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

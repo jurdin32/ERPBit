@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reporte Ingresos</title>
+</head>
+<body>
+    {% load customTagsInventario %}
+    <img src="{{ configuracion.ruta_imagenes }}/media/{{ configuracion.encabezado }}" style="width: 100%;" alt="">
+    <h1 style="text-align: center; padding-bottom: 0px; margin-bottom: 0px;color: {{ configuracion.color_encabezados_tablas }}"><i>KARDEX REPORTE DE INGRESOS
+        {% if desde and hasta %}
+            <br>PERÍODO:{{ desde }}/{{ hasta }}
+        {% else %}
+            <br>
+            REPORTE GENERAL
+        {% endif %}</i>
+
+    <br>
+    <u><strong>{{ detalle.producto.nombre }}</strong></u>
+    </h1>
+    <br>
+    <table style="color: {{ configuracion.color_texto }}">
+        <tr>
+            <td><strong>REFERENCIA </strong></td>
+            <td>{{ detalle.producto.cod_referencia }}</td>
+            <td><strong>CATEGORÍA</strong></td>
+            <td>{{ detalle.producto.categoria.categoria|upper }}</td>
+        </tr>
+        <tr>
+            <td><strong>PESO/MEDIDA</strong></td>
+            <td>{{ detalle.producto.peso }}/{{ detalle.producto.medida }} </td>
+            <td><strong>BODEGA</strong></td>
+            <td>{{ detalle.producto.bodega.bodega|upper }}</td>
+        </tr>
+        <tr>
+            <td><strong>PROVEEDOR</strong></td>
+            <td colspan="3">{% if detalle.proveedor.razonSocial %}{{ detalle.proveedor.razonSocial|upper}}{% else %}{{ detalle.proveedor.nombreComercial|upper}}{% endif %}
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr style="padding: 3px; border: 1px solid {{ configuracion.color_lineas }};">
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color: {{ configuracion.color_encabezados_tablas_texto }}; width: 200px; text-align: center">Código Prod.</td>
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color: {{ configuracion.color_encabezados_tablas_texto }}; width: 300px; text-align: center">Fecha de Afectación</td>
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color: {{ configuracion.color_encabezados_tablas_texto }}; width: 100px; text-align: center">Ingreso</td>
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color: {{ configuracion.color_encabezados_tablas_texto }}; width: 100px; text-align: center">Egreso</td>
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color: {{ configuracion.color_encabezados_tablas_texto }}">Detalle de la Transacción</td>
+        </tr>
+        {% for kard in kardex %}
+        {% if kard.tipo == "I" %}
+        <tr style="padding: 3px; border: 1px solid {{ configuracion.color_lineas }}">
+            <td style="text-align: center;background-color:{{ configuracion.color_fondo }};color: {{ configuracion.color_texto }} ">{{ kard.detalle.producto.cod_referencia }}</td>
+            <td style="text-align: center;background-color:{{ configuracion.color_fondo }}; color: {{ configuracion.color_texto }}">{{ kard.fechaCreacion }}</td>
+            <td style="text-align: center;background-color:{{ configuracion.color_fondo }}; color: {{ configuracion.color_texto }}">{{ kard.cantidad }}</td>
+            <td style="text-align: center;background-color:{{ configuracion.color_fondo }}; color: {{ configuracion.color_texto }}">0</td>
+            <td style="color: {{ configuracion.color_texto }};background-color:{{ configuracion.color_fondo }};">{{ kard.descripcion }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    {% if pie %}
+        <tr style="padding: 3px; border: 1px solid {{ configuracion.color_lineas }}">
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color:{{ configuracion.color_encabezados_tablas_texto }};text-align: right" colspan="2">Total</td>
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color:{{ configuracion.color_encabezados_tablas_texto }}; width: 100px; text-align: center"> {% CalcularIngresos detalle.id %} </td>
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color:{{ configuracion.color_encabezados_tablas_texto }}; width: 100px; text-align: center"> - 0</td>
+            <td style="background-color: {{ configuracion.color_encabezados_tablas }}; color:{{ configuracion.color_encabezados_tablas_texto }}; width: 100%; text-align: justify">  = {% CalcularIngresos detalle.id %}</td>
+        </tr>
+    {% endif %}
+    </table>
+</body>
+</html>

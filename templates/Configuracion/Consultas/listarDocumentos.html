@@ -1,0 +1,87 @@
+<div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div style="border-radius: 5px" class="x_panel">
+                <div class="x_title">
+                    <small>Todos los registros</small>
+                    </h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div class="row">
+                        {% for factura in facturas %}
+                            <div class="col-md-2 col-xs-12 widget_tally_box">
+                                <div class="x_panel" style="background: #d0e9c6 !important;">
+                                    <div class="x_content">
+                                        <div class="flex">
+                                            <ul class="list-inline widget_profile_box" style="border-radius: 10px !important; height: 45px !important; padding: 5px !important;">
+                                                <li>
+                                                    <a target="_blank" href="/consulta/listarPDF/{{ factura.id }}/">
+                                                        <i class="fa fa-file-pdf-o"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <img src="/media/{{ factura.empresa.logo }}" alt="..."
+                                                         class="img-circle profile_img">
+                                                </li>
+                                                <li>
+                                                    <a a target="_blank" href="/documentos_electronicos/Facturas/xml/{{ factura.id }}/">
+                                                        <i class="fa fa-file-excel-o"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h3 class="name" style="color: #0a68a3"> {% if factura.cliente.razonSocial %}
+                                            {{ factura.cliente.razonSocial }}
+                                        {% else %}
+                                            {{ factura.cliente.nombre }} {{ factura.cliente.apellido }}
+                                        {% endif %}</h3>
+                                        <h4 class="name" style="color: #0f0f0f">{{ factura.cliente.ruc }}</h4>
+                                        <div class="flex">
+                                            <ul class="list-inline count2">
+                                                <li>
+                                                    <span>{{ factura.subtotal }}</span><br>
+                                                    <span style="font-weight: bold">Subtotal</span>
+                                                </li>
+                                                <li>
+                                                    <span>{{ factura.iva }}</span><br>
+                                                    <span style="font-weight: bold">IVA</span>
+                                                </li>
+                                                <li>
+                                                    <span>{{ factura.total }}</span><br>
+                                                    <span style="font-weight: bold">Total</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p>
+                                            <span style="font-weight: bold">Fecha de Emision:</span> {{ factura.fecha|date:"d/m/Y" }} <br>
+                                            {{ factura.codigoEstablecimiento }}-{{ factura.puntoEmision }}-{{ factura.secuencial }}
+                                            <br>
+                                            {{ factura.clave_acceso|truncatechars:30 }}
+                                            <br>
+                                            <span style="font-weight: bold">Estado:</span>
+                                            {% if factura.estado %}
+                                                AUTORIZADO
+                                            {% else %}
+                                                NO AUTORIZADO
+                                            {% endif %}
+                                            <br>
+                                        <span style="font-weight: bold">Ambientes:</span>
+                                        {% if factura.ambiente == '2' %}
+                                            PRODUCCION
+                                        {% else %}
+                                            PRUEBAS
+                                        {% endif %}
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

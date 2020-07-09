@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1508201901070454853600120010010000004750000000018</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000475</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>15/08/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>TRANSPORTES TRANSTAX S.A. </razonSocialComprador><identificacionComprador>0790091507001</identificacionComprador><direccionComprador>PICHINCHA Y NAPOLEON MERA</direccionComprador><totalSinImpuestos>616.07</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>616.07</baseImponible><valor>73.93</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>690.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>927</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0736'</codigoAuxiliar>
+                      <descripcion>b'MONITOR LG BLACK LED 20"'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>84.82</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>84.82</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>84.82</baseImponible>
+                <valor>10.18</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle><detalle>
+                      <codigoPrincipal>926</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0735'</codigoAuxiliar>
+                      <descripcion>b'DVR 4CHANNEL, 4 CAMARAS 1080P '/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>1.00</cantidad>
+                      <precioUnitario>531.25</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>531.25</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>531.25</baseImponible>
+                <valor>63.75</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

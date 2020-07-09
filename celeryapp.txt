@@ -1,0 +1,1 @@
+D:\Py36\Scripts\python manage.py celeryd -l info

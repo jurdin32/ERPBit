@@ -1,0 +1,20 @@
+{
+    'estado': 'DEVUELTA',
+    'comprobantes': {
+        'comprobante': [
+            {
+                'claveAcceso': '2401201907070388669700110010010000100000000011112',
+                'mensajes': {
+                    'mensaje': [
+                        {
+                            'identificador': '35',
+                            'mensaje': 'ARCHIVO NO CUMPLE ESTRUCTURA XML',
+                            'informacionAdicional': "Se encontró el siguiente error en la estructura del comprobante: cvc-pattern-valid: Value '1/2019' is not facet-valid with respect to pattern '[0-9]{2}/[0-9]{4}' for type 'periodoFiscal'..",
+                            'tipo': 'ERROR'
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

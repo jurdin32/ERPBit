@@ -1,0 +1,1107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIT-Admin | Datos Electronicos{% endblock title %}
+{% block content %}
+    {% load customTagsInventario %}
+    <div class="right_col" role="main">
+        <div class="x_title">
+            <h2><a href="{% url 'facturas' %}">Facturas »</a>
+                <small><strong>AMBIENTE: <a
+                        style="color: darkred; font-size: 15px">{{ datos.ambiente.nombre }}</a></strong></small>
+            </h2>
+            <ul class="nav navbar-right panel_toolbox"></ul>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div style="border-radius: 5px" class="x_panel">
+                    <div class="x_title">
+                        <h2><a href="">»</a>
+                            <small>Datos del Cliente</small>
+                        </h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="form-horizontal form-label-left">
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-xs-12">Tipo de Venta :</label>
+                                <div class="col-md-9 col-xs-12">
+                                    <select style="border-radius: 5px"
+                                            class="form-control col-md-7 col-xs-12 has-feedback-left"
+                                            name="tipoventa" id="tipoventa">
+                                        <option value="CONTADO">AL CONTADO</option>
+                                        <option value="CREDITO">CRÉDITO</option>
+                                    </select>
+                                    <span class="fa fa-map-marker form-control-feedback left"
+                                          aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-xs-12">Tiempo:</label>
+                                <div class="col-md-9 col-xs-12">
+                                    <input style="border-radius: 5px; text-align: right "
+                                           class="form-control col-md-9 col-xs-12 has-feedback-left" id="dias"
+                                           required="required" type="number" value="0">
+                                    <span class="fa fa-map-marker form-control-feedback left"
+                                          aria-hidden="true"></span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-xs-12">Razon Social | Nombres y Apellidos
+                                    :</label>
+                                <div class="col-md-9 col-xs-12">
+                                    <div class="input-group">
+                                        <input type="hidden" id="idCliente" value="{{ consumidor.id }}">
+                                        <input readonly type="text" id="nom"
+                                               value="{{ consumidor.razonSocial }}"
+                                               class="form-control">
+                                        <span class="input-group-btn">
+                                              <button type="button" data-toggle="modal"
+                                                      data-target="#clientes" class="btn bg-blue">
+                                                  <i class="fa fa-user-plus"></i> CLIENTES
+                                              </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-xs-12">Identificacion :</label>
+                                <div class="col-md-9 col-xs-12">
+                                    <input style="border-radius: 5px;" value="{{ consumidor.ruc }}"
+                                           class="form-control col-md-7 col-xs-12 has-feedback-left"
+                                           id="identificacion"
+                                           required="required" readonly
+                                           type="text">
+                                    <span class="fa fa-credit-card form-control-feedback left"
+                                          aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="">»</a>
+                                <small>Datos Adicionales</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-horizontal form-label-left">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12">Direccion :</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <input style="border-radius: 5px " readonly value="{{ consumidor.direccion }}"
+                                               class="form-control col-md-7 col-xs-12 has-feedback-left" id="direccion"
+                                               required="required"
+                                               type="text">
+                                        <span class="fa fa-map-marker form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12">Email :</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <input style="border-radius: 5px " readonly value="{{ consumidor.email }}"
+                                               class="form-control col-md-7 col-xs-12 has-feedback-left" id="email"
+                                               required="required"
+                                               type="email">
+                                        <span class="fa fa-envelope form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 10px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Forma de Pago:</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="border-radius: 10px" class="x_panel">
+                    <div class="x_title">
+                        <h2>Detalle de Factura: <a id="secuencia">{{ secuencial }}</a></h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="row">
+                            <div class="col-xs-12 table-responsive">
+                                <table id="myTable" class="table ">
+                                    <thead style="background-color: #5A738E;color: whitesmoke">
+                                    <th style="text-align: center;width: 100px">Eliminar</th>
+                                    <th style="width: 100px">Id</th>
+                                    <th style="width: 100px">Cod Ref</th>
+                                    <th style="text-align: center; width: 100px">Cantidad</th>
+                                    <th>Description</th>
+                                    <th style="width: 100px; text-align: right">P. Unit</th>
+                                    <th style="width: 100px; text-align: right">DESC.</th>
+                                    <th style="width: 100px; text-align: right">SUBTOTAL</th>
+                                    <th style="width: 100px; text-align: right">IVA</th>
+                                    <th style="width: 100px; text-align: right">ICE</th>
+                                    <th style="width: 100px; text-align: right">IRBPNR</th>
+                                    <th style="width: 100px; text-align: right">Total</th>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Subtotal
+                                            12%:
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="subtotal12">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Subtotal 0%
+                                            :
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="subtotal0">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Subtotal Sin
+                                            Desc :
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="subtotal">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Descuento
+                                            :
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="descuento">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Subtotal Con
+                                            Desc :
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="subtotalDes">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">IVA (12 %)
+                                            :
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="iva12">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Valor ICE
+                                            :
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="ice">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">IRBPNR :
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="IRBPNR">0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9" style="border-top: none !important;"></td>
+                                        <th colspan="2" style="background-color: #5A738E;color: whitesmoke">VALOR TOTAL
+                                            :
+                                        </th>
+                                        <td class="totales" style="text-align: right" id="totales">0.00</td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12" style="text-align: center">
+                                <a href="/documentos_electronicos/registroFactura/" class="btn bg-red"
+                                   style="margin-right: 5px"><i
+                                        class="fa fa-file-text"></i> Nueva Venta
+                                </a>
+                                <a id="pdf" class="btn bg-orange" style="margin-right: 5px"><i class="glyphicon glyphicon-print"></i> Imprimir PDF </a>
+                                <button id="registroFac" onclick="registrarFactura()" class="btn bg-blue"><i
+                                        class="glyphicon glyphicon-save"></i> Registrar Factura
+                                </button>
+                                <button class="btn bg-green" data-toggle="modal" id="agregaProductos"
+                                        data-target=".productos">
+                                    <i class="fa fa-shopping-cart"></i> Productos (+)
+                                </button>
+                            </div>
+                        </div>
+                        <div id="validador">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- MODAL PARA CARGAR PRODUCTOS -->
+
+    <div class="modal fade productos" id="productos" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width: 70%">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Agregar Productos a Factura</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+                    {#                    <div class="input-group col-lg-12 col-lg-12 col-xs-12">#}
+                    {#                        <input onkeypress="buscar('tablaProductos','filterProduc')" id="filterProduc"#}
+                    {#                               style="border-radius: 5px" type="text" class="form-control" name="buscar"#}
+                    {#                               placeholder="Filtrar Productos">#}
+                    {#                    </div>#}
+                    <div class="row">
+                        <div class="col-lg-12 col-lg-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <div class="row" style="font-size: 11px">
+                                        <table id="tablaProductos"
+                                                   class="tablaProductos table-striped table-bordered table ">
+                                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                                <th>PRODUCTO</th>
+                                                <th>DETALLES</th>
+                                                <th style="text-align: center">STOCK</th>
+                                                <th>MARCA</th>
+                                                <th>PROVEEDOR</th>
+                                                <th style="text-align: right">PVP</th>
+                                                 <th style="text-align: right">PVP - DES</th>
+                                                <th style="text-align: right">TOTAL</th>
+                                                <th style="text-align: right">DESCUENTO</th>
+                                                <th style="text-align: center">SELEC.</th>
+                                                </thead>
+                                                <tbody>
+                                                {% for producto in productos %}
+                                                    <tr id="item{{ producto.id }}">
+                                                        <td style="width: 200px;vertical-align: middle">{{ producto.producto.cod_referencia }}
+                                                            <br>{{ producto.producto.nombre }}
+                                                        </td>
+                                                        <td style="width: 320px;vertical-align: middle">{{ producto.producto.tipo }}<br>
+                                                            {{ producto.detalles }}
+                                                        </td>
+                                                        <td style="text-align: center;vertical-align: middle">{% CalcularStock producto.id %}</td>
+                                                        <td style="vertical-align: middle">{{ producto.producto.marca.nombre }}</td>
+                                                        {% if producto.proveedor.nombreComercial %}
+                                                            <td style="vertical-align: middle">{{ producto.proveedor.nombreComercial }}</td>
+                                                        {% else %}
+                                                            <td style="vertical-align: middle">{{ producto.proveedor.razonSocial }}</td>
+                                                        {% endif %}
+                                                        <td style="text-align: right;vertical-align: middle" id="p{{ producto.id }}">{{ producto.pvp }}</td>
+                                                        <td style="text-align: right;vertical-align: middle" id="px{{ producto.id }}">{{ producto.pvp }}</td>
+                                                        <td style="text-align: right;vertical-align: middle" id="pxi{{ producto.id }}">{{ producto.totalpvp }}</td>
+                                                        <td style="text-align: right;vertical-align: middle"><input style="width: 80px; text-align: right"  onkeyup="descuentos('{{ producto.id }}',this,'{{ producto.porcentajeIVA }}','{{ producto.porcentajeICE }}','{{ producto.porcentajeIRBPNR }}')" type="text" value="0.00" class="descuentos form-control"  id="xxp{{ producto.id }}"></td>
+                                                        <td style="text-align: center;vertical-align: middle ">
+                                                            <a id="dt{{ producto.id }}" data-ip="{{ producto.id }}" onclick="pasar('{{ producto.id }}','{{ producto.producto.cod_referencia }}','{{ producto.producto.nombre }}',
+                                                                    '{{ producto.porcentajeIVA }}','{{ producto.porcentajeICE }}','{{ producto.porcentajeIRBPNR }}','{{ producto.producto.tipo }}',
+                                                                    '{% CalcularStock producto.id %}')"
+                                                               data-codigo="{{ producto.producto.cod_referencia }}"
+                                                               data-nomb="{{ producto.producto.nombre }}"
+                                                               data-precio="{{ producto.pvp }}"
+                                                               data-iva="{{ producto.ivapvp }}"
+                                                               data-ice="{{ producto.icepvp }}"
+                                                               data-irbpnr="{{ producto.irbpnrpvp }}"
+                                                               data-stock="{% CalcularStock producto.id %}"
+                                                               data-total="{{ producto.totalpvp }}"
+                                                               data-tipo="{{ producto.producto.tipo }}"
+                                                               class=" Fila btn bg-green glyphicon glyphicon-ok "
+                                                               style="font-size: 9px; padding: 3px;margin: 0px"></a>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+
+                                                </tbody>
+
+                                            </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-red" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        SALIR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- MODAL PARA CARGAR CLIENTES -->
+    <div class="modal fadeInLeft" id="clientes" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width: 70%">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Agregar Clientes a Factura</h4>
+                </div>
+
+                <div class="modal-body table-responsive">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div style="border-radius: 10px" class="x_panel">
+                                <div class="x_content">
+                                    <div class="row">
+                                            <table id="tablaClientes"
+                                                   class="tablaClientes table-striped table-bordered table">
+                                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                                <th>IDENTIFICACION</th>
+                                                <th>NOMBRES</th>
+                                                <th>RAZON SOCIAL</th>
+                                                <th>DIRECCION</th>
+                                                <th>TELEFONO</th>
+                                                <th style="text-align: center">SELEC.</th>
+                                                </thead>
+
+                                                <tbody id="body">
+
+                                                {% for cliente in clientes %}
+                                                    <tr class="cli">
+                                                        <td>{{ cliente.ruc }}</td>
+                                                        <td>{{ cliente.nombre }} {{ cliente.apellido }}</td>
+                                                        <td>{{ cliente.razonSocial }}</td>
+                                                        <td>{{ cliente.direccion }}</td>
+                                                        <td>{{ cliente.telefono }}</td>
+                                                        <td style="text-align: center ">
+                                                            <a data-id="{{ cliente.id }}"
+                                                               data-ruc="{{ cliente.ruc }}"
+                                                               data-nombre="{{ cliente.nombre }}"
+                                                               data-apellidos="{{ cliente.apellido }}"
+                                                               data-rsocial="{{ cliente.razonSocial }}"
+                                                               data-direccion="{{ cliente.direccion }}"
+                                                               data-telefono="{{ cliente.telefono }}"
+                                                               data-email="{{ cliente.email }}"
+                                                               class=" Agregar btn bg-green glyphicon glyphicon-user "
+                                                               style="font-size: 9px; padding: 5px;margin: 0px"></a>
+                                                        </td>
+
+                                                    </tr>
+                                                {% endfor %}
+
+                                                </tbody>
+
+                                            </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <a data-toggle="modal" href="#CrearClientes" id="creacion" class="btn bg-blue"><i
+                            class="fa fa-user-plus"></i>
+                        Agregar Cliente</a>
+                    <button type="button" class="btn bg-red" data-dismiss="modal"><i class="fa fa-sign-in"></i>
+                        SALIR
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PARA REGISTRAR CLIENTES -->
+    <div class="modal fadeInLeft" id="CrearClientes" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Registrar Nuevos Clientes </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form role="form">
+                        {% csrf_token %}
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Tipo Identificacion</label>
+                            <select name="tipoIdentificacion" id="tipoIdentificacion" class="form-control">
+                                {% for tipo in tiposIdentificacion %}
+                                    <option value="{{ tipo.id }}">{{ tipo.nombre }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <input type="hidden" id="veri">
+                            <label>Cedula o RUC</label><input style="border-radius: 5px" type="text"
+                                                              class="form-control" id="ruc"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Nombre</label><input style="border-radius: 5px" class="form-control" type="text"
+                                                        id="nombre"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Apellido</label>
+                            <input style="border-radius: 5px" class="form-control" type="text" id="apellido"/>
+                        </div>
+
+                        <div class="form-group col-md-12 col-sm-9 col-xs-12">
+                            <label>Nombre Comercial</label>
+                            <input style="border-radius: 5px" class="form-control" type="text" id="razonSocial"/>
+                        </div>
+
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Telefono</label>
+                            <input style="border-radius: 5px" class="form-control" type="text" id="telefono"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Pais</label>
+                            <select name="pais" id="pais" class="form-control">
+                                {% for pais in paises %}
+                                    <option value="{{ pais.id }}">{{ pais.nombre }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Provincia</label>
+                            <div name="provincias" id="provincias"></div>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Ciudad</label>
+                            <div name="lugarciudad" id="lugarciudad"></div>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Parroquia</label>
+                            <div name="lugarparroquia" id="lugarparroquia"></div>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Direccion</label>
+                            <input style="border-radius: 5px" class="form-control" type="text" id="direccion"/>
+                        </div>
+
+                        <div class="form-group col-md-6 col-sm-9 col-xs-12">
+                            <label>Email</label>
+                            <input style="border-radius: 5px" class="form-control" type="email" id="emailes"/>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" id="borrarDatos" class="btn btn-danger"><i class="fa fa-recycle"></i>
+                        Limpiar Formulario
+                    </button>
+                    <button type="button" id="registrar" class="btn btn-warning"><i class="fa fa-save"></i>
+                        Guardar Datos
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <style>
+        .cantidad {
+            border: none;
+            width: 50px;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 0px;
+            margin-top: 5px;
+        }
+    </style>
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'js/ruc_jquery_validator.min.js' %}"></script>
+    <script>
+        var opciones = {
+            strict: true,              // va a validar siempre, aunque la cantidad de caracteres no sea 10 ni 13
+            events: "keyup",          // evento que va a disparar la validación
+            the_classes: "invalid",    // clase que se va a agregar al nodo en el que se realiza la validación
+            onValid: function () {
+                console.log("correcto")
+                if ($("#tipoIdentificacion option:selected").text() == 'RUC' && $("#ruc").val().length == 13) {
+                    $("#ruc").removeClass('parsley-error')
+                    $('#veri').val('')
+                } else {
+                    if ($("#tipoIdentificacion option:selected").text() == 'CEDULA' && $("#ruc").val().length == 10) {
+                        $("#ruc").removeClass('parsley-error')
+                        $('#veri').val('')
+
+                    } else {
+                        $("#ruc").addClass('parsley-error')
+                        $('#veri').val('Error')
+
+                    }
+                }
+
+            },   // callback cuando la cédula es correcta.
+            onInvalid: function () {
+                if ($("#tipoIdentificacion option:selected").text() == 'CEDULA' || $("#tipoIdentificacion option:selected").text() == 'RUC') {
+                    $("#ruc").addClass('parsley-error')
+                    $('#veri').val('Error')
+                } else {
+                    $("#ruc").removeClass('parsley-error')
+                    $('#veri').val('')
+                }
+
+            }  // callback cuando la cédula es incorrecta.
+        };
+        $('#ruc').validarCedulaEC(opciones);
+
+        function valida() {
+            $('#ruc').validarCedulaEC(opciones)
+        }
+
+        $("#tipoIdentificacion").change(valida()).change()
+    </script>
+
+    <script>
+        $("#registrar").click(function () {
+            if ($("#ruc").val() && $("#nombre").val() && $("#apellido").val() && $("#direccion").val() && $("#emailes").val()) {
+                $.post("/clientes/registroCliente", {
+                    tipoIdentificacion: $("#tipoIdentificacion").val(),
+                    ruc: $("#ruc").val(),
+                    nombre: $("#nombre").val(),
+                    apellido: $("#apellido").val(),
+                    razonSocial: $("#razonSocial").val(),
+                    telefono: $("#telefono").val(),
+                    parroquia: $("#parroquia").val(),
+                    direccion: $("#direccion").val(),
+                    email: $("#emailes").val(),
+                    verificar: $('#veri').val(),
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                    Ext: "1",
+
+                }, function (data) {
+                    if (data == "ya") {
+                        swal({
+                            title: "Ops Algo ha salido mal, es posible los datos que intenta registra ya existan en la base de datos..!!",
+                            text: error,
+                            icon: "error",
+                            button: "Aceptar!"
+                        });
+                    } else {
+                        if (data == "no") {
+                            swal({
+                                title: "Ops Algo ha salido mal, Hay un problema con la cedula ingresada..!!",
+                                text: error,
+                                icon: "error",
+                                button: "Aceptar!"
+                            });
+                        } else {
+                            $("#CrearClientes").modal('hide');
+
+                            if ($("#razonSocial").val().length > 0) {
+                                $("#nom").val($("#razonSocial").val());
+                            } else {
+                                $("#nom").val($("#nombre").val() + " " + $("#apellido").val());
+                            }
+                            $('#identificacion').val($("#ruc").val());
+                            $('#direccion').val($("#direccion").val());
+                            $('#email').val($("#emailes").val());
+                            $("#idCliente").val(data);
+
+                            swal({
+                                title: "En Buena Hora..!!",
+                                text: "EL Cliente se ha registrado exitosamente.!",
+                                icon: "success",
+                                button: "Aceptar!"
+                            });
+
+                        }
+                    }
+
+                });
+            } else {
+                swal({
+                    title: "Ops Algo ha salido mal, es posible aque algunos de los datos que son obligatorios no se esten registrando..!!",
+                    text: error,
+                    icon: "error",
+                    button: "Aceptar!"
+                });
+            }
+
+        });
+    </script>
+    <script>
+        $("#creacion").click(function () {
+            $("#clientes").modal("hide")
+        })
+    </script>
+    <script>
+        function remove(t, id) {
+            var td = t.parentNode;
+            var tr = td.parentNode;
+            var table = tr.parentNode;
+            console.log($("#item" + id + " .Fila").removeAttr('data-estado'));//Elimina el atributo estado en la tabla productos
+            table.removeChild(tr);
+            calculos();
+            $('#x' + id).remove()
+        }
+    </script>
+    <!-- funcion para realizar calculos sobre la tabla -->
+    <script>
+        var subtotal0 = 0;
+        var subtotal12 = 0;
+        var subtotal = 0;
+        var iva12 = 0;
+        var ice = 0;
+        var descuento = 0;
+        var IRBPNR = 0;
+        var grantotal = 0;
+
+        function capturador(t) {
+            subtotal0 = subtotal12 = subtotal = iva12 = ice = descuento = IRBPNR = grantotal =total= 0;
+            var td = t.parentNode;
+            var tr = td.parentNode;
+            var cantidad=0;
+            var codigo=0;
+            var precioU=0;
+            var iva=0;
+            var ic=0;
+            var ir=0;
+            var pn=0;
+            cantidad = ($(tr).find('td input').val())
+            codigo = ($(tr).find('td').eq(1).text())
+            pn = parseFloat($(tr).find('td').eq(5).text().replace(",", "."))
+            precioU = parseFloat($(tr).find('td').eq(7).text().replace(",", "."))
+            iva = parseFloat($(tr).find('td').eq(8).text().replace(",", "."))
+            ic = parseFloat($(tr).find('td').eq(9).text().replace(",", "."));
+            ir = parseFloat($(tr).find('td').eq(10).text().replace(",", "."));
+
+            console.log($("#x" + codigo + "").val())
+
+            if (parseFloat(cantidad) > parseFloat($('#x' + codigo).val())) {
+                $(tr).find('td input').val(0)
+                swal({
+                    title: "Ops Algo ha salido mal..!!",
+                    text: "No hay stock suficiente",
+                    icon: "warning",
+                    button: "Aceptar!"
+                });
+
+
+            } else {
+
+                if (iva > 0) {
+                    subtotal12 = precioU * cantidad;
+                    iva12 = iva * cantidad;
+                } else {
+                    subtotal0 = precioU * cantidad;
+                    iva12 = 0
+                }
+                subtotal=subtotal0+subtotal12
+                ice = (ic * cantidad);
+                IRBPNR = (ir * cantidad);
+                total = (precioU + iva + ic + ir)*cantidad;
+                console.log(cantidad + " " + precioU + " total: " + total);
+                $(tr).find('td').eq(11).text(subtotal12.toFixed(2))
+
+            }
+            calculos();
+        }
+
+        function calculos() {
+            subtotal0 = subtotal12 = subtotal = iva12 = ice = descuento = IRBPNR = grantotal = 0;
+            $("#myTable>tbody>tr").each(function () {
+                var cantidades = parseFloat($(this).find('td input').val().replace(",", "."));
+                var unitarios = parseFloat($(this).find('td').eq(5).text().replace(",", "."));
+                var descuentos = parseFloat($(this).find('td').eq(6).text().replace(",", "."));
+                var ivas = parseFloat($(this).find('td').eq(8).text().replace(",", "."));
+                var ices = parseFloat($(this).find('td').eq(9).text().replace(",", "."));
+                var irbnpr = parseFloat($(this).find('td').eq(10).text().replace(",", "."));
+                if (ivas > 0) {
+                    subtotal12 += (unitarios) * cantidades;
+                    iva12 += (ivas * cantidades);
+                } else {
+                    subtotal0 += (unitarios) * cantidades;
+                }
+                ice += (ices * cantidades);
+                IRBPNR += (irbnpr * cantidades);
+                descuento+=descuentos*cantidades;
+            })
+            subtotal = subtotal12 + subtotal0;
+            $("#subtotal12").text(subtotal12.toFixed(2));
+            $("#subtotal0").text(subtotal0.toFixed(2));
+            $("#subtotal").text(subtotal.toFixed(2));
+            $("#descuento").text(descuento.toFixed(2));
+
+            $("#subtotalDes").text((subtotal-descuento).toFixed(2));
+
+            $("#iva12").text((subtotal*0.12).toFixed(2));
+            $("#ice").text(ice.toFixed(2));
+            $("#IRBPNR").text(IRBPNR.toFixed(2));
+            grantotal = (subtotal -descuento) + (subtotal*0.12) + ice + IRBPNR
+            $("#totales").text(grantotal.toFixed(2))
+            ;
+            console.log("Calculos: sub12: " + subtotal12.toFixed(2) + " sub0: " + subtotal0.toFixed(2) + " iva12: " + iva12.toFixed(2))
+        }
+
+    </script>
+
+    <!-- script para pasar los productos o servicios del modal a la FACTURA -->
+    <script>
+        function pasar(id,codigo,nombre,porcentajeIVA,porcentajeICE,PorcentajeIRBPNR,tipo,stock){
+
+            console.log(id+" , "+codigo+" , "+nombre+" , "+porcentajeIVA+ " , " +porcentajeICE+" , "+PorcentajeIRBPNR+" , "+tipo+" , "+stock)
+
+            descuen=$("#xxp"+id).val()
+            campo=$("#px"+id).text().replace(",",".");
+            pn=$("#p"+id).text().replace(",",".");
+            precioU=parseFloat(campo)
+
+            iva=(campo)*parseFloat(porcentajeIVA.replace(",",".")/100);
+            ice=(campo)*parseFloat(porcentajeICE.replace(",","."))/100;
+            irbpnr=(campo)*parseFloat(PorcentajeIRBPNR.replace(",","."))/100;
+ 
+            total=(precioU+iva+ice+irbpnr)
+            console.log("subtotal:"+campo+" iva: "+iva+" ice:"+ice+" irbpnr:"+irbpnr+" TOTAL:"+precioU+iva+ice+irbpnr)
+
+             if (parseInt(stock) > 0 || tipo == "SERVICIO") {
+                cadena = '<tr id="' + id + '"><td style="text-align: center"><button id="' + id + '" class="btn bg-red btn-xs" onclick="remove(this,' + id + ')"><i class="glyphicon glyphicon-trash"></i></button></td><td>' + id + '</td><td>' + codigo + '</td><td style="text-align: center;margin:0px;padding:0px;"><input class="cantidad c' + id + ' onclick="capturador(this)" onchange="capturador(this)" onkeyup="capturador(this)" min="0" max="'+stock+'" value="1" type="number"></td><td>' + nombre + '</td><td class="unitarios" style="text-align:right">' + pn + '</td><td class="descuentttt" style="text-align:right">' + descuen + '</td></td><td class="subtt" style="text-align:right">' + campo + '</td><td class="ivas" style="text-align:right">' + iva.toFixed(2) + '</td><td class="ices" style="text-align:right">' + ice + '</td><td class="irbnpr" style="text-align:right">' + irbpnr + '</td><td class="txx" style="text-align:right">' + total.toFixed(2) + '</td></tr>'
+                nfilas = $("#myTable>tbody>tr").length;
+                if ($("#dt"+id).attr('data-estado')) {
+                    swal({
+                        title: "Ops Algo ha salido mal..!!",
+                        text: "Este item ya lo agrego a la factura. Edite la cantidad",
+                        icon: "error",
+                        button: "Aceptar!"
+                    });
+                } else {
+                    if (tipo == "PRODUCTO") {
+                        var inputs = "<input type='hidden' id=x" + id + " value=" + stock + ">";
+                    }
+                    $('#validador').append(inputs)
+                    $('#dt'+id).attr('data-estado', 'usado');
+                    $('#myTable>tbody:last').append(cadena)
+
+                }
+            } else {
+                swal({
+                    title: "Ops Algo ha salido mal..!!",
+                    text: "No hay stock suficiente",
+                    icon: "warning",
+                    button: "Aceptar!"
+                });
+                calculos();
+            }
+            calculos();
+        }/**
+        $(document).on('click', '.Fila', function () {
+            id = $(this).data('ip');
+            codigo = $(this).data('codigo');
+            nombre = $(this).data('nomb');
+            precioU = $(this).data('precio');
+            porcentaje = $(this).data('porcentaje');
+            iva = $(this).data('iva');
+            ice = $(this).data('ice');
+            irbpnr = $(this).data('irbpnr');
+            total = $(this).data('total');
+            tipo = $(this).data('tipo')
+            stock = $(this).data('stock');
+
+            if (stock > 0 || tipo == "SERVICIO") {
+                cadena = '<tr id="' + id + '"><td style="text-align: center"><button id="' + id + '" class="btn bg-red btn-xs" ' +
+                    'onclick="remove(this,' + id + ')"><i class="glyphicon glyphicon-trash"></i></button></td><td>' + id + '</td>' +
+                    '<td>' + codigo + '</td><td style="text-align: center;margin:0px;padding:0px;"><input class="cantidad c' + id + '" ' +
+                    'onkeyup="capturador(this)" value="1" type="text"></td><td>' + nombre + '</td><td class="unitarios" style="text-align:right">' + precioU + '' +
+                    '<td class="ivas" style="text-align:right">' + iva + '</td><td class="ices" style="text-align:right">' + ice + '</td>' +
+                    '<td class="irbnpr" style="text-align:right">' + irbpnr + '</td><td class="totales" style="text-align:right">' + total + '</td></tr>'
+                nfilas = $("#myTable>tbody>tr").length;
+                if (($(this).data('estado') == 'usado')) {
+                    swal({
+                        title: "Ops Algo ha salido mal..!!",
+                        text: "Este item ya lo agrego a la factura. Edite la cantidad",
+                        icon: "error",
+                        button: "Aceptar!"
+                    });
+                } else {
+                    if (tipo == "PRODUCTO") {
+                        var inputs = "<input type='hidden' id=x" + id + " value=" + stock + ">";
+                    }
+                    $('#validador').append(inputs)
+                    $(this).attr('data-estado', 'usado');
+                    $('#myTable>tbody:last').append(cadena)
+
+                }
+            } else {
+                swal({
+                    title: "Ops Algo ha salido mal..!!",
+                    text: "No hay stock suficiente",
+                    icon: "warning",
+                    button: "Aceptar!"
+                });
+            }
+            calculos();
+
+        })
+    **/
+    </script>
+
+    <!--! SCRIPT PARA AGREGAR CLIENTES DEL MODAL A LA FACTURA !-->
+    <script>
+        $(document).on('click', '.Agregar', function () {
+            ruc = $(this).data('ruc');
+            nombre = $(this).data('nombre');
+            apellido = $(this).data('apellidos');
+            rsocial = $(this).data('rsocial');
+            direccion = $(this).data('direccion');
+            telefono = $(this).data('telefono');
+            email = $(this).data('email');
+            id = $(this).data('id');
+            console.log(rsocial)
+            if (rsocial.length > 0) {
+                $("#nom").val(rsocial);
+            } else {
+                $("#nom").val(nombre + " " + apellido);
+            }
+            $('#identificacion').val(ruc);
+            $('#direccion').val(direccion);
+            $('#email').val(email);
+            $("#idCliente").val(id);
+            $('#clientes').modal('hide');
+        });
+    </script>
+
+    <script>
+        function registrarFactura() {
+            var idCliente = $("#idCliente").val();
+            var sub0 = $("#subtotal0").text();
+            var sub12 = $("#subtotal12").text();
+            var sub = $("#subtotal").text();
+            var ivva = $("#iva12").text();
+            var iceee = $("#ice").text();
+            var irbpnrrr = $("#IRBPNR").text();
+            var totalesss = $("#totales").text();
+            var secuencia = $("#secuencia").text();
+            var dias = $("#dias").val();
+            var tipoventa = $("#tipoventa").val();
+            var descuento=$("#descuento").text();
+            var f = $("#myTable>tbody>tr").length;
+            if (f > 0) {
+                $.post("/documentos_electronicos/registroFactura/", {
+                    'tipoventa': tipoventa,
+                    'dias': dias,
+                    "secuencia": secuencia,
+                    'cliente': parseInt(idCliente),
+                    'sutotal0': parseFloat(sub0),
+                    'subtotal12': parseFloat(sub12),
+                    'subtotal': parseFloat(sub),
+                    'iva': parseFloat(ivva),
+                    'ice': parseFloat(iceee),
+                    'irbpnr': parseFloat(irbpnrrr),
+                    'descuento':parseFloat(descuento),
+                    'total': parseFloat(totalesss)
+                }, function (data) {
+                    if (parseInt(data) > 0) {
+                        registroDetalles(data)
+                    }
+                });
+                $("#agregaProductos").attr('disabled', 'disabled')
+            } else {
+                swal({
+                    title: "Ops Algo ha salido mal..!!",
+                    text: "No se puede emitir una Factura en Blanco",
+                    icon: "warning",
+                    button: "Aceptar!"
+                });
+            }
+        }
+
+        var idFact = 0
+
+        function registroDetalles(data) {
+            var subtotal0 = 0;
+            var subtotal12 = 0;
+            var subtotal = 0;
+            var iva12 = 0;
+            var ice = 0;
+            var IRBPNR = 0;
+            var DESCUENTO=0;
+            var nf = $("#myTable>tbody>tr").length;
+            $("#myTable>tbody>tr").each(function () {
+                subtotal0 = subtotal12 = subtotal = iva12 = ice = IRBPNR = 0;
+                var producto = $(this).find('td').eq(1).text();
+                var cantidades = parseFloat($(this).find('td input').val().replace(",", "."));
+                var desc=parseFloat($(this).find('td').eq(6).text().replace(",", "."));
+
+                var unitarios = parseFloat($(this).find('td').eq(7).text().replace(",", "."));
+                var ivas = parseFloat($(this).find('td').eq(8).text().replace(",", "."));
+                var ices = parseFloat($(this).find('td').eq(9).text().replace(",", "."));
+                var irbnpr = parseFloat($(this).find('td').eq(10).text().replace(",", "."));
+                if (ivas > 0) {
+                    subtotal12 = unitarios * cantidades;
+                    iva12 = (ivas * cantidades);
+                } else {
+                    subtotal0 = unitarios * cantidades;
+                }
+                subtotal = subtotal0 + subtotal12;
+                ice = (ices * cantidades);
+                IRBPNR = (irbnpr * cantidades);
+                DESCUENTO= (desc * cantidades);
+                idFact = data;
+                var tttt = subtotal + ice + iva12 + IRBPNR;
+                $.post("/documentos_electronicos/Facturas/" + data + "/", {
+                    factura_id: parseInt(data),
+                    producto: producto,
+                    cantidad: cantidades,
+                    sub0: subtotal0,
+                    sub12: subtotal12,
+                    sub: subtotal,
+                    iva: iva12,
+                    ice: ice,
+                    Irbpnr: IRBPNR,
+                    descuento:DESCUENTO,
+                    total: tttt
+                }, function (data) {
+                    if (data == "ok") {
+                        nf -= 1;
+                        console.log("Se registró la fila..!!  -> " + nf)
+
+                        if (nf == 0) {
+                            $("#registroFac").attr('disabled','disabled')
+                            $.get('/documentos_electronicos/Facturas/xml/' + idFact + '/', function () {
+
+                            });
+                            swal({
+                                title: "En Buena Hora..!!",
+                                text: "La Factura se registro Exitosamente.",
+                                icon: "success",
+                                button: "Aceptar!"
+                            });
+                        }
+                    } else {
+                        swal({
+                            title: "Ops Algo ha salido mal..!!",
+                            text: "Es posible que halla un problema en el servidor.",
+                            icon: "error",
+                            button: "Aceptar!"
+                        });
+
+                    }
+
+                })
+            })
+        }
+
+        $("#pdf").click(function () {
+            if (idFact > 0) {
+                window.location.href = "/documentos_electronicos/Facturas/" + idFact + "/";
+            } else {
+                swal({
+                    title: "Ops Algo ha salido mal..!!",
+                    text: "La Factura aun no ha sido creada.",
+                    icon: "warning",
+                    button: "Aceptar!"
+                });
+            }
+
+        })
+    </script>
+    <script>
+        tm=[[5 ],['5']]
+        Tablas2("#tablaProductos",tm)
+        Tablas2("#tablaClientes",tm)
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var prov = "";
+            var ciud = "";
+            var parr = "";
+            $('#tipoIdentificacion option[value="{{ tipo.id }}"]').attr("selected", true);
+            provincia();
+
+            function provincia() {
+                $('#pais option[value="{{ parroquia.lugar.lugar.lugar.id }}"]').attr("selected", true);
+                $('#pais').change(function () {
+                    $.get('/configuracion/lugar/' + $(this).val() + "/", function (data) {
+                        prov = '<select  style="border-radius: 5px" class="form-control" id="provincia">' + data + '</select>';
+                        $("#provincias").html(prov);
+                        $('#provincia option[value="{{ parroquia.lugar.lugar.id }}"]').attr("selected", true);
+                        $('#provincia').change(function () {
+                            $.get('/configuracion/lugar/' + $("#provincia").val() + "/", function (data1) {
+                                ciud = '<select  style="border-radius: 5px" class="form-control" name="ciudad" id="ciudad">' + data1 + '</select>';
+                                $("#lugarciudad").html(ciud);
+                                $('#ciudad option[value="{{ parroquia.lugar.id }}"]').attr("selected", true);
+                                $('#ciudad').change(function () {
+                                    $.get('/configuracion/lugar/' + $(this).val() + "/", function (data2) {
+                                        parr = '<select  style="border-radius: 5px" class="form-control" name="parroquia" id="parroquia">' + data2 + '</select>';
+                                        $("#lugarparroquia").html(parr);
+                                        $('#parroquia option[value="{{ parroquia.id }}"]').attr("selected", true);
+                                    });
+                                }).change();
+                            });
+                        }).change();
+                    });
+                }).change();
+            }
+        })
+    </script>
+
+    <script>
+    function descuentos(id,t,porcentajeIVA,porcentajeICE,PorcentajeIRBPNR,){
+        des=t.value.replace(",",".");
+        campo1=parseFloat($("#p"+id).text().replace(",","."));
+
+        $("#px"+id).text((parseFloat(campo1)-parseFloat(des)).toFixed(2));
+        campo=parseFloat($("#px"+id).text().replace(",","."));
+
+        iva=((campo)*parseFloat(porcentajeIVA.replace(",","."))/100).toFixed(2);
+        ice=((campo)*parseFloat(porcentajeICE.replace(",","."))/100).toFixed(2);
+        irbpnr=((campo)*parseFloat(PorcentajeIRBPNR.replace(",","."))/100).toFixed(2);
+        console.log('campo: '+campo," iva:"+iva+' ice:'+ice+" irbpnr:"+irbpnr);
+
+        $("#pxi"+id).text(((parseFloat(campo)+iva+ice+irbpnr)).toFixed(2));
+    }
+    </script>
+    <style>
+    #nom{
+        border-radius: 5px 0px 0px 5px !important;
+    }
+    </style>
+{% endblock %}
+

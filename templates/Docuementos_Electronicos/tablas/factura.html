@@ -1,0 +1,89 @@
+<div class="col-md-12 col-sm-12 col-xs-12" id="">
+{% load mathfilters %}
+    <div style="border-radius: 5px" class="x_panel">
+        <div class="x_content">
+            <table id="tablaReportes" class="table table-bordered table-striped dataTables_scroll">
+                <thead style="background-color: #5A738E;color: whitesmoke">
+                <th>USUARIO</th>
+                <th style="text-align: center">Nº DOCUMENTO</th>
+                <th style="text-align: center">TIPO DOCUMENTO</th>
+                <th style="text-align: center">ESTADO DOCUMENTO</th>
+                <th style="text-align: center">AMBIENTE DOCUMENTO</th>
+                <th style="text-align: center">FECHA EMISON</th>
+                <th>CLIENTE</th>
+                <th style="width: 100px; text-align: right">SUB 0%</th>
+                <th style="width: 100px; text-align: right">SUB 12%</th>
+                <th style="width: 100px; text-align: right">IMP</th>
+                <th style="width: 100px; text-align: right">DESC</th>
+                <th style="width: 100px; text-align: right">SUBTOTAL</th>
+                <th style="width: 100px; text-align: right">IVA</th>
+                <th style="width: 100px; text-align: right">TOTAL</th>
+                </thead>
+                <tbody>
+
+                    {% for documento in documentos %}
+                        <tr>
+                            <td>{{ documento.usuario.username }}</td>
+                            <td>{{ documento.secuencial }}</td>
+                            <td>{{ documento.tipo }}</td>
+                            <td>{% if documento.estado == "AUTORIZADO" or documento.estado == "ANULADO" %}{{ documento.estado }}{% else %}NO AUTORIZADO{% endif %}</td>
+                            <td>{% if documento.ambiente == 1 %}
+                                PRUEBAS
+                                {% else %}
+                                PRODUCCION
+                            {% endif %}</td>
+                            <td>{{ documento.fecha|date:"d/m/Y" }}</td>
+                            <td>{% if documento.cliente.razonSocial %}
+                                {{ documento.cliente.razonSocial|upper }}
+                            {% else %}
+                                {{ documento.cliente.nombre|upper }} {{ documento.cliente.apellido|upper }}
+                            {% endif %}
+                            </td>
+                            <td style="text-align: right">{{ documento.subtotal_0|floatformat:2 }}</td>
+                            <td style="text-align: right">{{ documento.subtotal_iva|floatformat:2}}</td>
+                            <td style="text-align: right">{{ documento.subtotal|floatformat:2}}</td>
+                            <td style="text-align: right">{{ documento.descuento|floatformat:2}}</td>
+                            <td style="text-align: right">{{ documento.subtotal|sub:documento.descuento|floatformat:2}}</td>
+                            <td style="text-align: right">{{ documento.iva|floatformat:2 }}</td>
+                            <td style="text-align: right">{{ documento.total|floatformat:2 }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+<div class="col-md-2 col-lg-offset-10 col-sm-2 col-xs-12" id="">
+    <div style="border-radius: 5px" class="x_panel">
+        <div class="x_content">
+            <table class="table table-bordered table-striped dataTables_scroll">
+                <tr>
+                    <td style="font-weight: bold">SUBTOTAL 0%</td>
+                    <td style="text-align: right">{{ subtotal0.subtotal_0__sum}}</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">SUBTOTAL 12%</td>
+                    <td  style="text-align: right">{{ subtotal12.subtotal_iva__sum }}</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">SUBTOTAL</td>
+                    <td  style="text-align: right">{{ subtotal.subtotal__sum }}</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">IVA</td>
+                    <td  style="text-align: right">{{ iva.iva__sum }}</td>
+                </tr>
+            <tr>
+                    <td style="font-weight: bold">TOTAL</td>
+                    <td  style="text-align: right">{{ total.total__sum }}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+<script>
+    Tablas("#tablaReportes");
+</script>

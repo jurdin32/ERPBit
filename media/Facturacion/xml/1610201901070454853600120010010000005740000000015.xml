@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1610201901070454853600120010010000005740000000015</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000574</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>16/10/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>DIRECCION PROVINCIAL DEL CONSEJO DE LA JUDICATURA EL ORO </razonSocialComprador><identificacionComprador>0760013910001</identificacionComprador><direccionComprador>ROCAFUERTE 1115 E/ AYACUCHO Y GUAYAS</direccionComprador><totalSinImpuestos>73.70</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>73.70</baseImponible><valor>8.84</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>82.54</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                      <codigoPrincipal>1001</codigoPrincipal>
+                      <codigoAuxiliar>b'SER-0803'</codigoAuxiliar>
+                      <descripcion>b'PINZA PONCHA NEXXT Y CORTE DE CABLE MODELO PRJ-45 (HERRAMIENTA)'/SIN MARCA x Unidades x </descripcion>
+                      <cantidad>2.00</cantidad>
+                      <precioUnitario>36.85</precioUnitario>
+                      <descuento>0.00</descuento>
+                      <precioTotalSinImpuesto>73.70</precioTotalSinImpuesto>
+                      <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>73.70</baseImponible>
+                <valor>8.84</valor>
+            </impuesto>
+                      
+                      
+                      </impuestos>
+                      </detalle></detalles></factura>

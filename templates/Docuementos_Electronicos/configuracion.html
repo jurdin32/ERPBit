@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}BIT-Admin | Documentos Electrocnicos{% endblock title %}
+
+{% block content %}
+
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+                {% if mensaje %}
+                    <div class="alert alert-success">
+                        <label for="">{{ mensaje }}</label>
+                    </div>
+                {% endif %}
+                {% if error %}
+                    <div class="alert alert-danger">
+                        <label for="">{{ error }}</label>
+                    </div>
+                {% endif %}
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="{% url 'empresas' %}">Documentos Electronicos »</a>
+                                <small>Configuracion Cargada al Momento</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                       aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <table class="table table-bordered table-responsive table-striped" id="tablaDatos">
+                                <thead style="background: #5A738E; color: white">
+                                <th style="text-align: center;">NO</th>
+                                <th style="text-align: center;">AMBIENTE</th>
+                                <th style="text-align: center;">ESTAB.</th>
+                                <th style="text-align: center;">EMISION</th>
+                                <th style="text-align: center;">T. EMI.</th>
+                                <th style="text-align: center;">BANNER</th>
+                                <th style="text-align: center;">SEC. FACT.</th>
+                                <th style="text-align: center;">SEC. PROF.</th>
+                                <th style="text-align: center;">SEC. GUIA REM.</th>
+                                <th style="text-align: center;">SEC. RET.</th>
+                                <th style="text-align: center;">SEC. NOTA ENT.</th>
+                                <th style="text-align: center;">OPCION</th>
+                                </thead>
+                                <tbody>
+                                {% for dato in datos %}
+                                    <tr style="text-align: center">
+                                        <td style="vertical-align: middle">{{ forloop.counter }}</td>
+                                        <td style="vertical-align: middle">{{ dato.ambiente }}</td>
+                                        <td style="vertical-align: middle">{{ dato.codigoEstablecimiento.codigo }}</td>
+                                        <td style="vertical-align: middle">{{ dato.puntoEmision.codigo }}</td>
+                                        <td style="vertical-align: middle">{{ dato.tipoEmision }}</td>
+                                        <td style="vertical-align: middle"><img src="/media/{{ dato.banner }}"
+                                                                                style="width: 100px" alt=""></td>
+                                        <td style="vertical-align: middle">{{ dato.secuencial }}</td>
+                                        <td style="vertical-align: middle">{{ dato.secuenciaProforma }}</td>
+                                        <td style="vertical-align: middle">{{ dato.secuencialGuias }}</td>
+                                        <td style="vertical-align: middle">{{ dato.secuencialRetencion }}</td>
+                                        <td style="vertical-align: middle">{{ dato.secuencialNotaVenta }}</td>
+                                        <td style="vertical-align: middle">
+                                            {% if dato.estado %}
+                                                <a href="{% url 'configuracionActivar' dato.id %}" class="btn btn-danger" data-placement="left"
+                                                   data-toggle="tooltip" data-original-title="Clic para desactivar"><i
+                                                        class="fa fa-close"></i></a>
+                                            {% else %}
+                                                <a href="{% url 'configuracionActivar' dato.id %}" class="btn btn-success" data-placement="left"
+                                                   data-toggle="tooltip" data-original-title="Clic pra activar"><i
+                                                        class="fa fa-check-circle"></i></a>
+                                            {% endif %}
+
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="{% url 'empresas' %}">Documentos Electronicos »</a>
+                                <small>Configuracion</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                       aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <br/>
+                            <form method="POST" enctype="multipart/form-data" action=""
+                                  id="demo-form2" data-parsley-validate
+                                  class="form-horizontal form-label-left">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12">Ambiente *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" name="ambiente"
+                                                id="ambiente" value="">
+                                            {% for ambiente in ambientes %}
+                                                <option value="{{ ambiente.id }}">{{ ambiente.nombre }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12">Cod. Establecimiento *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control"
+                                                name="cod_Establecimiento"
+                                                id="cod_Establecimiento" value="">
+
+                                            {% for codEstablecimiento in codEstablecimiento %}
+                                                <option value="{{ codEstablecimiento.id }}">{{ codEstablecimiento.codigo }}
+                                                    | {{ codEstablecimiento.empresa }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12">Punto Emision *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <select style="border-radius: 5px" class="form-control" name="punto_Emision"
+                                                id="punto_Emision" value="">
+
+                                            {% for puntoEmimision in puntoEmision %}
+                                                <option value="{{ puntoEmimision.id }}">{{ puntoEmimision.codigo }}
+                                                    | {{ puntoEmimision.empresa }}</option>
+                                            {% endfor %}
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12" for="first-name">Tipo Emision
+                                        *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" name="tipo_Emision"
+                                               required="required" readonly
+                                               class="form-control col-md-7 col-xs-12 has-feedback-left"
+                                               value="1">
+                                        <span class="fa fa-tags form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                            <span class="control-fileupload">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                     for="file">Firma Electronica *</label>
+                              <div class="col-md-4 col-xs-12">
+                                  <input style="border-radius: 5px" type="file" class="form-control col-md-7 col-xs-12"
+                                         id="file" name="firma">
+                              </div>
+                            </span>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12" for="first-name">Clave Firma
+                                        *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" name="clave_Firma"
+                                               required="required"
+                                               class="form-control col-md-7 col-xs-12 has-feedback-left"
+                                               value="">
+                                        <span class="fa fa-key form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                            <span class="control-fileupload">
+
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                     for="file">Banner Empresa *</label>
+                              <div class="col-md-4 col-xs-12">
+                                  <input style="border-radius: 5px" type="file" class="form-control col-md-7 col-xs-12"
+                                         id="file" name="banner">
+                              </div>
+
+                            </span>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12" for="first-name">Sec. Factura
+                                        *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <input style="border-radius: 5px" type="number" name="sec_Factura"
+                                               required="required"
+                                               class="form-control col-md-7 col-xs-12 has-feedback-left"
+                                               value="">
+                                        <span class="fa fa-sort-numeric-asc form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12" for="first-name">Sec. Proforma
+                                        *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <input style="border-radius: 5px" type="number" name="sec_Proforma"
+                                               required="required"
+                                               class="form-control col-md-7 col-xs-12 has-feedback-left"
+                                               value="">
+                                        <span class="fa fa-sort-numeric-asc form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12" for="first-name">Sec. Guia
+                                        Remision *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <input style="border-radius: 5px" type="number" name="sec_Guia"
+                                               required="required"
+                                               class="form-control col-md-7 col-xs-12 has-feedback-left"
+                                               value="">
+                                        <span class="fa fa-sort-numeric-asc form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-xs-12" for="first-name">Sec. Retencion
+                                        *</label>
+                                    <div class="col-md-4 col-xs-12">
+                                        <input style="border-radius: 5px" type="number" name="sec_Retencion"
+                                               required="required"
+                                               class="form-control col-md-7 col-xs-12 has-feedback-left"
+                                               value="">
+                                        <span class="fa fa-sort-numeric-asc form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                        <button class="btn bg-blue " type="submit"><i
+                                                class="glyphicon glyphicon-save"></i> Guardar
+                                        </button>
+                                        <a class="btn bg-orange " href="{% url 'registroEmpresa' %}" type="reset"><i
+                                                class="fa fa-remove"></i> Limpiar</a>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}
+{% block scripts %}
+    <script>
+        Tablas("#tablaDatos")
+        setTimeout(function(){
+            $(".alert").hide()
+        },5000)
+
+    </script>
+{% endblock %}

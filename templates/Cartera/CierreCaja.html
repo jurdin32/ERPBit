@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% block title %}BitAdmin | Cartera{% endblock title %}
+{% load static %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="">Cartera »</a>
+                                <small>Apertura de Caja</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-horizontal form-label-left">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Billetes<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px;text-align: right" readonly type="text"
+                                               id="abilletes" value="{% if apertura.totalBilletes %}{{ apertura.totalBilletes|floatformat:2 }}{% else %}0.00{% endif %}"
+                                               class="form-control has-feedback-left" name="abilletes">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Monedas<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" type="text" id="amonedas"
+                                               value="{% if apertura.totalMonedas %}{{ apertura.totalMonedas|floatformat:2 }}{% else %}0.00{% endif %}"
+                                               readonly
+                                               class="form-control has-feedback-left" name="amonedas">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Documentos<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px;text-align: right" type="text" id="adocumentos"
+                                               value="{% if apertura.totalDocumentos %}{{ apertura.totalDocumentos|floatformat:2 }}{% else %}0.00{% endif %}"
+                                               readonly
+                                               class="form-control has-feedback-left" name="adocumentos">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Saldo<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" type="text" id="asaldo"
+                                               value="{% if apertura.saldoInicial %}{{ apertura.saldoInicial|floatformat:2 }}{% else %}0.00{% endif %}"
+                                               readonly
+                                               class="form-control has-feedback-left" name="asaldo">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="">Cartera »</a>
+                                <small>Total de Gastos y Ventas</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-horizontal form-label-left">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Apertura<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" type="text" id="apertura"
+                                               value="{% if apertura.saldoInicial %}{{ apertura.saldoInicial|floatformat:2 }}{% else %}0.00{% endif %}"
+                                               readonly
+                                               class="form-control has-feedback-left" name="apertura">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Ventas<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" required type="text"
+                                               id="ventas" value="{{ ventas|floatformat:2 }}" readonly
+                                               class="form-control has-feedback-left" name="ventas">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Gastos<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" type="text" id="gastos"
+                                               value="{{ gastos|floatformat:2 }}" readonly
+                                               class="form-control has-feedback-left" name="gastos">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Total<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px; text-align: right" id="diario" type="text"
+                                               value="0.00" readonly
+                                               class="form-control has-feedback-left">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2><a href="">Cartera »</a>
+                                <small>Cierre de Caja</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <form method="POST" action="" id="form-registro-marcas"
+                                  class="form-horizontal form-label-left">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Billetes<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" required type="text" id="billetes"
+                                               value="0.00" onkeyup="calcular()"
+                                               class="form-control has-feedback-left" name="billetes">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Monedas<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" id="monedas" value="0.00"
+                                               onkeyup="calcular()" required
+                                               class="form-control has-feedback-left" name="monedas">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Documentos<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" id="documentos" value="0.00"
+                                               onkeyup="calcular()" required
+                                               class="form-control has-feedback-left" name="documentos">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Saldo<span
+                                            class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-9 col-xs-12">
+                                        <input style="border-radius: 5px" type="text" id="saldo" value="0.00" readonly
+                                               class="form-control has-feedback-left" name="saldo">
+                                        <span class="fa fa-money form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-xs-12" style="text-align:center">
+                                        <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Guardar
+                                        </button>
+                                        <a class="btn btn-warning" href="{% url 'cierreCaja' %}" type="reset"><i
+                                                class="fa fa-remove"></i> Limpiar</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if cierres %}
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div style="border-radius: 5px" class="x_panel">
+                            <div class="x_title">
+                                <h2><a href="">Cartera »</a>
+                                    <small>Cierre de Caja</small>
+                                </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <table id="tablaCierres" class="table table-bordered table-striped"
+                                           style="text-align: center">
+                                        <thead style="background-color: #5A738E; color: whitesmoke">
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Hora
+                                        </th>
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Fecha
+                                        </th>
+                                        <th style="text-align: center">
+                                            Saldo Inicial
+                                        </th>
+                                        <th style="text-align: center">
+                                            Total en Ventas
+                                        </th>
+                                        <th style="text-align: center">
+                                            Total en Gastos
+                                        </th>
+                                        <th style="text-align: center">
+                                            Suma Total
+                                        </th>
+                                        <th>Total Cierre</th>
+                                        <th style="text-align: center; vertical-align: middle">Diferencias
+                                        </th>
+                                        <th style="text-align: center; vertical-align: middle">
+                                            Observación
+                                        </th>
+                                        </thead>
+                                        <tbody>
+                                        {% for cierre in cierres %}
+                                            <tr>
+                                                <td>{{ cierre.hora }}</td>
+                                                <td>{{ cierre.fecha|date:"d/m/Y" }}</td>
+                                                <td>{{ cierre.saldoInicial|floatformat:2 }}</td>
+                                                <td>{{ cierre.totalVentas|floatformat:2 }}</td>
+                                                <td>{{ cierre.totalGasto|floatformat:2 }}</td>
+                                                <td>{{ cierre.totalDiario|floatformat:2 }}</td>
+                                                <td>{{ cierre.saldoFinal|floatformat:2 }}</td>
+                                                <td>{{ cierre.faltante|floatformat:2 }}</td>
+                                                <td style="width: 600px; text-align: justify">{{ cierre.observacion }}</td>
+                                            </tr>
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script>
+        var totales = (parseFloat($("#apertura").val().replace(",", ".")) + parseFloat($("#ventas").val().replace(",", "."))) - parseFloat($("#gastos").val().replace(",", "."))
+        $("#diario").val(totales.toFixed(2))
+
+        function calcular() {
+            var billetes = parseFloat($("#billetes").val().replace(",", "."));
+            var monedas = parseFloat($("#monedas").val().replace(",", "."));
+            var documentos = parseFloat($("#documentos").val().replace(",", "."));
+            var saldo = parseFloat(billetes + monedas + documentos);
+            $("#saldo").val(saldo);
+        }
+
+        Tablas("#tablaCierres");
+    </script>
+{% endblock %}

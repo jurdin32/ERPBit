@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head lang="{{ LANGUAGE_CODE }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BIT-Admin | Login</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'assets/vendors/bootstrap/dist/css/bootstrap.min.css' %} " rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{% static 'assets/vendors/font-awesome/css/font-awesome.min.css' %} " rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{% static 'assets/vendors/nprogress/nprogress.css' %} " rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="{% static 'assets/vendors/animate.css/animate.min.css' %} " rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="{% static 'assets/build/css/custom.min.css' %} " rel="stylesheet">
+</head>
+
+<body class="login">
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+
+                {% if error %}
+                    <p class="alert alert-danger">{{ error }}</p>
+                {% endif %}
+{#            Selecciona el idioma#}
+{#                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}#}
+{#                    <input name="next" type="hidden" value="{{ redirect_to }}"/>#}
+{#                    <select name="language">#}
+{#                        {% get_current_language as LANGUAGE_CODE %}#}
+{#                        {% get_available_languages as LANGUAGES %}#}
+{#                        {% get_language_info_list for LANGUAGES as languages %}#}
+{#                        {% for language in languages %}#}
+{#                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}#}
+{#                                    selected{% endif %}>#}
+{#                                {{ language.name_local }} ({{ language.code }})#}
+{#                            </option>#}
+{#                        {% endfor %}#}
+{#                    </select>#}
+{#                    <input type="submit" value="Ir"/>#}
+{#                </form>#}
+{#            fin del selector#}
+                <form method="POST" action= {% url 'login' %}>
+                    <h1>INGRESAR</h1>
+                    {% csrf_token %}
+
+                    <div>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required=""/>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-default submit" type="submit">Iniciar Sesión</button>
+                        <a class="reset_pass" href="#">Olvido su contraseña?</a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+
+
+                        <div class="clearfix"></div>
+                        <br/>
+
+                        <div>
+                            <img src="{% static 'images/logos/LOGO ERALY-06.png' %}" style="width: 160px" alt="">
+                            <p>©2018 All Rights Reserved. Business Intelligence Thinks</p>
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

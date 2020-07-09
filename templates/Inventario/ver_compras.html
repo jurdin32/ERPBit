@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BIT-Admin | Inventario{% endblock title %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div style="border-radius: 5px" class="x_panel">
+                        <div class="x_title">
+                            <h2>Compras {{ compra.proveedor }}
+                                <small> {{ compra.fecha_emision }}</small>
+                            </h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="col-xs-12 table-responsive ">
+                            <table id="myTable" class="table table-striped table-bordered">
+                                <thead style="background-color: #5A738E;color: whitesmoke">
+                                <th style="width: 100px; text-align: center">Id</th>
+                                <th style="width: 100px; text-align: center">Cod Ref</th>
+                                <th style="text-align: center; width: 100px">Cantidad</th>
+                                <th>Description</th>
+                                <th style="width: 100px; text-align: right">P. Unit</th>
+                                <th style="width: 100px; text-align: right">IVA</th>
+                                <th style="width: 100px; text-align: right">ICE</th>
+                                <th style="width: 100px; text-align: right">IRBPNR</th>
+                                <th style="width: 100px; text-align: right">Total</th>
+                                </thead>
+                                <tbody>
+                                {% for detalle in detalles %}
+                                    <tr>
+                                        <td>{{ detalle.producto.producto_id }}</td>
+                                        <td>{{ detalle.producto.producto.cod_referencia }}</td>
+                                        <td>{{ detalle.cantidad }}</td>
+                                        <td>{{ detalle.producto.producto }}</td>
+                                        <td style="text-align: right">{{ detalle.producto.precioProveedor }}</td>
+                                        <td style="text-align: right">{{ detalle.producto.iva }}</td>
+                                        <td style="text-align: right">{{ detalle.producto.ice }}</td>
+                                        <td style="text-align: right">{{ detalle.producto.irbpnr }}</td>
+                                        <td style="text-align: right">{{ detalle.producto.total }}</td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="6" rowspan="8" style="border-top: none !important;"></td>
+                                    <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Subtotal
+                                        12%:
+                                    </th>
+                                    <td class="totales" id="subtotal12"
+                                        style="text-align: right">{{ compra.subtotal_iva }}</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Subtotal 0%
+                                        :
+                                    </th>
+                                    <td class="totales" id="subtotal0"
+                                        style="text-align: right">{{ compra.subtotal_0 }}</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Subtotal Sin
+                                        Desc :
+                                    </th>
+                                    <td class="totales" id="subtotal"
+                                        style="text-align: right">{{ compra.subtotal }}</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Descuento
+                                        :
+                                    </th>
+                                    <td class="totales" id="descuento"
+                                        style="text-align: right">{{ compra.descuento }}</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="background-color: #5A738E;color: whitesmoke">IVA (12 %)
+                                        :
+                                    </th>
+                                    <td class="totales" id="iva12" style="text-align: right">{{ compra.iva }}</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="background-color: #5A738E;color: whitesmoke">Valor ICE
+                                        :
+                                    </th>
+                                    <td class="totales" id="ice" style="text-align: right">{{ compra.ice }}</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="background-color: #5A738E;color: whitesmoke">IRBPNR :
+                                    </th>
+                                    <td class="totales" id="IRBPNR" style="text-align: right">{{ compra.irbpnr }}</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="background-color: #5A738E;color: whitesmoke">VALOR TOTAL
+                                        :
+                                    </th>
+                                    <td class="totales" id="totales" style="text-align: right">{{ compra.total }}</td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+

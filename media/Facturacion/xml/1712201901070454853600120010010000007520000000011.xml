@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><factura id='comprobante' version='1.0.0'><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Lewis Roger Jaramillo Asanza</razonSocial><nombreComercial>Lewis Roger Jaramillo Asanza</nombreComercial><ruc>0704548536001</ruc><claveAcceso>1712201901070454853600120010010000007520000000011</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000752</secuencial><dirMatriz>Junin Entre Pichincha y Bolivar</dirMatriz></infoTributaria><infoFactura><fechaEmision>17/12/2019</fechaEmision><dirEstablecimiento>Junin Entre Pichincha y Bolivar</dirEstablecimiento><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>04</tipoIdentificacionComprador><razonSocialComprador>GOBIERNO AUTONOMO DESCENTRALIZADO PROVINCIAL DE EL ORO </razonSocialComprador><identificacionComprador>0760000180001</identificacionComprador><direccionComprador>JUNIN S/N Y AV 25 DE JUNIO</direccionComprador><totalSinImpuestos>6797.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>6797.00</baseImponible><valor>815.64</valor></totalImpuesto></totalConImpuestos><propina>0.0</propina><importeTotal>7612.64</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle>
+                                  <codigoPrincipal>1277</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1032'</codigoAuxiliar>
+                                  <descripcion>b'DISCOS DUROS  PARA LAPTOP DE 2TB ' / b''</descripcion>
+                                  <cantidad>7.00</cantidad>
+                                  <precioUnitario>98.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>686.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>686.00</baseImponible>
+                <valor>82.32</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1279</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1034'</codigoAuxiliar>
+                                  <descripcion>b'MEMORIA  SO-DIMM 8GB DDR3L PC-1600' / b''</descripcion>
+                                  <cantidad>5.00</cantidad>
+                                  <precioUnitario>58.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>290.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>290.00</baseImponible>
+                <valor>34.80</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1303</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1058'</codigoAuxiliar>
+                                  <descripcion>b'CINTA DOBLE FAZ 3M' / b''</descripcion>
+                                  <cantidad>5.00</cantidad>
+                                  <precioUnitario>10.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>50.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>50.00</baseImponible>
+                <valor>6.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1301</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1056'</codigoAuxiliar>
+                                  <descripcion>b'BATERIA ENERGIZER RECARGABLE 9V' / b''</descripcion>
+                                  <cantidad>4.00</cantidad>
+                                  <precioUnitario>15.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>60.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>60.00</baseImponible>
+                <valor>7.20</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1302</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1057'</codigoAuxiliar>
+                                  <descripcion>b'NETSCOUT LINKRUNNER AT 1000 ' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>1450.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>1450.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>1450.00</baseImponible>
+                <valor>174.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1299</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1054'</codigoAuxiliar>
+                                  <descripcion>b'ASPIRADORA SOPLADORA DE MANO' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>35.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>35.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>35.00</baseImponible>
+                <valor>4.20</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1300</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1055'</codigoAuxiliar>
+                                  <descripcion>b'CARGADOR DE IPAD' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>45.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>90.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>90.00</baseImponible>
+                <valor>10.80</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1297</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1052'</codigoAuxiliar>
+                                  <descripcion>b'BATER\xc3\x8dAS PARA UPS 12V 7 AH' / b''</descripcion>
+                                  <cantidad>5.00</cantidad>
+                                  <precioUnitario>35.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>175.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>175.00</baseImponible>
+                <valor>21.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1298</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1053'</codigoAuxiliar>
+                                  <descripcion>b'PARES DE PILAS AA RECARGABLES' / b''</descripcion>
+                                  <cantidad>10.00</cantidad>
+                                  <precioUnitario>13.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>130.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>130.00</baseImponible>
+                <valor>15.60</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1296</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1051'</codigoAuxiliar>
+                                  <descripcion>b'TARJETA DE RED PCI EXPRESS  ' / b''</descripcion>
+                                  <cantidad>5.00</cantidad>
+                                  <precioUnitario>12.50</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>62.50</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>62.50</baseImponible>
+                <valor>7.50</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1295</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1050'</codigoAuxiliar>
+                                  <descripcion>b'ADAPTADOR INALAMBRICO USB WIRELESS' / b''</descripcion>
+                                  <cantidad>8.00</cantidad>
+                                  <precioUnitario>12.50</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>100.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>100.00</baseImponible>
+                <valor>12.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1294</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1049'</codigoAuxiliar>
+                                  <descripcion>b'TERCERA MANO CON LUPA Y LAGARTOS PARA PLACAS' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>10.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>20.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>20.00</baseImponible>
+                <valor>2.40</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1293</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1048'</codigoAuxiliar>
+                                  <descripcion>b'LIMPIDORES DE PANTALLAS' / b''</descripcion>
+                                  <cantidad>3.00</cantidad>
+                                  <precioUnitario>10.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>30.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>30.00</baseImponible>
+                <valor>3.60</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1292</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1047'</codigoAuxiliar>
+                                  <descripcion>b'LIMPIADOR DE CONTACTO' / b''</descripcion>
+                                  <cantidad>4.00</cantidad>
+                                  <precioUnitario>10.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>40.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>40.00</baseImponible>
+                <valor>4.80</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1291</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1046'</codigoAuxiliar>
+                                  <descripcion>b'MEMORIA DIMM  8GB DDR4 PC-2400 ' / b''</descripcion>
+                                  <cantidad>3.00</cantidad>
+                                  <precioUnitario>58.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>174.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>174.00</baseImponible>
+                <valor>20.88</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1289</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1044'</codigoAuxiliar>
+                                  <descripcion>b'PILAS 2032 PARA MAINBOARD SONY' / b''</descripcion>
+                                  <cantidad>30.00</cantidad>
+                                  <precioUnitario>2.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>60.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>60.00</baseImponible>
+                <valor>7.20</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1290</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1045'</codigoAuxiliar>
+                                  <descripcion>b'ALMOHADILLA PARA IMPRESORA EPSON L355 ' / b''</descripcion>
+                                  <cantidad>5.00</cantidad>
+                                  <precioUnitario>35.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>175.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>175.00</baseImponible>
+                <valor>21.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1288</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1043'</codigoAuxiliar>
+                                  <descripcion>b'MEMORIA DIMM 8GB DDR3 PC-1600/1066/1333' / b''</descripcion>
+                                  <cantidad>9.00</cantidad>
+                                  <precioUnitario>58.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>522.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>522.00</baseImponible>
+                <valor>62.64</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1287</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1042'</codigoAuxiliar>
+                                  <descripcion>b'MOTHERBOARD LCD ANALYCER DIAGNOSTIC 4 IN 1' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>85.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>85.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>85.00</baseImponible>
+                <valor>10.20</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1286</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1041'</codigoAuxiliar>
+                                  <descripcion>b'CABLE DE RED PATCH CORD 7FT CAT 6 CERTIFICADO' / b''</descripcion>
+                                  <cantidad>20.00</cantidad>
+                                  <precioUnitario>9.50</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>190.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>190.00</baseImponible>
+                <valor>22.80</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1284</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1039'</codigoAuxiliar>
+                                  <descripcion>b'CONECTORES RJ45 CAT 6' / b''</descripcion>
+                                  <cantidad>100.00</cantidad>
+                                  <precioUnitario>0.30</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>30.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>30.00</baseImponible>
+                <valor>4.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1285</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1040'</codigoAuxiliar>
+                                  <descripcion>b'ROLLO DE CABLE UTP CAT 6 INTERNO PANDUIT.' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>255.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>510.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>510.00</baseImponible>
+                <valor>61.20</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1312</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1067'</codigoAuxiliar>
+                                  <descripcion>b'DISCOS DUROS PC 2TB WESTER DIGITAL' / b''</descripcion>
+                                  <cantidad>8.00</cantidad>
+                                  <precioUnitario>98.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>784.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>784.00</baseImponible>
+                <valor>94.08</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1280</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1035'</codigoAuxiliar>
+                                  <descripcion>b'PONCHADORA NEXX RJ45' / b''</descripcion>
+                                  <cantidad>1.00</cantidad>
+                                  <precioUnitario>23.50</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>23.50</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>23.50</baseImponible>
+                <valor>2.82</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1283</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1038'</codigoAuxiliar>
+                                  <descripcion>b'JACK RJ-45 CAT 6 ' / b''</descripcion>
+                                  <cantidad>100.00</cantidad>
+                                  <precioUnitario>4.50</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>450.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>450.00</baseImponible>
+                <valor>54.00</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1278</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1033'</codigoAuxiliar>
+                                  <descripcion>b'MEMORIA SODIMM  4GB DDR2 6300 PC2 \xe2\x80\x93 6400  800' / b''</descripcion>
+                                  <cantidad>4.00</cantidad>
+                                  <precioUnitario>89.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>356.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>356.00</baseImponible>
+                <valor>42.72</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1282</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1037'</codigoAuxiliar>
+                                  <descripcion>b'REGLETA FORZA 5 TOMAS' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>9.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>18.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>18.00</baseImponible>
+                <valor>2.16</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1281</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1036'</codigoAuxiliar>
+                                  <descripcion>b'PASTA T\xc3\x89RMICA 30 GRAMOS' / b''</descripcion>
+                                  <cantidad>2.00</cantidad>
+                                  <precioUnitario>8.00</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>16.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>16.00</baseImponible>
+                <valor>1.92</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle><detalle>
+                                  <codigoPrincipal>1275</codigoPrincipal>
+                                  <codigoAuxiliar>b'SER-1030'</codigoAuxiliar>
+                                  <descripcion>b'FUENTES DE PODER 750W' / b''</descripcion>
+                                  <cantidad>10.00</cantidad>
+                                  <precioUnitario>18.50</precioUnitario>
+                                  <descuento>0.00</descuento>
+                                  <precioTotalSinImpuesto>185.00</precioTotalSinImpuesto>
+                                  <impuestos>
+            <impuesto>
+                <codigo>2</codigo>
+                <codigoPorcentaje>2</codigoPorcentaje>
+                <tarifa>12.00</tarifa>
+                <baseImponible>185.00</baseImponible>
+                <valor>22.20</valor>
+            </impuesto>
+                                  
+                                  
+                                  </impuestos>
+                                  </detalle></detalles></factura>
