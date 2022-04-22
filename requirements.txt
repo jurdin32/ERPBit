@@ -31,7 +31,7 @@ olefile==0.44
 Pillow==5.2.0
 pisa==3.0.33
 psycopg2==2.7.5
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pytz==2018.5
 reportlab==3.5.5
 requests==2.19.1
