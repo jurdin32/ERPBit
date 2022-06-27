@@ -33,7 +33,7 @@ pisa==3.0.33
 psycopg2==2.7.5
 PyPDF2==1.26.0
 pytz==2018.5
-reportlab==3.5.5
+reportlab==3.5.55
 requests==2.19.1
 requests-toolbelt==0.8.0
 six==1.11.0
